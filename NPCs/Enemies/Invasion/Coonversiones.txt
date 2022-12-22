@@ -1,0 +1,35 @@
+Guide 			-
+Merchant		-
+Nurse			-
+Demolitionist		-
+Dye Trader		-
+Angler			-
+Zoologist		-
+Dryad			-
+Painter			-
+Golfer			-
+Armas Dealer		-
+Tavernkeep		-
+Stylist			-
+Goblin Tinkerer		-
+Witch Doctor		-
+Clothier		-
+Mechanic		-
+Party Girl		-
+Wizard			-
+Tax Collector		-
+Truffle			-
+Pirate			-
+Steampunker		-
+Cyborg			-
+Santa Claus		-
+Princess		-	
+Traveling Merchant	-
+Skeleton Merchant	-
+
+
+Arqueologo		-
+Ninja			-
+Meteorman		-
+Enchanter		-
+Mc Money Pants		-
