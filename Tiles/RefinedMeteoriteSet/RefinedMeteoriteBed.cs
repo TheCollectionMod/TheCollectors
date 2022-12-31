@@ -1,4 +1,3 @@
-using TheCollectors.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +7,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-
 
 namespace TheCollectors.Tiles.RefinedMeteoriteSet
 {
@@ -29,7 +27,7 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair); // Beds count as chairs for the purpose of suitable room creation
 
-			DustType = ModContent.DustType<Sparkle>();
+			//DustType = ModContent.DustType<Sparkle>();
 			AdjTiles = new int[] { TileID.Beds };
 
 			// Placement
@@ -43,7 +41,10 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 			name.SetDefault("Refined Meteorite Bed");
 			AddMapEntry(new Color(221, 51, 255), Language.GetText("Mods.TheCollectors.RefinedMeteoriteChest"));
 		}
-
+		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		{
+			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBed>());
+		}
 		public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
 		{
 			return true;
@@ -64,15 +65,11 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 			info.VisualOffset.Y += 4f; // Move player down a notch because the bed is not as high as a regular bed
 		}
 
-		public override void NumDust(int i, int j, bool fail, ref int num)
+		/*public override void NumDust(int i, int j, bool fail, ref int num)
 		{
 			num = 1;
 		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBed>());
-		}
+		*/
 
 		public override bool RightClick(int i, int j)
 		{
@@ -109,7 +106,6 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 					Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
 				}
 			}
-
 			return true;
 		}
 

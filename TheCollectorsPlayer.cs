@@ -16,6 +16,9 @@ namespace TheCollectors
         public bool FireHealing;
         public bool FakeCrystalLeafSet = false;
         public bool fullGraniteSet = false;
+        public bool geodePickaxe = false;
+        public bool oysterRake = false;
+        public bool copptinPolish = false;
 
         public static TheCollectorsPlayer Get(Player player, Mod mod)
         {
@@ -36,6 +39,9 @@ namespace TheCollectors
             FlyingEyeling = false;
             FireHealing = false;
             FakeCrystalLeafSet = false;
-        }
+            geodePickaxe = false;
+            oysterRake = false;
+            copptinPolish = false;
+    }
     }
 }

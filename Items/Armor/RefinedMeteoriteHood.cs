@@ -41,7 +41,7 @@ namespace TheCollectors.Items.Armor
 		public override void UpdateArmorSet(Player player) {
 			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
 							+ "\nEmits an aura of light"
-							+ "\nReduced damage taken when under 200 health"
+							+ "\nReduced damage taken when under half health"
 							+ "\nIncreases your max number of minions by 2.";
 
 			player.AddBuff(BuffID.Shine, 2);

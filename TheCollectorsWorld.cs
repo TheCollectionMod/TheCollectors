@@ -29,6 +29,8 @@ namespace TheCollectors
 		public static bool meteormanJustRescued = false; // Not important for saving.
 		public static bool savedEnchanter = false;
 		public static bool enchanterJustRescued = false; // Not important for saving.
+		public static bool savedFarmer = false;
+		public static bool farmerJustRescued = false; // Not important for saving.
 
 		public override void OnWorldLoad()
 		{
@@ -36,6 +38,8 @@ namespace TheCollectors
 			meteormanJustRescued = false;
 			savedEnchanter = false;
 			enchanterJustRescued = false;
+			savedFarmer = false;
+			farmerJustRescued = false;
 		}
 
 		public override void OnWorldUnload()
@@ -44,6 +48,8 @@ namespace TheCollectors
 			meteormanJustRescued = false;
 			savedEnchanter = false;
 			enchanterJustRescued = false;
+			savedFarmer = false;
+			farmerJustRescued = false;
 		}
 
 		public override void SaveWorldData(TagCompound tag)
@@ -56,11 +62,16 @@ namespace TheCollectors
 			{
 				tag["savedEnchanter"] = true;
 			}
+			if (savedFarmer)
+			{
+				tag["savedFarmer"] = true;
+			}
 		}
 		public override void LoadWorldData(TagCompound tag)
 		{
 			savedMeteorman = tag.ContainsKey("savedMeteorman");
 			savedMeteorman = tag.ContainsKey("savedEnchanter");
+			savedFarmer = tag.ContainsKey("savedFarmer");
 		}
 
 		public override void NetSend(BinaryWriter writer)
@@ -69,6 +80,7 @@ namespace TheCollectors
 			var flags = new BitsByte();
 			flags[0] = savedMeteorman;
 			flags[1] = savedEnchanter;
+			flags[2] = savedFarmer;
 			writer.Write(flags);
 		}
 
@@ -77,6 +89,7 @@ namespace TheCollectors
 			BitsByte flags = reader.ReadByte();
 			savedMeteorman = flags[0];
 			savedEnchanter = flags[1];
+			savedFarmer = flags[2];
 		}
 		public static void UpdateWorldBool() //from Calamity's Vanities
 		{

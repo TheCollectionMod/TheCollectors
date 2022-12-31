@@ -35,7 +35,7 @@ namespace TheCollectors.NPCs
             if (!NPCID.Sets.CountsAsCritter[npc.type]) // Checks if NPCID Counts as a critter, if false runs the statment
             {
                 // This is where we add global rules for all NPC. Here is a simple example:
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.NPCStash.McMoneyPants.TerraCoin>(), 10));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.NPCStash.McMoneyPants.TerraCoin>(), 20));
             }
 
             if (npc.type == NPCID.WyvernHead)

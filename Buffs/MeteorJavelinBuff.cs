@@ -1,7 +1,6 @@
 ﻿using TheCollectors.NPCs;
 using Terraria;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Buffs
 {
@@ -12,12 +11,10 @@ namespace TheCollectors.Buffs
 			texture = "TheCollectionMod/Buffs/BuffTemplate";
 			return base.Autoload(ref name, ref texture);
 		}*/
-
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Meteorite Javelin");
 			Description.SetDefault("Losing life");
 		}
-
 		public override void Update(NPC npc, ref int buffIndex) {
 			npc.GetGlobalNPC<TheCollectorsGlobalNPC>().MeteorJavelin = true;
 		}

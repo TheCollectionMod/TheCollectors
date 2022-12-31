@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Items.Armor
@@ -14,12 +13,6 @@ namespace TheCollectors.Items.Armor
 			Tooltip.SetDefault("+10% increased melee damage."
 				+ "\n+10% increased melee critical strike chance."
 				+ "\n+10% increased melee speed.");
-
-			// Be sure to have "using Terraria.Localization".
-			/*DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Casco de meteorito refinado");
-			Tooltip.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "+10% daño cuerpo a cuerpo."
-				+ "\n+10% probabilidad de ataque crítico cuerpo a cuerpo."
-				+ "\n+10% velocidad cuerpo a cuerpo.");*/
 		}
 
 		public override void SetDefaults() {
@@ -47,7 +40,7 @@ namespace TheCollectors.Items.Armor
 		{
 			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
 							+ "\nEmits an aura of light"
-							+ "\nReduced damage taken when under 200 health"
+							+ "\nReduced damage taken when under half health"
 							+ "\n19% Increased melee speed"
 							+ "\n19% Increases movement speed"
 							+ "\nIncreases maximum life by 25";
@@ -60,13 +53,10 @@ namespace TheCollectors.Items.Armor
 			//player.meleeSpeed += 0.19f;      /*19% Increased melee speed*/
 			player.moveSpeed += 0.19f;       /*19% Increases movement speed*/
 			player.statLifeMax2 += 25;     /*Increases maximum life by 25*/
-			/*if (player.statLife < 200)  //Ej condicion: Añade el buffo cuando la vida baja de 200
+			if (player.statLife < 0.5f * player.statLifeMax)
 			{
-				player.AddBuff(mod.BuffType("MeteorbodyBuff"), 2);
-			}*/
-			/*AddTranslation(GameCulture.Spanish, "Inmunidad a '¡En llamas!','Ardiendo' y lava"
-		+ "\nEmite un aura de luz"
-		+ "\n+2 máximo de súbditos.");*/
+				player.AddBuff(ModContent.BuffType<Buffs.MeteorbodyBuff>(), 3600, false);
+			}
 		}
 		public override void ArmorSetShadows(Player player)
 		{

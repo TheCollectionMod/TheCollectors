@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.Events;
 using Terraria.GameContent.Personalities;
 using Terraria.Utilities;
 using Microsoft.Xna.Framework.Graphics;
@@ -150,23 +151,60 @@ namespace TheCollectors.NPCs.TownNPCs
         {
             shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Tools.MeteorClentaminator>()); nextSlot++;
             shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Ammo.MeteoriteSolution>()); nextSlot++;
-
             if (Main.hardMode)
             {
                 shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Ammo.MeteoriteHardenerSolution>()); nextSlot++;
             }
-            if (NPC.downedMechBoss1)
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.CopperSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TinSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.IronSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.LeadSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.SilverSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TungstenSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.GoldSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.PlatinumSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.MeteoriteSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.DemoniteSoil>()); nextSlot++;
+            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.CrimtaneSoil>()); nextSlot++;
+
+            if (NPC.downedBoss3) //Skeletron
+            {
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.ObsidianSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.HellstoneSoil>()); nextSlot++;
+            }
+            if (Main.hardMode)
+            {
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.CobaltSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.PalladiumSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.MythrilSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.OrichalcumSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TitaniumSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.AdamantiteSoil>()); nextSlot++;
+            }
+            if (NPC.downedMechBossAny)
+            {
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.HallowedSoil>()); nextSlot++;
+            }
+            if (NPC.downedMechBoss1 && NPC.downedMechBoss2 && NPC.downedMechBoss3)
+            {
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.ChlorophyteSoil>()); nextSlot++;
+            }
+            if (NPC.downedPlantBoss)
+            {
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.ShroomiteSoil>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.SpectreSoil>()); nextSlot++;
+            }
+            if (NPC.downedMoonlord)
+            {
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.LuminiteSoil>()); nextSlot++;
+
+            }
+            if (BirthdayParty.PartyIsUp) // fiesta activa
             {
                 shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.MeteormanMask>()); nextSlot++;
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.MeteormanBody>()); 
+                //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Armor.Vanity.MeteormanLegs>());
             }
-            /*if (NPC.downedMechBoss2)
-            {
-                shop.item[nextSlot].SetDefaults(mod.ItemType("MeteormanBody")); nextSlot++;
-            }
-            if (NPC.downedMechBoss3)
-            {
-                shop.item[nextSlot].SetDefaults(mod.ItemType("MeteormanLegs")); nextSlot++;
-            }*/
         }
         public override string GetChat()
         {
@@ -332,7 +370,7 @@ namespace TheCollectors.NPCs.TownNPCs
             {
                 for (int k = 0; k < 8; k++)
                 {
-                    Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, 2.5f * hitDirection, -2.5f, Scale: 0.8f);
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Lava, 2.5f * hitDirection, -2.5f, Scale: 0.8f);
                 }
 
                 if (!Main.dedServ)

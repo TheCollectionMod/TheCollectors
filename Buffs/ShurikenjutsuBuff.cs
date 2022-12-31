@@ -1,6 +1,4 @@
-﻿using IL.Terraria.GameContent.Events;
-using Terraria;
-using Terraria.Localization;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace TheCollectors.Buffs
@@ -10,11 +8,9 @@ namespace TheCollectors.Buffs
         public override void SetStaticDefaults()
         {
             Main.buffNoTimeDisplay[Type] = false;
-            Main.debuff[Type] = false; //Add this so the nurse doesn't remove the buff when healing
+            Main.debuff[Type] = false; 
             DisplayName.SetDefault("Shuriken Jutsu");
-            DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Arte Ninja - Shuriken");
             Description.SetDefault("Increases throwing damage, speed and critical strike chance by 25%");
-            Description.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Aumento de daño, probabilidad de crítico y velocidad de lanzamiento a las armas arrojadizas en 25%");
         }
 
         public override void Update(Player player, ref int buffIndex)

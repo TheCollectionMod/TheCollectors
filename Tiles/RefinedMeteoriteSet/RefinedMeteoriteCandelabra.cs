@@ -26,6 +26,8 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+			TileObjectData.newTile.Height = 2; // because the template is for 1x2 not 1x3
+			TileObjectData.newTile.Width = 2; // because the template is for 1x2 not 1x3
 			TileObjectData.newTile.WaterDeath = true;
 			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -41,10 +43,57 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 				flameTexture = ModContent.Request<Texture2D>("TheCollectors/Tiles/RefinedMeteoriteSet/RefinedMeteoriteCandelabra_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
 			}
 		}
-
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandelabra>());
+			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandelabra>());
+		}
+		public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
+		{
+			offsetY = 2;
+		}
+		public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+		{
+			if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+			{
+				return;
+			}
+
+			Tile tile = Main.tile[i, j];
+
+			short frameX = tile.TileFrameX;
+			short frameY = tile.TileFrameY;
+
+			// Return if the lamp is off (when frameX is 0), or if a random check failed.
+			if (frameX != 0 || !Main.rand.NextBool(40))
+			{
+				return;
+			}
+
+			int style = frameY / 48;
+
+			if (frameY / 18 % 2 == 0)
+			{
+				int dustChoice = -1;
+
+				if (style == 0)
+				{
+					dustChoice = 21; // A purple dust.
+				}
+
+				// We can support different dust for different styles here
+				if (dustChoice != -1)
+				{
+					var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+
+					if (!Main.rand.NextBool(3))
+					{
+						dust.noGravity = true;
+					}
+
+					dust.velocity *= 0.3f;
+					dust.velocity.Y = dust.velocity.Y - 1.5f;
+				}
+			}
 		}
 		public override void HitWire(int i, int j)
 		{
@@ -76,18 +125,18 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 
 			NetMessage.SendTileSquare(-1, left, top + 1, 2);
 		}
-
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
 			Tile tile = Main.tile[i, j];
-
-			if (tile.TileFrameX < 18 * 2)
+			if (tile.TileFrameX == 0)
 			{
-				r = 0.8f;
-				g = 0.2f;
-				b = 0f;
+				// We can support different light colors for different styles here: switch (tile.frameY / 54)
+				r = 1f;
+				g = 0.75f;
+				b = 1f;
 			}
 		}
+
 		public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 		{
 			SpriteEffects effects = SpriteEffects.None;
@@ -113,7 +162,7 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 
 			TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
 
-			ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 16 | (long)(uint)i); // Don't remove any casts.
+			ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 64 | (long)(uint)i); // Don't remove any casts.
 
 			// We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 54;
 			for (int c = 0; c < 7; c++)

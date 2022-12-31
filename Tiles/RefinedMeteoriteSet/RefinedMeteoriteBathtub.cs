@@ -1,6 +1,6 @@
-using TheCollectors.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
@@ -9,18 +9,17 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-
 namespace TheCollectors.Tiles.RefinedMeteoriteSet
 {
 	public class RefinedMeteoriteBathtub : ModTile
 	{
-		//public const int NextStyleHeight = 38; //Calculated by adding all CoordinateHeights + CoordinatePaddingFix.Y applied to all of them + 2
-
 		public override void SetStaticDefaults()
 		{
 			// Properties
 			Main.tileFrameImportant[Type] = true;
+			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
+			TileID.Sets.DisableSmartCursor[Type] = true;
 
 			AdjTiles = new int[] { TileID.Bathtubs };
 
@@ -32,12 +31,13 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 
 			// Etc
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Refined Meteorite Bathtubs");
+			name.SetDefault("Refined Meteorite Bathtub");
 			AddMapEntry(new Color(221, 51, 255), name);
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
+			SoundEngine.PlaySound(SoundID.NPCHit4);
 			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBathtub>());
 		}
 	}

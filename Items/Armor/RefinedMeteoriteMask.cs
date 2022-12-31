@@ -44,7 +44,7 @@ namespace TheCollectors.Items.Armor
 		{
 			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
 							+ "\nEmits an aura of light"
-							+ "\nReduced damage taken when under 200 health"
+							+ "\nReduced damage taken when under half health"
 							+ "\n20% chance to not consume ammo";
 
 			player.AddBuff(BuffID.Shine, 2);

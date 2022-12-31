@@ -116,7 +116,7 @@ namespace TheCollectors.NPCs.TownNPCs
 			{
 				for (int k = 0; k < 8; k++)
 				{
-					Dust.NewDust(NPC.position, NPC.width, NPC.height, 5, 2.5f * hitDirection, -2.5f, Scale: 0.8f);
+					Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, 2.5f * hitDirection, -2.5f, Scale: 0.8f);
 				}
 
 				if (!Main.dedServ)

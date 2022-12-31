@@ -24,6 +24,8 @@ namespace TheCollectors
 				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Meteorman>(), "Rescue in Meteor crash");
 				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Enchanter>(), "Rescue in Dungeon");
 				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.McMoneyPants>(), "Have a Terra Coin in inventary");
+				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Farmer>(), "Rescue in Snow");
+				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.StarMerchant>(), "Have a Fallen Star in inventary");
 			}
 			{
 				// Registers a new custom currency

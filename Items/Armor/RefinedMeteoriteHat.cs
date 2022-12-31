@@ -13,13 +13,7 @@ namespace TheCollectors.Items.Armor
 			DisplayName.SetDefault("Refined Meteorite Hat");
 			Tooltip.SetDefault("20% increased throwing damage" 
 				+ "\n10% increased throwing critical strike chance");
-
-			// Be sure to have "using Terraria.Localization".
-			/*DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Gorro de meteorito refinado");
-			Tooltip.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "+20% daño arrojadizo"
-				+ "\n+10% probabilidad de ataque arrojadizo crítico");*/
 		}
-
 		public override void SetDefaults() {
 			Item.width = 18;
 			Item.height = 18;
@@ -27,22 +21,19 @@ namespace TheCollectors.Items.Armor
 			Item.rare = ItemRarityID.Pink;
 			Item.defense = 9;
 		}
-
 		public override void UpdateEquip(Player player)
 		{
 			player.GetDamage(DamageClass.Throwing) += 0.20f; // Increase by 20%
 			player.GetCritChance(DamageClass.Throwing) += 0.10f; // Increase by 10%
 		}
-
 		public override bool IsArmorSet(Item head, Item body, Item legs) {
 			return body.type == ItemType<RefinedMeteoriteBreastplate>() && legs.type == ItemType<RefinedMeteoriteLeggings>();
 		}
-
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
 							+ "\nEmits an aura of light"
-							+ "\nReduced damage taken when under 200 health"
+							+ "\nReduced damage taken when under half health"
 							+ "\nReduced the aggro from enemies";
 
 			player.AddBuff(BuffID.Shine, 2);
@@ -50,12 +41,11 @@ namespace TheCollectors.Items.Armor
 			player.buffImmune[BuffID.Burning] = true;
 			player.lavaImmune = true;
 			player.aggro -= 400;
-			/*if (player.statLife < 200)  //Ej condicion: Añade buff cuando la vida baja de 200
+			if (player.statLife < 0.5f * player.statLifeMax)
 			{
-				player.AddBuff(mod.BuffType("MeteorbodyBuff"), 2);
-			}*/
+				player.AddBuff(ModContent.BuffType <Buffs.MeteorbodyBuff>(), 3600, false);
+			}
 		}
-
 		public override void ArmorSetShadows(Player player)
 		{
 			player.armorEffectDrawShadow = true;

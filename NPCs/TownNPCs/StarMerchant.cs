@@ -133,7 +133,6 @@ namespace TheCollectors.NPCs.TownNPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = "Shop";
-            button2 = "Jutsu";
         }
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)
         {
@@ -141,151 +140,14 @@ namespace TheCollectors.NPCs.TownNPCs
             {
                 shop = true; // Esto lo convierte en tienda
             }
-            else
-            {
-                Main.npcChatText = "It's ninja time!";
-                //Main.LocalPlayer.AddBuff(BuffID.Regeneration, 10);
-                //Main.LocalPlayer.buffImmune[BuffID.OnFire] = true;
-                Main.LocalPlayer.AddBuff(ModContent.BuffType<Buffs.StealthBuff>(),36000); /*600 = 10seg*/
-                //Main.LocalPlayer.AddBuff(mod.BuffType("StealthBuff"), 36000); /*600 = 10seg*/
-            }
         }
         public override void SetupShop(Chest shop, ref int nextSlot)
         {
-            shop.item[nextSlot].SetDefaults(ItemID.Katana); nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.Shuriken); nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.NinjaHood); nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.NinjaPants); nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.NinjaShirt); nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.InvisibilityPotion); nextSlot++;
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Placeable.ThrowingDummy>()); nextSlot++;
-
-            // Bosses y eventos, items permanentes
-            if (NPC.downedGoblins) // Goblins invasion
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.SpikyBall); nextSlot++;
-            }
-
-            if (NPC.downedSlimeKing)
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.SlimeShuriken>()); nextSlot++;
-            } //este NPC Spawnea al matar al king slime, redundante
-
-            if (NPC.downedBoss1) //Eye of Cthulhu
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.EyeShuriken>()); nextSlot++;
-            }
-
-            if (NPC.downedBoss2) // Eater of Worlds OR the Brain of Cthulhu 
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.WormShuriken>()); nextSlot++;
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.BrainShuriken>()); nextSlot++;
-            }
-
-            if (NPC.downedQueenBee) //Queen Bee
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.BeeShuriken>()); nextSlot++;
-            }
-
-            if (NPC.downedBoss3) //Skeletron
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.BoneShuriken>()); nextSlot++;
-            }
-
-            if (NPC.downedDeerclops) //Deerclops
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.DeerShuriken>()); nextSlot++;
-            }
-
-            if (Main.hardMode) // = defeat Wall of Flesh
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.WallShuriken>()); nextSlot++;
-                shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife); nextSlot++;
-                shop.item[nextSlot].SetDefaults(ItemID.Muramasa); nextSlot++;
-            }
-
-            /*if (Main.party?) // no se como es el rollo para la fiesta
-            {
-                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Weapons.Throwing.PartyShuriken>()); nextSlot++;
-            }*/
-
-            // Weather y eventos temporales
-            /*if (Main.IsItRaining) // dia de lluvia?
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife); nextSlot++;
-            }
-
-            if (Main.IsItAHappyWindyDay) // dia de viento?
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife); nextSlot++;
-            }
-
-            if (Main.IsItStorming) // dia de tormenta?
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife); nextSlot++;
-            }
-
-            if (Main.bloodMoon) // durante blood moon
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife); nextSlot++;
-            }
-
-            if (Main.slimeRain) // durante lluvia de slimes
-            {
-                shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife); nextSlot++;
-            }*/
+            shop.item[nextSlot].SetDefaults(ItemID.FallenStar); nextSlot++;
         }
         public override string GetChat()
         {
-            WeightedRandom<string> chat = new WeightedRandom<string>();
-
-            // Chat con NPC Vanilla
-            int partyGirl = NPC.FindFirstNPC(NPCID.PartyGirl);
-            if (partyGirl >= 0 && Main.rand.NextBool(4))
-            {
-                chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.PartyGirlDialogue", Main.npc[partyGirl].GivenName));
-                chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.PartyGirlDialogueRare", Main.npc[partyGirl].GivenName), 0.1);
-            }
-
-            int guide = NPC.FindFirstNPC(NPCID.Guide);
-            if (guide >= 0 && Main.rand.NextBool(4))
-            {
-                chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.GuideDialogue1", Main.npc[guide].GivenName));
-                chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.GuideDialogue2", Main.npc[guide].GivenName));
-            }
-
-            /*// Chat con ModNPC 
-            int mastersan = NPC.FindFirstNPC(ModContent.NPCType<MasterSan());
-            if (mastersan >= 0 && Main.rand.NextBool(4))
-            {
-                chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.MasterSanDialogue", Main.npc[mastersan].GivenName));
-                chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.MasterSanDialogueRare", Main.npc[mastersan].GivenName), 0.1);
-            }*/
-
-            // Chat Normal
-            // These are things that the NPC has a chance of telling you when you talk to it.
-            chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.StandardDialogue1"));
-            chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.StandardDialogue2"));
-            chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.StandardDialogue3"));
-            chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.StandardDialogue4"));
-            //chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.CommonDialogue"), 5.0);
-
-
-            /*// Chat de eventos y similar, estos chats  rulan mal, si downedQueenSlime, solo sale ese chat, revisar
-            if (NPC.downedQueenSlime) 
-            {
-                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.downedQueenSlime");
-            }
-            else
-            {
-                Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.NotdownedQueenSlime");
-            }
-
-            if (Main.slimeRain)
-            {
-                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.slimeRain");
-            }*/
-            return chat; // chat is implicitly cast to a string.
+            return Language.GetTextValue("Mods.TheCollectors.Dialogue.StarMerchant.TemporalDialogue");
         }
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

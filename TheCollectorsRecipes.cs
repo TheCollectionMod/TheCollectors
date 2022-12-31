@@ -19,7 +19,11 @@ namespace TheCollectors
 		{
 			TheCollectorsRecipeGroup = null;
 		}
-
+		public override void AddRecipeGroups()
+		{
+			RecipeGroup group = new RecipeGroup(() => $"{Language.GetTextValue("Copper or Tin Armor")}", ItemID.IceMirror, ItemID.MagicMirror);
+			RecipeGroup.RegisterGroup(nameof(ItemID.MagicMirror), group);
+		}
 		public override void AddRecipes()
 		{
 			{

@@ -1,8 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.DataStructures;
 using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Buffs
@@ -12,11 +10,7 @@ namespace TheCollectors.Buffs
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Flying Eyeling");
-			Description.SetDefault("This weird head don't go away...");
-
-			// Be sure to have "using Terraria.Localization".
-			//DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Cabeza de Meteoro amistosa");
-			//Description.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Esta rara cabeza no se va...");
+			Description.SetDefault("It seems that these beings can fly");
 
 			Main.buffNoTimeDisplay[Type] = true;
 			Main.lightPet[Type] = false;

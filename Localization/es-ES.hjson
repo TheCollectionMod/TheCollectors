@@ -10,6 +10,28 @@ Mods:
 {
 	TheCollectors: 
 	{
+		BuffName: 
+		{
+			FlyingEyeling: "Eyeling Volador"
+			LivingSpaceRock: "Cabeza de Meteoro amistosa"
+			MeteorbodyBuff: "Cuerpo meteoro"
+			MeteorHoverboard: "Hoverboard meteórico"
+			Monja: "Monja"
+			ShurikenjutsuBuff: "Arte Ninja - Shuriken"
+			StealthBuff: "Arte Ninja - Sigilo"
+			Thunder: "Trueno"
+		}
+		BuffDescription: 
+		{
+			FlyingEyeling: "Parece ser que estos seres pueden volar"
+			LivingSpaceRock: "Esta extraña cabeza no se va..."
+			MeteorbodyBuff: "+20 de defensa"
+			MeteorHoverboard: "Estupendo para explorar islas flotantes"
+			Monja: "¡Monja luminosa!"
+			ShurikenjutsuBuff: "Aumento de daño, probabilidad de crítico y velocidad de lanzamiento a las armas arrojadizas en 25%"
+			StealthBuff: "Reduce mucho el aggro de los enemigos"
+			Thunder: "Pierdes vida"
+		}
 		NPCName: 
 		{
 			Archeologist: "Arqueólogo"
@@ -20,6 +42,8 @@ Mods:
 			EnchanterPrisioner: "Encantador encantado"
 			McMoneyPants: "Tío Gacha"
 			StarMerchant: "Mercader Estelar"
+			FrozenFarmer: "Granjera congelada"
+			Farmer: "Granjera"
 			SkitteringHusk: "Cascarón resbaladizo"
 			Eyeling: "Eyeling"
 			Clawclops: "Garrojo"
@@ -27,6 +51,7 @@ Mods:
 			GraniteSlime: "Slime de granito"
 			LihzahrdSlime: "Slime de templo"
 			MeteoriteWorm: "Gusano meteoro"
+			CopperBunny: "Conejo de cobre"
 		}
 
 		Bestiary: 
@@ -37,6 +62,7 @@ Mods:
 			Enchanter: Víctima de sus propios encantamientos, el ahora líberado encantador promete no volver a pifiarla.
 			McMoneyPants: Todos los que os burlais de mis terracajas misteriosas no borréis está descripción que nos reiemos todos al cabo de un tiempo.
 			StarMerchant: Futura actualización.
+			Farmer: Futura actualización.
 			Clawclops: Go, go, go, go, go, go, go, go, go, go! Gotta go fast, gotta go fast! Gotta go faster, faster, faster, faster, faster!.
 			Eyeling: Feroz bestia corrupta de 8 patas... o mas bien, inofensivo pseudocangrejo corrupto, hay quien dice que se puede domesticar.
 			SkitteringHusk: Un mero cascarón de lo que fue habitante de estas tierras ahora contaminadas por la Corrupción.
@@ -44,6 +70,7 @@ Mods:
 			GraniteSlime: Un slime normal y corriente, pero endurecido por el granito de las cuevas.
 			LihzahrdSlime: Los slimes se han colado en el templo, y como no, ya se han adaptado al medio.
 			MeteoriteWorm: ¡Gusanos espaciales... en la tierra!
+			CopperBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos despues de comer las raras frutas de los árboles del hombre de meteorito.
 		}
 		
 		#This is what displays during all of an NPC's happiness levels. Note that the localization key for these should always be "TownNPCMood.*NPCName*.*Mood*" or else it won't display properly.
@@ -218,7 +245,7 @@ Mods:
 				StandardDialogue3 : "Ciertos clones que aparecen en la mazmorra dan más [i:TheCollectors/MagicSoul] de lo normal."
 				InfoSoul: "Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno."
 				TalkALot : "En realidad mi cometido aquí iba a ser otro, rollo el duende chapucero, pero los desarrolladores son un poco negados..."
-				NotTalkALot: "MSoy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno."
+				NotTalkALot: "Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno."
 				PartyIsUp: "¡¿Una fiesta sorpresa!?, pásame las pócimas del estante de arriba... ¡es hora de empocimarse!"
 				InvasionGenerica: "No se que manía tienen con invadir este pueblo constantemente."
 				FrostInvasion1 : "Ojalá una invasión de muñecos de nieve para probar mi nuevo báculo de rubí."
@@ -247,12 +274,27 @@ Mods:
 				InvasionGenerica: "Madre de dios, cuanto primo... digo potenciales clientes."
 				NotInvasionGenerica: "Aquí hace falta una buena raid, necesito vender más Terrabox."
 			}
+
+			FrozenFarmer: 
+			{
+				RescueDialogue : "......"
+			}
+
+			StarMerchant: 
+			{
+				TemporalDialogue: "Temporal cosas"
+			}
+
+			Farmer: 
+			{
+				TemporalDialogue: "Temporal cosas"
+			}
 		}
 
 		ItemName: 
 		{
-			MeteoriteArrow: Flecha de meteorito
-			MeteorireHardenerSolution: Solución endurecedora de meteorito
+			MeteorArrow: Flecha de meteorito
+			MeteoriteHardenerSolution: Solución endurecedora de meteorito
 			MeteoriteSolution: Solución de meteorito
 			GraniteArmorHelmet: Casco de granito
 			GraniteArmorBreastplate: Armadura de granito
@@ -267,7 +309,7 @@ Mods:
 			RefinedMeteoriteHelmet: Casco de meteorito refinado
 			RefinedMeteoriteHood: Caperuza de meteorito refinado
 			RefinedMeteoriteLeggins: Grebas de meteorito refinado
-			RefinedMeteoriteMask: M�scara de meteorito refinado
+			RefinedMeteoriteMask: Máscara de meteorito refinado
 			SlimeCoat_Breastplate: Recubrimiento de Slime - Pecho
 			SlimeCoat_Leggings: Recubrimiento de Slime - Pantalones
 			SlimeCoat_Mask: Recubrimiento de Slime - Máscara
@@ -365,8 +407,8 @@ Mods:
 
 		ItemTooltip: 
 		{
-			MeteoriteArrow: "'Golpea como un meteorito'"
-			MeteorireHardenerSolution: "'Úsalo con el clentaminator, transforma el meteorito en meteorito endurecido'"
+			MeteorArrow: "'Golpea como un meteorito'"
+			MeteoriteHardenerSolution: "'Úsalo con el clentaminator, espárcelo sobre meteorito para endurecerlo'"
 			MeteoriteSolution: "'Úsalo con el clentaminator, transforma la piedra en meteorito'"
 			GraniteArmorHelmet: "'Un buen casco'"
 			GraniteArmorBreastplate: "'Una buena armadura'"
@@ -453,11 +495,7 @@ Mods:
 			MeteorClentaminator: "'No tan bueno como el Clentaminator'"
 			MeteorFishingPole: "'Puede pescar en la lava'"
 			MeteorPickaxe: "'Puede picar piedra infernal'"
-			MeteormanHeart: 
-				'''
-				Grants Metorbody buff
-				Reduces damage from touching lava
-				'''
+			MeteormanHeart: "'Otorga Cuerpo Meteórico'"
 			MeteorBoomerang: "'Puede infligir ¡En llamas! y 'Hemorragia' a los enemigos'"
 			MeteoriteSpear: "'Puede infligir ¡En llamas! a los enemigos'"
 			MeteoriteYoyo: "'Puede infligir ¡En llamas! a los enemigos'"

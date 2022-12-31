@@ -11,9 +11,7 @@ namespace TheCollectors.Buffs
             Main.buffNoTimeDisplay[Type] = false;
             Main.debuff[Type] = false; //Add this so the nurse doesn't remove the buff when healing
             DisplayName.SetDefault("Meteor Body");
-            //DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Cuerpo meteoro");
             Description.SetDefault("+20 Increased defense");
-            //Description.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "+20 de defensa");
         }
         public override void Update(Player player, ref int buffIndex)
         {

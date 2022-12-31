@@ -9,13 +9,9 @@ namespace TheCollectors.Items.Ammo
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Meteorite Hardener");
-			Tooltip.SetDefault("Used by the Clentaminator, spread true meteorite ore on meteorite ore.");
-			// Be sure to have "using Terraria.Localization".
-			//DisplayName.AddTranslation(GameCulture.Spanish, "Endurecedor de meteorito");
-			//Tooltip.AddTranslation(GameCulture.Spanish, "Úsalo con el clentaminator, transforma el meteorito en meteorito endurecido");
+			DisplayName.SetDefault("Meteorite Hardener Solution");
+			Tooltip.SetDefault("Used by the Clentaminator, spread it on meteorite to harden it.");
 		}
-
 		public override void SetDefaults()
 		{
 			Item.width = 10;

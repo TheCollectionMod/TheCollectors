@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Items.Armor
@@ -14,11 +13,7 @@ namespace TheCollectors.Items.Armor
 			DisplayName.SetDefault("Harpy Feather Crown");
 			Tooltip.SetDefault("3% Increased minion damage");
 			ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true; // Draw hair as if a hat was covering the top. Used by Wizards Hat
-																  // Be sure to have "using Terraria.Localization".
-			/*DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Corona de plumas de arpía");
-			Tooltip.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "+3% daño de súbditos.");*/
 		}
-
 		public override void SetDefaults() {
 			Item.width = 24;
 			Item.height = 22;
@@ -30,11 +25,9 @@ namespace TheCollectors.Items.Armor
 		{
 			player.GetDamage(DamageClass.Summon) += 0.03f;   // 3 % increased minion damage/
 		}
-
 		public override bool IsArmorSet(Item head, Item body, Item legs) {
 			return body.type == ItemType<HarpyFeatherChest>() && legs.type == ItemType<HarpyFeatherBoots>();
 		}
-
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = "9% Increased minion damage"

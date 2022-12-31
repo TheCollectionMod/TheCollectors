@@ -1,8 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.DataStructures;
 using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Buffs
@@ -15,7 +13,6 @@ namespace TheCollectors.Buffs
             Main.buffNoTimeDisplay[Type] = true;
             Main.lightPet[Type] = true;
         }
-
         public override void Update(Player player, ref int buffIndex) {
             player.GetModPlayer<TheCollectorsPlayer>().MyLightPet = true;
             player.buffTime[buffIndex] = 18000;

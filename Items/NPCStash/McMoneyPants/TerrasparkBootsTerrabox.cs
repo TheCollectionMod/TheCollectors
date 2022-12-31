@@ -41,17 +41,17 @@ namespace TheCollectors.Items.NPCStash.McMoneyPants
 				ItemDropRule.NotScalingWithLuck(ItemID.Obsidian, 1, 5, 10),
 			};
 
-			var comun = new IItemDropRule[1] 
+			var comun = new IItemDropRule[5] 
 			{
 				ItemDropRule.NotScalingWithLuck(ItemID.ObsidianSkull, 1),
-			};
-
-			var raro = new IItemDropRule[11] 
-			{
 				ItemDropRule.NotScalingWithLuck(ItemID.SailfishBoots, 1),
 				ItemDropRule.NotScalingWithLuck(ItemID.HermesBoots, 1),
 				ItemDropRule.NotScalingWithLuck(ItemID.SandBoots, 1),
 				ItemDropRule.NotScalingWithLuck(ItemID.FlurryBoots, 1),
+			};
+
+			var raro = new IItemDropRule[7] 
+			{
 				ItemDropRule.NotScalingWithLuck(ItemID.WaterWalkingBoots, 1),
 				ItemDropRule.NotScalingWithLuck(ItemID.RocketBoots, 1),
 				ItemDropRule.NotScalingWithLuck(ItemID.Aglet, 1),

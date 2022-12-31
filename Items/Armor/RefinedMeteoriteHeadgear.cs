@@ -48,22 +48,22 @@ namespace TheCollectors.Items.Armor
 		{
 			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
 							+ "\nEmits an aura of light"
-							+ "\nIncreased defense when under 200 health"
+							+ "\nReduced damage taken when under half health"
 							+ "\n20% reduced mana usage"
-							+ "\nRefined Meteor Staff don't consume mana";
+							+ "\nRefined Meteor Staff don't consume mana"; //Revisar
 			player.AddBuff(BuffID.Shine, 2);
 			player.buffImmune[BuffID.OnFire] = true;
 			player.buffImmune[BuffID.Burning] = true;
 			player.lavaImmune = true;
-			/*if (player.statLife < 200)  //Ej condicion: Añade el buffo cuando la vida baja de 200
+			if (player.statLife < 0.5f * player.statLifeMax)
 			{
-				player.AddBuff(mod.BuffType("MeteorbodyBuff"), 2);
-			}*/
+				player.AddBuff(ModContent.BuffType<Buffs.MeteorbodyBuff>(), 3600, false);
+			}
 			player.manaCost -= 0.2f;    //20% decreased mana cost
-			if (Main.LocalPlayer.HasItem(ItemID.MeteorStaff))
+			/*if (Main.LocalPlayer.HasItem(ItemID.MeteorStaff))
 			{
 				player.spaceGun = true;
-			}
+			}*/
 		}
 
 		public override void ArmorSetShadows(Player player)
