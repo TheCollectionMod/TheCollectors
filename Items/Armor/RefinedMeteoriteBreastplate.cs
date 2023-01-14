@@ -17,7 +17,7 @@ namespace TheCollectors.Items.Armor
 		{
 			Item.width = 18;
 			Item.height = 18;
-			Item.value = 10000;
+			Item.value = Item.sellPrice(0, 1, 50, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.defense = 15;
 		}

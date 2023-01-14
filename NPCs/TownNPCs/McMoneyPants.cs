@@ -153,15 +153,21 @@ namespace TheCollectors.NPCs.TownNPCs
             shop.item[nextSlot].shopSpecialCurrency = TheCollectors.TerraCoinId;
             nextSlot++;
 
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.McMoneyPants.ZenithTerrabox>());
-            shop.item[nextSlot].shopCustomPrice = 1;
-            shop.item[nextSlot].shopSpecialCurrency = TheCollectors.TerraCoinId;
-            nextSlot++;
+            if (Main.hardMode)
+            {
+                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.McMoneyPants.TerrasparkBootsTerrabox>());
+                shop.item[nextSlot].shopCustomPrice = 1;
+                shop.item[nextSlot].shopSpecialCurrency = TheCollectors.TerraCoinId;
+                nextSlot++;
+            }
+            if (NPC.downedMoonlord)
+            {
+                shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.McMoneyPants.ZenithTerrabox>());
+                shop.item[nextSlot].shopCustomPrice = 1;
+                shop.item[nextSlot].shopSpecialCurrency = TheCollectors.TerraCoinId;
+                nextSlot++;
+            }
 
-            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.McMoneyPants.TerrasparkBootsTerrabox>());
-            shop.item[nextSlot].shopCustomPrice = 1;
-            shop.item[nextSlot].shopSpecialCurrency = TheCollectors.TerraCoinId;
-            nextSlot++;
         }
         /*rule => rule is ItemDropWithConditionRule drop // If the rule is an ItemDropWithConditionRule instance
 						&& drop.itemId == ItemID.GreenCap // And that instance drops a green cap

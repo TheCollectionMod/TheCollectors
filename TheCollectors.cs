@@ -33,7 +33,7 @@ namespace TheCollectors
 				MagicSoulId = CustomCurrencyManager.RegisterCurrency(new Currencies.MagicSoul(ModContent.ItemType<Items.MagicSoul>(), 999L, "Magic Soul"));
 
 			}
-			if (ModLoader.TryGetMod("BossesAsNPCs", out Mod BossesAsNPCs))
+			/*if (ModLoader.TryGetMod("BossesAsNPCs", out Mod BossesAsNPCs))
 			{
 				//bossesAsNPCs.Call, ModContent.NPCType<KingSlime>();
 				BossesAsNPCs.Call("KingSlime");
@@ -42,7 +42,7 @@ namespace TheCollectors
 				////bossesAsNPCs.Call("AddToShop", "DefaultPrice", "IceQueen", ModContent.ItemType<Items.Weapons.Summon.Whips.FestiveWhip>(), () => true);
 				//bossesAsNPCs.Call("AddToShop", "DefaultPrice", "BrainOfCthulhu", ModContent.ItemType<Items.Materials.CrawlerChelicera>(), () => true);
 				//.Call("AddToShop", "DefaultPrice", "QueenSlime", ModContent.ItemType<Items.Weapons.Summon.Cudgels.CrystalClusterCudgel>(), () => true);
-			}
+			}*/
 			/*if (ModLoader.TryGetMod("BossesAsNPCs", out Mod BossesAsNPCs))
 			{
 				BossesAsNPCs.Call(ModContent.NPCType<KingSlime>());

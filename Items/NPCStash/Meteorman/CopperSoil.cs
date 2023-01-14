@@ -42,12 +42,8 @@ namespace TheCollectors.Items.NPCStash.Meteorman
 		{
 			int[] gems = new int[]
 			{
-				ItemID.Topaz,
-				ItemID.Amethyst,
-				ItemID.Sapphire,
-				ItemID.Emerald,
-				ItemID.Diamond,
-				ItemID.Ruby
+				ItemID.CopperOre,
+				ItemID.MudBlock
 			};
 			resultStack = Main.rand.Next(7, 15);
 			resultType = Main.rand.Next(gems);

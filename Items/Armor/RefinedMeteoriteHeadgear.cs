@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Items.Armor
@@ -14,34 +13,25 @@ namespace TheCollectors.Items.Armor
 			DisplayName.SetDefault("Refined Meteorite Headgear");
 			Tooltip.SetDefault("+100 max mana"
 			+ "\n+12% increased magic damage and critical strike chance");
-
-			// Be sure to have "using Terraria.Localization".
-			/*DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Tocado de meteorito refinado");
-			Tooltip.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "+100 de maná máximo"
-			+ "\n+12% daño mágico"
-			+ "\n+12% probabilidad de ataque crítico mágico");*/
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 18;
 			Item.height = 18;
-			Item.value = 10000;
+			Item.value = Item.sellPrice(0, 1, 50, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.defense = 5;
 		}
 		public override void UpdateEquip(Player player)
 		{
 			player.statManaMax2 += 100;
-			//player.magicDamage += 0.12f;
-			//player.magicCrit = 12;
 			player.GetDamage(DamageClass.Magic) += 0.12f; // Increase by 12%
 			player.GetCritChance(DamageClass.Magic) += 0.12f; // Increase by 12%
 		}
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-
 			return body.type == ItemType<RefinedMeteoriteBreastplate>() && legs.type == ItemType<RefinedMeteoriteLeggings>();
 		}
 		public override void UpdateArmorSet(Player player)
@@ -59,7 +49,7 @@ namespace TheCollectors.Items.Armor
 			{
 				player.AddBuff(ModContent.BuffType<Buffs.MeteorbodyBuff>(), 3600, false);
 			}
-			player.manaCost -= 0.2f;    //20% decreased mana cost
+			player.manaCost -= 0.2f;    //20% decreased mana cost 
 			/*if (Main.LocalPlayer.HasItem(ItemID.MeteorStaff))
 			{
 				player.spaceGun = true;

@@ -14,28 +14,22 @@ namespace TheCollectors.Items.Armor
 				+ "\n+10% increased melee critical strike chance."
 				+ "\n+10% increased melee speed.");
 		}
-
 		public override void SetDefaults() {
 			Item.width = 18;
 			Item.height = 18;
-			Item.value = 10000;
+			Item.value = Item.sellPrice(0, 1, 50, 0);
 			Item.rare = ItemRarityID.Pink;
 			Item.defense = 24;
 		}
 		public override void UpdateEquip(Player player)
 		{
-			//player.meleeDamage += 0.10f;   /*10 % increased melee damage*/
-			//player.meleeCrit += 10;        /*10 % increased melee critical strike chance*/
-			//player.meleeSpeed += 0.1f;     /*10% increased melee speed*/
 			player.GetDamage(DamageClass.Melee) += 0.10f; // Increase by 10%
 			player.GetCritChance(DamageClass.Melee) += 0.10f; // Increase by 10%
 			player.GetAttackSpeed(DamageClass.Melee) += 0.10f; // Increase by 10%
 		}
-
 		public override bool IsArmorSet(Item head, Item body, Item legs) {
 			return body.type == ItemType<RefinedMeteoriteBreastplate>() && legs.type == ItemType<RefinedMeteoriteLeggings>();
 		}
-
 		public override void UpdateArmorSet(Player player)
 		{
 			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
@@ -50,7 +44,6 @@ namespace TheCollectors.Items.Armor
 			player.buffImmune[BuffID.Burning] = true;
 			player.lavaImmune = true;
 			player.GetAttackSpeed(DamageClass.Melee) += 0.19f; // Increase by 19%
-			//player.meleeSpeed += 0.19f;      /*19% Increased melee speed*/
 			player.moveSpeed += 0.19f;       /*19% Increases movement speed*/
 			player.statLifeMax2 += 25;     /*Increases maximum life by 25*/
 			if (player.statLife < 0.5f * player.statLifeMax)

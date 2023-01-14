@@ -23,7 +23,6 @@ namespace TheCollectors.Items.Armor
 		}
 		public override void UpdateEquip(Player player) 
 		{
-			//player.minionDamage += 0.03f;
 			player.GetDamage(DamageClass.Summon) += 0.03f;   // 3 % increased minion damage/
 		}
 	}

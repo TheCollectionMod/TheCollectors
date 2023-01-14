@@ -308,7 +308,7 @@ Mods:
 			RefinedMeteoriteHeadgear: Tocado de meteorito refinado
 			RefinedMeteoriteHelmet: Casco de meteorito refinado
 			RefinedMeteoriteHood: Caperuza de meteorito refinado
-			RefinedMeteoriteLeggins: Grebas de meteorito refinado
+			RefinedMeteoriteLeggigns: Grebas de meteorito refinado
 			RefinedMeteoriteMask: Máscara de meteorito refinado
 			SlimeCoat_Breastplate: Recubrimiento de Slime - Pecho
 			SlimeCoat_Leggings: Recubrimiento de Slime - Pantalones
@@ -403,6 +403,10 @@ Mods:
 			RubyStaffTier2: Báculo de rubí piroexplosivo
 			DiamondStaffTier1: Báculo de diamante telesanador
 			DiamondStaffTier2: Báculo de diamante telemultisanador
+			AnkhShieldTerrabox: Terracaja misteriosa - Escudo de cruz ansata
+			ShellphoneTerrabox: Terracaja misteriosa - Teleconcha
+			TerrasparkBootsTerrabox: Terracaja misteriosa - Botas de terrachispa
+			ZenithTerrabox: Terracaja misteriosa - Cénit
 		}
 
 		ItemTooltip: 

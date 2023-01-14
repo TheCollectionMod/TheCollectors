@@ -30,7 +30,7 @@ namespace TheCollectors.Items.Armor
 			player.AddBuff(BuffID.Endurance, 2);
 			player.GetDamage(DamageClass.Melee) += 0.10f;   /*10 % increased melee damage*/
 			TheCollectorsPlayer modPlayer = player.GetModPlayer<TheCollectorsPlayer>();
-				modPlayer.fullGraniteSet = true;
+			modPlayer.fullGraniteSet = true;
 		}
 	}
 }

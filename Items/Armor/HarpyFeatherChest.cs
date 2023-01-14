@@ -25,12 +25,5 @@ namespace TheCollectors.Items.Armor
 		{
 			player.GetDamage(DamageClass.Summon) += 0.03f;   // 3 % increased minion damage/
 		}
-		public override void AddRecipes()
-		{
-			Recipe.Create(ModContent.ItemType<Items.Armor.HarpyFeatherChest>(), 1)
-				.AddIngredient(ItemID.Feather, 25)
-				.AddTile(TileID.Furnaces)
-				.Register();
-		}
 	}
 }
