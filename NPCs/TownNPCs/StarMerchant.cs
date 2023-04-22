@@ -170,7 +170,7 @@ namespace TheCollectors.NPCs.TownNPCs
             gravityCorrection = 0f;
             randomOffset = 2f;
         }
-        public override void HitEffect(int hitDirection, double damage) //cambiar los gores a troncos
+        public override void HitEffect(int hitDirection, double damage) //revisar cambiar los gores
         {
             if (NPC.life <= 0)
             {

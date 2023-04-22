@@ -32,7 +32,7 @@ namespace TheCollectors.Items.Pets
 		{
 			if (player.whoAmI == Main.myPlayer && player.itemTime == 0)
 			{
-				player.AddBuff(Item.buffType, 3600);
+				player.AddBuff(Item.buffType, 3600, true);
 			}
 		}
 	}

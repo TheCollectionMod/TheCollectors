@@ -99,11 +99,16 @@ namespace TheCollectors.Items.Placeable.Paintings
 			Item.placeStyle = 0;
 		}
 	}
+
 	public class NinjaPaintingVol1 : ModPainting
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("NinjaPaintingVol1");
+			DisplayName.SetDefault("Exploring no Jutsu");
+			Tooltip.SetDefault("Ninja Collection Vol.1"
+							+ "\n'The technique shown here consists of getting on"
+							+ "\na high place and looking at the horizon'"
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -115,7 +120,10 @@ namespace TheCollectors.Items.Placeable.Paintings
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("NinjaPaintingVol2");
+			DisplayName.SetDefault("Brawl no Jutsu");
+			Tooltip.SetDefault("Ninja Collection Vol.2"
+							+ "\nWhen you meet many enemies, it is best to mount a good brawl"
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -127,7 +135,11 @@ namespace TheCollectors.Items.Placeable.Paintings
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("NinjaPaintingVol3");
+			DisplayName.SetDefault("Slip no Jutsu");
+			Tooltip.SetDefault("Ninja Collection Vol.3"
+							+ "\n'Here I am fooling the enemy with my classic"
+							+ "\nslip, with this he will lower his guard'"
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -139,7 +151,11 @@ namespace TheCollectors.Items.Placeable.Paintings
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("NinjaPaintingVol4");
+			DisplayName.SetDefault("Help Please no Jutsu");
+			Tooltip.SetDefault("Ninja Collection Vol.4"
+							+ "\n'The enemy was more skilled than I thought, "
+							+ "\nso I had to resort to asking for help'"
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -151,7 +167,11 @@ namespace TheCollectors.Items.Placeable.Paintings
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("NinjaPaintingVol5");
+			DisplayName.SetDefault("Gratitude no Jutsu");
+			Tooltip.SetDefault("Ninja Collection Vol.5"
+							+ "\n'This is a very complex technique, few manage to carry"
+							+ "\nit out successfully, gratitude is no small feat'"
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -163,7 +183,11 @@ namespace TheCollectors.Items.Placeable.Paintings
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("NinjaPaintingVolEx");
+			DisplayName.SetDefault("Training no Jutsu");
+			Tooltip.SetDefault("Ninja Collection Vol.Ex"
+							+ "\n'Ah yes, the classic training sequence, it is actually "
+							+ "\nthe best ninja technique to increase your ninja points'"
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{

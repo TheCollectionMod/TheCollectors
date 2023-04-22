@@ -7,7 +7,7 @@ namespace TheCollectors.Buffs
 {
 	public class FlyingEyeling : ModBuff
 	{
-		public override void SetStaticDefaults()
+		public override void SetStaticDefaults() //revisar, este pet no va, no se si es problema del buff, item o proyectil
 		{
 			DisplayName.SetDefault("Flying Eyeling");
 			Description.SetDefault("It seems that these beings can fly");

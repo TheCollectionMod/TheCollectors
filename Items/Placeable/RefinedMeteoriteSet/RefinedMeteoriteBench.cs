@@ -12,13 +12,12 @@ namespace TheCollectors.Items.Placeable.RefinedMeteoriteSet
 			DisplayName.SetDefault("Refined Meteorite Bench");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
-
 		public override void SetDefaults()
 		{
 			//Common Properties
 			Item.width = 28;
 			Item.height = 20;
-			Item.value = Item.sellPrice(0, 0, 4, 0);
+			Item.value = Item.sellPrice(0, 0, 0, 60);
 			Item.rare = ItemRarityID.White;
 			Item.maxStack = 99;
 			Item.consumable = true;

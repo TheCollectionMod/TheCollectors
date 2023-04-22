@@ -1,2 +1,3 @@
 Rijam's Mod (code injured NPC)
 Lorem Ipsum
+https://github.com/gardenappl/Miscellania (fireplace and chimmey code)

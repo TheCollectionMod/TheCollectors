@@ -12,9 +12,7 @@ namespace TheCollectors.Items.Placeable.RefinedMeteoriteSet
 			DisplayName.SetDefault("Refined Meteorite Block");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 			ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
-
 		}
-
 		public override void SetDefaults()
 		{
 			//Common Properties

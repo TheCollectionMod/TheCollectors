@@ -10,10 +10,8 @@ namespace TheCollectors.Items.Placeable.RefinedMeteoriteSet
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Refined Meteorite Chair");
-
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
-
 		public override void SetDefaults()
 		{
 			//Common Properties

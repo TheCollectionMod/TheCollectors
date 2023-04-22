@@ -169,14 +169,10 @@ namespace TheCollectors.NPCs.TownNPCs
             }
 
         }
-        /*rule => rule is ItemDropWithConditionRule drop // If the rule is an ItemDropWithConditionRule instance
-						&& drop.itemId == ItemID.GreenCap // And that instance drops a green cap
-						&& drop.condition is Conditions.NamedNPC npcNameCondition // ..And if its condition is that an npc name must match some string
-						&& npcNameCondition.neededName == "Andrew" // And the condition's string is "Andrew".*/
         public override string GetChat()
         {
             NumberOfTimesTalkedTo++;
-            switch (Main.rand.Next(4))
+            switch (Main.rand.Next(3))
             {
                 case 0:
                     {
@@ -235,40 +231,21 @@ namespace TheCollectors.NPCs.TownNPCs
                         {
                             case 1:
 
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.InvansionGenerica");
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.InvansionGenerica");
                             case 2:
 
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.InvansionGenerica");
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.InvansionGenerica");
                             case 3:
 
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.InvansionGenerica");
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.InvansionGenerica");
                             case 4:
 
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.InvansionGenerica");
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.InvansionGenerica");
                             default:
 
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.NotInvansionGenerica");
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.NotInvansionGenerica");
                         }
                     }
-                case 3:
-                    {
-                        switch (Main.rand.Next(2))
-                        {
-                            case 0:
-                                if (Main.slimeRain)
-                                {
-                                    return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.QueenSlime2");
-                                }
-                                else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.QueenSlime1");
-                            case 1:
-                                if (Main.slimeRain)
-                                {
-                                    return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.SlimeRain2");
-                                }
-                                else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.SlimeRain1");
-                        }
-                    }
-                    return null;
             }
             return null;
         }
@@ -342,6 +319,10 @@ namespace TheCollectors.NPCs.TownNPCs
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
+            /*rule => rule is ItemDropWithConditionRule drop // If the rule is an ItemDropWithConditionRule instance
+        && drop.itemId == ItemID.GreenCap // And that instance drops a green cap
+        && drop.condition is Conditions.NamedNPC npcNameCondition // ..And if its condition is that an npc name must match some string
+        && npcNameCondition.neededName == "Andrew" // And the condition's string is "Andrew".*/
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Armor.Vanity.McMoneyHat>(), 10)); // Drop a stack of 5 to 15 items with 1 in 2 chance (50% chance)
         }
         public override void HitEffect(int hitDirection, double damage)

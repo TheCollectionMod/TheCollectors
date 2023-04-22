@@ -1,8 +1,7 @@
 ﻿using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.Localization;
 using Terraria.GameContent.Creative;
+using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using static Terraria.ModLoader.ModContent;
 
@@ -13,8 +12,8 @@ namespace TheCollectors.Items.Pets
         public override void SetStaticDefaults() {
             DisplayName.SetDefault("Monja");
             Tooltip.SetDefault("Summons a Monja light");
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
-
         public override void SetDefaults() {
             Item.damage = 0;
             Item.useStyle = ItemUseStyleID.Swing;
@@ -31,7 +30,8 @@ namespace TheCollectors.Items.Pets
         }
 
         public override void UseStyle(Player player, Rectangle heldItemFrame) { 
-            if (player.whoAmI == Main.myPlayer && player.itemTime == 0) {
+            if (player.whoAmI == Main.myPlayer && player.itemTime == 0) 
+            {
                 player.AddBuff(Item.buffType, 3600, true);
             }
         }

@@ -3,12 +3,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Microsoft.Xna.Framework;
-using Terraria.Localization;
-using static Terraria.ModLoader.ModContent;
-using System.Collections.Generic;
-using Terraria.IO;
-using Terraria.WorldBuilding;
-
 
 namespace TheCollectors.Items.NPCStash.Meteorman
 {
@@ -40,30 +34,18 @@ namespace TheCollectors.Items.NPCStash.Meteorman
 		}
 		public override void ExtractinatorUse(ref int resultType, ref int resultStack)
 		{
-			int[] gems = new int[]
+			int[] soil = new int[]
 			{
 				ItemID.PlatinumOre,
-				ItemID.MudBlock
+				ItemID.MudBlock,
+				ItemID.SlushBlock,
+				ItemID.DirtBlock,
+				ItemID.SiltBlock,
+				ItemID.ClayBlock
 			};
-			resultStack = Main.rand.Next(7, 15);
-			resultType = Main.rand.Next(gems);
+			resultStack = Main.rand.Next(1, 1);
+			resultType = Main.rand.Next(soil);
 		}
-		/*public override void ExtractinatorUse(ref int resultType, ref int resultStack)
-		{ // Calls upon use of an extractinator. Below is the chance you will get ExampleOre from the extractinator.
-			if (Main.rand.NextBool(3))
-			{
-				resultType = ItemID.CopperOre;  // Get this from the extractinator with a 1 in 3 chance.
-				if (Main.rand.NextBool(5))
-				{
-					resultStack += Main.rand.Next(2); // Add a chance to get more than one of ExampleOre from the extractinator.
-				}
-				/*resultType = ModContent.ItemType<HardenedMeteoriteOre>();  // Get this from the extractinator with a 1 in 3 chance.
-				if (Main.rand.NextBool(5))
-				{
-					resultStack += Main.rand.Next(2); // Add a chance to get more than one of ExampleOre from the extractinator.
-				}
-			}
-		}*/
 	}
 	public class PlatinumSoilTile : ModTile
 	{
@@ -71,7 +53,6 @@ namespace TheCollectors.Items.NPCStash.Meteorman
 		{
 			TileID.Sets.Ore[Type] = true;
 			Main.tileSpelunker[Type] = true; // The tile will be affected by spelunker highlighting
-											 //Main.tileOreFinderPriority[Type] = 720; // Metal Detector value, see https://terraria.gamepedia.com/Metal_Detector
 			Main.tileShine2[Type] = false; // Modifies the draw color slightly.
 			Main.tileShine[Type] = 875; // How often tiny dust appear off this tile. Larger is less frequently
 			Main.tileMergeDirt[Type] = true;
@@ -84,12 +65,11 @@ namespace TheCollectors.Items.NPCStash.Meteorman
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Platinum Soil");
 			AddMapEntry(new Color(207, 170, 216), name);
-			//name.AddTranslation(GameCulture.Spanish, "Meteorito endurecido");
 
-			DustType = DustID.FlameBurst;
+			DustType = DustID.Platinum;
 			ItemDrop = ModContent.ItemType<Items.NPCStash.Meteorman.PlatinumSoil>();
 			HitSound = SoundID.Tink;
-			//soundStyle = 1;
+
 			MineResist = 4f;
 			MinPick = 20;
 		}

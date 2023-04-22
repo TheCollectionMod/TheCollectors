@@ -23,12 +23,6 @@ namespace TheCollectors.Items.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.AddBuff(ModContent.BuffType<MeteorbodyBuff>(), 0);
-
-			/*if (player.HasBuff(BuffID.OnFire))
-			{
-				player.AddBuff(ModContent.BuffType<HealingFire>(), 0);
-
-			} */
 		}
 	}
 }

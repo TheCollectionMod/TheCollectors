@@ -51,7 +51,67 @@ Mods:
 			GraniteSlime: "Slime de granito"
 			LihzahrdSlime: "Slime de templo"
 			MeteoriteWorm: "Gusano meteoro"
+			MeteorFairy: "Hada meteoro"
 			CopperBunny: "Conejo de cobre"
+			TinBunny: "Conejo de estaño"
+			IronBunny: "Conejo de hierro"
+			LeadBunny: "Conejo de plomo"
+			SilverBunny: "Conejo de plata"
+			TungstenBunny: "Conejo de tungsteno"
+			GoldBunny: "Conejo de oro"
+			PlatinumBunny: "Conejo de platino"
+			SturdyFossilBunny: "Conejo de fósil férreo"
+			MeteoriteBunny: "Conejo de meteorito"
+			DemoniteBunny: "Conejo endemoniado"
+			CrimtaneBunny: "Conejo carmesí"
+			ObsidianBunny: "Conejo de obsidiana"
+			HellstoneBunny: "Conejo infernal"
+			CobaltBunny: "Conejo de cobalto"
+			PalladiumBunny: "Conejo de paladio"
+			MythrilBunny: "Conejo de mithril"
+			OrichalcumBunny: "Conejo de oricalco"
+			AdamantiteBunny: "Conejo de adamantita"
+			TitaniumBunny: "Conejo de titanio"
+			HallowedBunny: "Conejo sagrado"
+			HardenedMeteoriteBunny: "Conejo de meteorito endurecido"
+			ChlorophyteBunny: "Conejo de clorofita"
+			ShroomiteBunny: "Conejo de piñonita"
+			SpectreBunny: "Conejo espectral"
+			LuminiteBunny: "Conejo de luminita"
+			SolarBunny: "Conejo solar"
+			NebulaBunny: "Conejo nebuloso"
+			StardustBunny: "Conejo de polvo estelar"
+			VortexBunny: "Conejo vórtice"
+			CopperSquirrel: "Ardilla de cobre"
+			TinSquirrel: "Ardilla de estaño"
+			IronSquirrel: "Ardilla de hierro"
+			LeadSquirrel: "Ardilla de plomo"
+			SilverSquirrel: "Ardilla de plata"
+			TungstenSquirrel: "Ardilla de tungsteno"
+			GoldSquirrel: "Ardilla de oro"
+			PlatinumSquirrel: "Ardilla de platino"
+			SturdyFossilSquirrel: "Ardilla de fósil férreo"
+			MeteoriteSquirrel: "Ardilla de meteorito"
+			DemoniteSquirrel: "Ardilla endemoniada"
+			CrimtaneSquirrel: "Ardilla carmesí"
+			ObsidianSquirrel: "Ardilla de obsidiana"
+			HellstoneSquirrel: "Ardilla infernal"
+			CobaltSquirrel: "Ardilla de cobalto"
+			PalladiumSquirrel: "Ardilla de paladio"
+			MythrilSquirrel: "Ardilla de mithril"
+			OrichalcumSquirrel: "Ardilla de oricalco"
+			AdamantiteSquirrel: "Ardilla de adamantita"
+			TitaniumSquirrel: "Ardilla de titanium"
+			HallowedSquirrel: "Ardilla sagrada"
+			HardenedMeteoriteSquirrel: "Ardilla de meteorito endurecido"
+			ChlorophyteSquirrel: "Ardilla de clorofita"
+			ShroomiteSquirrel: "Ardilla de piñonita"
+			SpectreSquirrel: "Ardilla espectral"
+			LuminiteSquirrel: "Ardilla de luminita"
+			SolarSquirrel: "Ardilla solar"
+			NebulaSquirrel: "Ardilla nebuloso"
+			StardustSquirrel: "Ardilla de polvo estelar"
+			VortexSquirrel: "Ardilla vórtice"
 		}
 
 		Bestiary: 
@@ -70,7 +130,67 @@ Mods:
 			GraniteSlime: Un slime normal y corriente, pero endurecido por el granito de las cuevas.
 			LihzahrdSlime: Los slimes se han colado en el templo, y como no, ya se han adaptado al medio.
 			MeteoriteWorm: ¡Gusanos espaciales... en la tierra!
-			CopperBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos despues de comer las raras frutas de los árboles del hombre de meteorito.
+			MeteorFairy: Extrañas esquirlas de fuego que parecen tener vida propia.
+			CopperBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			TinBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			IronBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			LeadBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			SilverBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			TungstenBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			GoldBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			PlatinumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			SturdyFossilBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			MeteoriteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			DemoniteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			CrimtaneBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			ObsidianBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			HellstoneBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			CobaltBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			PalladiumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			MythrilBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			OrichalcumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			AdamantiteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			TitaniumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			HallowedBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			HardenedMeteoriteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			ChlorophyteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			ShroomiteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			SpectreBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			LuminiteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			SolarBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			NebulaBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			StardustBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			VortexBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
+			CopperSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			TinSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			IronSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			LeadSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			SilverSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			TungstenSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			GoldSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			PlatinumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			SturdyFossilSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			MeteoriteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			DemoniteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			CrimtaneSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			ObsidianSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			HellstoneSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			CobaltSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			PalladiumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			MythrilSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			OrichalcumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			AdamantiteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			TitaniumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			HallowedSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			HardenedMeteoriteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			ChlorophyteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			ShroomiteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			SpectreSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			LuminiteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			SolarSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			NebulaSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			StardustSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			VortexSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
 		}
 		
 		#This is what displays during all of an NPC's happiness levels. Note that the localization key for these should always be "TownNPCMood.*NPCName*.*Mood*" or else it won't display properly.
@@ -150,21 +270,21 @@ Mods:
 
 			McMoneyPants: 
 			{
-				Content: I'm feeling good!
-				NoHome: Do you have any spare housing? Please? Anything? Even a jail cell is fine with me!
-				LoveSpace: Peace and quiet means I get to live it up!
-				FarFromHome: I think my house was that way... unless you're taking me somewhere?
-				DislikeCrowded: The more the merrier and all, but I'm starting to feel a lil' overcrowded.
-				HateCrowded: I can't kick my legs out and relax without hitting someone...
-				LikeBiome: "Ha ha ha, something about {BiomeName} just makes me laugh uncontrollably for some reason!"
-				LoveBiome: The stars above are so pretty, I love watching them go by so much!
-				DislikeBiome: Can we go somewhere warmer than this?
-				HateBiome: I wanna live elsewhere! This is awful, I'm sweating up a storm!
-				LikeNPC: "{NPCName} is my big-but-not-biggest bro. He's pretty cool!"
-				LikeNPC_Princess: "I gotta visit {NPCName} again sometime, there's a girl who gets me!"
-				LoveNPC: "{NPCName} is here! That's my big bro, isn't he just the coolest?!"
-				DislikeNPC: "I can't stand girls like {NPCName}, feels like she's just here for a certain audience."
-				HateNPC: "Just between us. Have you ever considered throwing {NPCName} back where you found him?"
+				Content: Jeje, nuevos vecinos a los que poder timar..., digo vender mis fantasticos productos.
+				NoHome: Voy a necesitar bastante espacio, un buen almacén, con caja fuerte por supuesto.
+				LoveSpace: El bosque es el mejor lugar para mi negocio, suelo barato que nadie quiere.
+				FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
+				DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
+				HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
+				LikeBiome: "..."
+				LoveBiome: "Aquí se respira negocio"
+				DislikeBiome: "..."
+				HateBiome: "..."
+				LikeNPC: "Me encanta que {NPCName} cobre por sus servicios, la privatización es el futuro."
+				LikeNPC_Princess: "¿{NPCName} es una princesa?, que maravilla, estos son unos primos..."
+				LoveNPC: "Es bueno que la gente deje a otros administrar su dinero, {NPCName} lo sabe bien."
+				DislikeNPC: "..."
+				HateNPC: "..."
 			}
 		}
 		
@@ -233,6 +353,10 @@ Mods:
 				MeteoriteHardenerSolution2: "Me llevó algo mas de lo esperado, pero por fin la tengo, con esto podemos mejorar el meteorito."
 				RefinedMeteoriteOre: "Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Mythril."
 				MeteoriteOre: "Por ahora deberíamos hacer acopio de mineral de meteorito, cuando recupere mis herramientas podremos hacer cosas chulas."
+				SoilsDialogue1: "En mi tiempo libre soy aficcionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares"
+				SoilsDialogue2: "¡Que diversidad de minerales hay en la Tierra!, podremos conseguir multitud de nuevos frutos ricos en minerales."
+				SoilsDialogue3: "Parece que las ardillas cambian de color cuando comen los frutos de los árboles mineralosos, igual te encuentras alguna en los árboles."
+				SoilsDialogue4: "A algunos conejos les gusta hacer sus madrigueras en los sustratos que preparo, por algún motivo los hacen cambiar de color..."
 			}
 
 			Enchanter: 
@@ -282,12 +406,12 @@ Mods:
 
 			StarMerchant: 
 			{
-				TemporalDialogue: "Temporal cosas"
+				TemporalDialogue: "Hola, todavía estoy pensando que hacer, por ahora venderé unas estrellas"
 			}
 
 			Farmer: 
 			{
-				TemporalDialogue: "Temporal cosas"
+				TemporalDialogue: "Gracias por rescatarme, en un futuro podré ayudarte"
 			}
 		}
 
@@ -296,6 +420,8 @@ Mods:
 			MeteorArrow: Flecha de meteorito
 			MeteoriteHardenerSolution: Solución endurecedora de meteorito
 			MeteoriteSolution: Solución de meteorito
+			MeteormanMask: Máscara del hombre de meteorito
+			McMoneyHat: Gorro del tío gacha
 			GraniteArmorHelmet: Casco de granito
 			GraniteArmorBreastplate: Armadura de granito
 			GraniteArmorGreaves: Perneras de granito
@@ -308,7 +434,7 @@ Mods:
 			RefinedMeteoriteHeadgear: Tocado de meteorito refinado
 			RefinedMeteoriteHelmet: Casco de meteorito refinado
 			RefinedMeteoriteHood: Caperuza de meteorito refinado
-			RefinedMeteoriteLeggigns: Grebas de meteorito refinado
+			RefinedMeteoriteLeggings: Grebas de meteorito refinado
 			RefinedMeteoriteMask: Máscara de meteorito refinado
 			SlimeCoat_Breastplate: Recubrimiento de Slime - Pecho
 			SlimeCoat_Leggings: Recubrimiento de Slime - Pantalones
@@ -319,8 +445,18 @@ Mods:
 			WyvernHelmet: Casco de escamas de guiverno
 			FlyingEyeling: Eyeling volador
 			LivingSpaceRock: Roca espacial viviente
-			MeteormanPainting1: La llegada
-			NinjaPainting4: Pidiendo ayuda
+			MeteormanPaintingVol1: Grietas lunares
+			MeteormanPaintingVol2: Colisión espacial
+			MeteormanPaintingVol3: Descenso a la Tierra
+			MeteormanPaintingVol4: Llegada mortal
+			MeteormanPaintingVol5: Al tercer día resucitó
+			MeteormanPaintingVolEx: Una nueva vida
+			NinjaPaintingVol1: Técnica Ninja - Explorando
+			NinjaPaintingVol2: Técnica Ninja - Gresca
+			NinjaPaintingVol3: Técnica Ninja - Resbalón
+			NinjaPaintingVol4: Técnica Ninja - Ayuda, por favor
+			NinjaPaintingVol5: Técnica Ninja - Gratitud
+			NinjaPaintingVolEx: Técnica Ninja - Entrenamiento
 			ClawclopsBanner: Estandarte de Garrojo
 			CorruptedFlameElementalBanner: Estandarte de Llama elemental corrupta
 			EyelingBanner: Estantarte de Eyeling
@@ -328,7 +464,7 @@ Mods:
 			HardenedMeteoriteOre: Mineral de meteorito endurecido
 			RefinedMeteoriteAnvil: Yunque de meteorito refinado
 			RefinedMeteoriteBar: Lingote de meteorito refinado
-			RefinedMeteoriteAnimatedLantern:
+			RefinedMeteoriteAnimatedLantern: Hada de meteorito en una botella
 			RefinedMeteoriteBathtub: Bañera de meteorito refinado
 			RefinedMeteoriteBed: Cama de meteorito refinado
 			RefinedMeteoriteBench: Banco de meteorito refinado
@@ -337,8 +473,10 @@ Mods:
 			RefinedMeteoriteCandelabra: Candelabro de meteorito refinado
 			RefinedMeteoriteCandle: Vela de meteorito refinado
 			RefinedMeteoriteChair: Silla de meteorito refinado
+			RefinedMeteoriteChandelier: Lámpara de araña de meteorito refinado
 			RefinedMeteoriteChest: Cofre de meteorito refinado
 			RefinedMeteoriteChestTrapped: Cofre de meteorito refinado atrapado
+			RefinedMeteoriteChestKey: Llave de cofre de meteorito refinado
 			RefinedMeteoriteClock: Reloj de meteorito refinado
 			RefinedMeteoriteDoor: Puerta de meteorito refinado
 			RefinedMeteoriteDresser: Aparador de meteorito refinado
@@ -351,6 +489,7 @@ Mods:
 			RefinedMeteoriteTable: Mesa de meteorito refinado
 			RefinedMeteoriteToilet: Retrete de meteorito refinado
 			RefinedMeteoriteTorch: Antorcha de meteorito refinado
+			RefinedMeteoriteTrashCan: Cubo de basura de meteorito refinado
 			RefinedMeteoriteWall: Pared de meteorito refinado
 			RefinedMeteoriteWorkbench: Banco de trabajo de meteorito refinado
 			ShroomiteOre: Mineral de piñonita
@@ -358,13 +497,18 @@ Mods:
 			MarbleFishingPole: Caña de pescar de mármol
 			MeteorClentaminator: Clentaminator de meteorito
 			MeteorFishingPole: Caña de pescar de meteorito
+			GeodePickaxe: Geopico
+			OysterRake: Ostrillo
 			MeteorPickaxe: Pico de meteorito
 			MeteormanHeart: Corazón de meteorito
 			WyvernScale: Escama de guiverno
 			MeteorBoomerang: Bumerán de meteorito
+			MeteoriteFlail: Mangual de meteorito
 			MeteoriteSpear: Lanza de meteorito
+			MeteoriteWhip: Látigo de meteorito
 			MeteoriteYoyo: Yoyó de meteorito
-			RefinedMeteoriteSword: Ira meteórica
+			RefinedMeteorSword: Ira meteórica
+			MeteorSword: Espada meteórica
 			MeteorHoverboardKey: Llave de Hoverboard
 			BeeShuriken: Aguijónken
 			BoneShuriken: Huesoken
@@ -389,6 +533,8 @@ Mods:
 			TungstenShuriken: Estrella ninja de tungsteno
 			WallShuriken: Muroken
 			WormShuriken: Devoraken
+			MagicSoul: Alma mágica
+			BookofMeteors: Libro de cabezas de meteorito
 			AmethystStaffTier1: Báculo de amatista venenoso
 			AmethystStaffTier2: Báculo de amatista extremadamente venenoso
 			TopazStaffTier1: Báculo de topacio opulento
@@ -403,10 +549,194 @@ Mods:
 			RubyStaffTier2: Báculo de rubí piroexplosivo
 			DiamondStaffTier1: Báculo de diamante telesanador
 			DiamondStaffTier2: Báculo de diamante telemultisanador
+			TerraCoin: Terramoneda
+			DyesTerrabox: Terracaja misteriosa - Tintes
 			AnkhShieldTerrabox: Terracaja misteriosa - Escudo de cruz ansata
 			ShellphoneTerrabox: Terracaja misteriosa - Teleconcha
 			TerrasparkBootsTerrabox: Terracaja misteriosa - Botas de terrachispa
 			ZenithTerrabox: Terracaja misteriosa - Cénit
+			CopperSoil: Sustrato de cobre
+			CopperBunnyItem: Conejo de cobre
+			CopperBunnyCage: Jaula de conejo de cobre
+			CopperFruit: Cobrezas
+			TinSoil: Sustrato de estaño
+			TinBunnyItem: Conejo de estaño
+			TinBunnyCage: Jaula de conejo de estaño
+			TinFruit: Estañarindo
+			IronSoil: Sustrato de hierro
+			IronBunnyItem: Conejo de hierro
+			IronBunnyCage: Jaula de conejo de hierro
+			IronFruit: Ferrelón
+			LeadSoil: Sustrato de plomo
+			LeadBunnyItem: Conejo de plomo
+			LeadBunnyCage: Jaula de conejo de plomo
+			LeadFruit: Plomichi
+			SilverSoil: Sustrato de plata
+			SilverBunnyItem: Conejo de plata
+			SilverBunnyCage: Jaula de conejo de plata
+			SilverFruit: Platárando
+			TungstenSoil: Sustrato de tungsteno
+			TungstenBunnyItem: Conejo de tungsteno
+			TungstenBunnyCage: Jaula de conejo de tungsteno
+			TungstenFruit: Tomateno
+			GoldSoil: Sustrato de oro
+			GoldBunnyItem: Conejo de oro
+			GoldBunnyCage: Jaula de conejo de oro
+			GoldFruit: Limonoro
+			PlatinumSoil: Sustrato de platino
+			PlatinumBunnyItem: Conejo de platino
+			PlatinumBunnyCage: Jaula de conejo de platino
+			PlatinumFruit: Platinbola
+			SturdyFossilSoil: Sustrato de fósil férreo
+			SturdyFossilBunnyItem: Conejo de fósil férreo
+			SturdyFossilBunnyCage: Jaula de conejo de fósil férreo
+			FossilFruit: Higósil férreo
+			MeteoriteSoil: Sustrato de meteorito
+			MeteoriteBunnyItem: Conejo de meteorito
+			MeteoriteBunnyCage: Jaula de conejo de meteorito
+			MeteoriteFruit: Naranjito
+			DemoniteSoil: Sustrato endemoniado
+			DemoniteBunnyItem: Conejo endemoniado
+			DemoniteBunnyCage: Jaula de conejo endemoniado
+			DemoniteFruit: Endemorazno
+			CrimtaneSoil: Sustrato carmesí
+			CrimtaneBunnyItem: Conejo carmesí
+			CrimtaneBunnyCage: Jaula de conejo carmesí
+			CrimtaneFruit: Carmetano
+			ObsidianSoil: Sustrato de obisiana
+			ObsidianBunnyItem: Conejo de obisiana
+			ObsidianBunnyCage: Jaula de conejo de obisiana
+			ObsidianFruit: Obsiliva
+			HellstoneSoil: Sustrato infernal
+			HellstoneBunnyItem: Conejo infernal
+			HellstoneBunnyCage: Jaula de conejo infernal
+			HellstoneFruit: Inferguacate
+			CobaltSoil: Sustrato de cobalto
+			CobaltBunnyItem: Conejo de cobalto
+			CobaltBunnyCage: Jaula de conejo de cobalto
+			CobaltFruit: Cocobalto
+			PalladiumSoil: Sustrato de paladio
+			PalladiumBunnyItem: Conejo de paladio
+			PalladiumBunnyCage: Jaula de conejo de paladio
+			PalladiumFruit: Granadio
+			MythrilSoil: Sustrato de mythril
+			MythrilBunnyItem: Conejo de mythril
+			MythrilBunnyCage: Jaula de conejo de mythril
+			MythrilFruit: Kiwithirl
+			OrichalcumSoil: Sustrato de oricalco
+			OrichalcumBunnyItem: Conejo de oricalco
+			OrichalcumBunnyCage: Jaula de conejo de oricalco
+			OrichalcumFruit: Persicalco
+			AdamantiteSoil: Sustrato de adamantita
+			AdamantiteBunnyItem: Conejo de adamantita
+			AdamantiteBunnyCage: Jaula de conejo de adamantita
+			AdamantiteFruit: Manzanatita
+			TitaniumSoil: Sustrato de titanio
+			TitaniumBunnyItem: Conejo de titanio
+			TitaniumBunnyCage: Jaula de conejo de titanio
+			TitaniumFruit: Piñanio
+			HardenedMeteoriteSoil: Sustrato de meteorito endurecido
+			HardenedMeteoriteBunnyItem: Conejo de meteorito endurecido
+			HardenedMeteoriteBunnyCage: Jaula de conejo de meteorito endurecido
+			HardenedMeteoriteFruit: Naranjito endurecido
+			HallowedOre: Mineral sagrado
+			HallowedSoil: Sustrato sagrado
+			HallowedBunnyItem: Conejo sagrado
+			HallowedBunnyCage: Jaula de conejo sagrado
+			HallowedFruit: Sagramelo
+			ChlorophyteSoil: Sustrato de clorofita
+			ChlorophyteBunnyItem: Conejo de clorofita
+			ChlorophyteBunnyCage: Jaula de conejo de clorofita
+			ChlorophyteFruit: Clorimoya
+			ShroomiteSoil: Sustrato de piñonita
+			ShroomiteBunnyItem: Conejo de piñonita
+			ShroomiteBunnyCage: Jaula de conejo de piñonita
+			ShroomiteFruit: Piñorina
+			SpectreOre: Mineral espectral
+			SpectreSoil: Sustrato espectral
+			SpectreBunnyItem: Conejo espectral
+			SpectreBunnyCage: Jaula de conejo espectral
+			SpectreFruit: Espectabaza
+			LuminiteSoil: Sustrato de luminita
+			LuminiteBunnyItem: Conejo de luminita
+			LuminiteBunnyCage: Jaula de conejo de luminita
+			LuminiteFruit: Lumilocotón
+			SolarSoil: Sustrato solar
+			SolarBunnyItem: Conejo solar
+			SolarBunnyCage: Jaula de conejo solar
+			SolarFruit: Lumilocotón solar
+			NebulaSoil: Sustrato neboloso
+			NebulaBunnyItem: Conejo neboloso
+			NebulaBunnyCage: Jaula de conejo neboloso
+			NebulaFruit: Lumilocotón nebuloso
+			VortexSoil: Sustrato vórtice
+			VortexBunnyItem: Conejo vórtice
+			VortexBunnyCage: Jaula de conejo vórtice
+			VortexFruit: Lumilocotón vórtice
+			StardustSoil: Sustrato de polvo estelar
+			StardustBunnyItem: Conejo de polvo estelar
+			StardustBunnyCage: Jaula de conejo de polvo estelar
+			StardustFruit: Lumilocotón estelar
+			CopperSquirrelItem: Ardilla de cobre
+			CopperSquirrelCage: Jaula de ardilla de cobre
+			TinSquirrelItem: Ardilla de estaño
+			TinSquirrelCage: Jaula de ardilla de estaño
+			IronSquirrelItem: Ardilla de hierro
+			IronSquirrelCage: Jaula de ardilla de hierro
+			LeadSquirrelItem: Ardilla de plomo
+			LeadSquirrelCage: Jaula de ardilla de plomo
+			SilverSquirrelItem: Ardilla de plata
+			SilverSquirrelCage: Jaula de ardilla de plata
+			TungstenSquirrelItem: Ardilla de tungsteno
+			TungstenSquirrelCage: Jaula de ardilla de tungsteno
+			GoldSquirrelItem: Ardilla de oro
+			GoldSquirrelCage: Jaula de ardilla de oro
+			PlatinumSquirrelItem: Ardilla de platino
+			PlatinumSquirrelCage: Jaula de ardilla de platino
+			SturdyFossilSquirrelItem: Ardilla de fósil férreo
+			SturdyFossilSquirrelCage: Jaula de ardilla de fósil férreo
+			MeteoriteSquirrelItem: Ardilla de meteorito
+			MeteoriteSquirrelCage: Jaula de ardilla de meteorito
+			DemoniteSquirrelItem: Ardilla endemoniado
+			DemoniteSquirrelCage: Jaula de ardilla endemoniado
+			CrimtaneSquirrelItem: Ardilla carmesí
+			CrimtaneSquirrelCage: Jaula de ardilla carmesí
+			ObsidianSquirrelItem: Ardilla de obisiana
+			ObsidianSquirrelCage: Jaula de ardilla de obisiana
+			HellstoneSquirrelItem: Ardilla infernal
+			HellstoneSquirrelCage: Jaula de ardilla infernal
+			CobaltSquirrelItem: Ardilla de cobalto
+			CobaltSquirrelCage: Jaula de ardilla de cobalto
+			PalladiumSquirrelItem: Ardilla de paladio
+			PalladiumSquirrelCage: Jaula de ardilla de paladio
+			MythrilSquirrelItem: Ardilla de mythril
+			MythrilSquirrelCage: Jaula de ardilla de mythril
+			OrichalcumSquirrelItem: Ardilla de oricalco
+			OrichalcumSquirrelCage: Jaula de ardilla de oricalco
+			AdamantiteSquirrelItem: Ardilla de adamantita
+			AdamantiteSquirrelCage: Jaula de ardilla de adamantita
+			TitaniumSquirrelItem: Ardilla de titanio
+			TitaniumSquirrelCage: Jaula de ardilla de titanio
+			HardenedMeteoriteSquirrelItem: Ardilla de meteorito endurecido
+			HardenedMeteoriteSquirrelCage: Jaula de ardilla de meteorito endurecido
+			HallowedSquirrelItem: Ardilla sagrado
+			HallowedSquirrelCage: Jaula de ardilla sagrado
+			ChlorophyteSquirrelItem: Ardilla de clorofita
+			ChlorophyteSquirrelCage: Jaula de ardilla de clorofita
+			ShroomiteSquirrelItem: Ardilla de piñonita
+			ShroomiteSquirrelCage: Jaula de ardilla de piñonita
+			SpectreSquirrelItem: Ardilla espectral
+			SpectreSquirrelCage: Jaula de ardilla espectral
+			LuminiteSquirrelItem: Ardilla de luminita
+			LuminiteSquirrelCage: Jaula de ardilla de luminita
+			SolarSquirrelItem: Ardilla solar
+			SolarSquirrelCage: Jaula de ardilla solar
+			NebulaSquirrelItem: Ardilla neboloso
+			NebulaSquirrelCage: Jaula de ardilla neboloso
+			VortexSquirrelItem: Ardilla vórtice
+			VortexSquirrelCage: Jaula de ardilla vórtice
+			StardustSquirrelItem: Ardilla de polvo estelar
+			StardustSquirrelCage: Jaula de ardilla de polvo estelar
 		}
 
 		ItemTooltip: 
@@ -416,11 +746,7 @@ Mods:
 			MeteoriteSolution: "'Úsalo con el clentaminator, transforma la piedra en meteorito'"
 			GraniteArmorHelmet: "'Un buen casco'"
 			GraniteArmorBreastplate: "'Una buena armadura'"
-			GraniteArmorGreaves:
-				'''
-				Contiene un par de piernas
-				segunda linea
-				'''
+			GraniteArmorGreaves: "'Unas buenas perneras'"
 			HarpyFeatherBoots: "+3% daño de súbditos."
 			HarpyFeatherChest: "+3% daño de súbditos."
 			HarpyFeatherHat: "+3% daño de súbditos."
@@ -484,26 +810,95 @@ Mods:
 			CorruptedFlameElementalBanner: "'Los jugadores cercanos obtienen una bonificación contra: Llama elemental corrupta'"
 			EyelingBanner: "'Los jugadores cercanos obtienen una bonificación contra: Eyeling'"
 			SkitteringHuskBanner: "'Los jugadores cercanos obtienen una bonificación contra: Cascarón resbaladizo'"
-			MeteormanPainting1:
+			MeteormanPaintingVol1:
 				'''
-				Muestra meteorito en su llegada a la Tierra.
-				Meteor. Man
+				Colección hombre de meteorito Vol.1
+				¿Qué son esas extrañas y brillantes grietas en la luna?
+				Por thyflyingraccons
 				'''
-			NinjaPainting4:
+			MeteormanPaintingVol2:
 				'''
-				T�cnica Ninja - Ayuda, por favor
-				Saske B. Oninja
+				Colección hombre de meteorito Vol.2
+				La explosión lunar alcanza el hogar del Hombre de Meteorito.
+				Por thyflyingraccons
+				'''
+			MeteormanPaintingVol3:
+				'''
+				Colección hombre de meteorito Vol.3
+				Parte del meteorito está llegando a la Tierra.
+				Por thyflyingraccons
+				'''
+			MeteormanPaintingVol4:
+				'''
+				Colección hombre de meteorito Vol.4
+				Se muestra al Hombre de Meteorito en una inusual postura.
+				Por thyflyingraccons
+				'''
+			MeteormanPaintingVol5:
+				'''
+				Colección hombre de meteorito Vol.5
+				La Driada cura al Hombre de Meteorito.
+				Por thyflyingraccons
+				'''
+			MeteormanPaintingVolEx:
+				'''
+				Colección hombre de meteorito Vol.Ex
+				Se muestra al Hombre de Meteorito plantando unos extraños ¿árboles?.
+				Por thyflyingraccons
+				'''
+			NinjaPaintingVol1:
+				'''
+				Colección Ninja Vol.1
+				'La técnica aqui mostrada consiste en subirse a un sitio elevado y mirar al horizonte'
+				Por thyflyingraccons
+				'''
+			NinjaPaintingVol2:
+				'''
+				Colección Ninja Vol.2
+				'Cuando te encuentras con muchos enemigos, lo mejor es montar un buena gresca'
+				Por thyflyingraccons
+				'''
+			NinjaPaintingVol3:
+				'''
+				Colección Ninja Vol.3
+				'Aquí estoy engañando al enemigo con mi clásico resbalón, con esto bajará la guardia'
+				Por thyflyingraccons
+				'''
+			NinjaPaintingVol4:
+				'''
+				Colección Ninja Vol.4
+				'El enemigo era mas hábil de lo que yo pensaba, así que tuve que recurrir a pedir ayuda'
+				Por thyflyingraccons
+				'''
+			NinjaPaintingVol5:
+				'''
+				Colección Ninja Vol.5
+				'Esta es una técnica muy compleja, pocos logran llevarla a cabo con exito, la gratitud no es moco de pavo'
+				Por thyflyingraccons
+				'''
+			NinjaPaintingVolEx:
+				'''
+				Colección Ninja Vol.Ex
+				'Ah si, la clásica secuencia de entrenamiento, en realidad es la mejor técnica ninja para subir tus ninja puntos'
+				Por thyflyingraccons
 				'''
 			RefinedMeteoriteAnvil: "'Se usa para crear cosas especiales'"
+			RefinedMeteoriteSink: "'Cuenta como fuente de agua y lava'"
+			RefinedMeteoriteWorkbench: "'Se usa para creaciones básicas'"
 			ThrowingDummy: "'Aumento de daño, probabilidad de crítico y velocidad de lanzamiento a las armas arrojadizas'"
 			MeteorClentaminator: "'No tan bueno como el Clentaminator'"
 			MeteorFishingPole: "'Puede pescar en la lava'"
 			MeteorPickaxe: "'Puede picar piedra infernal'"
+			GeodePickaxe: "'10% de obtener geodas al picar piedra'"
+			OysterRake: "'Encuentra ostras al cavar arena en el océano'"
 			MeteormanHeart: "'Otorga Cuerpo Meteórico'"
 			MeteorBoomerang: "'Puede infligir ¡En llamas! y 'Hemorragia' a los enemigos'"
+			MeteoriteFlail: "'Puede infligir ¡En llamas! a los enemigos'"
 			MeteoriteSpear: "'Puede infligir ¡En llamas! a los enemigos'"
+			MeteoriteWhip: "'Puede infligir ¡En llamas! a los enemigos'"
 			MeteoriteYoyo: "'Puede infligir ¡En llamas! a los enemigos'"
-			RefinedMeteoriteSword: "'Dispara ondas meteóricas'"
+			MeteorSword: "'Puede infligir ¡En llamas! a los enemigos'"
+			RefinedMeteorSword: "'Dispara ondas meteóricas'"
 			MeteorHoverboardKey: "'Estupendo para explorar islas flotantes'"
 			BeeShuriken: ¡Envenenan a la velocidad de la luz!
 			BoneShuriken: Unos huesos fuertes mejoran la efectividad.
@@ -517,6 +912,7 @@ Mods:
 			SlimeShuriken: ¡Rebota rebota y en tu cara explota!"
 			WallShuriken: Requiere actualización
 			WormShuriken: ¡Como un topo, pero en estrella ninja!
+			BookofMeteors: Dispara cabezas de meteorito
 			AmethystStaffTier1: Inflige Envenenado
 			AmethystStaffTier2:Inflige Envenenado y Ponzoña
 			TopazStaffTier1: Inflige Midas
@@ -532,7 +928,7 @@ Mods:
 				Si el jugador tiene <50% de vida, se activa Barrera de hielo
 				'''
 			EmeraldStaffTier1: Otorga Espinas
-			EmeraldStaffTier1: Otorga Espinas y Hoja de cristal
+			EmeraldStaffTier2: Otorga Espinas y Hoja de cristal
 			AmberStaffTier1: Otorga Miel
 			AmberStaffTier2:
 				'''

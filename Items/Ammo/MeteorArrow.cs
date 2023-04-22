@@ -1,10 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Items.Ammo
 {
@@ -14,8 +10,6 @@ namespace TheCollectors.Items.Ammo
         {
             DisplayName.SetDefault("Meteor Arrow");
             Tooltip.SetDefault("'Hits like a meteor'");
-            //Tooltip.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "Flecha de meteorito");
-           // DisplayName.AddTranslation(GameCulture.FromCultureName(GameCulture.CultureName.Spanish), "'Golpea como un meteorito'");
         }
         public override void SetDefaults()
         {

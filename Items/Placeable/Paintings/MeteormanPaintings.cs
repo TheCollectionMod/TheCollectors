@@ -97,9 +97,9 @@ namespace TheCollectors.Items.Placeable.Paintings
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Moon rift");
-			Tooltip.SetDefault("Meteorman Painting Vol.1"
-							+ "\nWhat are those strange,"
-							+ "\nbright cracks in the moon?.");
+			Tooltip.SetDefault("Meteorman Collection Vol.1"
+							+ "\nWhat are those strange bright cracks in the moon?."
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -112,9 +112,9 @@ namespace TheCollectors.Items.Placeable.Paintings
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Space collision");
-			Tooltip.SetDefault("Meteorman Painting Vol.2"
-							+ "\nThe moonburst reaches the home"
-							+ "\nof the Meteorite Man.");
+			Tooltip.SetDefault("Meteorman Collection Vol.2"
+							+ "\nThe moonburst reaches the home of the Meteorite Man."
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -127,8 +127,9 @@ namespace TheCollectors.Items.Placeable.Paintings
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Descent to Earth");
-			Tooltip.SetDefault("Meteorman Painting Vol.3"
-							+ "\nPart of the meteorite is coming to Earth.");
+			Tooltip.SetDefault("Meteorman Collection Vol.3"
+							+ "\nPart of the meteorite is coming to Earth."
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -141,8 +142,9 @@ namespace TheCollectors.Items.Placeable.Paintings
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Deadly arrival");
-			Tooltip.SetDefault("Meteorman Painting Vol.4"
-							+ "\nMeteor Man is shown in an unusual pose.");
+			Tooltip.SetDefault("Meteorman Collection Vol.4"
+							+ "\nMeteor Man is shown in an unusual pose."
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -155,8 +157,9 @@ namespace TheCollectors.Items.Placeable.Paintings
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("On the third day he rose");
-			Tooltip.SetDefault("Meteorman Painting Vol.5"
-							+ "\nThe Dryad heals the Meteorite Man.");
+			Tooltip.SetDefault("Meteorman Collection Vol.5"
+							+ "\nThe Dryad heals the Meteorite Man."
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{
@@ -169,8 +172,9 @@ namespace TheCollectors.Items.Placeable.Paintings
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("A new life");
-			Tooltip.SetDefault("Meteorman Painting Vol.Ex"
-							+ "\nMeteorite Man is shown planting some strange trees.");
+			Tooltip.SetDefault("Meteorman Collection Vol.Ex"
+							+ "\nMeteorite Man is shown planting some strange trees."
+							+ "\nBy thyflyingraccons");
 		}
 		public override void SafeSetDefaults()
 		{

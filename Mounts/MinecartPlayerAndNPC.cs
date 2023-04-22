@@ -8,7 +8,7 @@ namespace TheCollectors.Mounts.Minecarts
 	{
 		public override void ModifyHitByNPC(NPC npc, ref int damage, ref bool crit)
 		{
-			if (Player.mount.Type == ModContent.MountType<MarbleMinecart>() && Math.Abs(Player.velocity.X) > 3.5f) //reduces contact damage when ramming
+			if (Player.mount.Type == ModContent.MountType<RefinedMeteoriteMinecart>() && Math.Abs(Player.velocity.X) > 3.5f) //reduces contact damage when ramming
 			{
 				damage -= (int)(Math.Abs(Player.velocity.X) - 5);
 				if (damage < 1) //idk if this is necessary but hey
@@ -21,7 +21,7 @@ namespace TheCollectors.Mounts.Minecarts
 	{
 		public override void OnHitPlayer(NPC npc, Player target, int damage, bool crit)
 		{
-			if (target.mount.Type == ModContent.MountType<MarbleMinecart>() && Math.Abs(target.velocity.X) > 3.5f) //does extra damage on hit
+			if (target.mount.Type == ModContent.MountType<RefinedMeteoriteMinecart>() && Math.Abs(target.velocity.X) > 3.5f) //does extra damage on hit
 				npc.StrikeNPC((int)target.velocity.X, 4f, target.direction, true, false, false);
 		}
 	}

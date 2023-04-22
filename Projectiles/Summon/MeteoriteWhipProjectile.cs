@@ -68,7 +68,18 @@ namespace TheCollectors.Projectiles.Summon
 			target.AddBuff(ModContent.BuffType<Buffs.MeteorWhip>(), 240);
 			Main.player[Projectile.owner].MinionAttackTargetNPC = target.whoAmI;
 		}
-
+		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		{
+			Player player = Main.player[Projectile.owner];
+			Projectile.ai[1] = 1;
+			Projectile.netUpdate = true;
+			if (Main.rand.NextBool(10))
+			{
+				target.AddBuff(BuffID.OnFire, 300, false);
+			}
+			else if (Main.rand.NextBool(3))
+				target.AddBuff(BuffID.OnFire, 90, false);
+		}
 		// This method draws a line between all points of the whip, in case there's empty space between the sprites.
 		private void DrawLine(List<Vector2> list)
 		{

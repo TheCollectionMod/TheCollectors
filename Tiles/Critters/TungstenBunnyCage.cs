@@ -26,7 +26,7 @@ namespace TheCollectors.Tiles.Critters
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<Items.Consumables.TungstenBunnyItem>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<Items.Consumables.Critters.TungstenBunnyItem>(), 1);
 			recipe.AddIngredient(ItemID.Terrarium, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
@@ -53,7 +53,17 @@ namespace TheCollectors.Tiles.Critters
 			Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 48, ModContent.ItemType<TungstenBunnyCage>());
 		}
 
-		public override void AnimateTile(ref int frame, ref int frameCounter)
+		public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
+		{
+			Tile tile = Main.tile[i, j];
+			Main.critterCage = true;
+			int left = i - tile.TileFrameX / 18;
+			int top = j - tile.TileFrameY / 18;
+			int offset = left / 3 * (top / 3);
+			offset %= Main.cageFrames;
+			frameYOffset = Main.bunnyCageFrame[offset] * AnimationFrameHeight;
+		}
+		/*public override void AnimateTile(ref int frame, ref int frameCounter)
 		{
 			frameCounter++;
 			if (frameCounter >= 8) //replace 10 with duration of frame in ticks
@@ -63,6 +73,6 @@ namespace TheCollectors.Tiles.Critters
 				frame %= 22;
 			}
 			//frame = Main.tileFrame[TileID.AmberBunnyCage];
-		}
+		}*/
 	}
 }

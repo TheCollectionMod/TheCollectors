@@ -12,7 +12,6 @@ namespace TheCollectors.Items.Placeable.RefinedMeteoriteSet
 			DisplayName.SetDefault("Refined Meteorite Chest");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
-
 		public override void SetDefaults()
 		{
 			//Common Properties
@@ -40,7 +39,6 @@ namespace TheCollectors.Items.Placeable.RefinedMeteoriteSet
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3; // Biome keys usually take 1 item to research instead.
 		}
-
 		public override void SetDefaults()
 		{
 			Item.CloneDefaults(ItemID.GoldenKey);

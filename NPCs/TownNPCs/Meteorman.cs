@@ -156,13 +156,13 @@ namespace TheCollectors.NPCs.TownNPCs
                 shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.Ammo.MeteoriteHardenerSolution>()); nextSlot++;
             }
             shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.CopperSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TinSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.IronSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.LeadSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.SilverSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TungstenSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.GoldSoil>()); nextSlot++;
-            //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.PlatinumSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TinSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.IronSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.LeadSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.SilverSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.TungstenSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.GoldSoil>()); nextSlot++;
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.PlatinumSoil>()); nextSlot++;
             //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.MeteoriteSoil>()); nextSlot++;
             //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.DemoniteSoil>()); nextSlot++;
             //shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.NPCStash.Meteorman.CrimtaneSoil>()); nextSlot++;
@@ -209,7 +209,7 @@ namespace TheCollectors.NPCs.TownNPCs
         public override string GetChat()
         {
             NumberOfTimesTalkedTo++;
-            switch (Main.rand.Next(4))
+            switch (Main.rand.Next(5))
             {
                 case 0:
                     {
@@ -307,6 +307,21 @@ namespace TheCollectors.NPCs.TownNPCs
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.RefinedMeteoriteOre");
                                 }
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.MeteoriteOre");
+                        }
+                    }
+                    return null;
+                case 4:
+                    {
+                        switch (Main.rand.Next(4))
+                        {
+                            case 0:
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.SoilsDialogue1");
+                            case 1:
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.SoilsDialogue2");
+                            case 2:
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.SoilsDialogue3");
+                            case 3:
+                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.SoilsDialogue4");
                         }
                     }
                     return null;

@@ -1,12 +1,8 @@
 using Terraria;
-using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System.IO;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.ItemDropRules;
 
 namespace TheCollectors.NPCs.Critters
 {
@@ -19,15 +15,13 @@ namespace TheCollectors.NPCs.Critters
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.GemBunnyRuby];
 			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
 			{
-				// Influences how the NPC looks in the Bestiary
-				Velocity = 1f // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
+				Velocity = 1f
 			};
 			NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, value);
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
 		{
-			// We can use AddRange instead of calling Add multiple times in order to add multiple items at once
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
 				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
 				new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.LeadBunny")
@@ -45,26 +39,39 @@ namespace TheCollectors.NPCs.Critters
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.knockBackResist = 0f;
 			NPC.aiStyle = 7;
-			NPC.catchItem = (short)ModContent.ItemType<Items.Consumables.LeadBunnyItem>();
+			NPC.catchItem = (short)ModContent.ItemType<Items.Consumables.Critters.LeadBunnyItem>();
 			NPC.dontTakeDamageFromHostiles = false;
 			AIType = NPCID.GemBunnyRuby;
 			AnimationType = NPCID.GemBunnyRuby;
-			Banner = Item.NPCtoBanner(NPCID.Bunny); // Makes this NPC get affected by the normal zombie banner.
-			BannerItem = Item.BannerToItem(Banner); // Makes kills of this NPC go towards dropping the banner it's associated with.
+			Banner = Item.NPCtoBanner(NPCID.Bunny); 
+			BannerItem = Item.BannerToItem(Banner); 
 		}
-
 		public override void HitEffect(int hitDirection, double damage)
 		{
 			if (NPC.life <= 0)
 			{
 				for (int k = 0; k < 10; k++)
-					Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Copper, 1.75f * hitDirection, -1.75f, 0, new Color(), 0.6f);
+					Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood, 1.75f * hitDirection, -1.75f, 0, new Color(), 0.6f);
+			}
+			if (!Main.dedServ)
+			{
+				Vector2 pos = NPC.position + new Vector2(Main.rand.Next(NPC.width - 8), Main.rand.Next(NPC.height / 2));
+				Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/LeadBunnyGore1").Type);
+
+				pos = NPC.position + new Vector2(Main.rand.Next(NPC.width - 8), Main.rand.Next(NPC.height / 2));
+				Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/LeadBunnyGore2").Type);
 			}
 		}
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			if (spawnInfo.Player.ZoneNormalCaverns) return 0.15f;
-			return 0f;
+			if (spawnInfo.Player.ZoneNormalCaverns && spawnInfo.SpawnTileType == ModContent.TileType<Items.NPCStash.Meteorman.LeadSoilTile>())
+			{
+				return 0.15f;
+			}
+			else
+			{
+				return 0f;
+			}
 		}
 	}
 }

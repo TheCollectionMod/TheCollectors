@@ -88,37 +88,37 @@ namespace TheCollectors
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteHat>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 12)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteHeadgear>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 12)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteHelmet>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 12)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteHood>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 12)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteMask>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 12)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteBreastplate>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 24)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.RefinedMeteoriteLeggings>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 18)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Armor.SlimeCoat_Mask>(), 1)
@@ -170,6 +170,10 @@ namespace TheCollectors
 					.Register();
 
 				//Placeable
+				Recipe.Create(ItemID.ShroomiteBar, 1)
+					.AddIngredient(ItemType<Items.NPCStash.Meteorman.ShroomiteOre>(), 4)
+					.AddTile(TileID.MythrilAnvil)
+					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.HardenedMeteoriteOre>(), 4)
@@ -180,23 +184,23 @@ namespace TheCollectors
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 1)
 					.AddIngredient(ItemID.Bottle, 1)
 					.AddIngredient(ItemID.FallenStar, 1)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBathtub>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 14)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBed>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 15)
 					.AddIngredient(ItemID.Silk, 5)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBench>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 8)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 5)
@@ -208,66 +212,66 @@ namespace TheCollectors
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBookcase>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 20)
 					.AddIngredient(ItemID.Book, 10)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandelabra>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 5)
 					.AddIngredient(ItemID.Torch, 3)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandle>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 4)
 					.AddIngredient(ItemID.Torch, 1)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChair>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 4)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChest>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 8)
 					.AddRecipeGroup("IronBar", 2) //revisar
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteClock>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
 					.AddRecipeGroup("IronBar", 3) //revisar
 					.AddIngredient(ItemID.Glass, 6)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteDoor>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 6)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteDresser>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 16)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteLamp>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 3)
 					.AddIngredient(ItemID.Torch, 1)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteLantern>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 6)
 					.AddIngredient(ItemID.Torch, 1)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePiano>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 15)
 					.AddIngredient(ItemID.Bone, 4)
 					.AddIngredient(ItemID.Book, 1)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePlatform>(), 2)
@@ -277,28 +281,28 @@ namespace TheCollectors
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteSink>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 6)
 					.AddIngredient(ItemID.WaterBucket, 1)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteSofa>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 5)
 					.AddIngredient(ItemID.Silk, 2)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTable>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 8)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteToilet>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 6)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTorch>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 4)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteWall>(), 4)
@@ -308,7 +312,7 @@ namespace TheCollectors
 
 				Recipe.Create(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteWorkbench>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				/*Recipe.Create(ModContent.ItemType< Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnvil >(), 1)
@@ -402,7 +406,7 @@ namespace TheCollectors
 
 				Recipe.Create(ModContent.ItemType<Items.Weapons.Melee.RefinedMeteorSword>(), 1)
 					.AddIngredient(ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 24)
-					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnvil>())
+					.AddTile(TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
 				//Weapons.Magic

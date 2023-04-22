@@ -47,7 +47,7 @@ namespace TheCollectors.NPCs.Critters
 			NPC.aiStyle = 112;
 			NPC.catchItem = ItemID.FairyCritterPink;
 			NPC.noGravity = true;
-			NPC.catchItem = (short)ModContent.ItemType<Items.Consumables.MeteoriteFairyItem>();
+			NPC.catchItem = (short)ModContent.ItemType<Items.Consumables.Critters.MeteoriteFairyItem>();
 			NPC.dontTakeDamageFromHostiles = false;
 			AIType = NPCID.FairyCritterPink;
 			AnimationType = NPCID.FairyCritterPink;

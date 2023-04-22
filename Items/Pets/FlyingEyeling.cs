@@ -11,7 +11,7 @@ namespace TheCollectors.Items.Pets
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Flying Eyeling");
-			Tooltip.SetDefault("Summons a friendly FlyingEyeling");
+			Tooltip.SetDefault("Summons a friendly Flying Eyeling");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults() {

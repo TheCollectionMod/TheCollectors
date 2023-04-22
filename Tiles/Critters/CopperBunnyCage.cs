@@ -3,11 +3,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.Audio;
-using Terraria.GameContent.Creative;
 
 namespace TheCollectors.Tiles.Critters
 {
@@ -22,11 +17,10 @@ namespace TheCollectors.Tiles.Critters
 			Item.CloneDefaults(ItemID.AmberBunnyCage);
 			Item.createTile = ModContent.TileType<CopperBunnyCageTile>();
 		}
-
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<Items.Consumables.CopperBunnyItem>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<Items.Consumables.Critters.CopperBunnyItem>(), 1);
 			recipe.AddIngredient(ItemID.Terrarium, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
@@ -41,28 +35,29 @@ namespace TheCollectors.Tiles.Critters
 			Main.tileLavaDeath[Type] = true;
 			//TileObjectData.newTile.CopyFrom(TileObjectData.StyleSmallCage);  //The StyleSmallCage es la del ratón
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
+			TileObjectData.newTile.Height = 3;
+			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
+			TileObjectData.addTile(Type);
+
 			AnimationFrameHeight = 54;
 
-			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Copper Bunny Cage");
 			AddMapEntry(new Color(200, 200, 200), name);
 		}
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 48, ModContent.ItemType<CopperBunnyCage>());
+			Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ModContent.ItemType<CopperBunnyCage>());
 		}
-
-		public override void AnimateTile(ref int frame, ref int frameCounter)
+		public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset) //the confection mod
 		{
-			frameCounter++;
-			if (frameCounter >= 8) //replace 10 with duration of frame in ticks
-			{
-				frameCounter = 0;
-				frame++;
-				frame %= 22;
-			}
-			//frame = Main.tileFrame[TileID.AmberBunnyCage];
+			Tile tile = Main.tile[i, j];
+			Main.critterCage = true;
+			int left = i - tile.TileFrameX / 18;
+			int top = j - tile.TileFrameY / 18;
+			int offset = left / 3 * (top / 3);
+			offset %= Main.cageFrames;
+			frameYOffset = Main.bunnyCageFrame[offset] * AnimationFrameHeight;
 		}
 	}
 }

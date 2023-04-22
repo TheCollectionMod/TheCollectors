@@ -93,7 +93,7 @@ namespace TheCollectors.Tiles.Trees
 				for (int i = 0; i < repeats; ++i)
 				{
 					Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, Main.rand.NextBool() ? ModContent.ItemType<Items.Consumables.Goldemon>() : ModContent.ItemType<Items.Consumables.Goldemon>(), 1);
+					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, Main.rand.NextBool() ? ModContent.ItemType<Items.Consumables.Food.IronFruit>() : ModContent.ItemType<Items.Consumables.Food.IronFruit>(), 1);
 				}
 			}
 

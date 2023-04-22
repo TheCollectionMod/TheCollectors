@@ -37,7 +37,7 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 			ContainerName.SetDefault("Refined Meteorite Trash Can");
 
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Refined Meteorite Chest");
+			name.SetDefault("Refined Meteorite Trash Can");
 			AddMapEntry(new Color(200, 200, 200), name, MapChestName);
 
 			// Placement
@@ -137,6 +137,57 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 				player.editedChestName = false;
 			}
 
+			bool isLocked = Chest.IsLocked(left, top);
+			if (Main.netMode == NetmodeID.MultiplayerClient && !isLocked)
+			{
+				if (left == player.chestX && top == player.chestY && player.chest >= 0)
+				{
+					player.chest = -1;
+					Recipe.FindRecipes();
+					SoundEngine.PlaySound(SoundID.MenuClose);
+				}
+				else
+				{
+					NetMessage.SendData(MessageID.RequestChestOpen, -1, -1, null, left, top);
+					Main.stackSplit = 600;
+				}
+			}
+			else
+			{
+				if (isLocked)
+				{
+					// Make sure to change the code in UnlockChest if you don't want the chest to only unlock at night.
+					int key = ModContent.ItemType<RefinedMeteoriteChestKey>();
+					if (player.ConsumeItem(key) && Chest.Unlock(left, top))
+					{
+						if (Main.netMode == NetmodeID.MultiplayerClient)
+						{
+							NetMessage.SendData(MessageID.Unlock, -1, -1, null, player.whoAmI, 1f, left, top);
+						}
+					}
+				}
+				else
+				{
+					int chest = Chest.FindChest(left, top);
+					if (chest >= 0)
+					{
+						Main.stackSplit = 600;
+						if (chest == player.chest)
+						{
+							player.chest = -1;
+							SoundEngine.PlaySound(SoundID.MenuClose);
+						}
+						else
+						{
+							SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
+							player.OpenChest(left, top, chest);
+						}
+
+						Recipe.FindRecipes();
+					}
+				}
+			}
+
 			return true;
 		}
 
@@ -168,7 +219,7 @@ namespace TheCollectors.Tiles.RefinedMeteoriteSet
 				player.cursorItemIconText = Main.chest[chest].name.Length > 0 ? Main.chest[chest].name : defaultName;
 				if (player.cursorItemIconText == defaultName)
 				{
-					player.cursorItemIconID = ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChest>();
+					player.cursorItemIconID = ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>();
 					if (Main.tile[left, top].TileFrameX / 36 == 1)
 					{
 						player.cursorItemIconID = ModContent.ItemType<RefinedMeteoriteChestKey>();
