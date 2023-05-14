@@ -29,8 +29,9 @@ namespace TheCollectors
 		public static bool meteormanJustRescued = false; // Not important for saving.
 		public static bool savedEnchanter = false;
 		public static bool enchanterJustRescued = false; // Not important for saving.
-		public static bool savedFarmer = false;
-		public static bool farmerJustRescued = false; // Not important for saving.
+		public static bool savedCarver = false;
+		public static bool CarverJustRescued = false; // Not important for saving.
+		public static bool spawnedCopperGuardian = false;
 
 		public override void OnWorldLoad()
 		{
@@ -38,8 +39,9 @@ namespace TheCollectors
 			meteormanJustRescued = false;
 			savedEnchanter = false;
 			enchanterJustRescued = false;
-			savedFarmer = false;
-			farmerJustRescued = false;
+			savedCarver = false;
+			CarverJustRescued = false;
+			spawnedCopperGuardian = false;
 		}
 
 		public override void OnWorldUnload()
@@ -48,8 +50,9 @@ namespace TheCollectors
 			meteormanJustRescued = false;
 			savedEnchanter = false;
 			enchanterJustRescued = false;
-			savedFarmer = false;
-			farmerJustRescued = false;
+			savedCarver = false;
+			CarverJustRescued = false;
+			spawnedCopperGuardian = false;
 		}
 
 		public override void SaveWorldData(TagCompound tag)
@@ -62,16 +65,21 @@ namespace TheCollectors
 			{
 				tag["savedEnchanter"] = true;
 			}
-			if (savedFarmer)
+			if (savedCarver)
 			{
-				tag["savedFarmer"] = true;
+				tag["savedCarver"] = true;
+			}
+			if (spawnedCopperGuardian)
+			{
+				tag["spawnedCopperGuardian"] = true;
 			}
 		}
 		public override void LoadWorldData(TagCompound tag)
 		{
 			savedMeteorman = tag.ContainsKey("savedMeteorman");
 			savedMeteorman = tag.ContainsKey("savedEnchanter");
-			savedFarmer = tag.ContainsKey("savedFarmer");
+			savedCarver = tag.ContainsKey("savedCarver");
+			spawnedCopperGuardian = tag.ContainsKey("spawnedCopperGuardian");
 		}
 
 		public override void NetSend(BinaryWriter writer)
@@ -80,7 +88,8 @@ namespace TheCollectors
 			var flags = new BitsByte();
 			flags[0] = savedMeteorman;
 			flags[1] = savedEnchanter;
-			flags[2] = savedFarmer;
+			flags[2] = savedCarver;
+			flags[3] = spawnedCopperGuardian;
 			writer.Write(flags);
 		}
 
@@ -89,7 +98,8 @@ namespace TheCollectors
 			BitsByte flags = reader.ReadByte();
 			savedMeteorman = flags[0];
 			savedEnchanter = flags[1];
-			savedFarmer = flags[2];
+			savedCarver = flags[2];
+			spawnedCopperGuardian = flags[3];
 		}
 		public static void UpdateWorldBool() //from Calamity's Vanities
 		{

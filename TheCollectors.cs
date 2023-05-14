@@ -9,6 +9,7 @@ using Terraria.Localization;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Personalities;
 using static Terraria.ModLoader.ModContent;
+using System.IO;
 
 namespace TheCollectors
 {
@@ -16,46 +17,20 @@ namespace TheCollectors
 	{
 		public override void Load()
 		{
-			//Census mod support
-			if (ModLoader.TryGetMod("Census", out Mod Census))
-			{
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Ninja>(), "Kill King Slime");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Archeologist>(), "Have Rope Coil in inventary");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Meteorman>(), "Rescue in Meteor crash");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Enchanter>(), "Rescue in Dungeon");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.McMoneyPants>(), "Have a Terra Coin in inventary");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Farmer>(), "Rescue in Snow");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.StarMerchant>(), "Have a Fallen Star in inventary");
-			}
+
 			{
 				// Registers a new custom currency
-				TerraCoinId = CustomCurrencyManager.RegisterCurrency(new Currencies.TerraCoin(ModContent.ItemType<Items.NPCStash.McMoneyPants.TerraCoin > (), 999L, "Terra Coin"));
-				MagicSoulId = CustomCurrencyManager.RegisterCurrency(new Currencies.MagicSoul(ModContent.ItemType<Items.MagicSoul>(), 999L, "Magic Soul"));
+				TerraCoinId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.TerraCoin(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.TerraCoin > (), 999L, "Terra Coin"));
+				MagicSoulId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.MagicSoul(ModContent.ItemType<Content.Items.MagicSoul>(), 999L, "Magic Soul"));
 
 			}
-			/*if (ModLoader.TryGetMod("BossesAsNPCs", out Mod BossesAsNPCs))
-			{
-				//bossesAsNPCs.Call, ModContent.NPCType<KingSlime>();
-				BossesAsNPCs.Call("KingSlime");
-				//bossesAsNPCs.Call("AddToShop", "DefaultPrice", "IceQueen", ModContent.ItemType<Items.Materials.FestivePlating>(), () => NPC.downedChristmasSantank);
-				//bossesAsNPCs.Call("AddToShop", "WithDiv", "IceQueen", ModContent.ItemType<Items.Accessories.Summoner.NaughtyList>(), () => NPC.downedChristmasSantank, 0.1f);
-				////bossesAsNPCs.Call("AddToShop", "DefaultPrice", "IceQueen", ModContent.ItemType<Items.Weapons.Summon.Whips.FestiveWhip>(), () => true);
-				//bossesAsNPCs.Call("AddToShop", "DefaultPrice", "BrainOfCthulhu", ModContent.ItemType<Items.Materials.CrawlerChelicera>(), () => true);
-				//.Call("AddToShop", "DefaultPrice", "QueenSlime", ModContent.ItemType<Items.Weapons.Summon.Cudgels.CrystalClusterCudgel>(), () => true);
-			}*/
-			/*if (ModLoader.TryGetMod("BossesAsNPCs", out Mod BossesAsNPCs))
-			{
-				BossesAsNPCs.Call(ModContent.NPCType<KingSlime>());
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Archeologist>(), "No requirements");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Meteorman>(), "No requirements");
-				Census.Call("TownNPCCondition", ModContent.NPCType<NPCs.TownNPCs.Enchanter>(), "No requirements");
-			}*/
 		}
 		
 		public const string AssetPath = $"{nameof(TheCollectors)}/Assets/";
 
 		public static int TerraCoinId;
 		public static int MagicSoulId;
+
 
 		public override void Unload()
 		{
