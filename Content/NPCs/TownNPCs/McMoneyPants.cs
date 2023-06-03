@@ -62,7 +62,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPCID.Sets.AttackType[NPC.type] = 1;
             NPCID.Sets.AttackTime[NPC.type] = 10;
             NPCID.Sets.AttackAverageChance[NPC.type] = 10;
-            NPCID.Sets.HatOffsetY[NPC.type] = -7;           // For when a party is active, the party hat spawns at a Y offset.
+            NPCID.Sets.HatOffsetY[NPC.type] = +10;           // For when a party is active, the party hat spawns at a Y offset.
 
             NPCID.Sets.ShimmerTownTransform[Type] = true; // Allows for this NPC to have a different texture after touching the Shimmer liquid.
 
@@ -108,8 +108,8 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
-				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-				new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.McMoneyPants")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.McMoneyPants")
             });
         }
         public override bool CanTownNPCSpawn(int numTownNPCs)
@@ -181,6 +181,16 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
+                .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.StoryPaintings>())
+                {
+                    shopCustomPrice = 1,
+                    shopSpecialCurrency = TheCollectors.TerraCoinId
+                })
+                .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.DyesTerrabox>())
+                {
+                     shopCustomPrice = 1,
+                     shopSpecialCurrency = TheCollectors.TerraCoinId
+                })
                 .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.ShellphoneTerrabox>())
                 {
                     shopCustomPrice = 1,
@@ -302,8 +312,8 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         }
         public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
         {
-                projType = ProjectileID.GoldenBullet;
-                attackDelay = 1;
+            projType = ProjectileID.GoldenBullet;
+            attackDelay = 1;
         }
         public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)
         {
@@ -312,10 +322,10 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-        /*rule => rule is ItemDropWithConditionRule drop // If the rule is an ItemDropWithConditionRule instance
-        && drop.itemId == ItemID.GreenCap // And that instance drops a green cap
-        && drop.condition is Conditions.NamedNPC npcNameCondition // ..And if its condition is that an npc name must match some string
-        && npcNameCondition.neededName == "Andrew" // And the condition's string is "Andrew".*/
+            /*rule => rule is ItemDropWithConditionRule drop // If the rule is an ItemDropWithConditionRule instance
+            && drop.itemId == ItemID.GreenCap // And that instance drops a green cap
+            && drop.condition is Conditions.NamedNPC npcNameCondition // ..And if its condition is that an npc name must match some string
+            && npcNameCondition.neededName == "Andrew" // And the condition's string is "Andrew".*/
             npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.Armor.Vanity.McMoneyHat>(), 10)); // Drop a stack of 5 to 15 items with 1 in 2 chance (50% chance)
         }
         public override void HitEffect(NPC.HitInfo hit)

@@ -54,10 +54,8 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			// Etc
 			LocalizedText name = CreateMapEntryName();
-
-			// name.SetDefault("Torch");
-
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
+			AddMapEntry(new Color(253, 221, 3), name);
 
 			// Assets
 			if (!Main.dedServ)

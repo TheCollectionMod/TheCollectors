@@ -23,7 +23,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			TileID.Sets.DisableSmartCursor[Type] = true;
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
-			AddMapEntry(new Color(200, 200, 200));
+			AddMapEntry(new Color(191, 142, 111));
 
 			DustType = ModContent.DustType<Sparkle>();
 			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePlatform>();

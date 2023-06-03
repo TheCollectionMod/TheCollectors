@@ -41,8 +41,7 @@ namespace TheCollectors.Content.Tiles.Critters
 			TileObjectData.addTile(Type);
 			AnimationFrameHeight = 54;
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Shroomite Squirrel Cage");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(122, 217, 232), name);
 		}
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{

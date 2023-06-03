@@ -34,7 +34,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AdjTiles = new int[] { TileID.Chairs };
 
 			// Names
-			AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chair"));
+			AddMapEntry(new Color(191, 142, 111), Language.GetText("MapObject.Chair"));
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);

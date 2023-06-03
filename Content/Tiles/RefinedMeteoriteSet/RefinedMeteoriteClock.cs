@@ -29,7 +29,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			TileObjectData.addTile(Type);
 
 			// Etc
-			AddMapEntry(new Color(200, 200, 200), CreateMapEntryName()); // We don't need to call SetDefault() on CreateMapEntryName()'s return value if we have .lang files.
+			AddMapEntry(new Color(191, 142, 111), CreateMapEntryName()); // We don't need to call SetDefault() on CreateMapEntryName()'s return value if we have .lang files.
 		}
 
 		public override bool RightClick(int x, int y)

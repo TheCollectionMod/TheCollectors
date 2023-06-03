@@ -34,7 +34,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			// Etc
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Work Bench");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 		}
 
 		public override void NumDust(int x, int y, bool fail, ref int num)

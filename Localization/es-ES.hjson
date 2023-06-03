@@ -9,26 +9,223 @@
 Mods: {
 	TheCollectors: {
 		NPCs: {
-			Archeologist.DisplayName: Arqueólogo
-			Ninja.DisplayName: Ninja
-			// InjuredMeteorman.DisplayName: Hombre de Meteorito abatido
-			Meteorman.DisplayName: Hombre de Meteorito
-			Enchanter.DisplayName: Encantador
+			#............................................................................................................TownNPCs
+			Archeologist: {
+				DisplayName: Arqueólogo
+
+				TownNPCMood: {
+					// Content: Estoy feliz.
+					// NoHome: Detesto no tener un hogar.
+					// FarFromHome: Estoy demasiado lejos de casa.
+					// LoveSpace: Me encanta tener tanto espacio.
+					// DislikeCrowded: No me gusta tener tan poco espacio.
+					// HateCrowded: Detesto tener poco espacio.
+					// LoveBiome: Adoro el biomedio {BiomeName}.
+					// LikeBiome: Me gusta el biomedio {BiomeName}.
+					// DislikeBiome: No me gusta el biomedio {BiomeName}.
+					// HateBiome: Detesto el biomedio {BiomeName}.
+					// LoveNPC: Adoro a {NPCName}.
+					// LikeNPC: Me gusta {NPCName}.
+					// DislikeNPC: "{NPCName} no me cae nada bien."
+					// HateNPC: Detesto a {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			Carver: {
+				DisplayName: Tallista
+
+				TownNPCMood: {
+					// Content: Estoy feliz.
+					// NoHome: Detesto no tener un hogar.
+					// FarFromHome: Estoy demasiado lejos de casa.
+					// LoveSpace: Me encanta tener tanto espacio.
+					// DislikeCrowded: No me gusta tener tan poco espacio.
+					// HateCrowded: Detesto tener poco espacio.
+					// LoveBiome: Adoro el biomedio {BiomeName}.
+					// LikeBiome: Me gusta el biomedio {BiomeName}.
+					// DislikeBiome: No me gusta el biomedio {BiomeName}.
+					// HateBiome: Detesto el biomedio {BiomeName}.
+					// LoveNPC: Adoro a {NPCName}.
+					// LikeNPC: Me gusta {NPCName}.
+					// DislikeNPC: "{NPCName} no me cae nada bien."
+					// HateNPC: Detesto a {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			CarverFrozen.DisplayName: Tallista congelada
+
+			Enchanter: {
+				DisplayName: Encantador
+
+				TownNPCMood: {
+					// Content: Gracias por romper el hechizo.
+					// NoHome: El aire libre está muy bien y todo eso, pero aún así, sigo necesitando de una habitación para trabajar con mis báculos.
+					// LoveSpace: En {BiomeName} puedo concentrarme al máximo.
+					// FarFromHome: Una escapadita de vez en cuando viene bien, pero va tocando volver, ¿no?.
+					// DislikeCrowded: Se empieza a respirar poca magia por aquí, que corra el aire.
+					// HateCrowded: Como vuelva a venir alguien a pedirme que le saque un conejo del sombrero... Me mudo al oceano, y eso que no me gusta.
+					// LikeBiome: En {BiomeName} se respira magia.
+					// DislikeBiome: "{BiomeName} me distrae demasiado, se pone uno todo ocioso."
+					// HateBiome: Ya me estás construyendo una habitación en un sitio más luminoso, bastante tuve ya...
+					// LoveNPC: Una pena que a {NPCName} le guste andar por la jungla, su magia me parece de lo más interesante.
+					// LikeNPC: Con {NPCName} por aquí, la fiesta está asegurada.
+					// LikeNPC_Princess: "{NPCName} seems friendly."
+					// DislikeNPC: No me extraña que a {NPCName} le llamen duende chapucero, menuda escopeta de feria el tío.
+					// DislikeBiome: No me gusta el biomedio {BiomeName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+
+				// Census.SpawnCondition: Rescue in Dungeon
+			}
+
 			EnchanterPrisioner.DisplayName: Encantador encantado
-			// Mc_MoneyPants.DisplayName: Mc. Money Pants
-			SkitteringHusk.DisplayName: Cascarón resbaladizo
+
+			McMoneyPants: {
+				DisplayName: Tío Gacha
+
+				TownNPCMood: {
+					// Content: Jeje, nuevos vecinos a los que poder timar..., digo vender mis fantasticos productos.
+					// NoHome: Voy a necesitar bastante espacio, un buen almacén, con caja fuerte por supuesto.
+					// LoveSpace: El bosque es el mejor lugar para mi negocio, suelo barato que nadie quiere.
+					// FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
+					// DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
+					// HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
+					// LikeBiome: ...
+					// LoveBiome: Aquí se respira negocio
+					// DislikeBiome: ...
+					// HateBiome: ...
+					// LikeNPC: Me encanta que {NPCName} cobre por sus servicios, la privatización es el futuro.
+					// LikeNPC_Princess: ¿{NPCName} es una princesa?, que maravilla, estos son unos primos...
+					// LoveNPC: Es bueno que la gente deje a otros administrar su dinero, {NPCName} lo sabe bien.
+					// DislikeNPC: ...
+					// HateNPC: ...
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+
+				// Census.SpawnCondition: Have a Terra Coin in inventary
+			}
+
+			Meteorman: {
+				DisplayName: Hombre de Meteorito
+
+				TownNPCMood: {
+					// Content: Que tierra tan verde y poco rocosa, muy buena para mis aficciones.
+					// NoHome: Podemos usar los restos de mi accidente para hacer unas casas, no se pueden desperdiciar.
+					// LoveSpace: Se respira paz.
+					// FarFromHome: No me encuentro cómodo tan lejos de casa, aunque mi casa real estaba a miles de kilómetros.
+					// DislikeCrowded: Empiezo a tener la lista de encargos un poco saturada.
+					// HateCrowded: Odio admitirlo, pero con tanta gente no puedo seguir el ritmo de los encargos.
+					// LikeBiome: Por ahora me gustaría quedarme en {BiomeName}, aunque por la noche haga fresquito.
+					// LoveBiome: cuando pueda
+					// DislikeBiome: "{BiomeName} es fantástico, pero no me siento muy seguro tan cerca del agua."
+					// HateBiome: Como pase otro día más en {BiomeName}, creo que tendré que empezar a llamarme el Hombre de Piedra normal y corriente.
+					// LikeNPC: Me cae muy bien {NPCName}, cuida mucho la naturaleza.
+					// LikeNPC_Princess: "{NPCName} se lleva bien con todo el mundo, como debe ser."
+					// LoveNPC: Mi negocio y el de {NPCName} funcionan muy bien juntos.
+					// DislikeNPC: Why is {NPCName} here? It's okay, me, just don't look him in the eye and he can't scare you...
+					// HateNPC: No me gusta como {NPCName}, se aprovecha de la gente, además odia a Papá Noel.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+
+				// Census.SpawnCondition: Rescue in Meteor crash
+			}
+
+			MeteormanBroken.DisplayName: Hombre de Meteorito abatido
+
+			Ninja: {
+				DisplayName: Ninja
+
+				TownNPCMood: {
+					// Content: Me gusta como está quedando el barrio.
+					// NoHome: Estoy entrenado para no necesitar una casa, pero no me vendría mal una la verdad.
+					// LoveSpace: Mataría por una casita en el bosque....
+					// FarFromHome: A ver si vamos volviendo ya, que son horas.
+					// DislikeCrowded: ¿Y ese grupo de gente corriendo de esa manera tan rara?.
+					// HateCrowded: Por aquí hay demasiada gente, todo el día tocando mis Shurikens.
+					// LoveBiome: No tiene.
+					// LikeBiome: Me gusta {BiomeName}, me recuerda a mis años de entrenamiento con Master San.
+					// DislikeBiome: "7,8 too much {BiomeName}."
+					// HateBiome: Demasiados colorines en {BiomeName}.
+					// LoveNPC: Entreno mejor cuando {NPCName} está disponible.
+					// LikeNPC: no tiene
+					// LikeNPC_Princess: No puedo evitar pensar que estoy en un RPG al ver a {NPCName}.
+					// DislikeNPC: Primero secuestra a mi maestro ¿y ahora pretende venir a vivir aquí? {NPCName} le echa mucha cara.
+					// HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos"
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+
+				// Census.SpawnCondition: Kill King Slime
+			}
+
+			StarMerchant: {
+				DisplayName: Mercader Estelar
+
+				TownNPCMood: {
+					// Content: Estoy feliz.
+					// NoHome: Detesto no tener un hogar.
+					// FarFromHome: Estoy demasiado lejos de casa.
+					// LoveSpace: Me encanta tener tanto espacio.
+					// DislikeCrowded: No me gusta tener tan poco espacio.
+					// HateCrowded: Detesto tener poco espacio.
+					// LoveBiome: Adoro el biomedio {BiomeName}.
+					// LikeBiome: Me gusta el biomedio {BiomeName}.
+					// DislikeBiome: No me gusta el biomedio {BiomeName}.
+					// HateBiome: Detesto el biomedio {BiomeName}.
+					// LoveNPC: Adoro a {NPCName}.
+					// LikeNPC: Me gusta {NPCName}.
+					// DislikeNPC: "{NPCName} no me cae nada bien."
+					// HateNPC: Detesto a {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			CopperGuard: {
+				#............................................................................................................TownGuardians
+				DisplayName: Guardia de Cobre
+
+				TownNPCMood: {
+					// Content: Estoy feliz.
+					// NoHome: Detesto no tener un hogar.
+					// FarFromHome: Estoy demasiado lejos de casa.
+					// LoveSpace: Me encanta tener tanto espacio.
+					// DislikeCrowded: No me gusta tener tan poco espacio.
+					// HateCrowded: Detesto tener poco espacio.
+					// LoveBiome: Adoro el biomedio {BiomeName}.
+					// LikeBiome: Me gusta el biomedio {BiomeName}.
+					// DislikeBiome: No me gusta el biomedio {BiomeName}.
+					// HateBiome: Detesto el biomedio {BiomeName}.
+					// LoveNPC: Adoro a {NPCName}.
+					// LikeNPC: Me gusta {NPCName}.
+					// DislikeNPC: "{NPCName} no me cae nada bien."
+					// HateNPC: Detesto a {NPCName}.
+					// LikeNPC_Princess: I like {NPCName}.
+					// Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			#............................................................................................................Enemies
 			Eyeling.DisplayName: Eyeling
 			Clawclops.DisplayName: Garrojo
 			CorruptedFlameElemental.DisplayName: Elemental de fuego corrupto
+			SkitteringHusk.DisplayName: Cascarón resbaladizo
+			MeteoriteMan.DisplayName: Cuerpo de meteorito
+			TC_MeteoriteMotherSlime.DisplayName: Gran slime de meteorito
+			TC_MeteoriteSlime.DisplayName: Slime de meteorito
+			MeteoriteSlime.DisplayName: Slime de meteorito
+			MeteoriteWormBody.DisplayName: Gusano meteoro
+			MeteoriteWormHead.DisplayName: Gusano meteoro
+			MeteoriteWormTail.DisplayName: Gusano meteoro
+			TCMeteorBossBody.DisplayName: Jefe meteorito
+			TCMeteorBossMinion.DisplayName: Súbdito del jefe de meteorito
 			GraniteSlime.DisplayName: Slime de granito
 			LihzahrdSlime.DisplayName: Slime de templo
-			MeteormanBroken.DisplayName: Hombre de Meteorito abatido
-			McMoneyPants.DisplayName: Tío Gacha
-			StarMerchant.DisplayName: Mercader Estelar
-			// FrozenCarver.DisplayName: Mods.TheCollectors.NPCName.FrozenCarver
-			Carver.DisplayName: Tallista
-			CopperGuard.DisplayName: Guardia de Cobre
-			MeteoriteWorm.DisplayName: Gusano meteoro
+			#............................................................................................................Critters
 			MeteorFairy.DisplayName: Hada meteoro
 			CopperBunny.DisplayName: Conejo de cobre
 			TinBunny.DisplayName: Conejo de estaño
@@ -90,34 +287,31 @@ Mods: {
 			NebulaSquirrel.DisplayName: Ardilla nebuloso
 			StardustSquirrel.DisplayName: Ardilla de polvo estelar
 			VortexSquirrel.DisplayName: Ardilla vórtice
-			MeteoriteMan.DisplayName: Cuerpo de meteorito
-			MeteoriteWormBody.DisplayName: Cuerpo de gusarno meteoro
-			MeteoriteWormHead.DisplayName: Gusano meteoro
-			MeteoriteWormTail.DisplayName: Cola de gusano meteoro
-			CarverFrozen.DisplayName: Tallista congelada
-			MinionBossBody.DisplayName: Minion Boss Body
-			MinionBossMinion.DisplayName: Minion Boss Minion
-			TCMeteorBossBody.DisplayName: Jefe meteorito
-			TCMeteorBossMinion.DisplayName: Súbdito del jefe de meteorito
 		}
 
 		Bestiary: {
+			#........................................................................................................................................................TownNPCs
 			Archeologist: El Arqueólogo provee con útiles objetos básicos para el jugador nuevo. Parece tener cierta investigación en proceso...
-			Ninja: Discípulo del legendario Master San, experto en armas arrojadizas, o eso dice. Es el hermano del Guía.
-			Meteorman: El hombre de meteorito viene del meteoro para realizar meteóricas tareas. Es una roca guay.
+			Carver: Antigua miembro de una tribu especialista en tallar madera, se encontraba congelada.
 			Enchanter: Víctima de sus propios encantamientos, el ahora líberado encantador promete no volver a pifiarla.
-			// Mc_MoneyPants: Vengo a estafar.
-			GraniteSlime: Un slime normal y corriente, pero endurecido por el granito de las cuevas.
+			McMoneyPants: Todos los que os burlais de mis terracajas misteriosas no borréis está descripción que nos reiemos todos al cabo de un tiempo.
+			Meteorman: El hombre de meteorito viene del meteoro para realizar meteóricas tareas. Es una roca guay.
+			Ninja: Discípulo del legendario Master San, experto en armas arrojadizas, o eso dice. Es el hermano del Guía.
+			StarMerchant: Futura actualización.
+			#........................................................................................................................................................TownGuardians
+			CopperGuard: Gracias a la mágia, esta vieja armadura ha cobrado vida, listo para servir.
+			#........................................................................................................................................................Enemies
 			Clawclops: Go, go, go, go, go, go, go, go, go, go! Gotta go fast, gotta go fast! Gotta go faster, faster, faster, faster, faster!.
+			CorruptedFlameElemental: Elemental de fuego afectado por la corrupción, no presenta más cambios que un color verdoso que antes no tenía.
 			Eyeling: Feroz bestia corrupta de 8 patas... o mas bien, inofensivo pseudocangrejo corrupto, hay quien dice que se puede domesticar.
 			SkitteringHusk: Un mero cascarón de lo que fue habitante de estas tierras ahora contaminadas por la Corrupción.
-			CorruptedFlameElemental: Elemental de fuego afectado por la corrupción, no presenta más cambios que un color verdoso que antes no tenía.
+			GraniteSlime: Un slime normal y corriente, pero endurecido por el granito de las cuevas.
 			LihzahrdSlime: Los slimes se han colado en el templo, y como no, ya se han adaptado al medio.
-			McMoneyPants: Todos los que os burlais de mis terracajas misteriosas no borréis está descripción que nos reiemos todos al cabo de un tiempo.
-			StarMerchant: Futura actualización.
-			Carver: Antigua miembro de una tribu especialista en tallar madera, se encontraba congelada.
-			CopperGuard: Gracias a la mágia, esta vieja armadura ha cobrado vida, listo para servir.
 			MeteoriteWorm: ¡Gusanos espaciales... en la tierra!
+			MeteoriteMan.DisplayName: Mira tu donde estaba el resto de todas esas cabezas sueltas...
+			// TC_MeteoriteMotherSlime: Algunos slimes hicieron pelota y ahora es un único slime enorme.
+			// TC_MeteoriteSlime: Por algún motivo que no logro comprender, algunos slimes en vez de arder ahora echan pinchos de fuego.
+			#........................................................................................................................................................Critters
 			MeteorFairy: Extrañas esquirlas de fuego que parecen tener vida propia.
 			CopperBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
 			TinBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
@@ -181,135 +375,155 @@ Mods: {
 			VortexSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
 		}
 
-		#This is what displays during all of an NPC's happiness levels. Note that the localization key for these should always be "TownNPCMood.*NPCName*.*Mood*" or else it won't display properly.
-		TownNPCMood: {
+		#This is used to display the NPC's dialogues.
+		Dialogue: {
 			Archeologist: {
-				// Content: I'm feeling good!
-				// NoHome: Do you have any spare housing? Please? Anything? Even a jail cell is fine with me!
-				// LoveSpace: Peace and quiet means I get to live it up!
-				// FarFromHome: I think my house was that way... unless you're taking me somewhere?
-				// DislikeCrowded: The more the merrier and all, but I'm starting to feel a lil' overcrowded.
-				// HateCrowded: I can't kick my legs out and relax without hitting someone...
-				// LikeBiome: Ha ha ha, something about {BiomeName} just makes me laugh uncontrollably for some reason!
-				// LoveBiome: The stars above are so pretty, I love watching them go by so much!
-				// DislikeBiome: Can we go somewhere warmer than this?
-				// HateBiome: I wanna live elsewhere! This is awful, I'm sweating up a storm!
-				// LikeNPC: "{NPCName} is my big-but-not-biggest bro. He's pretty cool!"
-				// LikeNPC_Princess: I gotta visit {NPCName} again sometime, there's a girl who gets me!
-				// LoveNPC: "{NPCName} is here! That's my big bro, isn't he just the coolest?!"
-				// DislikeNPC: I can't stand girls like {NPCName}, feels like she's just here for a certain audience.
-				// HateNPC: Just between us. Have you ever considered throwing {NPCName} back where you found him?
+				LoreNPCsButton: Lore - NPCs.
+				LoreBossesButton: Lore - Jefes.
+				LoreNPCsChat: En una próxima update.
+				LoreBossesChat: En una próxima update.
+				ChangeButtons: Cambiar botón.
+				StandardDialogue1: Standard Dialogue 1.
+				StandardDialogue2: Standard Dialogue 2.
+				StandardDialogue3: Standard Dialogue 3.
+				StandardDialogue4: Standard Dialogue 4.
+				StandardDialogue5: Standard Dialogue 5.
+				InfoLore: Info Lore.
+				TalkALot: Talk A Lot.
+				NotTalkALot: Not Talk A Lot.
+				BestiaryGirl: Chica bestia {0}.
+				Dryad: Driada {0}.
+				Guide: Guía {0}.
+				Ninja: Ninja {0}.
+				WitchDoctor: Doctor brujo {0}.
+				FaltanNPCs: Faltan NPCs, ¿que puñetas es este chat?.
+				GoblinInvasion: Hay invasión de goblins.
+				FrostLegionInvasion: Hay invasión de hielo.
+				PiratesInvansion: Hay invasión pirata.
+				MartianInvansion: Hay invasión marciana.
+				NotInvasion: No hay invasión.
+				SlimeKing1: No has matado al Rey Slime.
+				SlimeKing2: Has matado al Rey Slime.
+				EyeofCthulhu1: No has matado al Ojo de Cthulhu.
+				EyeofCthulhu2: Has matado al Ojo de Cthulhu.
+				BrainWorm1: No has matado al Devoramundos.
+				BrainWorm2: Has matado al Devoramundos.
+				QueenBee1: No has matado a la Abeja Reina.
+				QueenBee2: Has matado a la Abeja Reina.
+				Skeletron1: No has matado a Skeletron.
+				Skeletron2: Has matado a Skeletron.
+				Deerclops1: No has matado al Cierviclople o como se llame.
+				Deerclops2: Has matado al Cierviclople o como se llame.
+				Wall1: No has matado al Muro de carne.
+				Wall2: Has matado al Muro de carne.
+				Hardmode: Estamos en Hardmode.
+				NotHardmode: No estamos en Hardmode.
+				QueenSlime1: No has matado al Reina Slime.
+				QueenSlime2: Has matado al Reina Slime.
+				Twins1: No has matado a los gemelos.
+				Twins2: Has matado a los gemelos.
+				Destroyer1: No has matado al destructor
+				Destroyer2: Has matado  al destructor
+				SkeletronPrime1: No has matado a Skeletron v2.
+				SkeletronPrime2: Has matado a Skeletron v2.
+				Plantera1: No has matado a Plantera.
+				Plantera2: Has matado a Plantera.
+				Golem1: No has matado al Golem.
+				Golem2: Has matado al Golem.
+				Fishron1: No has matado al peixe.
+				Fishron2: Has matado al peixe.
+				EmpressOfLight1: No has matado a la emperatriz de luz.
+				EmpressOfLight2: Has matado a la emperatriz de luz.
+				AncientCultist1: No has matado a los cultistas.
+				AncientCultist2: Has matado a los cultistas.
+				Towers1: No has matado las torres.
+				Towers2: Has matado las torres.
+				Moonlord1: No has matado al Señor de la Luna.
+				Moonlord2: Has matado al Señor de la Luna.
 			}
 
-			Ninja: {
-				Content: Me gusta como está quedando el barrio.
-				NoHome: Estoy entrenado para no necesitar una casa, pero no me vendría mal una la verdad.
-				LoveSpace: Mataría por una casita en el bosque....
-				FarFromHome: A ver si vamos volviendo ya, que son horas.
-				DislikeCrowded: ¿Y ese grupo de gente corriendo de esa manera tan rara?.
-				HateCrowded: Por aquí hay demasiada gente, todo el día tocando mis Shurikens.
-				LoveBiome: No tiene.
-				LikeBiome: Me gusta {BiomeName}, me recuerda a mis años de entrenamiento con Master San.
-				DislikeBiome: "7,8 too much {BiomeName}."
-				HateBiome: Demasiados colorines en {BiomeName}.
-				LoveNPC: Entreno mejor cuando {NPCName} está disponible.
-				LikeNPC: " no tiene"
-				LikeNPC_Princess: No puedo evitar pensar que estoy en un RPG al ver a {NPCName}.
-				DislikeNPC: Primero secuestra a mi maestro ¿y ahora pretende venir a vivir aquí? {NPCName} le echa mucha cara.
-				HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos"
+			CarverFrozen.RescueDialogue: ......
+
+			Carver: {
+				TemporalDialogue: Gracias por rescatarme, en un futuro podré ayudarte.
+				QuestNotFinished1: Lo siento, todavía necesito
+				QuestNotFinished2: para completar mi tarea.
 			}
 
-			Meteorman: {
-				Content: Que tierra tan verde y poco rocosa, muy buena para mis aficciones.
-				NoHome: Podemos usar los restos de mi accidente para hacer unas casas, no se pueden desperdiciar.
-				LoveSpace: Se respira paz.
-				FarFromHome: No me encuentro cómodo tan lejos de casa, aunque mi casa real estaba a miles de kilómetros.
-				DislikeCrowded: Empiezo a tener la lista de encargos un poco saturada.
-				HateCrowded: Odio admitirlo, pero con tanta gente no puedo seguir el ritmo de los encargos.
-				LikeBiome: Por ahora me gustaría quedarme en {BiomeName}, aunque por la noche haga fresquito.
-				LoveBiome: cuando pueda
-				DislikeBiome: "{BiomeName} es fantástico, pero no me siento muy seguro tan cerca del agua."
-				HateBiome: Como pase otro día más en {BiomeName}, creo que tendré que empezar a llamarme el Hombre de Piedra normal y corriente.
-				LikeNPC: Me cae muy bien {NPCName}, cuida mucho la naturaleza.
-				LikeNPC_Princess: "{NPCName} se lleva bien con todo el mundo, como debe ser."
-				LoveNPC: Mi negocio y el de {NPCName} funcionan muy bien juntos.
-				// DislikeNPC: Why is {NPCName} here? It's okay, me, just don't look him in the eye and he can't scare you...
-				HateNPC: No me gusta como {NPCName}, se aprovecha de la gente, además odia a Papá Noel.
-			}
+			EnchanterPrisioner.RescueDialogue: Puñetero cristal...
 
 			Enchanter: {
-				Content: Gracias por romper el hechizo.
-				NoHome: El aire libre está muy bien y todo eso, pero aún así, sigo necesitando de una habitación para trabajar con mis báculos.
-				LoveSpace: En {BiomeName} puedo concentrarme al máximo.
-				FarFromHome: Una escapadita de vez en cuando viene bien, pero va tocando volver, ¿no?.
-				DislikeCrowded: Se empieza a respirar poca magia por aquí, que corra el aire.
-				HateCrowded: Como vuelva a venir alguien a pedirme que le saque un conejo del sombrero... Me mudo al oceano, y eso que no me gusta.
-				LikeBiome: En {BiomeName} se respira magia.
-				// DislikeBiome: "{BiomeName} me distrae demasiado, se pone uno todo ocioso."
-				HateBiome: Ya me estás construyendo una habitación en un sitio más luminoso, bastante tuve ya...
-				LoveNPC: Una pena que a {NPCName} le guste andar por la jungla, su magia me parece de lo más interesante.
-				LikeNPC: Con {NPCName} por aquí, la fiesta está asegurada.
-				// LikeNPC_Princess: "{NPCName} seems friendly."
-				DislikeNPC: No me extraña que a {NPCName} le llamen duende chapucero, menuda escopeta de feria el tío.
-			}
-
-			Mc_MoneyPants: {
-				// Content: I'm feeling good!
-				// NoHome: Do you have any spare housing? Please? Anything? Even a jail cell is fine with me!
-				// LoveSpace: Peace and quiet means I get to live it up!
-				// FarFromHome: I think my house was that way... unless you're taking me somewhere?
-				// DislikeCrowded: The more the merrier and all, but I'm starting to feel a lil' overcrowded.
-				// HateCrowded: I can't kick my legs out and relax without hitting someone...
-				// LikeBiome: Ha ha ha, something about {BiomeName} just makes me laugh uncontrollably for some reason!
-				// LoveBiome: The stars above are so pretty, I love watching them go by so much!
-				// DislikeBiome: Can we go somewhere warmer than this?
-				// HateBiome: I wanna live elsewhere! This is awful, I'm sweating up a storm!
-				// LikeNPC: "{NPCName} is my big-but-not-biggest bro. He's pretty cool!"
-				// LikeNPC_Princess: I gotta visit {NPCName} again sometime, there's a girl who gets me!
-				// LoveNPC: "{NPCName} is here! That's my big bro, isn't he just the coolest?!"
-				// DislikeNPC: I can't stand girls like {NPCName}, feels like she's just here for a certain audience.
-				// HateNPC: Just between us. Have you ever considered throwing {NPCName} back where you found him?
+				StandardDialogue1: Debes de tener algún conocimiento en magia para romper mi encantamiento de cristal.
+				StandardDialogue2: No soy el único mago que quedó atrapado en la mazmorra.
+				StandardDialogue3: Ciertos clones que aparecen en la mazmorra dan más [i:TheCollectors/MagicSoul] de lo normal.
+				InfoSoul: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
+				TalkALot: En realidad mi cometido aquí iba a ser otro, rollo el duende chapucero, pero los desarrolladores son un poco negados...
+				NotTalkALot: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
+				PartyIsUp: ¡¿Una fiesta sorpresa!?, pásame las pócimas del estante de arriba... ¡es hora de empocimarse!
+				Wizard: El maestro {0} últimamente flojea con la magia, nos es propio de él dejarse atrapar de esa manera.
+				PartyGirl: En mis tiempos de estudiante no me perdía ninguna de las fiestas de {0}, que ganas de que haga alguna.
+				Dryad: "{0} maneja una magia ancestral muy extraña, ardo en deseos de conocer sus secretos."
+				InvasionGenerica: No se que manía tienen con invadir este pueblo constantemente.
+				FrostInvasion1: Ojalá una invasión de muñecos de nieve para probar mi nuevo báculo de rubí.
+				FrostInvasion2: Que maravilla de báculo, te aconsejo su compra para cuando vayas a zonas muy frías.
+				AncientCultist1: ¿Donde se habrán metido esos fanáticos...?
+				AncientCultist2: Pacece ser que los cultistas estaban siendo manipulados, nos invitan a una ronda de buenas pócimas, todo arreglado.
 			}
 
 			McMoneyPants: {
-				Content: Jeje, nuevos vecinos a los que poder timar..., digo vender mis fantasticos productos.
-				NoHome: Voy a necesitar bastante espacio, un buen almacén, con caja fuerte por supuesto.
-				LoveSpace: El bosque es el mejor lugar para mi negocio, suelo barato que nadie quiere.
-				FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
-				DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
-				HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
-				LikeBiome: ...
-				LoveBiome: Aquí se respira negocio
-				DislikeBiome: ...
-				HateBiome: ...
-				LikeNPC: Me encanta que {NPCName} cobre por sus servicios, la privatización es el futuro.
-				LikeNPC_Princess: ¿{NPCName} es una princesa?, que maravilla, estos son unos primos...
-				LoveNPC: Es bueno que la gente deje a otros administrar su dinero, {NPCName} lo sabe bien.
-				DislikeNPC: ...
-				HateNPC: ...
+				StandardDialogue1: Puedes comprar la hucha que te enseña el atractivo mercader, o ver lo que hay dentro de la terracaja misteriosa.
+				StandardDialogue2: De aquí a unos años, hasta el mercader usará mi modelo de negocio.
+				StandardDialogue3: ¿Quieres construir aparatos pero no dispones de materiales?, el único riesgo para obtenerlos aquí es el de tu bolsillo.
+				StandardDialogue4: Quién no se fabrica cosas molonas es porque no quiere.
+				NotTalkALot: Necesitas objetos para avanzar en tu aventura y te da miedo perder esa fortuna acumulada, soy el hombre que buscas.
+				TalkALot: En realidad lleno mis cajas con las cosas que sueltan otros jugadores.
+				Nurse: La sanidad privada es el futuro, {0} le sabe.
+				TaxCollector: No es un mal modelo de negocio el de {0}, pero debería apretar un poco más.
+				GoblinTinkerer: Es mía la idea de que las mejoras de equipo que ofrece {0} fueran completamente aleatorias. Antes te dejaba elegir a ti que mejora poner, vaya ruina de negocio.
+				FaltanNPCs: ¿No te interesan unas cuantas Terrabox?.
+				InvasionGenerica: Madre de dios, cuanto primo... digo potenciales clientes.
+				NotInvasionGenerica: Aquí hace falta una buena raid, necesito vender más Terrabox.
 			}
-		}
 
-		#This is used to display the NPC's dialogues.
-		Dialogue: {
+			MeteormanBroken.RescueDialogue: Menuda hostia colega, gracias por ayudarme.
+
+			Meteorman: {
+				StandardDialogue1: Anda que no teneis buenas piedras por aquí ni nada, menudas delicias...
+				StandardDialogue2: El equipamiento que forjas con meteorito no está nada mal, pero todavía se le puede sacar más potencial.
+				StandardDialogue3: Una pena lo de mi casa en el espacio, pero bueno, tampoco se está nada mal por aquí.
+				StandardDialogue4: No se como lo que hicisteis, pero habeis debilitado el sello del Señor de la Luna, no tardó nada en destruir mi base en el espacio, por eso terminé estrellandome aqui.
+				NotTalkALot: Pareces buena persona, seguro que terminamos siendo amigos.
+				TalkALot: Pero si es mi buen amigo 'Playername', ¿como te va?.
+				Demolitionist: "{0} prepara unas salsas explosivas que están de vicio."
+				Dryad: Sino fuera por {0}, no seguiría aquí, le estoy muy agradecido.
+				SantaClaus: Pero si es mi amigo {0}, antes siempre se pasaba por mi meteorito a repostar, y de paso me dejaba carbón del bueno.
+				FaltanNPCs: A este pueblo le falta buena gente.
+				InvasionGenerica: No se que manía tienen con invadir este pueblo constantemente.
+				MartianInvasion1: Me gustaría saber que le ha pasado a mi amigo...
+				MartianInvasion2: ¡¿Los marcianos están atacando?!, no lo entiendo, espero que mi amigo esté bien.
+				MartianInvasion3: Gracias a ti mi amigo está a salvo.
+				MartianInvasion4: Tus compañeros siguen viniendo, ojalá se fueran pacificamente...
+				MeteoriteHardenerSolution1: Podemos sacarle más rendimiento al meteorito, con mi clentamintor y una solución especial lo podríamos conseguir, pero me va a llevar algo de tiempo preparar la solución.
+				MeteoriteHardenerSolution2: Me llevó algo mas de lo esperado, pero por fin la tengo, con esto podemos mejorar el meteorito.
+				MeteoriteOre: Por ahora deberíamos hacer acopio de mineral de meteorito, cuando recupere mis herramientas podremos hacer cosas chulas.
+				RefinedMeteoriteOre: Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Mythril.
+				SoilsDialogue1: En mi tiempo libre soy aficcionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares
+				SoilsDialogue2: ¡Que diversidad de minerales hay en la Tierra!, podremos conseguir multitud de nuevos frutos ricos en minerales.
+				SoilsDialogue3: Parece que las ardillas cambian de color cuando comen los frutos de los árboles mineralosos, igual te encuentras alguna en los árboles.
+				SoilsDialogue4: A algunos conejos les gusta hacer sus madrigueras en los sustratos que preparo, por algún motivo los hacen cambiar de color...
+			}
+
 			Ninja: {
-				// PartyGirlDialogue: "{0} Copiar alguna movida de shinobu y las fiestas"
-				// PartyGirlDialogueRare: te contar� un secreto, voy a invitar a {0} al obon
-				// GuideDialogue1: Did you know that {0} is my brother?
-				// GuideDialogue2: "{0} is the most gifted student of Master-san?"
 				StandardDialogue1: Gracias por rescatarme, intentaré ayudarte en lo que pueda con mis humildes artes ninja.
 				StandardDialogue2: Odio el arroz blanco sin nada.
 				StandardDialogue3: La mejor manera de esquivar al Ojo de Cthulhu es en un ángulo de 90º.
 				StandardDialogue4: Que deshonra para un ninja, ser atrapado por ese Slime gigante.
-				downedQueenSlime: I expected no less from Master-san, not even a scratch.
-				NotdownedQueenSlime: I went with Master-San to investigate some things, but you know, Slime...
 				TalkALot: Cuando mi deseo alcance las estrellas, ¡sobrepasaré a la misma luz! ¡Sí, es lo que yo llamo el 'Battle Changue'!, Permiteme que lo explique, la estrella de la que hablamos aquí , no es ninguna de las estrellas del cielo, es una estrella abstracta y espiritual...
-				// slimeRain: Oh please not again.
 				NotTalkALot: Cuando mi deseo alcance las estrellas..., ¿uh?, no sabía que estabas por aquí, ¿no estarías escuchando verdad?.
-				PartyGirl1: Mira que estrellas ninja festivas más chulas, tengo que enseñarselas a {0}.
-				PartyGirl2: Que ganas tengo de que sea el Obon, aprovecharé los fuegos artificiales para declararme a {0}, deseame suerte.
 				Guide1: ¿Sabías que {0} es mi hermano?.
 				Guide2: "{0} es el aprendiz más aventajado de Master-san."
+				PartyGirl1: Mira que estrellas ninja festivas más chulas, tengo que enseñarselas a {0}.
+				PartyGirl2: Que ganas tengo de que sea el Obon, aprovecharé los fuegos artificiales para declararme a {0}, deseame suerte.
 				OtrosNPCs: ¿Ese muñeco todo quemado no se parece a mi hermano?.
 				NotInvansionGenerica: A veces invaden el pueblo, nadie sabe muy bien porqué, pero al final sirven de entrenamiento.
 				InvasionGenerica: ¡Cuantos enemigos 'playername'!, recuerda activar el ¡Battle Changue!.
@@ -320,71 +534,7 @@ Mods: {
 				BattleChangue: Venga, vamos a poner en práctica el ¡BattleChangue!
 			}
 
-			Meteorman: {
-				Demolitionist: "{0} prepara unas salsas explosivas que están de vicio."
-				Dryad: Sino fuera por {0}, no seguiría aquí, le estoy muy agradecido.
-				StandardDialogue1: Anda que no teneis buenas piedras por aquí ni nada, menudas delicias...
-				StandardDialogue2: El equipamiento que forjas con meteorito no está nada mal, pero todavía se le puede sacar más potencial.
-				StandardDialogue3: Una pena lo de mi casa en el espacio, pero bueno, tampoco se está nada mal por aquí.
-				MeteoriteHardenerSolution1: Podemos sacarle más rendimiento al meteorito, con mi clentamintor y una solución especial lo podríamos conseguir, pero me va a llevar algo de tiempo preparar la solución.
-				MeteoriteHardenerSolution2: Me llevó algo mas de lo esperado, pero por fin la tengo, con esto podemos mejorar el meteorito.
-				MartianInvasion1: Me gustaría saber que le ha pasado a mi amigo...
-				MartianInvasion2: ¡¿Los marcianos están atacando?!, no lo entiendo, espero que mi amigo esté bien.
-				StandardDialogue4: No se como lo que hicisteis, pero habeis debilidato el sello del Señor de la Luna, no tardó nada en destruir mi base en el espacio, por eso terminé estrellandome aqui.
-				NotTalkALot: Pareces buena persona, seguro que terminamos siendo amigos.
-				TalkALot: Pero si es mi buen amigo 'Playername', ¿como te va?.
-				SantaClaus: Pero si es mi amigo {0}, antes siempre se pasaba por mi meteorito a repostar, y de paso me dejaba carbón del bueno.
-				FaltanNPCs: A este pueblo le falta buena gente.
-				MartianInvasion3: Gracias a ti mi amigo está a salvo.
-				MartianInvasion4: Tus compañeros siguen viniendo, ojalá se fueran pacificamente...
-				InvasionGenerica: No se que manía tienen con invadir este pueblo constantemente.
-				RefinedMeteoriteOre: Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Mythril.
-				MeteoriteOre: Por ahora deberíamos hacer acopio de mineral de meteorito, cuando recupere mis herramientas podremos hacer cosas chulas.
-				SoilsDialogue1: En mi tiempo libre soy aficcionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares
-				SoilsDialogue2: ¡Que diversidad de minerales hay en la Tierra!, podremos conseguir multitud de nuevos frutos ricos en minerales.
-				SoilsDialogue3: Parece que las ardillas cambian de color cuando comen los frutos de los árboles mineralosos, igual te encuentras alguna en los árboles.
-				SoilsDialogue4: A algunos conejos les gusta hacer sus madrigueras en los sustratos que preparo, por algún motivo los hacen cambiar de color...
-			}
-
-			Enchanter: {
-				PartyGirl: En mis tiempos de estudiante no me perdía ninguna de las fiestas de {0}, que ganas de que haga alguna.
-				Wizard: El maestro {0} últimamente flojea con la magia, nos es propio de él dejarse atrapar de esa manera.
-				StandardDialogue1: Debes de tener algún conocimiento en magia para romper mi encantamiento de cristal.
-				StandardDialogue2: No soy el único mago que quedó atrapado en la mazmorra.
-				StandardDialogue3: Ciertos clones que aparecen en la mazmorra dan más [i:TheCollectors/MagicSoul] de lo normal.
-				// StandardDialogue4: Dialogo standard numero 3.
-				// RareDialogue: Este mensaje tiene un peso de 0.1, msignifica que aparece 10 veces mas raro.
-				InfoSoul: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
-				TalkALot: En realidad mi cometido aquí iba a ser otro, rollo el duende chapucero, pero los desarrolladores son un poco negados...
-				Dryad: "{0} maneja una magia ancestral muy extraña, ardo en deseos de conocer sus secretos."
-				NotTalkALot: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
-				PartyIsUp: ¡¿Una fiesta sorpresa!?, pásame las pócimas del estante de arriba... ¡es hora de empocimarse!
-				InvasionGenerica: No se que manía tienen con invadir este pueblo constantemente.
-				FrostInvasion1: Ojalá una invasión de muñecos de nieve para probar mi nuevo báculo de rubí.
-				FrostInvasion2: Que maravilla de báculo, te aconsejo su compra para cuando vayas a zonas muy frías.
-				AncientCultist1: ¿Donde se habrán metido esos fanáticos...
-				AncientCultist2: Pacece ser que los cultistas estaban siendo manipulados, nada como unas buenas fiestas para que recuperen el ánimo.
-			}
-
-			Archeologist: {
-				LoreNPCs: En una próxima update.
-				LoreBosses: En una próxima update.
-			}
-
-			McMoneyPants: {
-				StandardDialogue1: Puedes comprar la hucha que te enseña el atractivo mercader, o ver lo que hay dentro de la terracaja misteriosa.
-				StandardDialogue2: De aquí a unos años, hasta el mercader usará mi modelo de negocio.
-				StandardDialogue3: ¿Quieres construir aparatos pero no dispones de materiales?, el único riesgo para obtenerlos aquí es el de tu bolsillo.
-				StandardDialogue4: Quién no se fabrica cosas molonas es porque no quiere.
-				NotTalkALot: Necesitas objetos para avanzar en tu aventura y te da miedo perder esa fortuna acumulada, soy el hombre que buscas.
-				TalkALot: En realidad lleno mis cajas con las cosas que sueltan otros jugadores.
-				Nurse: " La sanidad privada es el futuro, {0} le sabe."
-				TaxCollector: No es un mal modelo de negocio el de {0}, pero debería apretar un poco más.
-				GoblinTinkerer: Es mía la idea de que las mejoras de equipo que ofrece {0} fueran completamente aleatorias. Antes te dejaba elegir a ti que mejora poner, vaya ruina de negocio.
-				FaltanNPCs: ¿No te interesan unas cuantas Terrabox?.
-				InvasionGenerica: Madre de dios, cuanto primo... digo potenciales clientes.
-				NotInvasionGenerica: Aquí hace falta una buena raid, necesito vender más Terrabox.
-			}
+			StarMerchant.TemporalDialogue: Hola, vengo de la lejana China, ha sido un viaje muy largo, por ahora descansaré una temporada.
 
 			CopperGuard: {
 				StandardDialogue1: La defensa de esta casa es mi única prioridad, estoy aquí para cumplir con mi deber.
@@ -392,279 +542,42 @@ Mods: {
 				StandardDialogue3: Pulir mi armadura otorga beneficios mágicos.
 			}
 
-			// InjuredMeteorman.RescueDialogue: Menuda hostia colega, gracias por ayudarme.
-			// EnchanterPrisioner.RescueDialogue: Puñetero cristal...
-			// Mc_MoneyPants.StandardDialogue1: Cambio monedas especiales por bolsas sorpresa.
 			Guide.Ninja: Gracias por rescatar a mi hermano {$Mods.TheCollectors.NPCName.Ninja}.
 			GoblinTinkerer.McMoneyPants: He de reconocer que he aprendido mucho de finanzas, pero creo que {$Mods.TheCollectors.NPCName.McMoneyPants} vuela demasiado cerca del sol.
-			MeteormanBroken.RescueDialogue: Menuda hostia colega, gracias por ayudarme.
-			FrozenCarver.RescueDialogue: ......
-			StarMerchant.TemporalDialogue: Hola, todavía estoy pensando que hacer, por ahora venderé unas estrellas
-			Carver.TemporalDialogue: Gracias por rescatarme, en un futuro podré ayudarte.
 		}
 
 		Items: {
-			MeteoriteArrow: {
-				// DisplayName: Flecha de meteorito
-				// Tooltip: "'Golpea como un meteorito'"
+			MagicSoul: {
+				DisplayName: Alma mágica
+				Tooltip: La esencia de criaturas mágicas
 			}
 
-			MeteorireHardenerSolution: {
-				// DisplayName: Soluci�n endurecedora de meteorito
-				// Tooltip: "'�salo con el clentaminator, transforma el meteorito en meteorito endurecido'"
+			WyvernScale: {
+				DisplayName: Escama de guiverno
+				// Tooltip: ""
 			}
 
-			MeteoriteSolution: {
-				DisplayName: Solución de meteorito
-				Tooltip: "'Úsalo con el clentaminator, transforma la piedra en meteorito'"
-			}
-
-			GraniteArmorHelmet: {
-				DisplayName: Casco de granito
-				// Tooltip: "'Un buen casco'"
-			}
-
-			GraniteArmorBreastplate: {
-				DisplayName: Armadura de granito
-				// Tooltip: "'Una buena armadura'"
-			}
-
-			GraniteArmorGreaves: {
-				DisplayName: Perneras de granito
-				Tooltip: "'Unas buenas perneras'"
-			}
-
-			HarpyFeatherBoots: {
-				DisplayName: Botas de plumas de arpía
-				Tooltip: +3% daño de súbditos.
-			}
-
-			HarpyFeatherChest: {
-				DisplayName: Peto de plumas de arpía
-				Tooltip: +3% daño de súbditos.
-			}
-
-			HarpyFeatherHat: {
-				DisplayName: Corona de plumas de arpía
-				Tooltip: +3% daño de súbditos.
-			}
-
-			HarpyHairpin: {
-				DisplayName: Horquilla de arpía
-				Tooltip: +3% daño de súbditos.
-			}
-
-			RefinedMeteoriteBreastplate: {
-				DisplayName: Cota de malla de meteorito refinado
-				Tooltip: +7% probabilidad de ataque crítico.
-			}
-
-			RefinedMeteoriteHat: {
-				DisplayName: Gorro de meteorito refinado
-				Tooltip:
-					'''
-					+20% daño arrojadizo
-					+10% probabilidad de ataque arrojadizo crítico
-					'''
-			}
-
-			RefinedMeteoriteHeadgear: {
-				DisplayName: Tocado de meteorito refinado
-				Tooltip:
-					'''
-					+100 de maná máximo
-					+12% daño mágico
-					+12% probabilidad de ataque crítico mágico
-					'''
-			}
-
-			RefinedMeteoriteHelmet: {
-				DisplayName: Casco de meteorito refinado
-				Tooltip:
-					'''
-					+10% daño cuerpo a cuerpo
-					+10% probabilidad de ataque crítico cuerpo a cuerpo
-					+10% velocidad cuerpo a cuerpo
-					'''
-			}
-
-			RefinedMeteoriteHood: {
-				DisplayName: Caperuza de meteorito refinado
-				Tooltip:
-					'''
-					+1 máximo de súbditos
-					+15% daño de súbditos
-					'''
-			}
-
-			RefinedMeteoriteLeggins: {
-				// DisplayName: Grebas de meteorito refinado
-				Tooltip:
-					'''
-					+7% daño
-					+8% velocidad de movimiento
-					'''
-			}
-
-			RefinedMeteoriteMask: {
-				DisplayName: Máscara de meteorito refinado
-				Tooltip:
-					'''
-					+15% daño a distancia
-					+8% probabilidad de ataque crítico a distancia
-					'''
-			}
-
-			SlimeCoat_Breastplate: {
-				DisplayName: Recubrimiento de Slime - Pecho
-				Tooltip: +1% daño de súbditos.
-			}
-
-			SlimeCoat_Leggings: {
-				DisplayName: Recubrimiento de Slime - Pantalones
-				Tooltip: +1% daño de súbditos.
-			}
-
-			SlimeCoat_Mask: {
-				DisplayName: Recubrimiento de Slime - Máscara
-				Tooltip: +1% daño de súbditos.
-			}
-
-			SlimeCoat_RoyalMask: {
-				DisplayName: Recubrimiento de Slime - Máscara Real
-				Tooltip: +1% daño de súbditos.
-			}
-
-			WyvernBreastplate: {
-				DisplayName: Cota de escamas de guiverno
-				Tooltip:
-					'''
-					+21% daño de súbditos
-					+1 máximo de súbditos
-					'''
-			}
-
-			WyvernGreaves: {
-				DisplayName: Grebas de escamas de guiverno
-				Tooltip:
-					'''
-					+21% daño de súbditos
-					+1 máximo de súbditos
-					'''
-			}
-
-			WyvernHelmet: {
-				DisplayName: Casco de escamas de guiverno
-				Tooltip:
-					'''
-					+21% daño de súbditos
-					+1 máximo de súbditos
-					'''
-			}
-
-			FlyingEyeling: {
-				// DisplayName: Eyeling volador
-				// Tooltip: "'Invoca a un Eyeling volador'"
-			}
-
-			LivingSpaceRock: {
-				DisplayName: Roca espacial viviente
-				Tooltip: "'Invoca a una amigable Cabeza de Meteorito'"
-			}
-
-			MeteormanPainting1: {
-				// DisplayName: La llegada
-				/* Tooltip:
-					'''
-					Muestra meteorito en su llegada a la Tierra.
-					Meteor. Man
-					''' */
-			}
-
-			NinjaPainting4: {
-				// DisplayName: Pidiendo ayuda
-				/* Tooltip:
-					'''
-					T�cnica Ninja - Ayuda, por favor
-					Saske B. Oninja
-					''' */
-			}
-
-			ClawclopsBanner: {
-				DisplayName: Estandarte de Garrojo
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Garrojo'"
-			}
-
-			CorruptedFlameElementalBanner: {
-				DisplayName: Estandarte de Llama elemental corrupta
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Llama elemental corrupta'"
-			}
-
-			EyelingBanner: {
-				DisplayName: Estantarte de Eyeling
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Eyeling'"
-			}
-
-			SkitteringHuskBanner: {
-				DisplayName: Estantarte de Cascarón resbaladizo
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Cascarón resbaladizo'"
-			}
-
-			RefinedMeteoriteAnvil: {
-				// DisplayName: Yunque de meteorito refinado
-				Tooltip: "'Se usa para crear cosas especiales'"
-			}
-
-			ThrowingDummy: {
-				DisplayName: Monigote de entrenamiento arrojadizo
-				Tooltip: "'Aumento de daño, probabilidad de crítico y velocidad de lanzamiento a las armas arrojadizas'"
-			}
-
-			MeteorClentaminator: {
-				DisplayName: Clentaminator de meteorito
-				Tooltip: "'No tan bueno como el Clentaminator'"
-			}
-
-			MeteoriteFishingPole: {
-				// DisplayName: Ca�a de pescar de meteorito
-				// Tooltip: "'Puede pescar en la lava'"
-			}
-
-			MeteorPickaxe: {
-				DisplayName: Pico de meteorito
-				Tooltip: "'Puede picar piedra infernal'"
-			}
-
+			#............................................................................................................Accesories
 			MeteormanHeart: {
 				DisplayName: Corazón de meteorito
-				Tooltip: "'Otorga Cuerpo Meteórico'"
+				Tooltip: Aumenta la defensa en 20
 			}
 
-			MeteorBoomerang: {
-				DisplayName: Bumerán de meteorito
-				Tooltip: "'Puede infligir ¡En llamas! y 'Hemorragia' a los enemigos'"
+			StatueDetector: {
+				// DisplayName: Radar Statue
+				// Tooltip: Shows the location of nearby statues on the map
 			}
 
-			MeteoriteSpear: {
-				DisplayName: Lanza de meteorito
-				Tooltip: "'Puede infligir ¡En llamas! a los enemigos'"
+			TCMeteorWings: {
+				DisplayName: Impulso meteórico
+				Tooltip:
+					'''
+					Permite volar y caer lentamente
+					"¡Hasta el infinito y más allá!"
+					'''
 			}
 
-			MeteoriteYoyo: {
-				DisplayName: Yoyó de meteorito
-				Tooltip: "'Puede infligir ¡En llamas! a los enemigos'"
-			}
-
-			RefinedMeteoriteSword: {
-				// DisplayName: Ira mete�rica
-				// Tooltip: "'Dispara ondas mete�ricas'"
-			}
-
-			MeteorHoverboardKey: {
-				DisplayName: Llave de Hoverboard
-				Tooltip: "'Estupendo para explorar islas flotantes'"
-			}
-
+			#............................................................................................................Ammo
 			MeteorArrow: {
 				DisplayName: Flecha de meteorito
 				Tooltip: "'Golpea como un meteorito'"
@@ -672,23 +585,1052 @@ Mods: {
 
 			MeteoriteHardenerSolution: {
 				DisplayName: Solución endurecedora de meteorito
-				Tooltip: "'Úsalo con el clentaminator, espárcelo sobre meteorito para endurecerlo'"
+				Tooltip:
+					'''
+					Lo usa el Clentaminator
+					Siembra Meteorito endurecido
+					'''
+			}
+
+			MeteoriteSolution: {
+				DisplayName: Solución de meteorito
+				Tooltip:
+					'''
+					Lo usa el Clentaminator
+					Siembra Meteorito
+					'''
+			}
+
+			#............................................................................................................Armor
+			GraniteArmorHelmet: {
+				DisplayName: Casco de granito
+				// Tooltip: ""
+			}
+
+			GraniteArmorBreastplate: {
+				DisplayName: Armadura de granito
+				// Tooltip: ""
+			}
+
+			GraniteArmorGreaves: {
+				DisplayName: Perneras de granito
+				// Tooltip: ""
+			}
+
+			HarpyFeatherBoots: {
+				DisplayName: Botas de plumas de arpía
+				Tooltip: Aumenta un 3% el daño de invocación
+			}
+
+			HarpyFeatherChest: {
+				DisplayName: Peto de plumas de arpía
+				Tooltip: Aumenta un 3% el daño de invocación
+			}
+
+			HarpyFeatherHat: {
+				DisplayName: Corona de plumas de arpía
+				Tooltip: Aumenta un 3% el daño de invocación
+			}
+
+			HarpyHairpin: {
+				DisplayName: Horquilla de arpía
+				Tooltip: Aumenta un 3% el daño de invocación
+			}
+
+			RefinedMeteoriteBreastplate: {
+				DisplayName: Cota de malla de meteorito refinado
+				Tooltip: Aumenta un 7% la probabilidad de ataque crítico
+			}
+
+			RefinedMeteoriteHat: {
+				DisplayName: Gorro de meteorito refinado
+				Tooltip:
+					'''
+					Aumenta un 20% el daño arrojadizo
+					Aumenta un 10% la probabilidad de ataque arrojadizo crítico
+					'''
+			}
+
+			RefinedMeteoriteHeadgear: {
+				DisplayName: Tocado de meteorito refinado
+				Tooltip:
+					'''
+					Aumenta el maná máximo en 100
+					Aumenta un 12% el daño y la probabilidad de ataque crítico mágico
+					'''
+			}
+
+			RefinedMeteoriteHelmet: {
+				DisplayName: Casco de meteorito refinado
+				Tooltip: Aumenta un 10% el daño, la velocidad y la probabilidad de ataque crítico en el cuerpo a cuerpo
+			}
+
+			RefinedMeteoriteHood: {
+				DisplayName: Caperuza de meteorito refinado
+				Tooltip:
+					'''
+					Aumenta en 1 el máximo de súbditos que puedes tener
+					Aumenta un 15% el daño de invocación
+					'''
 			}
 
 			RefinedMeteoriteLeggings: {
 				DisplayName: Grebas de meteorito refinado
-				/* Tooltip:
+				Tooltip:
 					'''
-					+7% increased damage
-					+8% increased movement speed
-					''' */
+					Aumenta un 7% el daño
+					Aumenta en un 8% la velocidad de movimiento
+					'''
 			}
 
-			FlyingEyelingItem: {
-				DisplayName: Eyeling volador
-				Tooltip: "'Invoca a un Eyeling volador'"
+			RefinedMeteoriteMask: {
+				DisplayName: Máscara de meteorito refinado
+				Tooltip:
+					'''
+					Aumenta un 15% el daño de los ataques a distancia
+					Aumenta un 8% la probabilidad de asestar críticos a distancia
+					'''
 			}
 
+			SlimeCoat_Breastplate: {
+				DisplayName: Recubrimiento de Slime - Pecho
+				Tooltip: Aumenta un 1% el daño de invocación
+			}
+
+			SlimeCoat_Leggings: {
+				DisplayName: Recubrimiento de Slime - Pantalones
+				Tooltip: Aumenta un 1% el daño de invocación
+			}
+
+			SlimeCoat_Mask: {
+				DisplayName: Recubrimiento de Slime - Máscara
+				Tooltip: Aumenta un 1% el daño de invocación
+			}
+
+			SlimeCoat_RoyalMask: {
+				DisplayName: Recubrimiento de Slime - Máscara Real
+				Tooltip:
+					'''
+					Aumenta un 1% el daño de invocación
+					Los slimes serán amistosos
+					'''
+			}
+
+			WyvernBreastplate: {
+				DisplayName: Cota de escamas de guiverno
+				Tooltip:
+					'''
+					Aumenta en 1 el máximo de súbditos que puedes tener
+					Aumenta un 21% el daño de invocación
+					'''
+			}
+
+			WyvernGreaves: {
+				DisplayName: Grebas de escamas de guiverno
+				Tooltip:
+					'''
+					Aumenta en 1 el máximo de súbditos que puedes tener
+					Aumenta un 21% el daño de invocación
+					'''
+			}
+
+			WyvernHelmet: {
+				DisplayName: Casco de escamas de guiverno
+				Tooltip:
+					'''
+					Aumenta en 1 el máximo de súbditos que puedes tener
+					Aumenta un 21% el daño de invocación
+					'''
+			}
+
+			#............................................................................................................Armor Vanity
+			MeteormanMask: {
+				DisplayName: Máscara del hombre de meteorito
+				// Tooltip: ""
+			}
+
+			McMoneyHat: {
+				DisplayName: Gorro del tío gacha
+				// Tooltip: ""
+			}
+
+			MinionBossMask: {
+				// DisplayName: Minion Boss Mask
+				// Tooltip: ""
+			}
+
+			CarverSetHat: {
+				DisplayName: Casco de tallista
+				Tooltip: ""
+			}
+
+			#............................................................................................................Consumables Bosses
+			TCMeteorBossBag: {
+				DisplayName: Bolsa del tesoro (Jefe meteorito)
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			TCMeteorBossSummonItem: {
+				DisplayName: Invocación meteoro
+				Tooltip: Invoca al Jefe meteorito
+			}
+
+			#............................................................................................................Consumables Critters
+			
+			CopperBunnyItem: {
+				DisplayName: Conejo de cobre
+				// Tooltip: ""
+			}
+
+			TinBunnyItem: {
+				DisplayName: Conejo de estaño
+				// Tooltip: ""
+			}
+
+			IronBunnyItem: {
+				DisplayName: Conejo de hierro
+				// Tooltip: ""
+			}
+
+			LeadBunnyItem: {
+				DisplayName: Conejo de plomo
+				// Tooltip: ""
+			}
+
+			SilverBunnyItem: {
+				DisplayName: Conejo de plata
+				// Tooltip: ""
+			}
+
+			TungstenBunnyItem: {
+				DisplayName: Conejo de tungsteno
+				// Tooltip: ""
+			}
+
+			PlatinumBunnyItem: {
+				DisplayName: Conejo de platino
+				// Tooltip: ""
+			}
+
+			SturdyFossilBunnyItem: {
+				DisplayName: Conejo de fósil férreo
+				// Tooltip: ""
+			}
+
+			MeteoriteBunnyItem: {
+				DisplayName: Conejo de meteorito
+				// Tooltip: ""
+			}
+
+			DemoniteBunnyItem: {
+				DisplayName: Conejo endemoniado
+				// Tooltip: ""
+			}
+
+			CrimtaneBunnyItem: {
+				DisplayName: Conejo carmesí
+				// Tooltip: ""
+			}
+
+			ObsidianBunnyItem: {
+				DisplayName: Conejo de obisiana
+				// Tooltip: ""
+			}
+
+			HellstoneBunnyItem: {
+				DisplayName: Conejo infernal
+				// Tooltip: ""
+			}
+
+			CobaltBunnyItem: {
+				DisplayName: Conejo de cobalto
+				// Tooltip: ""
+			}
+
+			PalladiumBunnyItem: {
+				DisplayName: Conejo de paladio
+				// Tooltip: ""
+			}
+
+			MythrilBunnyItem: {
+				DisplayName: Conejo de mythril
+				// Tooltip: ""
+			}
+
+			OrichalcumBunnyItem: {
+				DisplayName: Conejo de oricalco
+				// Tooltip: ""
+			}
+
+			AdamantiteBunnyItem: {
+				DisplayName: Conejo de adamantita
+				// Tooltip: ""
+			}
+
+			TitaniumBunnyItem: {
+				DisplayName: Conejo de titanio
+				// Tooltip: ""
+			}
+
+			HardenedMeteoriteBunnyItem: {
+				DisplayName: Conejo de meteorito endurecido
+				// Tooltip: ""
+			}
+
+			HallowedBunnyItem: {
+				DisplayName: Conejo sagrado
+				// Tooltip: ""
+			}
+
+			ChlorophyteBunnyItem: {
+				DisplayName: Conejo de clorofita
+				// Tooltip: ""
+			}
+
+			ShroomiteBunnyItem: {
+				DisplayName: Conejo de piñonita
+				// Tooltip: ""
+			}
+
+			SpectreBunnyItem: {
+				DisplayName: Conejo espectral
+				// Tooltip: ""
+			}
+
+			LuminiteBunnyItem: {
+				DisplayName: Conejo de luminita
+				// Tooltip: ""
+			}
+
+			SolarBunnyItem: {
+				DisplayName: Conejo solar
+				// Tooltip: ""
+			}
+
+			NebulaBunnyItem: {
+				DisplayName: Conejo neboloso
+				// Tooltip: ""
+			}
+
+			VortexBunnyItem: {
+				DisplayName: Conejo vórtice
+				// Tooltip: ""
+			}
+
+			StardustBunnyItem: {
+				DisplayName: Conejo de polvo estelar
+				// Tooltip: ""
+			}
+
+			CopperSquirrelItem: {
+				DisplayName: Ardilla de cobre
+				// Tooltip: ""
+			}
+
+			TinSquirrelItem: {
+				DisplayName: Ardilla de estaño
+				// Tooltip: ""
+			}
+
+			IronSquirrelItem: {
+				DisplayName: Ardilla de hierro
+				// Tooltip: ""
+			}
+
+			LeadSquirrelItem: {
+				DisplayName: Ardilla de plomo
+				// Tooltip: ""
+			}
+
+			SilverSquirrelItem: {
+				DisplayName: Ardilla de plata
+				// Tooltip: ""
+			}
+
+			TungstenSquirrelItem: {
+				DisplayName: Ardilla de tungsteno
+				// Tooltip: ""
+			}
+
+			GoldBunnyItem: {
+				DisplayName: Conejo de oro
+				Tooltip: Totalmente diferente al conejo dorado
+			}
+
+			GoldSquirrelItem: {
+				DisplayName: Ardilla de oro
+				Tooltip: Totalmente diferente a la ardilla dorada
+			}
+
+			PlatinumSquirrelItem: {
+				DisplayName: Ardilla de platino
+				// Tooltip: ""
+			}
+
+			SturdyFossilSquirrelItem: {
+				DisplayName: Ardilla de fósil férreo
+				// Tooltip: ""
+			}
+
+			MeteoriteSquirrelItem: {
+				DisplayName: Ardilla de meteorito
+				// Tooltip: ""
+			}
+
+			DemoniteSquirrelItem: {
+				DisplayName: Ardilla endemoniado
+				// Tooltip: ""
+			}
+
+			CrimtaneSquirrelItem: {
+				DisplayName: Ardilla carmesí
+				// Tooltip: ""
+			}
+
+			ObsidianSquirrelItem: {
+				DisplayName: Ardilla de obisiana
+				// Tooltip: ""
+			}
+
+			HellstoneSquirrelItem: {
+				DisplayName: Ardilla infernal
+				// Tooltip: ""
+			}
+
+			CobaltSquirrelItem: {
+				DisplayName: Ardilla de cobalto
+				// Tooltip: ""
+			}
+
+			PalladiumSquirrelItem: {
+				DisplayName: Ardilla de paladio
+				// Tooltip: ""
+			}
+
+			MythrilSquirrelItem: {
+				DisplayName: Ardilla de mythril
+				// Tooltip: ""
+			}
+
+			OrichalcumSquirrelItem: {
+				DisplayName: Ardilla de oricalco
+				// Tooltip: ""
+			}
+
+			AdamantiteSquirrelItem: {
+				DisplayName: Ardilla de adamantita
+				// Tooltip: ""
+			}
+
+			TitaniumSquirrelItem: {
+				DisplayName: Ardilla de titanio
+				// Tooltip: ""
+			}
+
+			HardenedMeteoriteSquirrelItem: {
+				DisplayName: Ardilla de meteorito endurecido
+				// Tooltip: ""
+			}
+
+			HallowedSquirrelItem: {
+				DisplayName: Ardilla sagrado
+				// Tooltip: ""
+			}
+
+			ChlorophyteSquirrelItem: {
+				DisplayName: Ardilla de clorofita
+				// Tooltip: ""
+			}
+
+			ShroomiteSquirrelItem: {
+				DisplayName: Ardilla de piñonita
+				// Tooltip: ""
+			}
+
+			SpectreSquirrelItem: {
+				DisplayName: Ardilla espectral
+				// Tooltip: ""
+			}
+
+			LuminiteSquirrelItem: {
+				DisplayName: Ardilla de luminita
+				// Tooltip: ""
+			}
+
+			SolarSquirrelItem: {
+				DisplayName: Ardilla solar
+				// Tooltip: ""
+			}
+
+			NebulaSquirrelItem: {
+				DisplayName: Ardilla neboloso
+				// Tooltip: ""
+			}
+
+			VortexSquirrelItem: {
+				DisplayName: Ardilla vórtice
+				// Tooltip: ""
+			}
+
+			StardustSquirrelItem: {
+				DisplayName: Ardilla de polvo estelar
+				// Tooltip: ""
+			}
+
+			MeteoriteFairyItem: {
+				DisplayName: Hada ardiente
+				Tooltip: ¡Eh! ¡Hazme caso!
+			}
+
+			#............................................................................................................Consumables Food
+			CopperFruit: {
+				DisplayName: Cobrezas
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			TinFruit: {
+				DisplayName: Estañarindo
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			IronFruit: {
+				DisplayName: Ferrelón
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			LeadFruit: {
+				DisplayName: Plomichi
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			SilverFruit: {
+				DisplayName: Platárando
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			TungstenFruit: {
+				DisplayName: Tomateno
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			GoldFruit: {
+				DisplayName: Limonoro
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			PlatinumFruit: {
+				DisplayName: Platinbola
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			FossilFruit: {
+				DisplayName: Higósil férreo
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			MeteoriteFruit: {
+				DisplayName: Naranjito
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			DemoniteFruit: {
+				DisplayName: Endemorazno
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			CrimtaneFruit: {
+				DisplayName: Carmetano
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			ObsidianFruit: {
+				DisplayName: Obsiliva
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			HellstoneFruit: {
+				DisplayName: Inferguacate
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			CobaltFruit: {
+				DisplayName: Cocobalto
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			PalladiumFruit: {
+				DisplayName: Granadio
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			MythrilFruit: {
+				// DisplayName: Kiwithirl
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			OrichalcumFruit: {
+				DisplayName: Persicalco
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			AdamantiteFruit: {
+				DisplayName: Manzanatita
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			TitaniumFruit: {
+				DisplayName: Piñanio
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			HardenedMeteoriteFruit: {
+				DisplayName: Naranjito endurecido
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			HallowedFruit: {
+				DisplayName: Sagramelo
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			ChlorophyteFruit: {
+				DisplayName: Clorimoya
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			ShroomiteFruit: {
+				DisplayName: Piñorina
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			SpectreFruit: {
+				DisplayName: Espectabaza
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			LuminiteFruit: {
+				DisplayName: Lumilocotón
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			SolarFruit: {
+				DisplayName: Lumilocotón solar
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			NebulaFruit: {
+				DisplayName: Lumilocotón nebuloso
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			VortexFruit: {
+				DisplayName: Lumilocotón vórtice
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			StardustFruit: {
+				DisplayName: Lumilocotón estelar
+				Tooltip:
+					'''
+					{$CommonItemTooltip.MediumStats}
+					"Increiblemente no tóxica"
+					'''
+			}
+
+			#............................................................................................................NPC Stash Carver
+			QuestWood: {
+				// DisplayName: Quest Wood
+				// Tooltip: ""
+			}
+
+			#............................................................................................................NPC Stash MC Money Pants
+			
+			TerraCoin: {
+				DisplayName: Terramoneda
+				Tooltip: Dinero para comerciar con el Tío Gacha
+			}
+
+			DyesTerrabox: {
+				DisplayName: Terracaja misteriosa - Tintes
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Puede tocar cualquier tinte
+					'''
+			}
+
+			AnkhShieldTerrabox: {
+				DisplayName: Terracaja misteriosa - Escudo de cruz ansata
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Puede tocar cualquiera de los materiales para construir el Ankh Shield
+					'''
+			}
+
+			ShellphoneTerrabox: {
+				DisplayName: Terracaja misteriosa - Teleconcha
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Puede tocar cualquiera de los materiales para construir el Shellphone
+					'''
+			}
+
+			TerrasparkBootsTerrabox: {
+				DisplayName: Terracaja misteriosa - Botas de terrachispa
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Puede tocar cualquiera de los materiales para construir las Terraspark Boots
+					'''
+			}
+
+			ZenithTerrabox: {
+				DisplayName: Terracaja misteriosa - Cénit
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Puede tocar cualquiera de los materiales para construir la Zenith
+					'''
+			}
+
+			#............................................................................................................NPC Stash Meteorman
+			CopperSoil: {
+				DisplayName: Sustrato de cobre
+				// Tooltip: ""
+			}
+
+			TinSoil: {
+				DisplayName: Sustrato de estaño
+				// Tooltip: ""
+			}
+
+			IronSoil: {
+				DisplayName: Sustrato de hierro
+				// Tooltip: ""
+			}
+
+			LeadSoil: {
+				DisplayName: Sustrato de plomo
+				// Tooltip: ""
+			}
+
+			SilverSoil: {
+				DisplayName: Sustrato de plata
+				// Tooltip: ""
+			}
+
+			TungstenSoil: {
+				DisplayName: Sustrato de tungsteno
+				// Tooltip: ""
+			}
+
+			GoldSoil: {
+				DisplayName: Sustrato de oro
+				// Tooltip: ""
+			}
+
+			PlatinumSoil: {
+				DisplayName: Sustrato de platino
+				// Tooltip: ""
+			}
+
+			SturdyFossilSoil: {
+				DisplayName: Sustrato de fósil férreo
+				// Tooltip: ""
+			}
+
+			MeteoriteSoil: {
+				DisplayName: Sustrato de meteorito
+				// Tooltip: ""
+			}
+
+			DemoniteSoil: {
+				DisplayName: Sustrato endemoniado
+				// Tooltip: ""
+			}
+
+			CrimtaneSoil: {
+				DisplayName: Sustrato carmesí
+				// Tooltip: ""
+			}
+
+			ObsidianSoil: {
+				DisplayName: Sustrato de obisiana
+				// Tooltip: ""
+			}
+
+			HellstoneSoil: {
+				DisplayName: Sustrato infernal
+				// Tooltip: ""
+			}
+
+			CobaltSoil: {
+				DisplayName: Sustrato de cobalto
+				// Tooltip: ""
+			}
+
+			PalladiumSoil: {
+				DisplayName: Sustrato de paladio
+				// Tooltip: ""
+			}
+
+			MythrilSoil: {
+				DisplayName: Sustrato de mythril
+				// Tooltip: ""
+			}
+
+			OrichalcumSoil: {
+				DisplayName: Sustrato de oricalco
+				// Tooltip: ""
+			}
+
+			AdamantiteSoil: {
+				DisplayName: Sustrato de adamantita
+				// Tooltip: ""
+			}
+
+			TitaniumSoil: {
+				DisplayName: Sustrato de titanio
+				// Tooltip: ""
+			}
+
+			HardenedMeteoriteSoil: {
+				DisplayName: Sustrato de meteorito endurecido
+				// Tooltip: ""
+			}
+
+			HallowedOre: {
+				DisplayName: Mineral sagrado
+				// Tooltip: ""
+			}
+
+			HallowedSoil: {
+				DisplayName: Sustrato sagrado
+				// Tooltip: ""
+			}
+
+			ChlorophyteSoil: {
+				DisplayName: Sustrato de clorofita
+				// Tooltip: ""
+			}
+
+			ShroomiteOre: {
+				DisplayName: Mineral de piñonita
+				// Tooltip: ""
+			}
+
+			ShroomiteSoil: {
+				DisplayName: Sustrato de piñonita
+				// Tooltip: ""
+			}
+
+			SpectreOre: {
+				DisplayName: Mineral espectral
+				// Tooltip: ""
+			}
+
+			SpectreSoil: {
+				DisplayName: Sustrato espectral
+				// Tooltip: ""
+			}
+
+			LuminiteSoil: {
+				DisplayName: Sustrato de luminita
+				// Tooltip: ""
+			}
+
+			SolarSoil: {
+				DisplayName: Sustrato solar
+				// Tooltip: ""
+			}
+
+			NebulaSoil: {
+				DisplayName: Sustrato neboloso
+				// Tooltip: ""
+			}
+
+			VortexSoil: {
+				DisplayName: Sustrato vórtice
+				// Tooltip: ""
+			}
+
+			StardustSoil: {
+				DisplayName: Sustrato de polvo estelar
+				// Tooltip: ""
+			}
+
+			#............................................................................................................Placeable
+			ThrowingDummy: {
+				DisplayName: Monigote de entrenamiento arrojadizo
+				Tooltip: Aumento de daño, probabilidad de crítico y velocidad de lanzamiento a las armas arrojadizas
+			}
+
+			#............................................................................................................Placeable Banners
+			ClawclopsBanner: {
+				DisplayName: Estandarte de Garrojo
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Garrojo
+			}
+
+			CorruptedFlameElementalBanner: {
+				DisplayName: Estandarte de Llama elemental corrupta
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Llama elemental corrupta
+			}
+
+			EyelingBanner: {
+				DisplayName: Estantarte de Eyeling
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Eyeling
+			}
+
+			SkitteringHuskBanner: {
+				DisplayName: Estantarte de Cascarón resbaladizo
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Cascarón resbaladizo
+			}
+
+			MeteoriteFairyBanner: {
+				DisplayName: Estandarte de Hada meteoro
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Meteorite Fairy
+			}
+
+			MeteoriteManBanner: {
+				DisplayName: Estandarte de Cuerpo de meteorito
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Cuerpo de meteorito
+			}
+
+			MeteoriteWormBanner: {
+				DisplayName: Estandarte de Gusano meteoro
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Gusano meteoro
+			}
+
+			#............................................................................................................Placeable Bosses
+			TCMeteorBossRelic: {
+				DisplayName: Reliquia de Jefe meteorito
+				// Tooltip: ""
+			}
+
+			TCMeteorBossTrophy: {
+				DisplayName: Trofeo Jefe meteorito
+				// Tooltip: ""
+			}
+
+			#............................................................................................................Placeable Paintings
 			MeteormanPaintingVol1: {
 				DisplayName: Grietas lunares
 				Tooltip:
@@ -704,7 +1646,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección hombre de meteorito Vol.2
-					La explosión lunar alcanza el hogar del Hombre de Meteorito.
+					La explosión lunar alcanza el hogar del Hombre de Meteorito
 					Por thyflyingraccons
 					'''
 			}
@@ -714,7 +1656,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección hombre de meteorito Vol.3
-					Parte del meteorito está llegando a la Tierra.
+					Parte del meteorito está llegando a la Tierra
 					Por thyflyingraccons
 					'''
 			}
@@ -724,7 +1666,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección hombre de meteorito Vol.4
-					Se muestra al Hombre de Meteorito en una inusual postura.
+					Se muestra al Hombre de Meteorito en una inusual postura
 					Por thyflyingraccons
 					'''
 			}
@@ -734,7 +1676,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección hombre de meteorito Vol.5
-					La Driada cura al Hombre de Meteorito.
+					La Driada cura al Hombre de Meteorito
 					Por thyflyingraccons
 					'''
 			}
@@ -744,7 +1686,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección hombre de meteorito Vol.Ex
-					Se muestra al Hombre de Meteorito plantando unos extraños ¿árboles?.
+					Se muestra al Hombre de Meteorito plantando unos extraños... ¿árboles?
 					Por thyflyingraccons
 					'''
 			}
@@ -754,7 +1696,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.1
-					'La técnica aqui mostrada consiste en subirse a un sitio elevado y mirar al horizonte'
+					"La técnica aqui mostrada consiste en subirse a un sitio elevado y mirar al horizonte"
 					Por thyflyingraccons
 					'''
 			}
@@ -764,7 +1706,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.2
-					'Cuando te encuentras con muchos enemigos, lo mejor es montar un buena gresca'
+					"Cuando te encuentras con muchos enemigos, lo mejor es montar un buena gresca"
 					Por thyflyingraccons
 					'''
 			}
@@ -774,7 +1716,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.3
-					'Aquí estoy engañando al enemigo con mi clásico resbalón, con esto bajará la guardia'
+					"Aquí estoy engañando al enemigo con mi clásico resbalón, con esto bajará la guardia"
 					Por thyflyingraccons
 					'''
 			}
@@ -784,7 +1726,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.4
-					'El enemigo era mas hábil de lo que yo pensaba, así que tuve que recurrir a pedir ayuda'
+					"El enemigo era mas hábil de lo que yo pensaba, así que tuve que recurrir a pedir ayuda"
 					Por thyflyingraccons
 					'''
 			}
@@ -794,7 +1736,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.5
-					'Esta es una técnica muy compleja, pocos logran llevarla a cabo con exito, la gratitud no es moco de pavo'
+					"Esta es una técnica muy compleja, pocos logran llevarla a cabo con exito, la gratitud no es moco de pavo"
 					Por thyflyingraccons
 					'''
 			}
@@ -804,622 +1746,19 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.Ex
-					'Ah si, la clásica secuencia de entrenamiento, en realidad es la mejor técnica ninja para subir tus ninja puntos'
+					"Ah si, la clásica secuencia de entrenamiento, en realidad es la mejor técnica ninja para subir tus ninja puntos"
 					Por thyflyingraccons
 					'''
 			}
 
-			RefinedMeteoriteSink: {
-				DisplayName: Fregadero de meteorito refinado
-				Tooltip: "'Cuenta como fuente de agua y lava'"
-			}
-
-			RefinedMeteoriteWorkbench: {
-				DisplayName: Banco de trabajo de meteorito refinado
-				Tooltip: "'Se usa para creaciones básicas'"
-			}
-
-			MeteorFishingPole: {
-				DisplayName: Caña de pescar de meteorito
-				Tooltip: "'Puede pescar en la lava'"
-			}
-
-			GeodePickaxe: {
-				DisplayName: Geopico
-				Tooltip: "'10% de obtener geodas al picar piedra'"
-			}
-
-			OysterRake: {
-				DisplayName: Ostrillo
-				Tooltip: "'Encuentra ostras al cavar arena en el océano'"
-			}
-
-			MeteoriteFlail: {
-				DisplayName: Mangual de meteorito
-				Tooltip: "'Puede infligir ¡En llamas! a los enemigos'"
-			}
-
-			MeteoriteWhip: {
-				DisplayName: Látigo de meteorito
-				Tooltip: "'Puede infligir ¡En llamas! a los enemigos'"
-			}
-
-			RefinedMeteorSword: {
-				DisplayName: Ira meteórica
-				Tooltip: "'Dispara ondas meteóricas'"
-			}
-
-			MeteorSword: {
-				DisplayName: Espada meteórica
-				Tooltip: "'Puede infligir ¡En llamas! a los enemigos'"
-			}
-
-			BeeShuriken: {
-				DisplayName: Aguijónken
-				Tooltip: ¡Envenenan a la velocidad de la luz!
-			}
-
-			BoneShuriken: {
-				DisplayName: Huesoken
-				Tooltip: Unos huesos fuertes mejoran la efectividad.
-			}
-
-			BrainShuriken: {
-				DisplayName: Menteken
-				Tooltip: ¡Ahora con control remoto incorporado!
-			}
-
-			DeerShuriken: {
-				DisplayName: Astaken
-				Tooltip: ¡Empuja a tus enemigos con su poderoso retroceso!
-			}
-
-			EyeShuriken: {
-				DisplayName: Lenteken
-				Tooltip: ¡Mejora tu puntería con sus lentes!
-			}
-
-			HellstoneShuriken: {
-				DisplayName: Estrella ninja de piedra infernal
-				Tooltip: Inflige ¡En llamas!
-			}
-
-			MeteoriteShuriken: {
-				DisplayName: Estrella ninja de meteorito
-				Tooltip: Inflige ¡En llamas!
-			}
-
-			MeteorJavelin: {
-				DisplayName: Jabalina de meteorito
-				Tooltip:
-					'''
-					Puede infligir ¡En llamas! y 'Hemorragia' a los enemigos
-					'Golpea como un meteorito'
-					'''
-			}
-
-			PartyShuriken: {
-				DisplayName: Estrella ninja fiestera
-				Tooltip: ¡Que empiece la fiesta, no te preocupes por darle a alguien, no hacen daño!
-			}
-
-			SlimeShuriken: {
-				DisplayName: Elastiken
-				Tooltip: ¡Rebota rebota y en tu cara explota!"
-			}
-
-			WallShuriken: {
-				DisplayName: Muroken
-				Tooltip: Requiere actualización
-			}
-
-			WormShuriken: {
-				DisplayName: Devoraken
-				Tooltip: ¡Como un topo, pero en estrella ninja!
-			}
-
-			MagicSoul: {
-				DisplayName: Alma mágica
-				// Tooltip: "'The essence of magic creatures'"
-			}
-
-			BookofMeteors: {
-				DisplayName: Libro de cabezas de meteorito
-				Tooltip: Dispara cabezas de meteorito
-			}
-
-			AmethystStaffTier1: {
-				DisplayName: Báculo de amatista venenoso
-				Tooltip: Inflige Envenenado
-			}
-
-			AmethystStaffTier2: {
-				DisplayName: Báculo de amatista extremadamente venenoso
-				Tooltip: Inflige Envenenado y Ponzoña
-			}
-
-			TopazStaffTier1: {
-				DisplayName: Báculo de topacio opulento
-				Tooltip: Inflige Midas
-			}
-
-			TopazStaffTier2: {
-				DisplayName: Báculo de topacio opulento avaricioso
-				Tooltip:
-					'''
-					Inflige Midas
-					Otorga ¡Pánico!, Vela de agua y Batalla
-					'''
-			}
-
-			SapphireStaffTier1: {
-				DisplayName: Báculo de zafiro congelante
-				Tooltip: Inflige Helado
-			}
-
-			SapphireStaffTier2: {
-				DisplayName: Báculo de zafiro frescudo
-				Tooltip:
-					'''
-					Inflige Helado
-					Si el jugador tiene <50% de vida, se activa Barrera de hielo
-					'''
-			}
-
-			EmeraldStaffTier1: {
-				DisplayName: Báculo de esmeralda espinoso
-				Tooltip: Otorga Espinas
-			}
-
-			EmeraldStaffTier2: {
-				DisplayName: Báculo de esmeralda furipinoso
-				Tooltip: Otorga Espinas y Hoja de cristal
-			}
-
-			AmberStaffTier1: {
-				DisplayName: Báculo de ámbar meloso
-				Tooltip: Otorga Miel
-			}
-
-			AmberStaffTier2: {
-				DisplayName: Báculo de ámbar abejalea
-				Tooltip:
-					'''
-					Otorga Miel
-					Los proyectiles al explotar liberan abejas
-					'''
-			}
-
-			RubyStaffTier1: {
-				DisplayName: Báculo de rubí ardiente
-				Tooltip: Inflige ¡En llamas!
-			}
-
-			RubyStaffTier2: {
-				DisplayName: Báculo de rubí piroexplosivo
-				Tooltip:
-					'''
-					Inflige ¡En llamas!
-					Dispara múltiples proyectiles
-					'''
-			}
-
-			DiamondStaffTier1: {
-				DisplayName: Báculo de diamante telesanador
-				Tooltip:
-					'''
-					Dispara un proyectil teledirigido
-					Cura un 10% del daño causado
-					Dispara múltiples proyectiles
-					'''
-			}
-
-			DiamondStaffTier2: {
-				DisplayName: Báculo de diamante telemultisanador
-				Tooltip:
-					'''
-					Dispara multiples proyectiles teledirigidos que explotan en más proyectiles
-					Cada proyectil cura un 10% del daño causado
-					'''
-			}
-
-			TerraCoin: {
-				DisplayName: Terramoneda
-				// Tooltip: Moneda especial del Terraria.
-			}
-
-			DyesTerrabox: {
-				DisplayName: Terracaja misteriosa - Tintes
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquier tinte.
-					''' */
-			}
-
-			AnkhShieldTerrabox: {
-				DisplayName: Terracaja misteriosa - Escudo de cruz ansata
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir el Ankh Shield.
-					''' */
-			}
-
-			ShellphoneTerrabox: {
-				DisplayName: Terracaja misteriosa - Teleconcha
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir el Shellphone.
-					''' */
-			}
-
-			TerrasparkBootsTerrabox: {
-				DisplayName: Terracaja misteriosa - Botas de terrachispa
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir las Terraspark Boots.
-					''' */
-			}
-
-			ZenithTerrabox: {
-				DisplayName: Terracaja misteriosa - Cénit
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir la Zenith.
-					''' */
-			}
-
-			CopperFruit: {
-				DisplayName: Cobrezas
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			TinFruit: {
-				DisplayName: Estañarindo
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			IronFruit: {
-				DisplayName: Ferrelón
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			LeadFruit: {
-				DisplayName: Plomichi
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			SilverFruit: {
-				DisplayName: Platárando
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			TungstenFruit: {
-				DisplayName: Tomateno
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			GoldBunnyItem: {
-				DisplayName: Conejo de oro
-				// Tooltip: Totalmente diferente al conejo dorado vanilla
-			}
-
-			GoldFruit: {
-				DisplayName: Limonoro
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			PlatinumFruit: {
-				DisplayName: Platinbola
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			FossilFruit: {
-				DisplayName: Higósil férreo
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			MeteoriteFruit: {
-				DisplayName: Naranjito
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			DemoniteFruit: {
-				DisplayName: Endemorazno
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			CrimtaneFruit: {
-				DisplayName: Carmetano
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			ObsidianFruit: {
-				DisplayName: Obsiliva
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			HellstoneFruit: {
-				DisplayName: Inferguacate
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			CobaltFruit: {
-				DisplayName: Cocobalto
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			PalladiumFruit: {
-				DisplayName: Granadio
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			MythrilFruit: {
-				// DisplayName: Kiwithirl
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			OrichalcumFruit: {
-				DisplayName: Persicalco
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			AdamantiteFruit: {
-				DisplayName: Manzanatita
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			TitaniumFruit: {
-				DisplayName: Piñanio
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			HardenedMeteoriteFruit: {
-				DisplayName: Naranjito endurecido
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			HallowedFruit: {
-				DisplayName: Sagramelo
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			ChlorophyteFruit: {
-				DisplayName: Clorimoya
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			ShroomiteFruit: {
-				DisplayName: Piñorina
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			SpectreFruit: {
-				DisplayName: Espectabaza
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			LuminiteFruit: {
-				DisplayName: Lumilocotón
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			SolarFruit: {
-				DisplayName: Lumilocotón solar
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			NebulaFruit: {
-				DisplayName: Lumilocotón nebuloso
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			VortexFruit: {
-				DisplayName: Lumilocotón vórtice
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			StardustFruit: {
-				DisplayName: Lumilocotón estelar
-				/* Tooltip:
-					'''
-					{$CommonItemTooltip.MediumStats}
-					'Mysteriously good'
-					''' */
-			}
-
-			StatueDetector: {
-				// DisplayName: Radar Statue
-				// Tooltip: Shows the location of nearby statues on the map
-			}
-
-			Monja: {
-				// DisplayName: Monja
-				Tooltip: "'Invoca a un Monja luminosa'"
-			}
-
-			RefinedMeteoriteCampfire: {
-				// DisplayName: Refined Meteorite Campfire
-				// Tooltip: Life regen is increased when near a campfire
-			}
-
-			RefinedMeteoriteCraftingStation: {
-				// DisplayName: Refined Meteorite Crafting Station
-				// Tooltip: Used for special crafting
-			}
-
-			RefinedMeteoriteFireplace: {
-				// DisplayName: Refined Meteorite Fireplace
-				// Tooltip: Life regen is increased when near a fireplace
-			}
-
-			PearlStaff: {
-				// DisplayName: Pearl Staff
-				// Tooltip: Lanza un rayo de perlas que rebota en las paredes
-			}
-
-			RefinedMeteoriteFlail: {
-				// DisplayName: Example Advanced Flail
-				// Tooltip: This is a modded flail with custom behavior.
-			}
-
-			RefinedMeteoriteMinecartItem: {
-				// DisplayName: Refined Meteorite Minecart
-				// Tooltip: Template
-			}
-
-			LivingSpaceRockItem: {
-				// DisplayName: Living Space Rock Item
-				// Tooltip: ""
-			}
-
-			MonjaItem: {
-				// DisplayName: Monja Item
-				// Tooltip: ""
-			}
-
-			TCMeteorBossBag: {
-				// DisplayName: T C Meteor Boss Bag
-				// Tooltip: ""
-			}
-
-			TCMeteorBossSummonItem: {
-				// DisplayName: T C Meteor Boss Summon Item
-				// Tooltip: ""
-			}
-
-			TCMeteorBossRelic: {
-				// DisplayName: T C Meteor Boss Relic
-				// Tooltip: ""
-			}
-
-			TCMeteorBossTrophy: {
-				// DisplayName: T C Meteor Boss Trophy
-				// Tooltip: ""
-			}
-
+			#............................................................................................................Placeable Refined Meteorite Set
 			HardenedMeteoriteOre: {
 				DisplayName: Mineral de meteorito endurecido
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteAnimatedLantern: {
+				DisplayName: Hada meteoro en una botella
 				// Tooltip: ""
 			}
 
@@ -1428,38 +1767,13 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			ShroomiteOre: {
-				DisplayName: Mineral de piñonita
-				// Tooltip: ""
-			}
-
-			MarbleFishingPole: {
-				DisplayName: Caña de pescar de mármol
-				// Tooltip: ""
-			}
-
-			WyvernScale: {
-				DisplayName: Escama de guiverno
-				// Tooltip: ""
-			}
-
-			MeteormanMask: {
-				DisplayName: Máscara del hombre de meteorito
-				// Tooltip: ""
-			}
-
-			McMoneyHat: {
-				DisplayName: Gorro del tío gacha
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteAnimatedLantern: {
-				DisplayName: Hada de meteorito en una botella
-				// Tooltip: ""
-			}
-
 			RefinedMeteoriteBathtub: {
 				DisplayName: Bañera de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteBeam: {
+				DisplayName: Columna de meteorito refinado
 				// Tooltip: ""
 			}
 
@@ -1481,6 +1795,11 @@ Mods: {
 			RefinedMeteoriteBookcase: {
 				DisplayName: Librería de meteorito refinado
 				// Tooltip: ""
+			}
+
+			RefinedMeteoriteCampfire: {
+				DisplayName: Hoguera de meteorito refinado
+				Tooltip: La regeneración de vida es mayor junto a una hoguera
 			}
 
 			RefinedMeteoriteCandelabra: {
@@ -1508,16 +1827,34 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			RefinedMeteoriteChestTrapped.DisplayName: Cofre de meteorito refinado atrapado
-
 			RefinedMeteoriteChestKey: {
 				DisplayName: Llave de cofre de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteChestLocked: {
+				// DisplayName: Refined Meteorite Chest Locked
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteChimney: {
+				DisplayName: Chimenea de meteorito refinado
 				// Tooltip: ""
 			}
 
 			RefinedMeteoriteClock: {
 				DisplayName: Reloj de meteorito refinado
 				// Tooltip: ""
+			}
+
+			RefinedMeteoriteCommandSign: {
+				DisplayName: Cartel de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteCraftingStation: {
+				DisplayName: Meteorefinador
+				Tooltip: Se usa para crear cosas especiales
 			}
 
 			RefinedMeteoriteDoor: {
@@ -1527,6 +1864,16 @@ Mods: {
 
 			RefinedMeteoriteDresser: {
 				DisplayName: Aparador de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteFireplace: {
+				DisplayName: Hogar de meteorito refinado
+				Tooltip: La regeneración de vida es mayor junto a un hogar
+			}
+
+			RefinedMeteoriteFountain: {
+				DisplayName: Fuente de meteorito refinado
 				// Tooltip: ""
 			}
 
@@ -1545,9 +1892,24 @@ Mods: {
 				// Tooltip: ""
 			}
 
+			RefinedMeteoritePlate: {
+				// DisplayName: Refined Meteorite Plate
+				// Tooltip: ""
+			}
+
 			RefinedMeteoritePlatform: {
 				DisplayName: Plataforma de meteorito refinado
 				// Tooltip: ""
+			}
+
+			RefinedMeteoriteShingles: {
+				DisplayName: Tejuela de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteSink: {
+				DisplayName: Fregadero de meteorito refinado
+				Tooltip: Cuenta como fuente de agua y lava
 			}
 
 			RefinedMeteoriteSofa: {
@@ -1575,17 +1937,265 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			RefinedMeteoriteWall: {
-				DisplayName: Pared de meteorito refinado
+			RefinedMeteoriteVase: {
+				DisplayName: Jarrón de meteorito refinado
 				// Tooltip: ""
+			}
+
+			RefinedMeteoriteWall: {
+				DisplayName: Pared de ladrillos de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteWallAdvanced: {
+				DisplayName: Pared ardiente de ladrillos de meteorito refinado
+				// Tooltip: ""
+			}
+
+			RefinedMeteoriteWorkbench: {
+				DisplayName: Banco de trabajo de meteorito refinado
+				Tooltip: Se usa para creaciones básicas
+			}
+
+			#............................................................................................................Tools
+			
+			GeodePickaxe: {
+				DisplayName: Geopico
+				Tooltip: Encuentra geodas al picar piedra
+			}
+
+			MarbleFishingPole: {
+				DisplayName: Caña de pescar de mármol
+				// Tooltip: ""
+			}
+
+			MeteorClentaminator: {
+				DisplayName: Clentaminator de meteorito
+				Tooltip: No es tan bueno como el Clentaminator
+			}
+
+			MeteorFishingPole: {
+				DisplayName: Caña de pescar de meteorito
+				Tooltip: Puede pescar en la lava
+			}
+
+			MeteorPickaxe: {
+				DisplayName: Pico de meteorito
+				Tooltip: Puede picar piedra infernal
+			}
+
+			OysterRake: {
+				DisplayName: Ostrillo
+				Tooltip: Encuentra ostras al cavar arena en el océano
+			}
+
+			#............................................................................................................Weapons Magic
+			BookofMeteors: {
+				DisplayName: Libro de los meteoros
+				Tooltip: Dispara cabezas de meteorito
+			}
+
+			AmethystStaffTier1: {
+				DisplayName: Báculo de amatista venenoso
+				Tooltip: Inflige Envenenado
+			}
+
+			AmethystStaffTier2: {
+				DisplayName: Báculo de amatista extremadamente venenoso
+				Tooltip: Inflige Envenenado y Ponzoña
+			}
+
+			TopazStaffTier1: {
+				DisplayName: Báculo de topacio opulento
+				Tooltip: Inflige Midas
+			}
+
+			TopazStaffTier2: {
+				DisplayName: Báculo de topacio opulento avaricioso
+				Tooltip:
+					'''
+					Inflige Midas
+					Otorga ¡Pánico!, Vela de agua y Batalla al impactar en el enemigo
+					'''
+			}
+
+			SapphireStaffTier1: {
+				DisplayName: Báculo de zafiro congelante
+				Tooltip: Inflige Helado
+			}
+
+			SapphireStaffTier2: {
+				DisplayName: Báculo de zafiro frescudo
+				Tooltip:
+					'''
+					Inflige Helado
+					Si el jugador tiene <50% de vida, se activa Barrera de hielo
+					'''
+			}
+
+			EmeraldStaffTier1: {
+				DisplayName: Báculo de esmeralda espinoso
+				Tooltip: Otorga Espinas al impactar en el enemigo
+			}
+
+			EmeraldStaffTier2: {
+				DisplayName: Báculo de esmeralda furipinoso
+				Tooltip:
+					'''
+					Otorga Espinas al impactar en el enemigo
+					Si el jugador tiene <50% de vida, se activa Hoja de cristal
+					'''
+			}
+
+			AmberStaffTier1: {
+				DisplayName: Báculo de ámbar meloso
+				Tooltip: Otorga Miel al impactar en el enemigo
+			}
+
+			AmberStaffTier2: {
+				DisplayName: Báculo de ámbar abejalea
+				Tooltip:
+					'''
+					Otorga Miel al impactar en el enemigo
+					Los proyectiles al explotar liberan abejas
+					'''
+			}
+
+			RubyStaffTier1: {
+				DisplayName: Báculo de rubí ardiente
+				Tooltip: Inflige ¡En llamas!
+			}
+
+			RubyStaffTier2: {
+				DisplayName: Báculo de rubí piroexplosivo
+				Tooltip:
+					'''
+					Inflige ¡En llamas!
+					Dispara múltiples proyectiles
+					'''
+			}
+
+			DiamondStaffTier1: {
+				DisplayName: Báculo de diamante telesanador
+				Tooltip:
+					'''
+					Dispara un proyectil teledirigido
+					Cura un 10% del daño causado
+					'''
+			}
+
+			DiamondStaffTier2: {
+				DisplayName: Báculo de diamante telemultisanador
+				Tooltip:
+					'''
+					Dispara un proyectil teledirigido que explota en más proyectiles
+					Cada proyectil cura un 10% del daño causado
+					'''
+			}
+
+			PearlStaff: {
+				// DisplayName: Pearl Staff
+				// Tooltip: Lanza un rayo de perlas que rebota en las paredes
+			}
+
+			#............................................................................................................Weapons Melee
+			MeteorBoomerang: {
+				DisplayName: Bumerán de meteorito
+				Tooltip: Puede infligir ¡En llamas! y Hemorragia a los enemigos
+			}
+
+			MeteoriteFlail: {
+				DisplayName: Mangual de meteorito
+				Tooltip: Puede infligir ¡En llamas! a los enemigos
+			}
+
+			MeteoriteSpear: {
+				DisplayName: Lanza de meteorito
+				Tooltip: Puede infligir ¡En llamas! a los enemigos
+			}
+
+			MeteoriteYoyo: {
+				DisplayName: Yoyó de meteorito
+				Tooltip: Puede infligir ¡En llamas! a los enemigos
+			}
+
+			MeteorSword: {
+				DisplayName: Espada meteórica
+				Tooltip: Puede infligir ¡En llamas! a los enemigos
+			}
+
+			RefinedMeteorSword: {
+				DisplayName: Ira meteórica
+				Tooltip: Dispara ondas meteóricas
+			}
+
+			RefinedMeteoriteFlail: {
+				DisplayName: Mangual de meteorito refinado
+				// Tooltip: This is a modded flail with custom behavior.
+			}
+
+			#............................................................................................................Weapons Ranged
+			#............................................................................................................Weapons Summon
+			MeteoriteWhip: {
+				DisplayName: Látigo de meteorito
+				Tooltip: Puede infligir ¡En llamas! a los enemigos
+			}
+
+			AdvancedMeteoriteWhip: {
+				DisplayName: Látigo de meteorito refinado
+				// Tooltip: ""
+			}
+
+			#............................................................................................................Weapons Throwing
+			BeeShuriken: {
+				DisplayName: Aguijónken
+				Tooltip: ¡Envenenan a la velocidad de la luz!
+			}
+
+			BoneShuriken: {
+				DisplayName: Huesoken
+				Tooltip: Unos huesos fuertes mejoran la efectividad
+			}
+
+			BrainShuriken: {
+				DisplayName: Menteken
+				Tooltip: ¡Ahora con control remoto incorporado!
+			}
+
+			DeerShuriken: {
+				DisplayName: Astaken
+				Tooltip: ¡Empuja a tus enemigos con su poderoso retroceso!
+			}
+
+			EyeShuriken: {
+				DisplayName: Lenteken
+				Tooltip: ¡Mejora tu puntería con sus lentes!
+			}
+
+			SlimeShuriken: {
+				DisplayName: Elastiken
+				Tooltip: ¡Rebota rebota y en tu cara explota!
+			}
+
+			WallShuriken: {
+				DisplayName: Muroken
+				Tooltip: Requiere actualización
+			}
+
+			WormShuriken: {
+				DisplayName: Devoraken
+				Tooltip: ¡Como un topo, pero en estrella ninja!
+			}
+
+			HellstoneShuriken: {
+				DisplayName: Estrella ninja de piedra infernal
+				Tooltip: Inflige ¡En llamas!
 			}
 
 			CopperShuriken: {
 				DisplayName: Estrella ninja de cobre
 				// Tooltip: ""
 			}
-
-			CrimsomShuriken.DisplayName: Estrella ninja carmesí
 
 			DemoniteShuriken: {
 				DisplayName: Estrella ninja endemoniada
@@ -1612,6 +2222,25 @@ Mods: {
 				// Tooltip: ""
 			}
 
+			MeteoriteShuriken: {
+				DisplayName: Estrella ninja de meteorito
+				Tooltip: Inflige ¡En llamas!
+			}
+
+			MeteorJavelin: {
+				DisplayName: Jabalina de meteorito
+				Tooltip:
+					'''
+					Puede infligir ¡En llamas! y 'Hemorragia' a los enemigos
+					'Golpea como un meteorito'
+					'''
+			}
+
+			PartyShuriken: {
+				DisplayName: Estrella ninja fiestera
+				Tooltip: ¡Que empiece la fiesta, no te preocupes por darle a alguien, no hacen daño!
+			}
+
 			PlatinumShuriken: {
 				DisplayName: Estrella ninja de platino
 				// Tooltip: ""
@@ -1632,28 +2261,41 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			CopperSoil: {
-				DisplayName: Sustrato de cobre
+			#............................................................................................................Mounts
+			MeteorHoverboardKey: {
+				DisplayName: Llave de Hoverboard
+				Tooltip: Estupendo para explorar islas flotantes
+			}
+
+			RefinedMeteoriteMinecartItem: {
+				// DisplayName: Refined Meteorite Minecart
 				// Tooltip: ""
 			}
 
-			CopperBunnyItem: {
-				DisplayName: Conejo de cobre
+			#............................................................................................................Pets
+			FlyingEyelingItem: {
+				DisplayName: Eyeling volador
+				Tooltip: Invoca a un Eyeling volador
+			}
+
+			LivingSpaceRockItem: {
+				DisplayName: Roca viviente voladora
+				Tooltip: Invoca a una Cabeza de meteorito amistosa
+			}
+
+			MonjaItem: {
+				// DisplayName: Monja
+				Tooltip: Invoca una monja luminosa
+			}
+
+			MinionBossPetItem: {
+				// DisplayName: Minion Boss Pet Item
 				// Tooltip: ""
 			}
 
+			#............................................................................................................Tiles Placeable
 			CopperBunnyCage: {
 				DisplayName: Jaula de conejo de cobre
-				// Tooltip: ""
-			}
-
-			TinSoil: {
-				DisplayName: Sustrato de estaño
-				// Tooltip: ""
-			}
-
-			TinBunnyItem: {
-				DisplayName: Conejo de estaño
 				// Tooltip: ""
 			}
 
@@ -1662,28 +2304,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			IronSoil: {
-				DisplayName: Sustrato de hierro
-				// Tooltip: ""
-			}
-
-			IronBunnyItem: {
-				DisplayName: Conejo de hierro
-				// Tooltip: ""
-			}
-
 			IronBunnyCage: {
 				DisplayName: Jaula de conejo de hierro
-				// Tooltip: ""
-			}
-
-			LeadSoil: {
-				DisplayName: Sustrato de plomo
-				// Tooltip: ""
-			}
-
-			LeadBunnyItem: {
-				DisplayName: Conejo de plomo
 				// Tooltip: ""
 			}
 
@@ -1692,28 +2314,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SilverSoil: {
-				DisplayName: Sustrato de plata
-				// Tooltip: ""
-			}
-
-			SilverBunnyItem: {
-				DisplayName: Conejo de plata
-				// Tooltip: ""
-			}
-
 			SilverBunnyCage: {
 				DisplayName: Jaula de conejo de plata
-				// Tooltip: ""
-			}
-
-			TungstenSoil: {
-				DisplayName: Sustrato de tungsteno
-				// Tooltip: ""
-			}
-
-			TungstenBunnyItem: {
-				DisplayName: Conejo de tungsteno
 				// Tooltip: ""
 			}
 
@@ -1722,23 +2324,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			GoldSoil: {
-				DisplayName: Sustrato de oro
-				// Tooltip: ""
-			}
-
 			GoldBunnyCage: {
 				DisplayName: Jaula de conejo de oro
-				// Tooltip: ""
-			}
-
-			PlatinumSoil: {
-				DisplayName: Sustrato de platino
-				// Tooltip: ""
-			}
-
-			PlatinumBunnyItem: {
-				DisplayName: Conejo de platino
 				// Tooltip: ""
 			}
 
@@ -1747,28 +2334,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SturdyFossilSoil: {
-				DisplayName: Sustrato de fósil férreo
-				// Tooltip: ""
-			}
-
-			SturdyFossilBunnyItem: {
-				DisplayName: Conejo de fósil férreo
-				// Tooltip: ""
-			}
-
 			SturdyFossilBunnyCage: {
 				DisplayName: Jaula de conejo de fósil férreo
-				// Tooltip: ""
-			}
-
-			MeteoriteSoil: {
-				DisplayName: Sustrato de meteorito
-				// Tooltip: ""
-			}
-
-			MeteoriteBunnyItem: {
-				DisplayName: Conejo de meteorito
 				// Tooltip: ""
 			}
 
@@ -1777,28 +2344,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			DemoniteSoil: {
-				DisplayName: Sustrato endemoniado
-				// Tooltip: ""
-			}
-
-			DemoniteBunnyItem: {
-				DisplayName: Conejo endemoniado
-				// Tooltip: ""
-			}
-
 			DemoniteBunnyCage: {
 				DisplayName: Jaula de conejo endemoniado
-				// Tooltip: ""
-			}
-
-			CrimtaneSoil: {
-				DisplayName: Sustrato carmesí
-				// Tooltip: ""
-			}
-
-			CrimtaneBunnyItem: {
-				DisplayName: Conejo carmesí
 				// Tooltip: ""
 			}
 
@@ -1807,28 +2354,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			ObsidianSoil: {
-				DisplayName: Sustrato de obisiana
-				// Tooltip: ""
-			}
-
-			ObsidianBunnyItem: {
-				DisplayName: Conejo de obisiana
-				// Tooltip: ""
-			}
-
 			ObsidianBunnyCage: {
 				DisplayName: Jaula de conejo de obisiana
-				// Tooltip: ""
-			}
-
-			HellstoneSoil: {
-				DisplayName: Sustrato infernal
-				// Tooltip: ""
-			}
-
-			HellstoneBunnyItem: {
-				DisplayName: Conejo infernal
 				// Tooltip: ""
 			}
 
@@ -1837,28 +2364,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			CobaltSoil: {
-				DisplayName: Sustrato de cobalto
-				// Tooltip: ""
-			}
-
-			CobaltBunnyItem: {
-				DisplayName: Conejo de cobalto
-				// Tooltip: ""
-			}
-
 			CobaltBunnyCage: {
 				DisplayName: Jaula de conejo de cobalto
-				// Tooltip: ""
-			}
-
-			PalladiumSoil: {
-				DisplayName: Sustrato de paladio
-				// Tooltip: ""
-			}
-
-			PalladiumBunnyItem: {
-				DisplayName: Conejo de paladio
 				// Tooltip: ""
 			}
 
@@ -1867,28 +2374,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			MythrilSoil: {
-				DisplayName: Sustrato de mythril
-				// Tooltip: ""
-			}
-
-			MythrilBunnyItem: {
-				DisplayName: Conejo de mythril
-				// Tooltip: ""
-			}
-
 			MythrilBunnyCage: {
 				DisplayName: Jaula de conejo de mythril
-				// Tooltip: ""
-			}
-
-			OrichalcumSoil: {
-				DisplayName: Sustrato de oricalco
-				// Tooltip: ""
-			}
-
-			OrichalcumBunnyItem: {
-				DisplayName: Conejo de oricalco
 				// Tooltip: ""
 			}
 
@@ -1897,28 +2384,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			AdamantiteSoil: {
-				DisplayName: Sustrato de adamantita
-				// Tooltip: ""
-			}
-
-			AdamantiteBunnyItem: {
-				DisplayName: Conejo de adamantita
-				// Tooltip: ""
-			}
-
 			AdamantiteBunnyCage: {
 				DisplayName: Jaula de conejo de adamantita
-				// Tooltip: ""
-			}
-
-			TitaniumSoil: {
-				DisplayName: Sustrato de titanio
-				// Tooltip: ""
-			}
-
-			TitaniumBunnyItem: {
-				DisplayName: Conejo de titanio
 				// Tooltip: ""
 			}
 
@@ -1927,33 +2394,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			HardenedMeteoriteSoil: {
-				DisplayName: Sustrato de meteorito endurecido
-				// Tooltip: ""
-			}
-
-			HardenedMeteoriteBunnyItem: {
-				DisplayName: Conejo de meteorito endurecido
-				// Tooltip: ""
-			}
-
 			HardenedMeteoriteBunnyCage: {
 				DisplayName: Jaula de conejo de meteorito endurecido
-				// Tooltip: ""
-			}
-
-			HallowedOre: {
-				DisplayName: Mineral sagrado
-				// Tooltip: ""
-			}
-
-			HallowedSoil: {
-				DisplayName: Sustrato sagrado
-				// Tooltip: ""
-			}
-
-			HallowedBunnyItem: {
-				DisplayName: Conejo sagrado
 				// Tooltip: ""
 			}
 
@@ -1962,28 +2404,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			ChlorophyteSoil: {
-				DisplayName: Sustrato de clorofita
-				// Tooltip: ""
-			}
-
-			ChlorophyteBunnyItem: {
-				DisplayName: Conejo de clorofita
-				// Tooltip: ""
-			}
-
 			ChlorophyteBunnyCage: {
 				DisplayName: Jaula de conejo de clorofita
-				// Tooltip: ""
-			}
-
-			ShroomiteSoil: {
-				DisplayName: Sustrato de piñonita
-				// Tooltip: ""
-			}
-
-			ShroomiteBunnyItem: {
-				DisplayName: Conejo de piñonita
 				// Tooltip: ""
 			}
 
@@ -1992,33 +2414,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SpectreOre: {
-				DisplayName: Mineral espectral
-				// Tooltip: ""
-			}
-
-			SpectreSoil: {
-				DisplayName: Sustrato espectral
-				// Tooltip: ""
-			}
-
-			SpectreBunnyItem: {
-				DisplayName: Conejo espectral
-				// Tooltip: ""
-			}
-
 			SpectreBunnyCage: {
 				DisplayName: Jaula de conejo espectral
-				// Tooltip: ""
-			}
-
-			LuminiteSoil: {
-				DisplayName: Sustrato de luminita
-				// Tooltip: ""
-			}
-
-			LuminiteBunnyItem: {
-				DisplayName: Conejo de luminita
 				// Tooltip: ""
 			}
 
@@ -2027,28 +2424,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SolarSoil: {
-				DisplayName: Sustrato solar
-				// Tooltip: ""
-			}
-
-			SolarBunnyItem: {
-				DisplayName: Conejo solar
-				// Tooltip: ""
-			}
-
 			SolarBunnyCage: {
 				DisplayName: Jaula de conejo solar
-				// Tooltip: ""
-			}
-
-			NebulaSoil: {
-				DisplayName: Sustrato neboloso
-				// Tooltip: ""
-			}
-
-			NebulaBunnyItem: {
-				DisplayName: Conejo neboloso
 				// Tooltip: ""
 			}
 
@@ -2057,28 +2434,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			VortexSoil: {
-				DisplayName: Sustrato vórtice
-				// Tooltip: ""
-			}
-
-			VortexBunnyItem: {
-				DisplayName: Conejo vórtice
-				// Tooltip: ""
-			}
-
 			VortexBunnyCage: {
 				DisplayName: Jaula de conejo vórtice
-				// Tooltip: ""
-			}
-
-			StardustSoil: {
-				DisplayName: Sustrato de polvo estelar
-				// Tooltip: ""
-			}
-
-			StardustBunnyItem: {
-				DisplayName: Conejo de polvo estelar
 				// Tooltip: ""
 			}
 
@@ -2087,18 +2444,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			CopperSquirrelItem: {
-				DisplayName: Ardilla de cobre
-				// Tooltip: ""
-			}
-
 			CopperSquirrelCage: {
 				DisplayName: Jaula de ardilla de cobre
-				// Tooltip: ""
-			}
-
-			TinSquirrelItem: {
-				DisplayName: Ardilla de estaño
 				// Tooltip: ""
 			}
 
@@ -2107,18 +2454,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			IronSquirrelItem: {
-				DisplayName: Ardilla de hierro
-				// Tooltip: ""
-			}
-
 			IronSquirrelCage: {
 				DisplayName: Jaula de ardilla de hierro
-				// Tooltip: ""
-			}
-
-			LeadSquirrelItem: {
-				DisplayName: Ardilla de plomo
 				// Tooltip: ""
 			}
 
@@ -2127,18 +2464,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SilverSquirrelItem: {
-				DisplayName: Ardilla de plata
-				// Tooltip: ""
-			}
-
 			SilverSquirrelCage: {
 				DisplayName: Jaula de ardilla de plata
-				// Tooltip: ""
-			}
-
-			TungstenSquirrelItem: {
-				DisplayName: Ardilla de tungsteno
 				// Tooltip: ""
 			}
 
@@ -2147,18 +2474,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			GoldSquirrelItem: {
-				DisplayName: Ardilla de oro
-				// Tooltip: ""
-			}
-
 			GoldSquirrelCage: {
 				DisplayName: Jaula de ardilla de oro
-				// Tooltip: ""
-			}
-
-			PlatinumSquirrelItem: {
-				DisplayName: Ardilla de platino
 				// Tooltip: ""
 			}
 
@@ -2167,18 +2484,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SturdyFossilSquirrelItem: {
-				DisplayName: Ardilla de fósil férreo
-				// Tooltip: ""
-			}
-
 			SturdyFossilSquirrelCage: {
 				DisplayName: Jaula de ardilla de fósil férreo
-				// Tooltip: ""
-			}
-
-			MeteoriteSquirrelItem: {
-				DisplayName: Ardilla de meteorito
 				// Tooltip: ""
 			}
 
@@ -2187,18 +2494,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			DemoniteSquirrelItem: {
-				DisplayName: Ardilla endemoniado
-				// Tooltip: ""
-			}
-
 			DemoniteSquirrelCage: {
 				DisplayName: Jaula de ardilla endemoniado
-				// Tooltip: ""
-			}
-
-			CrimtaneSquirrelItem: {
-				DisplayName: Ardilla carmesí
 				// Tooltip: ""
 			}
 
@@ -2207,18 +2504,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			ObsidianSquirrelItem: {
-				DisplayName: Ardilla de obisiana
-				// Tooltip: ""
-			}
-
 			ObsidianSquirrelCage: {
 				DisplayName: Jaula de ardilla de obisiana
-				// Tooltip: ""
-			}
-
-			HellstoneSquirrelItem: {
-				DisplayName: Ardilla infernal
 				// Tooltip: ""
 			}
 
@@ -2227,18 +2514,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			CobaltSquirrelItem: {
-				DisplayName: Ardilla de cobalto
-				// Tooltip: ""
-			}
-
 			CobaltSquirrelCage: {
 				DisplayName: Jaula de ardilla de cobalto
-				// Tooltip: ""
-			}
-
-			PalladiumSquirrelItem: {
-				DisplayName: Ardilla de paladio
 				// Tooltip: ""
 			}
 
@@ -2247,18 +2524,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			MythrilSquirrelItem: {
-				DisplayName: Ardilla de mythril
-				// Tooltip: ""
-			}
-
 			MythrilSquirrelCage: {
 				DisplayName: Jaula de ardilla de mythril
-				// Tooltip: ""
-			}
-
-			OrichalcumSquirrelItem: {
-				DisplayName: Ardilla de oricalco
 				// Tooltip: ""
 			}
 
@@ -2267,18 +2534,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			AdamantiteSquirrelItem: {
-				DisplayName: Ardilla de adamantita
-				// Tooltip: ""
-			}
-
 			AdamantiteSquirrelCage: {
 				DisplayName: Jaula de ardilla de adamantita
-				// Tooltip: ""
-			}
-
-			TitaniumSquirrelItem: {
-				DisplayName: Ardilla de titanio
 				// Tooltip: ""
 			}
 
@@ -2287,18 +2544,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			HardenedMeteoriteSquirrelItem: {
-				DisplayName: Ardilla de meteorito endurecido
-				// Tooltip: ""
-			}
-
 			HardenedMeteoriteSquirrelCage: {
 				DisplayName: Jaula de ardilla de meteorito endurecido
-				// Tooltip: ""
-			}
-
-			HallowedSquirrelItem: {
-				DisplayName: Ardilla sagrado
 				// Tooltip: ""
 			}
 
@@ -2307,18 +2554,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			ChlorophyteSquirrelItem: {
-				DisplayName: Ardilla de clorofita
-				// Tooltip: ""
-			}
-
 			ChlorophyteSquirrelCage: {
 				DisplayName: Jaula de ardilla de clorofita
-				// Tooltip: ""
-			}
-
-			ShroomiteSquirrelItem: {
-				DisplayName: Ardilla de piñonita
 				// Tooltip: ""
 			}
 
@@ -2327,18 +2564,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SpectreSquirrelItem: {
-				DisplayName: Ardilla espectral
-				// Tooltip: ""
-			}
-
 			SpectreSquirrelCage: {
 				DisplayName: Jaula de ardilla espectral
-				// Tooltip: ""
-			}
-
-			LuminiteSquirrelItem: {
-				DisplayName: Ardilla de luminita
 				// Tooltip: ""
 			}
 
@@ -2347,18 +2574,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			SolarSquirrelItem: {
-				DisplayName: Ardilla solar
-				// Tooltip: ""
-			}
-
 			SolarSquirrelCage: {
 				DisplayName: Jaula de ardilla solar
-				// Tooltip: ""
-			}
-
-			NebulaSquirrelItem: {
-				DisplayName: Ardilla neboloso
 				// Tooltip: ""
 			}
 
@@ -2367,18 +2584,8 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			VortexSquirrelItem: {
-				DisplayName: Ardilla vórtice
-				// Tooltip: ""
-			}
-
 			VortexSquirrelCage: {
 				DisplayName: Jaula de ardilla vórtice
-				// Tooltip: ""
-			}
-
-			StardustSquirrelItem: {
-				DisplayName: Ardilla de polvo estelar
 				// Tooltip: ""
 			}
 
@@ -2387,109 +2594,24 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			MeteoriteFairyItem: {
-				// DisplayName: Meteorite Fairy
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteBeam: {
-				// DisplayName: Refined Meteorite Beam
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteChestLocked: {
-				// DisplayName: Refined Meteorite Chest Locked
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteChimney: {
-				// DisplayName: Refined Meteorite Chimney
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteCommandSign: {
-				// DisplayName: Refined Command Sign
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteFountain: {
-				// DisplayName: Refined Meteorite Fountain
-				// Tooltip: ""
-			}
-
-			RefinedMeteoritePlate: {
-				// DisplayName: Refined Meteorite Plate
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteShingles: {
-				// DisplayName: Refined Meteorite Shingles
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteVase: {
-				// DisplayName: Refined Meteorite Vase
-				// Tooltip: ""
-			}
-
-			RefinedMeteoriteWallAdvanced: {
-				// DisplayName: Refined Meteorite Advanced Wall
-				// Tooltip: ""
-			}
-
-			AdvancedMeteoriteWhip: {
-				// DisplayName: Advanced Meteorite Whip
-				// Tooltip: ""
-			}
-
 			CrimsonShuriken: {
-				// DisplayName: Crimson Shuriken
+				DisplayName: Estrella ninja carmesí
 				// Tooltip: ""
 			}
 
-			MinionBossMask: {
-				// DisplayName: Minion Boss Mask
+			TCBigMeteoriteSlime: {
+				// DisplayName: T C Big Meteorite Slime
 				// Tooltip: ""
 			}
 
-			MinionBossBag: {
-				// DisplayName: Minion Boss Bag
+			TCMeteoriteSlime: {
+				// DisplayName: T C Meteorite Slime
 				// Tooltip: ""
 			}
 
-			MinionBossRelic: {
-				// DisplayName: Minion Boss Relic
+			StoryPaintings: {
+				// DisplayName: Story Paintings
 				// Tooltip: ""
-			}
-
-			MinionBossSummonItem: {
-				// DisplayName: Minion Boss Summon Item
-				// Tooltip: ""
-			}
-
-			MinionBossTrophy: {
-				// DisplayName: Minion Boss Trophy
-				// Tooltip: ""
-			}
-
-			MinionBossPetItem: {
-				// DisplayName: Minion Boss Pet Item
-				// Tooltip: ""
-			}
-
-			QuestWood: {
-				// DisplayName: Quest Wood
-				// Tooltip: ""
-			}
-
-			ExampleWings: {
-				// DisplayName: Example Wings
-				// Tooltip: ""
-			}
-
-			CarverSetHat: {
-				DisplayName: Casco de tallista
-				Tooltip: ""
 			}
 		}
 
@@ -2497,11 +2619,6 @@ Mods: {
 			FlyingEyelingBuff: {
 				DisplayName: Eyeling Volador
 				Description: Parece ser que estos seres pueden volar
-			}
-
-			LivingSpaceRock: {
-				DisplayName: Cabeza de Meteoro amistosa
-				Description: Esta extraña cabeza no se va...
 			}
 
 			MeteorbodyBuff: {
@@ -2560,8 +2677,8 @@ Mods: {
 			}
 
 			LivingSpaceRockBuff: {
-				// DisplayName: Living Space Rock Buff
-				// Description: Mods.TheCollectors.Buffs.LivingSpaceRockBuff.Description
+				DisplayName: Roca viviente voladora
+				Description: Esta extraña cabeza no se va...
 			}
 
 			MonjaBuff: {
@@ -2642,144 +2759,146 @@ Mods: {
 			// MinionBossEye.DisplayName: Minion Boss Eye
 			// LivingSpaceRockProjectile.DisplayName: Living Space Rock Projectile
 			// MonjaProjectile.DisplayName: Monja Projectile
+			// SpikedGreenSlimeSpike.DisplayName: Spiked Green Slime Spike
+			// TCMeteoriteSlimeSpike.DisplayName: T C Meteorite Slime Spike
 		}
 
 		Tiles: {
 			RefinedMeteoriteChest: {
 				// ContainerName: Refined Meteorite Chest
 				// MapEntry: Refined Meteorite Chest
-				// MapEntry0: Mods.TheCollectors.Tiles.RefinedMeteoriteChest.MapEntry0
-				// MapEntry1: Mods.TheCollectors.Tiles.RefinedMeteoriteChest.MapEntry1
+				MapEntry0: Cofre de meteorito refinado
+				MapEntry1: Cofre de meteorito refinado cerrado
 			}
 
 			RefinedMeteoriteDresser: {
-				// ContainerName: Refined Meteorite Dresser
-				// MapEntry: Refined Meteorite Dresser
+				ContainerName: Tocador de meteorito refinado
+				MapEntry: Tocador
 			}
 
 			RefinedMeteoriteTrashCan: {
-				// ContainerName: Refined Meteorite Trash Can
-				// MapEntry: Refined Meteorite Trash Can
-				// MapEntry0: Mods.TheCollectors.Tiles.RefinedMeteoriteTrashCan.MapEntry0
-				// MapEntry1: Mods.TheCollectors.Tiles.RefinedMeteoriteTrashCan.MapEntry1
+				ContainerName: Cubo de basura
+				MapEntry: Cubo de basura de meteorito refinado
+				MapEntry0: Cubo de basura de meteorito refinado
+				MapEntry1: Cubo de basura de meteorito refinado cerrado
 			}
 
-			// AdamantiteSoilTile.MapEntry: Adamantite Soil
-			// ChlorophyteSoilTile.MapEntry: Chlorophyte Soil
-			// CobaltSoilTile.MapEntry: Cobalt Soil
-			// CopperSoilTile.MapEntry: Copper Soil
-			// CrimtaneSoilTile.MapEntry: Crimtane Soil
-			// DemoniteSoilTile.MapEntry: Demonite Soil
-			// GoldSoilTile.MapEntry: Gold Soil
-			// HallowedOreTile.MapEntry: Hallowed Ore
-			// HallowedSoilTile.MapEntry: Hallowed Soil
-			// HardenedMeteoriteSoilTile.MapEntry: Hardened Meteorite Soil
-			// HellstoneSoilTile.MapEntry: Hellstone Soil
-			// IronSoilTile.MapEntry: Iron Soil
-			// LeadSoilTile.MapEntry: Lead Soil
-			// LuminiteSoilTile.MapEntry: Luminite Soil
-			// MeteoriteSoilTile.MapEntry: Meteorite Soil
-			// MythrilSoilTile.MapEntry: Mythril Soil
-			// NebulaSoilTile.MapEntry: Nebula Soil
-			// ObsidianSoilTile.MapEntry: Obsidian Soil
-			// OrichalcumSoilTile.MapEntry: Orichalcum Soil
-			// PalladiumSoilTile.MapEntry: Palladium Soil
-			// PlatinumSoilTile.MapEntry: Platinum Soil
-			// ShroomiteOreTile.MapEntry: Shroomite Ore
-			// ShroomiteSoilTile.MapEntry: Shroomite Soil
-			// SilverSoilTile.MapEntry: Silver Soil
-			// SolarSoilTile.MapEntry: Solar Soil
-			// SpectreOreTile.MapEntry: Spectre Ore
-			// SpectreSoilTile.MapEntry: Spectre Soil
-			// StardustSoilTile.MapEntry: Stardust Soil
-			// SturdyFossilSoilTile.MapEntry: Sturdy Fossil Soil
-			// TinSoilTile.MapEntry: Tin Soil
-			// TitaniumSoilTile.MapEntry: Titanium Soil
-			// TungstenSoilTile.MapEntry: Tungsten Soil
-			// VortexSoilTile.MapEntry: Vortex Soil
+			HardenedMeteoriteOre.MapEntry: Meteorito endurecido
+			RefinedMeteoriteAnimatedLantern.MapEntry: Hada meteoro en una botella
+			RefinedMeteoriteBathtub.MapEntry: Bañera
+			RefinedMeteoriteBed.MapEntry: Cama
+			RefinedMeteoriteBench.MapEntry: Banco
+			RefinedMeteoriteCampfire.MapEntry: Hoguera
+			RefinedMeteoriteChest_Locked.MapEntry: Cofre cerrado
+			RefinedMeteoriteClock.MapEntry: Reloj
+			RefinedMeteoriteCommandSign.MapEntry: Cartel
+			RefinedMeteoriteCraftingStation.MapEntry: Meteorefinador
+			RefinedMeteoriteDoorClosed.MapEntry: Puerta cerrada
+			RefinedMeteoriteDoorOpen.MapEntry: Puerta abierta
+			RefinedMeteoriteFireplace.MapEntry: Hogar
+			RefinedMeteoriteFountain.MapEntry: Fuente
+			RefinedMeteoritePiano.MapEntry: Piano
+			RefinedMeteoriteSofa.MapEntry: Sofa
+			RefinedMeteoriteTable.MapEntry: Mesa
+			RefinedMeteoriteTorch.MapEntry: Antorcha
+			RefinedMeteoriteVase.MapEntry: Jarrón
+			RefinedMeteoriteWorkbench.MapEntry: Banco de trabajo
+			AdamantiteSoilTile.MapEntry: Sustrato de adamantita
+			ChlorophyteSoilTile.MapEntry: Sustrato de clorofita
+			CobaltSoilTile.MapEntry: Sustrato de cobalto
+			CopperSoilTile.MapEntry: Sustrato de cobre
+			CrimtaneSoilTile.MapEntry: Sustrato carmesí
+			DemoniteSoilTile.MapEntry: Sustrato endemoniado
+			GoldSoilTile.MapEntry: Sustrato de oro
+			HallowedOreTile.MapEntry: Mineral sagrado
+			HallowedSoilTile.MapEntry: Sustrato sagrado
+			HardenedMeteoriteSoilTile.MapEntry: Sustrato de meteorito endurecido
+			HellstoneSoilTile.MapEntry: Sustrato infernal
+			IronSoilTile.MapEntry: Sustrato de hierro
+			LeadSoilTile.MapEntry: Sustrato de plomo
+			LuminiteSoilTile.MapEntry: Sustrato de luminita
+			MeteoriteSoilTile.MapEntry: Sustrato de meteorito
+			MythrilSoilTile.MapEntry: Sustrato de mythril
+			NebulaSoilTile.MapEntry: Sustrato nebuloso
+			ObsidianSoilTile.MapEntry: Sustrato de obsidiana
+			OrichalcumSoilTile.MapEntry: Sustrato de oricalco
+			PalladiumSoilTile.MapEntry: Sustrato de paladio
+			PlatinumSoilTile.MapEntry: Sustrato de platino
+			ShroomiteOreTile.MapEntry: Mineral de piñonita
+			ShroomiteSoilTile.MapEntry: Sustrato de piñonita
+			SilverSoilTile.MapEntry: Sustrato de plata
+			SolarSoilTile.MapEntry: Sustrato solar
+			SpectreOreTile.MapEntry: Mineral espectral
+			SpectreSoilTile.MapEntry: Sustrato espectral
+			StardustSoilTile.MapEntry: Sustrato de polvo estelar
+			SturdyFossilSoilTile.MapEntry: Sustrato de fósil férreo
+			TinSoilTile.MapEntry: Sustrato de estaño
+			TitaniumSoilTile.MapEntry: Sustrato de titanio
+			TungstenSoilTile.MapEntry: Sustrato de tungsteno
+			VortexSoilTile.MapEntry: Sustrato de vórtice
 			// TheCollectorsBanners.MapEntry: Banner
 			// MeteormanPaintings.MapEntry: Painting
 			// NinjaPaintings.MapEntry: Painting
-			// AdamantiteBunnyCageTile.MapEntry: Adamantite Bunny Cage
+			AdamantiteBunnyCageTile.MapEntry: Jaula de conejo de adamantita
 			// AdamantiteSquirrelCageTile.MapEntry: Adamantite Squirrel Cage
-			// ChlorophyteBunnyCageTile.MapEntry: Chlorophyte Bunny Cage
+			ChlorophyteBunnyCageTile.MapEntry: Jaula de conejo de clorofita
 			// ChlorophyteSquirrelCageTile.MapEntry: Chlorophyte Squirrel Cage
-			// CobaltBunnyCageTile.MapEntry: Cobalt Bunny Cage
+			CobaltBunnyCageTile.MapEntry: Jaula de conejo de cobalto
 			// CobaltSquirrelCageTile.MapEntry: Cobalt Squirrel Cage
-			// CopperBunnyCageTile.MapEntry: Copper Bunny Cage
+			CopperBunnyCageTile.MapEntry: Jaula de conejo de cobre
 			// CopperSquirrelCageTile.MapEntry: Copper Squirrel Cage
-			// CrimtaneBunnyCageTile.MapEntry: Crimtane Bunny Cage
+			CrimtaneBunnyCageTile.MapEntry: Jaula de conejo carmesí
 			// CrimtaneSquirrelCageTile.MapEntry: Crimtane Squirrel Cage
-			// DemoniteBunnyCageTile.MapEntry: Demonite Bunny Cage
+			DemoniteBunnyCageTile.MapEntry: Jaula de conejo endemoniado
 			// DemoniteSquirrelCageTile.MapEntry: Demonite Squirrel Cage
-			// GoldBunnyCageTile.MapEntry: Gold Bunny Cage
+			GoldBunnyCageTile.MapEntry: Jaula de conejo de oro
 			// GoldSquirrelCageTile.MapEntry: Gold Squirrel Cage
-			// HallowedBunnyCageTile.MapEntry: Hallowed Bunny Cage
+			HallowedBunnyCageTile.MapEntry: Jaula de conejo sagrado
 			// HallowedSquirrelCageTile.MapEntry: Hallowed Squirrel Cage
-			// HardenedMeteoriteBunnyCageTile.MapEntry: Hardened Meteorite Bunny Cage
+			HardenedMeteoriteBunnyCageTile.MapEntry: Jaula de conejo de meteorito endurecido
 			// HardenedMeteoriteSquirrelCageTile.MapEntry: Hardened Meteorite Squirrel Cage
-			// HellstoneBunnyCageTile.MapEntry: Hellstone Bunny Cage
+			HellstoneBunnyCageTile.MapEntry: Jaula de conejo infernal
 			// HellstoneSquirrelCageTile.MapEntry: Hellstone Squirrel Cage
-			// IronBunnyCageTile.MapEntry: Iron Bunny Cage
+			IronBunnyCageTile.MapEntry: Jaula de conejo de hierro
 			// IronSquirrelCageTile.MapEntry: Iron Squirrel Cage
-			// LeadBunnyCageTile.MapEntry: Lead Bunny Cage
+			LeadBunnyCageTile.MapEntry: Jaula de conejo de plomo
 			// LeadSquirrelCageTile.MapEntry: Lead Squirrel Cage
-			// LuminiteBunnyCageTile.MapEntry: Luminite Bunny Cage
+			LuminiteBunnyCageTile.MapEntry: Jaula de conejo de luminita
 			// LuminiteSquirrelCageTile.MapEntry: Luminite Squirrel Cage
-			// MeteoriteBunnyCageTile.MapEntry: Meteorite Bunny Cage
+			MeteoriteBunnyCageTile.MapEntry: Jaula de conejo de meteorito
 			// MeteoriteSquirrelCageTile.MapEntry: Meteorite Squirrel Cage
-			// MythrilBunnyCageTile.MapEntry: Mythril Bunny Cage
+			MythrilBunnyCageTile.MapEntry: Jaula de conejo de mythril
 			// MythrilSquirrelCageTile.MapEntry: Mythril Squirrel Cage
-			// NebulaBunnyCageTile.MapEntry: Nebula Bunny Cage
+			NebulaBunnyCageTile.MapEntry: Jaula de conejo nebuloso
 			// NebulaSquirrelCageTile.MapEntry: Nebula Squirrel Cage
-			// ObsidianBunnyCageTile.MapEntry: Obsidian Bunny Cage
+			ObsidianBunnyCageTile.MapEntry: Jaula de conejo de obsidiana
 			// ObsidianSquirrelCageTile.MapEntry: Obsidian Squirrel Cage
-			// OrichalcumBunnyCageTile.MapEntry: Orichalcum Bunny Cage
+			OrichalcumBunnyCageTile.MapEntry: Jaula de conejo de oricalco
 			// OrichalcumSquirrelCageTile.MapEntry: Orichalcum Squirrel Cage
-			// PalladiumBunnyCageTile.MapEntry: Palladium Bunny Cage
+			PalladiumBunnyCageTile.MapEntry: Jaula de conejo de paladio
 			// PalladiumSquirrelCageTile.MapEntry: Palladium Squirrel Cage
-			// PlatinumBunnyCageTile.MapEntry: Platinum Bunny Cage
+			PlatinumBunnyCageTile.MapEntry: Jaula de conejo de platino
 			// PlatinumSquirrelCageTile.MapEntry: Platinum Squirrel Cage
-			// ShroomiteBunnyCageTile.MapEntry: Shroomite Bunny Cage
+			ShroomiteBunnyCageTile.MapEntry: Jaula de conejo de piñonita
 			// ShroomiteSquirrelCageTile.MapEntry: Shroomite Squirrel Cage
-			// SilverBunnyCageTile.MapEntry: Silver Bunny Cage
+			SilverBunnyCageTile.MapEntry: Jaula de conejo de plata
 			// SilverSquirrelCageTile.MapEntry: Silver Squirrel Cage
-			// SolarBunnyCageTile.MapEntry: Solar Bunny Cage
+			SolarBunnyCageTile.MapEntry: Jaula de conejo solar
 			// SolarSquirrelCageTile.MapEntry: Solar Squirrel Cage
-			// SpectreBunnyCageTile.MapEntry: Spectre Bunny Cage
+			SpectreBunnyCageTile.MapEntry: Jaula de conejo espectral
 			// SpectreSquirrelCageTile.MapEntry: Spectre Squirrel Cage
-			// StardustBunnyCageTile.MapEntry: Stardust Bunny Cage
+			StardustBunnyCageTile.MapEntry: Jaula de conejo de polvo estelar
 			// StardustSquirrelCageTile.MapEntry: Stardust Squirrel Cage
-			// SturdyFossilBunnyCageTile.MapEntry: Sturdy Fossil Bunny Cage
+			SturdyFossilBunnyCageTile.MapEntry: Jaula de conejo de fósil férreo
 			// SturdyFossilSquirrelCageTile.MapEntry: Sturdy Fossil Squirrel Cage
-			// TinBunnyCageTile.MapEntry: Tin Bunny Cage
+			TinBunnyCageTile.MapEntry: Jaula de conejo de estaño
 			// TinSquirrelCageTile.MapEntry: Tin Squirrel Cage
-			// TitaniumBunnyCageTile.MapEntry: Titanium Bunny Cage
+			TitaniumBunnyCageTile.MapEntry: Jaula de conejo de titanio
 			// TitaniumSquirrelCageTile.MapEntry: Titanium Squirrel Cage
-			// TungstenBunnyCageTile.MapEntry: Tungsten Bunny Cage
+			TungstenBunnyCageTile.MapEntry: Jaula de conejo de tungsteno
 			// TungstenSquirrelCageTile.MapEntry: Tungsten Squirrel Cage
-			// VortexBunnyCageTile.MapEntry: Vortex Bunny Cage
+			VortexBunnyCageTile.MapEntry: Jaula de conejo de vórtice
 			// VortexSquirrelCageTile.MapEntry: Vortex Squirrel Cage
-			// HardenedMeteoriteOre.MapEntry: Hardened Meteorite Ore
-			// RefinedMeteoriteAnimatedLantern.MapEntry: Meteorite Fairy in a Bottle
-			// RefinedMeteoriteBathtub.MapEntry: Refined Meteorite Bathtub
-			// RefinedMeteoriteBed.MapEntry: Refined Meteorite Bed
-			// RefinedMeteoriteBench.MapEntry: Mods.TheCollectors.MapObject.RefinedMeteoriteBench
-			// RefinedMeteoriteCampfire.MapEntry: Campfire
-			// RefinedMeteoriteChest_Locked.MapEntry: Locked Refined Meteorite Chest
-			// RefinedMeteoriteClock.MapEntry: Mods.TheCollectors.MapObject.RefinedMeteoriteClock
-			// RefinedMeteoriteCommandSign.MapEntry: Refined Meteorite Command Sign
-			// RefinedMeteoriteCraftingStation.MapEntry: Refined Meteorite Crafting Station
-			// RefinedMeteoriteDoorClosed.MapEntry: Refined Meteorite Door
-			// RefinedMeteoriteDoorOpen.MapEntry: Refined Meteorite Door
-			// RefinedMeteoriteFireplace.MapEntry: Fireplace
-			// RefinedMeteoriteFountain.MapEntry: Water Fountain
-			// RefinedMeteoritePiano.MapEntry: Piano
-			// RefinedMeteoriteSofa.MapEntry: Mods.TheCollectors.MapObject.RefinedMeteoriteSofa
-			// RefinedMeteoriteTable.MapEntry: Table
-			// RefinedMeteoriteTorch.MapEntry: Torch
-			// RefinedMeteoriteVase.MapEntry: Refined Meteorite Vase
-			// RefinedMeteoriteWorkbench.MapEntry: Work Bench
 			// ThrowingDummy.MapEntry: Throwing Dummy
 			// AdamantiteTreeSapling.MapEntry: Adamantite Sapling
 			// ChlorophyteTreeSapling.MapEntry: Chlorophyte Sapling
@@ -2811,11 +2930,46 @@ Mods: {
 			// TitaniumTreeSapling.MapEntry: Titanium Sapling
 			// TungstenTreeSapling.MapEntry: Tungsten Sapling
 			// VortexTreeSapling.MapEntry: Vortex Sapling
+			RefinedMeteoriteBeam.MapEntry: Columna
+			RefinedMeteoriteBlock.MapEntry: Bloque
+			RefinedMeteoriteCandelabra.MapEntry: Candelabro
+			RefinedMeteoriteCandle.MapEntry: Vela
+			RefinedMeteoriteChandelier.MapEntry: Lámpara de araña
+			RefinedMeteoriteLamp.MapEntry: Lámpara
+			RefinedMeteoriteLantern.MapEntry: Linterna
+			RefinedMeteoriteChimney.MapEntry: Chimenea
 		}
 
 		Biomes: {
-			// ExampleSurfaceBiome.DisplayName: Example Surface Biome
-			// ExampleUndergroundBiome.DisplayName: Example Underground Biome
+			ExampleSurfaceBiome: {
+				// DisplayName: Example Surface Biome
+				// TownNPCDialogueName: the Example Surface Biome
+			}
+
+			ExampleUndergroundBiome: {
+				// DisplayName: Example Underground Biome
+				// TownNPCDialogueName: the Example Underground Biome
+			}
 		}
+
+		Configs: {
+			TheCollectorsConfig: {
+				// DisplayName: The Collectors Config
+
+				WingsToggle: {
+					// Label: "{$Mods.TheCollectors.Config.WingsToggle.Label}"
+					// Tooltip: "{$Mods.TheCollectors.Config.WingsToggle.Tooltip}"
+				}
+
+				WeaponWithGrowingDamageToggle: {
+					// Label: Weapon With Growing Damage Toggle
+					// Tooltip: ""
+				}
+
+				// Headers.Items: Items Header
+			}
+		}
+
+		// Config.ItemHeader: Wings Toggle Header
 	}
 }

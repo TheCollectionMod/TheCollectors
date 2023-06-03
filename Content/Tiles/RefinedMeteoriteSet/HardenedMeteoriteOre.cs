@@ -3,11 +3,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
-using static Terraria.ModLoader.ModContent;
-using System.Collections.Generic;
-using Terraria.IO;
-using Terraria.WorldBuilding;
-
 
 namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 {
@@ -28,14 +23,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			Main.tileLavaDeath[Type] = false;
 
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Hardened Meteorite Ore");
 			AddMapEntry(new Color(207, 170, 216), name);
-			//name.AddTranslation(GameCulture.Spanish, "Meteorito endurecido");
 
-			DustType = DustID.FlameBurst;
-			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.HardenedMeteoriteOre>();
+			DustType = DustID.FireflyHit;
 			HitSound = SoundID.Tink;
-			//soundStyle = 1;
 			MineResist = 4f;
 			MinPick = 190;
 		}

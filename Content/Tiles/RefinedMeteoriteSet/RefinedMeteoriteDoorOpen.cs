@@ -35,7 +35,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			// Names
 			LocalizedText name = CreateMapEntryName();
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 
 			// Placement
 			TileObjectData.newTile.Width = 2;

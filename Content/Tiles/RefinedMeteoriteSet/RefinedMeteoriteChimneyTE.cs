@@ -10,11 +10,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 {
 	public class RefinedMeteoriteChimneyTE : ModTileEntity
     {
-        //public override bool IsLoadingEnabled(Mod mod)
-        //{
-        //    return ModContent.GetInstance<ServerConfig>().RedBrickFurniture;
-        //}
-
         public enum State : byte
         {
             Deactivated,

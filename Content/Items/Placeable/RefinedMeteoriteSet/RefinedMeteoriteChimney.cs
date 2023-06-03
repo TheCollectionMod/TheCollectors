@@ -18,7 +18,7 @@ namespace TheCollectors.Content.Items.Placeable.RefinedMeteoriteSet
 			Item.width = 24;
 			Item.height = 32;
 			Item.value = Item.sellPrice(0, 0, 0, 60);
-			Item.rare = ItemRarityID.White;
+			Item.rare = ItemRarityID.Blue;
 			Item.maxStack = 99;
 			Item.consumable = true;
 			Item.createTile = ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteChimney>();

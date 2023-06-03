@@ -19,9 +19,8 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			TileObjectData.newTile.StyleHorizontal = true;
 			TileObjectData.newTile.LavaDeath = false;
 			TileObjectData.addTile(Type);
-			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>();
 
-			AddMapEntry(new Color(221, 51, 255), Language.GetText("MapObject.MetalBar")); // localized text for "Metal Bar"
+			AddMapEntry(new Color(191, 142, 111), Language.GetText("MapObject.MetalBar")); // localized text for "Metal Bar"
 		}
 	}
 }

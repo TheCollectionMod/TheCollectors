@@ -34,7 +34,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			DustType = ModContent.DustType<Sparkle>();
 
 			// Names
-			AddMapEntry(new Color(200, 200, 200), CreateMapEntryName(), MapChestName);
+			AddMapEntry(new Color(191, 142, 111), CreateMapEntryName(), MapChestName);
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);

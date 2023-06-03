@@ -27,7 +27,7 @@ namespace TheCollectors.Content.Tiles
 			// Names
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Throwing Dummy");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);

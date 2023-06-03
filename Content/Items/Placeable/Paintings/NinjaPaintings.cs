@@ -31,7 +31,7 @@ namespace TheCollectors.Content.Items.Placeable.Paintings
 			//disableSmartCursor = true;
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Painting");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 		}
 
 		public override bool CreateDust(int i, int j, ref int type)

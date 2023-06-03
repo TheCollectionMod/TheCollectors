@@ -181,9 +181,8 @@ namespace TheCollectors
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnimatedLantern>(), 1)
-					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 1)
+					.AddIngredient(ItemType<Content.Items.Consumables.Critters.MeteoriteFairyItem>(), 1)
 					.AddIngredient(ItemID.Bottle, 1)
-					.AddIngredient(ItemID.FallenStar, 1)
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
@@ -314,30 +313,6 @@ namespace TheCollectors
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
-
-				/*Recipe.Create(ModContent.ItemType< Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnvil >(), 1)
-					.AddIngredient(ItemID.IronAnvil, 1)
-					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 10)
-					.AddTile(TileID.MythrilAnvil)
-					.Register();
-
-				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnvil>(), 1)
-					.AddIngredient(ItemID.LeadAnvil, 1)
-					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 10)
-					.AddTile(TileID.MythrilAnvil)
-					.Register();
-
-				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnvil>(), 1)
-					.AddIngredient(ItemID.MythrilAnvil, 1)
-					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 10)
-					.AddTile(TileID.MythrilAnvil)
-					.Register();
-
-				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnvil>(), 1)
-					.AddIngredient(ItemID.OrichalcumAnvil, 1)
-					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 10)
-					.AddTile(TileID.MythrilAnvil)
-					.Register();*/
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.ThrowingDummy>(), 1)
 					.AddRecipeGroup("Wood", 20) //solo sirve madera normal, revisar

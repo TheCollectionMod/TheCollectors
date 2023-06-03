@@ -29,8 +29,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			LocalizedText name = CreateMapEntryName();
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-			// name.SetDefault("Campfire");
-			AddMapEntry(new Color(179, 146, 107), name);
+			AddMapEntry(new Color(253, 221, 3), name);
 			AnimationFrameHeight = 38;
 			AdjTiles = new int[] { TileID.Campfire };
 		}

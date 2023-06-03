@@ -46,7 +46,7 @@ public class MeteoriteMan : ModNPC
         AnimationType = NPCID.DesertGhoul;
 
         Banner = NPC.type;
-        BannerItem = ModContent.ItemType<Content.Items.Placeable.Banners.ClawclopsBanner>();
+        BannerItem = ModContent.ItemType<Content.Items.Placeable.Banners.MeteoriteManBanner>();
     }
 
     public override void OnKill()

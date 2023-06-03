@@ -80,41 +80,5 @@ namespace TheCollectors.Common.GlobalNPCs
          * Martian Saucer    =    MartianSaucer
          * The Torch God     =    TorchGod
          */
-        public override void GetChat(NPC npc, ref string chat)
-        {
-            int ninja = NPC.FindFirstNPC(ModContent.NPCType<Ninja>());
-            switch (npc.type)
-            {
-                case NPCID.Guide:
-                    if (Main.rand.Next(0, 6) == 0 && NPC.CountNPCS(ModContent.NPCType<Ninja>()) > 0)
-                    {
-                        Language.GetTextValue("Mods.TheCollectors.Dialogue.Guide.Ninja" + Main.npc[ninja].GivenName);
-                    }
-                    break;
-                case NPCID.BestiaryGirl: //Zoologist
-                    if (Main.rand.Next(0, 6) == 0 && NPC.CountNPCS(ModContent.NPCType<Ninja>()) > 0)
-                    {
-                        if (Main.bloodMoon || Main.moonPhase == 0)
-                        {
-                            Language.GetTextValue("Mods.TheCollectors.Dialogue.Zoologist.Ninja2" + Main.npc[ninja].GivenName);
-                        }
-                        else
-                        {
-                            Language.GetTextValue("Mods.TheCollectors.Dialogue.Zoologist.Ninja1" + Main.npc[ninja].GivenName);
-                        }
-                    }
-                    break;
-            }
-            int mcmoneypants = NPC.FindFirstNPC(ModContent.NPCType<McMoneyPants>());
-            switch (npc.type)
-            {
-                case NPCID.GoblinTinkerer:
-                    if (Main.rand.Next(0, 6) == 0 && NPC.CountNPCS(ModContent.NPCType<McMoneyPants>()) > 0)
-                    {
-                        Language.GetTextValue("Mods.TheCollectors.Dialogue.GoblinTinkerer.McMoneyPants" + Main.npc[mcmoneypants].GivenName);
-                    }
-                    break;
-            }
-        }
     }
 }

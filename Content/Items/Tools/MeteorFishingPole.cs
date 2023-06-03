@@ -14,10 +14,6 @@ namespace TheCollectors.Content.Items.Tools
 		public override void SetStaticDefaults()
 		{
 			base.SetStaticDefaults();
-			// DisplayName.SetDefault("Meteor Fishing Pole");
-			// Tooltip.SetDefault("Able to fish in lava");
-
-			// Allows the pole to fish in lava
 			ItemID.Sets.CanFishInLava[Item.type] = true;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
@@ -43,10 +39,10 @@ namespace TheCollectors.Content.Items.Tools
 			new Color(153, 76, 205) // A purple color
 		};
 
-		// This holds the index of the fishing line color in the PossibleLineColors array.
+		/*// This holds the index of the fishing line color in the PossibleLineColors array.
 		private int fishingLineColorIndex;
 
-		private Color FishingLineColor => PossibleLineColors[fishingLineColorIndex];
+		private Color FishingLineColor => PossibleLineColors[fishingLineColorIndex];*/
 
 
 		// Grants the High Test Fishing Line bool if holding the item.

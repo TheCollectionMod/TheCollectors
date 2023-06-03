@@ -31,8 +31,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			// Etc
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Refined Meteorite Bathtub");
-			AddMapEntry(new Color(221, 51, 255), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)

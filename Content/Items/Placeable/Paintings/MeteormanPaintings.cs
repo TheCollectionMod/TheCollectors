@@ -29,7 +29,7 @@ namespace TheCollectors.Content.Items.Placeable.Paintings
 			TileObjectData.addTile(Type);
 			DustType = 0;
 			LocalizedText name = CreateMapEntryName();
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 		}
 
 		public override bool CreateDust(int i, int j, ref int type)

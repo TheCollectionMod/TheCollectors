@@ -35,8 +35,8 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			// AddMapEntry is for setting the color and optional text associated with the Tile when viewed on the map
 			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Meteorite Fairy in a Bottle");
-			AddMapEntry(new Color(238, 145, 105), name);
+			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
+			AddMapEntry(new Color(253, 221, 3), name);
 
 			// Can't use this since texture is vertical
 			// AnimationFrameHeight = 56;

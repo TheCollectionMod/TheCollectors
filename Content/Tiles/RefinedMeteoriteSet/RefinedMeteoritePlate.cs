@@ -32,7 +32,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AdjTiles = new int[] { TileID.FoodPlatter };
 
 			// Names
-			AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Plate"));
+			AddMapEntry(new Color(191, 142, 111), Language.GetText("MapObject.Plate"));
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);

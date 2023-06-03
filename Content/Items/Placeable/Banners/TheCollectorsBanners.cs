@@ -53,6 +53,21 @@ namespace TheCollectors.Content.Items.Placeable.Banners
 				case 3:
 					item = ItemType<CorruptedFlameElementalBanner>();
 					break;
+				case 4:
+					item = ItemType<MeteoriteFairyBanner>();
+					break;
+				case 5:
+					item = ItemType<MeteoriteManBanner>();
+					break;
+				case 6:
+					item = ItemType<MeteoriteWormBanner>();
+					break;
+				case 7:
+					item = ItemType<TCMeteoriteSlime>();
+					break;
+				case 8:
+					item = ItemType<TCBigMeteoriteSlime>();
+					break;
 				default:
 					return;
 			}
@@ -78,6 +93,21 @@ namespace TheCollectors.Content.Items.Placeable.Banners
 						break;
 					case 3:
 						type = ModContent.NPCType<NPCs.Enemies.Corruption.CorruptedFlameElemental>();
+						break;
+					case 4:
+						type = ModContent.NPCType<NPCs.Critters.MeteorFairy>();
+						break;
+					case 5:
+						type = ModContent.NPCType<NPCs.Enemies.Meteorite.MeteoriteMan>();
+						break;
+					case 6:
+						type = ModContent.NPCType<NPCs.Enemies.Meteorite.MeteoriteWormBody>();
+						break;
+					case 7:
+						type = ModContent.NPCType<NPCs.Enemies.Meteorite.TC_MeteoriteSlime>();
+						break;
+					case 8:
+						type = ModContent.NPCType<NPCs.Enemies.Meteorite.TC_MeteoriteMotherSlime>();
 						break;
 					default:
 						return;
@@ -147,6 +177,46 @@ namespace TheCollectors.Content.Items.Placeable.Banners
 		{
 			Item.createTile = TileType<TheCollectorsBanners>();
 			Item.placeStyle = 3;
+		}
+	}
+	public class MeteoriteFairyBanner : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 4;
+		}
+	}
+	public class MeteoriteManBanner : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 5;
+		}
+	}
+	public class MeteoriteWormBanner : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 6;
+		}
+	}
+	public class TCMeteoriteSlime : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 7;
+		}
+	}
+	public class TCBigMeteoriteSlime : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 8;
 		}
 	}
 }	

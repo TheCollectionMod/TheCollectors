@@ -40,14 +40,14 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			// Other tiles with just one map entry use CreateMapEntryName() to use the default translationkey, "MapEntry"
 			// Since ExampleChest needs multiple, we register our own MapEntry keys
-			AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
+			AddMapEntry(new Color(191, 142, 111), this.GetLocalization("MapEntry0"), MapChestName);
 			AddMapEntry(new Color(0, 141, 63), this.GetLocalization("MapEntry1"), MapChestName);
 			/*// Names
 			ContainerName tModPorter Note: Removed. Override DefaultContainerName instead .SetDefault("Refined Meteorite Chest");
 
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Refined Meteorite Chest");
-			AddMapEntry(new Color(200, 200, 200), name, MapChestName);
+			AddMapEntry(new Color(191, 142, 111), name, MapChestName);
 
 			name = CreateMapEntryName(Name + "_Locked"); // With multiple map entries, you need unique translation keys.
 			// name.SetDefault("Locked Refined Meteorite Chest");

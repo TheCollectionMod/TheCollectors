@@ -244,16 +244,30 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                         {
                             case 0:
                                 if (guide >= 0)
-                                {
-                                    return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.Guide1", Main.npc[guide].GivenName);
-                                }
+                                    switch (Main.rand.Next(2))
+                                    {
+                                        case 1:
+
+                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.Guide1", Main.npc[guide].GivenName);
+
+                                        default:
+
+                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.Guide2", Main.npc[guide].GivenName);
+                                    }
                                 else return null;
 
                             case 1:
                                 if (partygirl >= 0)
-                                {
-                                    return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl1", Main.npc[partygirl].GivenName);
-                                }
+                                    switch (Main.rand.Next(2))
+                                    {
+                                        case 1:
+
+                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl1", Main.npc[guide].GivenName);
+
+                                        default:
+
+                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl2", Main.npc[guide].GivenName);
+                                    }
                                 else return null;
                         }
                     }
@@ -336,7 +350,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             gravityCorrection = 0f;
             randomOffset = 2f;
         }
-        public override void HitEffect(NPC.HitInfo hit)
+       /* public override void HitEffect(NPC.HitInfo hit)
         {
             int num = NPC.life > 0 ? 1 : 5;
 
@@ -348,6 +362,32 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             if (Main.netMode != NetmodeID.Server && NPC.life <= 0)
             {
                 Gore.NewGore(NPC.GetSource_Death(), NPC.position, NPC.velocity, ModContent.Find<ModGore>(Mod.Name + "/" + Name + "Gore").Type, 1f);
+            }
+        }*/
+        public override void HitEffect(NPC.HitInfo hit)
+        {
+            int num = NPC.life > 0 ? 1 : 5;
+
+            for (int k = 0; k < num; k++)
+            {
+                Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Smoke);
+            }
+
+            if (Main.netMode != NetmodeID.Server && NPC.life <= 0)
+            {
+                // Retrieve the gore types. This NPC has shimmer and party variants for head, arm, and leg gore. (12 total gores)
+                string variant = "";
+                if (NPC.IsShimmerVariant) variant += "_Shimmer";
+                if (NPC.altTexture == 1) variant += "_Party";
+                int hatGore = NPC.GetPartyHatGore();
+                int headGore = Mod.Find<ModGore>($"{Name}_Gore{variant}").Type;
+
+                // Spawn the gores. The positions of the arms and legs are lowered for a more natural look.
+                if (hatGore > 0)
+                {
+                    Gore.NewGore(NPC.GetSource_Death(), NPC.position, NPC.velocity, hatGore);
+                }
+                Gore.NewGore(NPC.GetSource_Death(), NPC.position, NPC.velocity, headGore, 1f);
             }
         }
         /*public override void ModifyNPCLoot(NPCLoot npcLoot)

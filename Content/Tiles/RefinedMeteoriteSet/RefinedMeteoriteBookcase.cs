@@ -29,7 +29,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AdjTiles = new int[] { TileID.Bookcases };
 
 			// Names
-			AddMapEntry(new Color(221, 51, 255), Language.GetText("MapObject.Bookcase"));
+			AddMapEntry(new Color(191, 142, 111), Language.GetText("MapObject.Bookcase"));
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x4);

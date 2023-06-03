@@ -25,7 +25,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			TileObjectData.addTile(Type);
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Refined Meteorite Crafting Station");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 		}
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{

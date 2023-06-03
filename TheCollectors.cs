@@ -1,37 +1,25 @@
 using Terraria.ModLoader;
-using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
 using Terraria.GameContent.UI;
-using Terraria;
-using Terraria.ID;
-using Terraria.Localization;
-using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Personalities;
-using static Terraria.ModLoader.ModContent;
-using System.IO;
 
 namespace TheCollectors
 {
 	public class TheCollectors : Mod
-	{
-		public override void Load()
-		{
-
-			{
-				// Registers a new custom currency
-				TerraCoinId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.TerraCoin(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.TerraCoin > (), 999L, "Terra Coin"));
-				MagicSoulId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.MagicSoul(ModContent.ItemType<Content.Items.MagicSoul>(), 999L, "Magic Soul"));
-
-			}
-		}
-		
+	{		
 		public const string AssetPath = $"{nameof(TheCollectors)}/Assets/";
 
 		public static int TerraCoinId;
 		public static int MagicSoulId;
 
+		public override void Load()
+		{
 
+			{
+				// Registers a new custom currency
+				TerraCoinId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.TerraCoin(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.TerraCoin>(), 999L, "Terra Coin"));
+				MagicSoulId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.MagicSoul(ModContent.ItemType<Content.Items.MagicSoul>(), 999L, "Magic Soul"));
+
+			}
+		}
 		public override void Unload()
 		{
 			// The Unload() methods can be used for unloading/disposing/clearing special objects, unsubscribing from events, or for undoing some of your mod's actions.

@@ -36,8 +36,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
             LocalizedText name = CreateMapEntryName();
             AdjTiles = new int[] { TileID.Benches };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
-            //name.SetDefault("Sofa");
-            AddMapEntry(new Color(179, 146, 107), Lang.GetItemName(ItemID.Bench));
+            AddMapEntry(new Color(191, 142, 111), name);
         }
 
         public override void KillMultiTile(int i, int j, int frameX, int frameY)

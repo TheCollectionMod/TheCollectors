@@ -36,10 +36,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 		public override void AnimateWall(ref byte frame, ref byte frameCounter)
 		{
 			// Loop through 2 frames of animation, changing every 5 game frames
-			if (++frameCounter >= 5)
+			if (++frameCounter >= 10)
 			{
 				frameCounter = 0;
-				frame = (byte)(++frame % 2);
+				frame = (byte)(++frame % 4);
 			}
 		}
 

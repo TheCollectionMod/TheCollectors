@@ -38,12 +38,12 @@ namespace TheCollectors.Common.Systems
 			if (ModLoader.TryGetMod("Census", out Mod Census))
 			{
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Ninja>(), "Kill King Slime");
-				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Archeologist>(), "Have Rope Coil in inventary");
+				//Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Archeologist>(), "Have Rope Coil in inventary");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Meteorman>(), "Rescue in Meteor crash");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Enchanter>(), "Rescue in Dungeon");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.McMoneyPants>(), "Have a Terra Coin in inventary");
-				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Carver>(), "Rescue in Snow");
-				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.StarMerchant>(), "Have a Fallen Star in inventary");
+				//Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Carver>(), "Rescue in Snow");
+				//Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.StarMerchant>(), "Have a Fallen Star in inventary");
 			}
 		}
 

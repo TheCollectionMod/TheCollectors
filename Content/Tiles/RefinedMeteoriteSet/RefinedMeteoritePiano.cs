@@ -25,7 +25,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Piano");
-			AddMapEntry(new Color(200, 200, 200));
+			AddMapEntry(new Color(191, 142, 111));
 
 			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePiano>();
 

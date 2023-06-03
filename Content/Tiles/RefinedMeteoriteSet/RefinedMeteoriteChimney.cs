@@ -17,8 +17,9 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 18 };
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(ModContent.GetInstance<RefinedMeteoriteChimneyTE>().Hook_AfterPlacement, -1, 0, false);
             TileObjectData.addTile(Type);
-            AddMapEntry(Color.Red);
             AnimationFrameHeight = 56;
+            // Etc
+            AddMapEntry(new Color(191, 142, 111), CreateMapEntryName());
         }
 
         public override void KillMultiTile(int i, int j, int TileFrameX, int TileFrameY)
@@ -37,13 +38,13 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
             var tileEntity = (RefinedMeteoriteChimneyTE)TileEntity.ByPosition[new Point16(x, y)];
             if (tileEntity.CurrentState == RefinedMeteoriteChimneyTE.State.Deactivated)
             {
-                TileFrameYOffset = AnimationFrameHeight * 6;
+                TileFrameYOffset = AnimationFrameHeight * 7;
             }
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
-            frame = (Main.tileFrame[TileID.Chimney] + 4) % 6;
+            frame = (Main.tileFrame[TileID.Chimney] + 4) % 7;
         }
 
         public override void HitWire(int i, int j)

@@ -36,8 +36,9 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandle>();
 
 			// Etc
+			LocalizedText name = CreateMapEntryName();
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-			AddMapEntry(new Color(253, 221, 3), Language.GetText("MapObject.FloorLamp"));
+			AddMapEntry(new Color(253, 221, 3), name);
 
 			// Assets
 			if (!Main.dedServ)

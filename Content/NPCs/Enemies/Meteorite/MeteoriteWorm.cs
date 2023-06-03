@@ -34,6 +34,8 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 			// Head is 10 defence, body 20, tail 30.
 			NPC.CloneDefaults(NPCID.DiggerHead);
 			NPC.aiStyle = -1;
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<Content.Items.Placeable.Banners.MeteoriteWormBanner>();
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

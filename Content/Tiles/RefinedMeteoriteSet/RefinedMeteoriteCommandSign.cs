@@ -79,7 +79,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			LocalizedText name = CreateMapEntryName();
 			// name.SetDefault("Refined Meteorite Command Sign");
-			AddMapEntry(new Color(200, 200, 200), name);
+			AddMapEntry(new Color(191, 142, 111), name);
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
 

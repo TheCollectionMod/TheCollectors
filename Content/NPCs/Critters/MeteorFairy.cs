@@ -51,8 +51,8 @@ namespace TheCollectors.Content.NPCs.Critters
 			NPC.dontTakeDamageFromHostiles = false;
 			AIType = NPCID.FairyCritterPink;
 			AnimationType = NPCID.FairyCritterPink;
-			Banner = Item.NPCtoBanner(NPCID.FairyCritterPink); // Makes this NPC get affected by the normal zombie banner.
-			BannerItem = Item.BannerToItem(Banner); // Makes kills of this NPC go towards dropping the banner it's associated with.
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<Content.Items.Placeable.Banners.MeteoriteFairyBanner>();
 		}
 		public override void HitEffect(NPC.HitInfo hit)
 		{

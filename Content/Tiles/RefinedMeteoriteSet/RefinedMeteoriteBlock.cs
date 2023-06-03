@@ -1,6 +1,7 @@
 using TheCollectors.Content.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
@@ -18,9 +19,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			Main.tileLighted[Type] = true;
 
 			DustType = ModContent.DustType<Sparkle>();
-			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>();
 
-			AddMapEntry(new Color(102, 0, 102));
+			// Etc
+			LocalizedText name = CreateMapEntryName();
+			AddMapEntry(new Color(290, 51, 255), name);
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
