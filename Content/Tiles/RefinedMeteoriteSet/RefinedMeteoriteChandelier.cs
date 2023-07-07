@@ -52,10 +52,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			}
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32,16, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChandelier>());
-		}
+		}*/
 		public override void HitWire(int i, int j) //ExxoAvalonOrigins Mod
 
 		{

@@ -55,6 +55,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
             HitWire(i, j);
             return true;
         }
+
         public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];

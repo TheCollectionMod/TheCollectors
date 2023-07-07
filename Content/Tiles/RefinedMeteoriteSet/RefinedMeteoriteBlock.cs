@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 {
@@ -36,16 +37,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			g = 0.75f;
 			b = 1f;
 		}
-		/*public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+
+		/*public override void NearbyEffects(int i, int j, bool closer)
 		{
-			base.ModifyLight(i, j, ref r, ref g, ref b);
-			r = 255;
-			g = 255;
-			b = 150;
+		    Main.LocalPlayer.AddBuff(BuffID.OnFire, 60); // Cambia el valor de la duración según la duración de la quemadura que desees en tu mod
 		}*/
-		// todo: implement
-		// public override void ChangeWaterfallStyle(ref int style) {
-		// 	style = mod.GetWaterfallStyleSlot("ExampleWaterfallStyle");
-		// }
 	}
 }

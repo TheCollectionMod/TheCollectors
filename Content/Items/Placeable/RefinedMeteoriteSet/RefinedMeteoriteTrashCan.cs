@@ -9,18 +9,15 @@ namespace TheCollectors.Content.Items.Placeable.RefinedMeteoriteSet
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Refined Meteorite Trash Can");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Item.ResearchUnlockCount = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			//Common Properties
-			Item.CloneDefaults(ItemID.TrashCan);
+			Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>());
 			Item.width = 32;
 			Item.height = 30;
-			Item.createTile = ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>();
-			// Item.placeStyle = 1; // Use this to place the chest in its locked style
+			Item.value = 500;
 		}
 	}
 }

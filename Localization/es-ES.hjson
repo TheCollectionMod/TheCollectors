@@ -2613,6 +2613,11 @@ Mods: {
 				// DisplayName: Story Paintings
 				// Tooltip: ""
 			}
+
+			ExampleCampfire: {
+				// DisplayName: Example Campfire
+				// Tooltip: ""
+			}
 		}
 
 		Buffs: {

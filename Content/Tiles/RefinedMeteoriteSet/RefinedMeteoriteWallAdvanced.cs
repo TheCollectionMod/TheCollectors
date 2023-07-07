@@ -35,23 +35,22 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 		public override void AnimateWall(ref byte frame, ref byte frameCounter)
 		{
-			// Loop through 2 frames of animation, changing every 5 game frames
-			if (++frameCounter >= 10)
+			// Loop through 8 frames of animation, changing every 5 game frames
+			if (++frameCounter >= 5)
 			{
 				frameCounter = 0;
-				frame = (byte)(++frame % 4);
+				frame = (byte)(++frame % 8);
 			}
 		}
 
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
-			if (!Main.dayTime)
-			{
-				r = 0.1f;
-				g = 0.5f;
-				b = 0f;
-			}
+			base.ModifyLight(i, j, ref r, ref g, ref b);
+			r = 0.5f;
+			g = 0.75f;
+			b = 1f;
 		}
+
 
 		/*public override bool WallFrame(int i, int j, bool randomizeFrame, ref int style, ref int frameNumber)
 		{

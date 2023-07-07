@@ -36,22 +36,17 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			DustType = ModContent.DustType<Sparkle>();
 			AdjTiles = new int[] { TileID.Containers };
-			//ItemDrop = ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChest>();
 
 			// Other tiles with just one map entry use CreateMapEntryName() to use the default translationkey, "MapEntry"
 			// Since ExampleChest needs multiple, we register our own MapEntry keys
 			AddMapEntry(new Color(191, 142, 111), this.GetLocalization("MapEntry0"), MapChestName);
 			AddMapEntry(new Color(0, 141, 63), this.GetLocalization("MapEntry1"), MapChestName);
-			/*// Names
-			ContainerName tModPorter Note: Removed. Override DefaultContainerName instead .SetDefault("Refined Meteorite Chest");
 
-			LocalizedText name = CreateMapEntryName();
-			// name.SetDefault("Refined Meteorite Chest");
-			AddMapEntry(new Color(191, 142, 111), name, MapChestName);
-
-			name = CreateMapEntryName(Name + "_Locked"); // With multiple map entries, you need unique translation keys.
-			// name.SetDefault("Locked Refined Meteorite Chest");
-			AddMapEntry(new Color(0, 141, 63), name, MapChestName);*/
+			// Style 1 is ExampleChest when locked. We want that tile style to drop the ExampleChest item as well. Use the Chest Lock item to lock this chest.
+			// No item places ExampleChest in the locked style, so the automatically determined item drop is unknown, this is why RegisterItemDrop is necessary in this situation. 
+			RegisterItemDrop(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>(), 1);
+			// Sometimes mods remove content, such as tile styles, or tiles accidentally get corrupted. We can, if desired, register a fallback item for any tile style that doesn't have an automatically determined item drop. This is done by omitting the tileStyles parameter.
+			RegisterItemDrop(ItemID.Chest);
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
@@ -71,22 +66,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			TileObjectData.newTile.LavaDeath = false;
 			TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 			TileObjectData.addTile(Type);
-		}
-		// This example shows using GetItemDrops to manually decide item drops. This example is for a tile with a TileObjectData.
-		public override IEnumerable<Item> GetItemDrops(int i, int j)
-		{
-			Tile tile = Main.tile[i, j];
-			int style = TileObjectData.GetTileStyle(tile);
-			if (style == 0)
-			{
-				yield return new Item(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>());
-			}
-			if (style == 1)
-			{
-				// Style 1 is ExampleChest when locked. We want that tile style to drop the ExampleChest item as well. Use the Chest Lock item to lock this chest.
-				// No item places ExampleChest in the locked style, so the automatic item drop is unknown, this is why GetItemDrops is necessary in this situation. 
-				yield return new Item(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>());
-			}
 		}
 
 		public override ushort GetMapOption(int i, int j)

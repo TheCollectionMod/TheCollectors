@@ -9,7 +9,6 @@ namespace TheCollectors.Content.Items.Placeable.RefinedMeteoriteSet
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Refined Meteorite Chimney");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

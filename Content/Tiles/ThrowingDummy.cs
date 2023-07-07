@@ -54,10 +54,10 @@ namespace TheCollectors.Content.Tiles
 			num = 1;
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<Content.Items.Placeable.ThrowingDummy>());
-		}
+		}*/
 
 		public override bool RightClick(int i, int j)
 		{

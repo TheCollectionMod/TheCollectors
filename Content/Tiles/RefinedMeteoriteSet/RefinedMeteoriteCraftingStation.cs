@@ -27,10 +27,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			// name.SetDefault("Refined Meteorite Crafting Station");
 			AddMapEntry(new Color(191, 142, 111), name);
 		}
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 48, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>());
-		}
+		}*/
 
 		public override void AnimateTile(ref int frame, ref int frameCounter)
 		{

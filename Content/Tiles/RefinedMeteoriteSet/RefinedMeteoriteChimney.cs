@@ -9,10 +9,13 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 {
 	public class RefinedMeteoriteChimney : ModTile
     {
+        const int animationFrameWidth = 54;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
+            Main.tileLighted[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 18 };
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(ModContent.GetInstance<RefinedMeteoriteChimneyTE>().Hook_AfterPlacement, -1, 0, false);
@@ -26,6 +29,18 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
         {
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 48, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChimney>());
             ModContent.GetInstance<RefinedMeteoriteChimneyTE>().Kill(i, j);
+        }
+
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            if (Main.tile[i, j].TileFrameX < animationFrameWidth)
+            {
+                float rand = (float)Main.rand.Next(28, 42) * 0.005f;
+                rand += (float)(270 - (int)Main.mouseTextColor) / 700f;
+                r = 0.7f + rand;
+                g = 1f + rand;
+                b = 0.5f + rand;
+            }
         }
 
         //Don't animate if deactivated
