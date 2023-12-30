@@ -3,10 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.GameContent;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-using ItemID = Terraria.ID.ItemID;
-using NPCID = Terraria.ID.NPCID;
 
 namespace TheCollectors.Content.Tiles.Trees
 {
@@ -54,7 +53,6 @@ namespace TheCollectors.Content.Tiles.Trees
 			None = 0,
 			Acorn,
 			NPC,
-			Gore,
 			Fruit
 		}
 		public override bool Shake(int x, int y, ref bool createLeaves)
@@ -74,7 +72,6 @@ namespace TheCollectors.Content.Tiles.Trees
 			else if (effect == AdamantiteTreeShakeEffect.NPC)
 			{
 				WeightedRandom<int> npcType = new WeightedRandom<int>();
-				//npcType.Add(NPCID.GemSquirrelEmerald, 1);
 				npcType.Add(ModContent.NPCType<NPCs.Critters.AdamantiteSquirrel>(),1); 
 
 				Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
@@ -94,7 +91,7 @@ namespace TheCollectors.Content.Tiles.Trees
 				for (int i = 0; i < repeats; ++i)
 				{
 					Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, Main.rand.NextBool() ? ModContent.ItemType<Content.Items.Consumables.Food.AdamantiteFruit>() : ModContent.ItemType<Content.Items.Consumables.Food.AdamantiteFruit>(), 1);
+					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, ModContent.ItemType<Content.Items.Consumables.Food.AdamantiteFruit>(), Main.rand.Next(1, 3));
 				}
 			}
 

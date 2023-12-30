@@ -10,540 +10,392 @@ Mods: {
 	TheCollectors: {
 		NPCs: {
 			#............................................................................................................TownNPCs
-			Archeologist: {
-				DisplayName: Arqueólogo
+			CandyElf: {
+				DisplayName: Candy Elf
 
 				TownNPCMood: {
-					Content: Estoy feliz.
-					NoHome: Detesto no tener un hogar.
-					FarFromHome: Estoy demasiado lejos de casa.
-					LoveSpace: Me encanta tener tanto espacio.
-					DislikeCrowded: No me gusta tener tan poco espacio.
-					HateCrowded: Detesto tener poco espacio.
-					LoveBiome: Adoro el biomedio {BiomeName}.
-					LikeBiome: Me gusta el biomedio {BiomeName}.
-					DislikeBiome: No me gusta el biomedio {BiomeName}.
-					HateBiome: Detesto el biomedio {BiomeName}.
-					LoveNPC: Adoro a {NPCName}.
-					LikeNPC: Me gusta {NPCName}.
-					DislikeNPC: "{NPCName} no me cae nada bien."
-					HateNPC: Detesto a {NPCName}.
-					LikeNPC_Princess: I like {NPCName}.
+					Content: Well, howdy-doodly! Today, I'm as happy as a clam at high water, neighborino!
+					NoHome: Living without a home really bums me out, I tell ya. It's like having a bee in your bonnet, and that's not a diddly-doo good feeling, no siree.
+					FarFromHome: I'm feeling a tad too far from home, like a stray cat without its scratchin' post.
+					LoveSpace: But on the bright side, having so much space is like hitting the jackpot at the Candy Elves' family game night! It's roomier than a kangaroo's pouch, and I'm as pleased as punch about it, I am!
+					DislikeCrowded: Golly gee, I'm not too keen on how crowded things are around me. It's like a beehive on Candy Elves' Folly Farm during honey season!
+					HateCrowded: Oh, jumpin' Jehoshaphat! I downright hate how crowded it is. It's as bothersome as a woodpecker at 5 AM, I'll tell ya that much.
+					LikeBiome: I kinda like {BiomeName}, it's as pleasant as a mug of the best hot chocolate.
+					DislikeBiome: Well, slap my suspenders! I'm not too fond of {BiomeName}, it's about as appealing as a demon eye in the night.
+					HateBiome: I gotta be honest, I downright hate {BiomeName}. It's as unpleasant as Santa without his costume, and that's saying somethin'.
+					LoveNPC: Ah, diddly-doo! I love {NPCName}! They're as delightful as a neighbor bringing over a box full of candy cane after a full day shift.
+					LikeNPC_Princess: Golly! I'm sweet on that {NPCName} princess. She's like a ray of sunshine on a gloomy day, bless her royal heart!
 					Princess_LovesNPC: I like {NPCName}.
+					LoveBiome: Hot-diggity-doodle! I absolutely love {BiomeName}. It's like a slice of heaven on Earth, pure and simple.
+					LikeNPC: Well, slap me with a fish and call me a flounder! I sure do like {NPCName}. They're as enjoyable as making a marshmallow on a clear night.
+					DislikeNPC: Well, butter my grits! I must admit, I'm not too keen on {NPCName}. They're about as appealing as a cold cup of coffee on a winter morning, if you catch my drift.
+					HateNPC: Good grief and jumpin' Jehoshaphat! I downright hate {NPCName}. They're as irritating as a mosquito at a summer picnic, I tell ya.
 				}
+
+				Census.SpawnCondition: Have a Candy Cane Block [i:CandyCaneBlock] in inventory
 			}
-
-			Carver: {
-				DisplayName: Tallista
-
-				TownNPCMood: {
-					Content: Estoy feliz.
-					NoHome: Detesto no tener un hogar.
-					FarFromHome: Estoy demasiado lejos de casa.
-					LoveSpace: Me encanta tener tanto espacio.
-					DislikeCrowded: No me gusta tener tan poco espacio.
-					HateCrowded: Detesto tener poco espacio.
-					LoveBiome: Adoro el biomedio {BiomeName}.
-					LikeBiome: Me gusta el biomedio {BiomeName}.
-					DislikeBiome: No me gusta el biomedio {BiomeName}.
-					HateBiome: Detesto el biomedio {BiomeName}.
-					LoveNPC: Adoro a {NPCName}.
-					LikeNPC: Me gusta {NPCName}.
-					DislikeNPC: "{NPCName} no me cae nada bien."
-					HateNPC: Detesto a {NPCName}.
-					LikeNPC_Princess: I like {NPCName}.
-					Princess_LovesNPC: I like {NPCName}.
-				}
-			}
-
-			CarverFrozen.DisplayName: Tallista congelada
 
 			Enchanter: {
 				DisplayName: Encantador
 
 				TownNPCMood: {
-					Content: Gracias por romper el hechizo.
-					NoHome: El aire libre está muy bien y todo eso, pero aún así, sigo necesitando de una habitación para trabajar con mis báculos.
-					LoveSpace: En {BiomeName} puedo concentrarme al máximo.
-					FarFromHome: Una escapadita de vez en cuando viene bien, pero va tocando volver, ¿no?.
-					DislikeCrowded: Se empieza a respirar poca magia por aquí, que corra el aire.
-					HateCrowded: Como vuelva a venir alguien a pedirme que le saque un conejo del sombrero... Me mudo al oceano, y eso que no me gusta.
-					LikeBiome: En {BiomeName} se respira magia.
-					// DislikeBiome: "{BiomeName} me distrae demasiado, se pone uno todo ocioso."
-					HateBiome: Ya me estás construyendo una habitación en un sitio más luminoso, bastante tuve ya...
-					LoveNPC: Una pena que a {NPCName} le guste andar por la jungla, su magia me parece de lo más interesante.
-					LikeNPC: Con {NPCName} por aquí, la fiesta está asegurada.
-					// LikeNPC_Princess: "{NPCName} seems friendly."
-					DislikeNPC: No me extraña que a {NPCName} le llamen duende chapucero, menuda escopeta de feria el tío.
-					DislikeBiome: No me gusta el biomedio {BiomeName}.
-					LikeNPC_Princess: I like {NPCName}.
-					Princess_LovesNPC: I like {NPCName}.
+					Content: Thank you for breaking the spell.
+					NoHome: The outdoors is nice and all, but I still need a room to work with my staves.
+					LoveSpace: In {BiomeName} I can focus as much as possible.
+					FarFromHome: A getaway from time to time is good, but it's time to come back, right?
+					DislikeCrowded: We're starting to breathe little magic around here, let the air flow.
+					HateCrowded: If someone comes to me again and asks me to pull a rabbit out of their hat... I'm moving to the ocean, and I don't like it.
+					LikeBiome: In {BiomeName} breathes magic.
+					DislikeBiome: "{BiomeName} distracts me too much, it makes you all idle."
+					HateBiome: You'd better build me a room in a brighter place right now. I've had enough already.
+					LoveNPC: It's a shame that {NPCName} spends that much time in the jungle, I find her magic very interesting.
+					LikeNPC: With {NPCName} here, the party is guaranteed.
+					DislikeNPC: No wonder they call {NPCName} the tinkerer goblin, what a fairground shotgun that guy is.
+					HateNPC: I hate metal things.
+					LikeNPC_Princess: "{NPCName} is nice, she often comes by to take some potions."
+					Princess_LovesNPC: "{NPCName} always invites me to try his brewings. I like his cherry-flavoured flask of blossoms."
 				}
 
 				Census.SpawnCondition: Rescue in Dungeon
 			}
 
-			EnchanterPrisioner.DisplayName: Encantador encantado
+			EnchanterPrisioner.DisplayName: Enchanted Enchanter
 
 			McMoneyPants: {
-				DisplayName: Tío Gacha
+				DisplayName: Gacha Dude
 
 				TownNPCMood: {
-					Content: Jeje, nuevos vecinos a los que poder timar..., digo vender mis fantasticos productos.
-					NoHome: Voy a necesitar bastante espacio, un buen almacén, con caja fuerte por supuesto.
-					LoveSpace: El bosque es el mejor lugar para mi negocio, suelo barato que nadie quiere.
-					FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
-					DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
-					HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
+					Content: Hehe, new neighbours to swindl... to sell my fantastic goods.
+					NoHome: I'm going to need more space. A nice warehouse, with a safe, of course.
+					LoveSpace: The forest is the best place for my business, cheap ground that nobody wants.
+					FarFromHome: No no no no, this place is awful! Who is going to come shopping here?.
+					DislikeCrowded: Most people don't like crowds. But not me! More people, more business.
+					HateCrowded: Look how many people!, time to increase prices.
+					LoveBiome: Here I smell business
 					LikeBiome: ...
-					LoveBiome: Aquí se respira negocio
 					DislikeBiome: ...
-					HateBiome: ...
-					LikeNPC: Me encanta que {NPCName} cobre por sus servicios, la privatización es el futuro.
-					LikeNPC_Princess: ¿{NPCName} es una princesa?, que maravilla, estos son unos primos...
-					LoveNPC: Es bueno que la gente deje a otros administrar su dinero, {NPCName} lo sabe bien.
+					HateBiome: I don't like cold climates, I have to spend my savings on heating my mansion.
+					LoveNPC: It's good that peoples leave others manage their money, {NPCName} knows it well.
+					LikeNPC: I love that {NPCName} charges by his services, private companies are the future.
 					DislikeNPC: ...
-					HateNPC: ...
-					Princess_LovesNPC: I like {NPCName}.
+					HateNPC: I hate {NPCName}. Giving stuff for free? That's not how the system works!
+					LikeNPC_Princess: "{NPCName} is a princess?, how wonderful! these are so naïve..."
+					Princess_LovesNPC: Terraboxes are so exciting. I hope to get the special dye in the DyesTerrabox. However I have already 14 Red Dye.
 				}
 
-				Census.SpawnCondition: Have a Terra Coin in inventary
+				Census.SpawnCondition: Have a Terra Coin [i:TheCollectors/TerraCoin] in inventary
 			}
 
 			Meteorman: {
-				DisplayName: Hombre de Meteorito
+				DisplayName: Meteorman
 
 				TownNPCMood: {
-					Content: Que tierra tan verde y poco rocosa, muy buena para mis aficciones.
-					NoHome: Podemos usar los restos de mi accidente para hacer unas casas, no se pueden desperdiciar.
-					LoveSpace: Se respira paz.
-					FarFromHome: No me encuentro cómodo tan lejos de casa, aunque mi casa real estaba a miles de kilómetros.
-					DislikeCrowded: Empiezo a tener la lista de encargos un poco saturada.
-					HateCrowded: Odio admitirlo, pero con tanta gente no puedo seguir el ritmo de los encargos.
-					LikeBiome: Por ahora me gustaría quedarme en {BiomeName}, aunque por la noche haga fresquito.
+					Content: What a wonderful green stoneless lands. Great for my hobbies.
+					NoHome: We can use the leftovers from my accident to build some houses. We cannot waste them.
+					LoveSpace: It breathes peace.
+					FarFromHome: I don't feel at ease this far from home. Even if my real house was millions of kilometers away.
+					DislikeCrowded: I start having my commission list a bit swamped.
+					HateCrowded: I hate to admit, but with that much people I can't fulfill the commission list.
+					LikeBiome: By the now I would like to stay in {BiomeName}, despite during the night it cools down.
 					LoveBiome: cuando pueda
-					DislikeBiome: "{BiomeName} es fantástico, pero no me siento muy seguro tan cerca del agua."
-					HateBiome: Como pase otro día más en {BiomeName}, creo que tendré que empezar a llamarme el Hombre de Piedra normal y corriente.
-					LikeNPC: Me cae muy bien {NPCName}, cuida mucho la naturaleza.
-					LikeNPC_Princess: "{NPCName} se lleva bien con todo el mundo, como debe ser."
-					LoveNPC: Mi negocio y el de {NPCName} funcionan muy bien juntos.
-					// DislikeNPC: Why is {NPCName} here? It's okay, me, just don't look him in the eye and he can't scare you...
-					HateNPC: No me gusta como {NPCName}, se aprovecha de la gente, además odia a Papá Noel.
-					Princess_LovesNPC: I like {NPCName}.
+					DislikeBiome: "{BiomeName} is fantastic, but I don't feel very safe this close to the water."
+					HateBiome: If I spend one more day in {BiomeName}, I think I will become the Regular-Stoneman.
+					LikeNPC: I like {NPCName} very much, she takes care of the nature.
+					LikeNPC_Princess: "{NPCName} gets along with everybody. As it should be."
+					LoveNPC: My business and that of {NPCName} work very well together.
+					// DislikeNPC: No tiene.
+					HateNPC: I don't like {NPCName}, he takes advantage of everybody. Moreover he hates Santa Claus.
+					Princess_LovesNPC: "{NPCName} showed me a cute squirrel. I had never seen one that shiny! He also looks to be into gardening. He can show me a thing or two."
 				}
 
 				Census.SpawnCondition: Rescue in Meteor crash
 			}
 
-			MeteormanBroken.DisplayName: Hombre de Meteorito abatido
+			MeteormanBroken.DisplayName: Broken Meteorman
 
 			Ninja: {
 				DisplayName: Ninja
 
 				TownNPCMood: {
-					Content: Me gusta como está quedando el barrio.
-					NoHome: Estoy entrenado para no necesitar una casa, pero no me vendría mal una la verdad.
-					LoveSpace: Mataría por una casita en el bosque....
-					FarFromHome: A ver si vamos volviendo ya, que son horas.
-					DislikeCrowded: ¿Y ese grupo de gente corriendo de esa manera tan rara?.
-					HateCrowded: Por aquí hay demasiada gente, todo el día tocando mis Shurikens.
+					Content: I like the way the neighbourhood is growing.
+					NoHome: I am training to not need a house, but having one wouldn't be that bad, honestly.
+					LoveSpace: I would kill for a house in the forest....
+					FarFromHome: Let's go back home, it's late already.
+					DislikeCrowded: Why those people are running that way? They make me cringe.
+					HateCrowded: It's too crouded around here. All day disturbing my Shurikens.
 					LoveBiome: No tiene.
-					LikeBiome: Me gusta {BiomeName}, me recuerda a mis años de entrenamiento con Master San.
-					DislikeBiome: "7,8 too much {BiomeName}."
-					HateBiome: Demasiados colorines en {BiomeName}.
-					LoveNPC: Entreno mejor cuando {NPCName} está disponible.
+					LikeBiome: I like {BiomeName}, it remembers me my training years with Master-San.
+					DislikeBiome: 7.8 too much {BiomeName}.
+					HateBiome: Too many colours in {BiomeName}. It disturbs my vision.
+					LoveNPC: I train better when {NPCName} is available.
 					LikeNPC: no tiene
-					LikeNPC_Princess: No puedo evitar pensar que estoy en un RPG al ver a {NPCName}.
-					DislikeNPC: Primero secuestra a mi maestro ¿y ahora pretende venir a vivir aquí? {NPCName} le echa mucha cara.
-					HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos"
-					Princess_LovesNPC: I like {NPCName}.
+					LikeNPC_Princess: I can't avoid thinking I'm in an RPG when I see {NPCName}.
+					DislikeNPC: First, it kidnaps my master. And now he wants to move here? How insolent {NPCName} is.
+					HateNPC: "{NPCName} bring me slimy memories... and not the good ones"
+					Princess_LovesNPC: "{NPCName} brings fun to the parties. Last one went a bit wild... Next time we'd better avoid throwing Shurikens blinfolded. Luckily the nurse was around, however that poor boy...What a shiny day, isn't it?"
 				}
 
 				Census.SpawnCondition: Kill King Slime
 			}
 
-			StarMerchant: {
-				DisplayName: Mercader Estelar
-
-				TownNPCMood: {
-					Content: Estoy feliz.
-					NoHome: Detesto no tener un hogar.
-					FarFromHome: Estoy demasiado lejos de casa.
-					LoveSpace: Me encanta tener tanto espacio.
-					DislikeCrowded: No me gusta tener tan poco espacio.
-					HateCrowded: Detesto tener poco espacio.
-					LoveBiome: Adoro el biomedio {BiomeName}.
-					LikeBiome: Me gusta el biomedio {BiomeName}.
-					DislikeBiome: No me gusta el biomedio {BiomeName}.
-					HateBiome: Detesto el biomedio {BiomeName}.
-					LoveNPC: Adoro a {NPCName}.
-					LikeNPC: Me gusta {NPCName}.
-					DislikeNPC: "{NPCName} no me cae nada bien."
-					HateNPC: Detesto a {NPCName}.
-					LikeNPC_Princess: I like {NPCName}.
-					Princess_LovesNPC: I like {NPCName}.
-				}
-			}
-
-			CopperGuard: {
-				#............................................................................................................TownGuardians
-				DisplayName: Guardia de Cobre
-
-				TownNPCMood: {
-					Content: Estoy feliz.
-					NoHome: Detesto no tener un hogar.
-					FarFromHome: Estoy demasiado lejos de casa.
-					LoveSpace: Me encanta tener tanto espacio.
-					DislikeCrowded: No me gusta tener tan poco espacio.
-					HateCrowded: Detesto tener poco espacio.
-					LoveBiome: Adoro el biomedio {BiomeName}.
-					LikeBiome: Me gusta el biomedio {BiomeName}.
-					DislikeBiome: No me gusta el biomedio {BiomeName}.
-					HateBiome: Detesto el biomedio {BiomeName}.
-					LoveNPC: Adoro a {NPCName}.
-					LikeNPC: Me gusta {NPCName}.
-					DislikeNPC: "{NPCName} no me cae nada bien."
-					HateNPC: Detesto a {NPCName}.
-					LikeNPC_Princess: I like {NPCName}.
-					Princess_LovesNPC: I like {NPCName}.
-				}
-			}
-
 			#............................................................................................................Enemies
 			Eyeling.DisplayName: Eyeling
-			Clawclops.DisplayName: Garrojo
-			CorruptedFlameElemental.DisplayName: Elemental de fuego corrupto
-			SkitteringHusk.DisplayName: Cascarón resbaladizo
-			MeteoriteMan.DisplayName: Cuerpo de meteorito
-			TC_MeteoriteMotherSlime.DisplayName: Gran Slime de meteorito
-			TC_MeteoriteSlime.DisplayName: Slime de meteorito
-			MeteoriteSlime.DisplayName: Meteorite Slime
-			MeteoriteWormBody.DisplayName: Gusano meteoro
-			MeteoriteWormHead.DisplayName: Gusano meteoro
-			MeteoriteWormTail.DisplayName: Gusano meteoro
-			TCMeteorBossBody.DisplayName: Jefe meteorito
-			TCMeteorBossMinion.DisplayName: Súbdito del jefe de meteorito
-			GraniteSlime.DisplayName: Slime de granito
-			LihzahrdSlime.DisplayName: Slime de templo
+			Clawclops.DisplayName: Clawclops
+			CorruptedFlameElemental.DisplayName: Corrupted Flame Elemental
+			SkitteringHusk.DisplayName: Skittering Husk
+			MeteoriteMan.DisplayName: Meteorite Body
+			TC_MeteoriteMotherSlime.DisplayName: Big Meteorite Slime
+			TC_MeteoriteSlime.DisplayName: Meteorite Slime
+			MeteoriteWormBody.DisplayName: Meteorite Worm
+			MeteoriteWormHead.DisplayName: Meteorite Worm
+			MeteoriteWormTail.DisplayName: Meteorite Worm
+			GraniteEnergy.DisplayName: Granitoyster
+			GraniteSlime.DisplayName: Granite Slime
+			LihzahrdSlime.DisplayName: Lihzahrd Slime
 			#............................................................................................................Critters
-			MeteorFairy.DisplayName: Hada meteoro
-			CopperBunny.DisplayName: Conejo de cobre
-			TinBunny.DisplayName: Conejo de estaño
-			IronBunny.DisplayName: Conejo de hierro
-			LeadBunny.DisplayName: Conejo de plomo
-			SilverBunny.DisplayName: Conejo de plata
-			TungstenBunny.DisplayName: Conejo de tungsteno
-			GoldBunny.DisplayName: Conejo de oro
-			PlatinumBunny.DisplayName: Conejo de platino
-			SturdyFossilBunny.DisplayName: Conejo de fósil férreo
-			MeteoriteBunny.DisplayName: Conejo de meteorito
-			DemoniteBunny.DisplayName: Conejo endemoniado
-			CrimtaneBunny.DisplayName: Conejo carmesí
-			ObsidianBunny.DisplayName: Conejo de obsidiana
-			HellstoneBunny.DisplayName: Conejo infernal
-			CobaltBunny.DisplayName: Conejo de cobalto
-			PalladiumBunny.DisplayName: Conejo de paladio
-			MythrilBunny.DisplayName: Conejo de mithril
-			OrichalcumBunny.DisplayName: Conejo de oricalco
-			AdamantiteBunny.DisplayName: Conejo de adamantita
-			TitaniumBunny.DisplayName: Conejo de titanio
-			HallowedBunny.DisplayName: Conejo sagrado
-			HardenedMeteoriteBunny.DisplayName: Conejo de meteorito endurecido
-			ChlorophyteBunny.DisplayName: Conejo de clorofita
-			ShroomiteBunny.DisplayName: Conejo de piñonita
-			SpectreBunny.DisplayName: Conejo espectral
-			LuminiteBunny.DisplayName: Conejo de luminita
-			SolarBunny.DisplayName: Conejo solar
-			NebulaBunny.DisplayName: Conejo nebuloso
-			StardustBunny.DisplayName: Conejo de polvo estelar
-			VortexBunny.DisplayName: Conejo vórtice
-			CopperSquirrel.DisplayName: Ardilla de cobre
-			TinSquirrel.DisplayName: Ardilla de estaño
-			IronSquirrel.DisplayName: Ardilla de hierro
-			LeadSquirrel.DisplayName: Ardilla de plomo
-			SilverSquirrel.DisplayName: Ardilla de plata
-			TungstenSquirrel.DisplayName: Ardilla de tungsteno
-			GoldSquirrel.DisplayName: Ardilla de oro
-			PlatinumSquirrel.DisplayName: Ardilla de platino
-			SturdyFossilSquirrel.DisplayName: Ardilla de fósil férreo
-			MeteoriteSquirrel.DisplayName: Ardilla de meteorito
-			DemoniteSquirrel.DisplayName: Ardilla endemoniada
-			CrimtaneSquirrel.DisplayName: Ardilla carmesí
-			ObsidianSquirrel.DisplayName: Ardilla de obsidiana
-			HellstoneSquirrel.DisplayName: Ardilla infernal
-			CobaltSquirrel.DisplayName: Ardilla de cobalto
-			PalladiumSquirrel.DisplayName: Ardilla de paladio
-			MythrilSquirrel.DisplayName: Ardilla de mithril
-			OrichalcumSquirrel.DisplayName: Ardilla de oricalco
-			AdamantiteSquirrel.DisplayName: Ardilla de adamantita
-			TitaniumSquirrel.DisplayName: Ardilla de titanium
-			HallowedSquirrel.DisplayName: Ardilla sagrada
-			HardenedMeteoriteSquirrel.DisplayName: Ardilla de meteorito endurecido
-			ChlorophyteSquirrel.DisplayName: Ardilla de clorofita
-			ShroomiteSquirrel.DisplayName: Ardilla de piñonita
-			SpectreSquirrel.DisplayName: Ardilla espectral
-			LuminiteSquirrel.DisplayName: Ardilla de luminita
-			SolarSquirrel.DisplayName: Ardilla solar
-			NebulaSquirrel.DisplayName: Ardilla nebuloso
-			StardustSquirrel.DisplayName: Ardilla de polvo estelar
-			VortexSquirrel.DisplayName: Ardilla vórtice
+			MeteorFairy.DisplayName: Meteorite Fairy
+			CopperBunny.DisplayName: Copper Bunny
+			TinBunny.DisplayName: Tin Bunny
+			IronBunny.DisplayName: Iron Bunny
+			LeadBunny.DisplayName: Lead Bunny
+			SilverBunny.DisplayName: Silver Bunny
+			TungstenBunny.DisplayName: Tungsten Bunny
+			GoldBunny.DisplayName: Gold Bunny
+			PlatinumBunny.DisplayName: Platinum Bunny
+			SturdyFossilBunny.DisplayName: Sturdy Fossil Bunny
+			MeteoriteBunny.DisplayName: Meteorite Bunny
+			DemoniteBunny.DisplayName: Demonite Bunny
+			CrimtaneBunny.DisplayName: Crimtane Bunny
+			ObsidianBunny.DisplayName: Obsidian Bunny
+			HellstoneBunny.DisplayName: Hellstone Bunny
+			CobaltBunny.DisplayName: Cobalt Bunny
+			PalladiumBunny.DisplayName: Palladium Bunny
+			MythrilBunny.DisplayName: Mythril Bunny
+			OrichalcumBunny.DisplayName: Orichalcum Bunny
+			AdamantiteBunny.DisplayName: Adamantite Bunny
+			TitaniumBunny.DisplayName: Titanium Bunny
+			HallowedBunny.DisplayName: Hallowed Bunny
+			HardenedMeteoriteBunny.DisplayName: Hardened Meteorite Bunny
+			ChlorophyteBunny.DisplayName: Chlorophyte Bunny
+			ShroomiteBunny.DisplayName: Shroomite Bunny
+			SpectreBunny.DisplayName: Spectre Bunny
+			LuminiteBunny.DisplayName: Luminite Bunny
+			SolarBunny.DisplayName: Solar Bunny
+			NebulaBunny.DisplayName: Nebula Bunny
+			StardustBunny.DisplayName: Stardust Bunny
+			VortexBunny.DisplayName: Vortex Bunny
+			CopperSquirrel.DisplayName: Copper Squirrel
+			TinSquirrel.DisplayName: Tin Squirrel
+			IronSquirrel.DisplayName: Iron Squirrel
+			LeadSquirrel.DisplayName: Lead Squirrel
+			SilverSquirrel.DisplayName: Silver Squirrel
+			TungstenSquirrel.DisplayName: Tungsten Squirrel
+			GoldSquirrel.DisplayName: Gold Squirrel
+			PlatinumSquirrel.DisplayName: Platinum Squirrel
+			SturdyFossilSquirrel.DisplayName: Sturdy Fossil Squirrel
+			MeteoriteSquirrel.DisplayName: Meteorite Squirrel
+			DemoniteSquirrel.DisplayName: Demonite Squirrel
+			CrimtaneSquirrel.DisplayName: Crimtane Squirrel
+			ObsidianSquirrel.DisplayName: Obsidian Squirrel
+			HellstoneSquirrel.DisplayName: Hellstone Squirrel
+			CobaltSquirrel.DisplayName: Cobalt Squirrel
+			PalladiumSquirrel.DisplayName: Palladium Squirrel
+			MythrilSquirrel.DisplayName: Mythril Squirrel
+			OrichalcumSquirrel.DisplayName: Orichalcum Squirrel
+			AdamantiteSquirrel.DisplayName: Adamantite Squirrel
+			TitaniumSquirrel.DisplayName: Titanium Squirrel
+			HallowedSquirrel.DisplayName: Hallowed Squirrel
+			HardenedMeteoriteSquirrel.DisplayName: Hardened Meteorite Squirrel
+			ChlorophyteSquirrel.DisplayName: Chlorophyte Squirrel
+			ShroomiteSquirrel.DisplayName: Shroomite Squirrel
+			SpectreSquirrel.DisplayName: Spectre Squirrel
+			LuminiteSquirrel.DisplayName: Luminite Squirrel
+			SolarSquirrel.DisplayName: Solar Squirrel
+			NebulaSquirrel.DisplayName: Nebula Squirrel
+			StardustSquirrel.DisplayName: Stardust Squirrel
+			VortexSquirrel.DisplayName: Vortex Squirrel
 		}
 
 		Bestiary: {
 			#........................................................................................................................................................TownNPCs
-			Archeologist: El Arqueólogo provee con útiles objetos básicos para el jugador nuevo. Parece tener cierta investigación en proceso...
-			Carver: Antigua miembro de una tribu especialista en tallar madera, se encontraba congelada.
-			Enchanter: Víctima de sus propios encantamientos, el ahora líberado encantador promete no volver a pifiarla.
-			McMoneyPants: Todos los que os burlais de mis terracajas misteriosas no borréis está descripción que nos reiemos todos al cabo de un tiempo.
-			Meteorman: El hombre de meteorito viene del meteoro para realizar meteóricas tareas. Es una roca guay.
-			Ninja: Discípulo del legendario Master San, experto en armas arrojadizas, o eso dice. Es el hermano del Guía.
-			StarMerchant: Futura actualización.
-			#........................................................................................................................................................TownGuardians
-			CopperGuard: Gracias a la mágia, esta vieja armadura ha cobrado vida, listo para servir.
+			Enchanter: Victim of his own enchantments, the now freed enchanter vows never to screw up again.
+			McMoneyPants: All of you who make fun of my mysterious terraboxes, do not delete this description that we all laugh at after a while.
+			Meteorman: Meteorman comes from the meteor to perform meteoric tasks. It's a cool rock.
+			Ninja: Disciple of the legendary Master San, an expert in throwing weapons, or so he says. He is the brother of the Guide.
+			CandyElf: Coming from the North pole, the Candy Elf is patiently waiting to the winter season to deliver presents to those who behave well.
 			#........................................................................................................................................................Enemies
 			Clawclops: Go, go, go, go, go, go, go, go, go, go! Gotta go fast, gotta go fast! Gotta go faster, faster, faster, faster, faster!.
-			CorruptedFlameElemental: Elemental de fuego afectado por la corrupción, no presenta más cambios que un color verdoso que antes no tenía.
-			Eyeling: Feroz bestia corrupta de 8 patas... o mas bien, inofensivo pseudocangrejo corrupto, hay quien dice que se puede domesticar.
-			SkitteringHusk: Un mero cascarón de lo que fue habitante de estas tierras ahora contaminadas por la Corrupción.
-			GraniteSlime: Un slime normal y corriente, pero endurecido por el granito de las cuevas.
-			LihzahrdSlime: Los slimes se han colado en el templo, y como no, ya se han adaptado al medio.
-			MeteoriteWorm: ¡Gusanos espaciales... en la tierra!
-			MeteoriteMan.DisplayName: Mira tu donde estaba el resto de todas esas cabezas sueltas...
-			TC_MeteoriteMotherSlime: Algunos slimes hicieron pelota y ahora es un único slime enorme.
-			TC_MeteoriteSlime: Por algún motivo que no logro comprender, algunos slimes en vez de arder ahora echan pinchos de fuego.
+			CorruptedFlameElemental: A fire elemental affected by the corruption, it has no changes other than a greenish color that it did not have before.
+			Eyeling: Fierce 4-legged corrupted beast... or rather, harmless corrupted pseudo-crab, some say it can be tamed.
+			SkitteringHusk: A mere shell of what was an inhabitant of these lands now contaminated by Corruption.
+			GraniteSlime: An ordinary slime, but hardened by the granite of the caves.
+			GraniteEnergy: This granite oyster was born in high-pressure enviroments and its shell can handle up to 5000 atm. The gravity seems to not affect it.
+			LihzahrdSlime: The slimes have slipped into the temple, and of course, they have already adapted to the environment.
+			MeteoriteWorm: Space Worms... on Earth!
+			MeteoriteMan: Look where the rest of all those loose heads were...
+			TC_MeteoriteMotherSlime: Some slimes balled up and now it's a single huge slime.
+			TC_MeteoriteSlime: For some reason that I don't understand, some slimes instead of burning now shoot out spikes of fire.
 			#........................................................................................................................................................Critters
-			MeteorFairy: Extrañas esquirlas de fuego que parecen tener vida propia.
-			CopperBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			TinBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			IronBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			LeadBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			SilverBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			TungstenBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			GoldBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			PlatinumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			SturdyFossilBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			MeteoriteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			DemoniteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			CrimtaneBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			ObsidianBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			HellstoneBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			CobaltBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			PalladiumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			MythrilBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			OrichalcumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			AdamantiteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			TitaniumBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			HallowedBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			HardenedMeteoriteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			ChlorophyteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			ShroomiteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			SpectreBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			LuminiteBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			SolarBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			NebulaBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			StardustBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			VortexBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
-			CopperSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			TinSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			IronSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			LeadSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			SilverSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			TungstenSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			GoldSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			PlatinumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			SturdyFossilSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			MeteoriteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			DemoniteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			CrimtaneSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			ObsidianSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			HellstoneSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			CobaltSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			PalladiumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			MythrilSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			OrichalcumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			AdamantiteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			TitaniumSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			HallowedSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			HardenedMeteoriteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			ChlorophyteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			ShroomiteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			SpectreSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			LuminiteSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			SolarSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			NebulaSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			StardustSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
-			VortexSquirrel: Estas coloridas ardillas adquirieron estes brillantes aspectos después de comer los frutos mineralosos.
+			MeteorFairy: Strange shards of fire that seem to have a life of their own.
+			CopperBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			TinBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			IronBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			LeadBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			SilverBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			TungstenBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			GoldBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			PlatinumBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			SturdyFossilBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			MeteoriteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			DemoniteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			CrimtaneBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			ObsidianBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			HellstoneBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			CobaltBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			PalladiumBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			MythrilBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			OrichalcumBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			AdamantiteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			TitaniumBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			HallowedBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			HardenedMeteoriteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			ChlorophyteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			ShroomiteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			SpectreBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			LuminiteBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			SolarBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			NebulaBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			StardustBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			VortexBunny: These colorful bunnies took on these brilliant looks after burrowing in Meteorman's special soils.
+			CopperSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			TinSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			IronSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			LeadSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			SilverSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			TungstenSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			GoldSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			PlatinumSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			SturdyFossilSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			MeteoriteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			DemoniteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			CrimtaneSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			ObsidianSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			HellstoneSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			CobaltSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			PalladiumSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			MythrilSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			OrichalcumSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			AdamantiteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			TitaniumSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			HallowedSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			HardenedMeteoriteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			ChlorophyteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			ShroomiteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			SpectreSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			LuminiteSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			SolarSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			NebulaSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			StardustSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
+			VortexSquirrel: These colorful squirrels took on these bright looks after eating the mineral fruits.
 		}
 
 		#This is used to display the NPC's dialogues.
 		Dialogue: {
-			Archeologist: {
-				LoreNPCsButton: Lore - NPCs
-				LoreBossesButton: Lore - Jefes
-				LoreNPCsChat: En una próxima update.
-				LoreBossesChat: En una próxima update.
-				ChangeButtons: Cambiar botón
-				StandardDialogue1: Standard Dialogue 1.
-				StandardDialogue2: Standard Dialogue 2.
-				StandardDialogue3: Standard Dialogue 3.
-				StandardDialogue4: Standard Dialogue 4.
-				StandardDialogue5: Standard Dialogue 5.
-				InfoLore: Info Lore.
-				TalkALot: Talk A Lot.
-				NotTalkALot: Not Talk A Lot.
-				BestiaryGirl: Chica bestia {0}.
-				Dryad: Driada {0}.
-				Guide: Guía {0}.
-				Ninja: Ninja {0}.
-				WitchDoctor: Doctor brujo {0}.
-				FaltanNPCs: Faltan NPCs, ¿que puñetas es este chat?.
-				GoblinInvasion: Hay invasión de goblins.
-				FrostLegionInvasion: Hay invasión de hielo.
-				PiratesInvansion: Hay invasión pirata.
-				MartianInvansion: Hay invasión marciana.
-				NotInvasion: No hay invasión.
-				SlimeKing1: No has matado al Rey Slime.
-				SlimeKing2: Has matado al Rey Slime.
-				EyeofCthulhu1: No has matado al Ojo de Cthulhu.
-				EyeofCthulhu2: Has matado al Ojo de Cthulhu.
-				BrainWorm1: No has matado al Devoramundos.
-				BrainWorm2: Has matado al Devoramundos.
-				QueenBee1: No has matado a la Abeja Reina.
-				QueenBee2: Has matado a la Abeja Reina.
-				Skeletron1: No has matado a Skeletron.
-				Skeletron2: Has matado a Skeletron.
-				Deerclops1: No has matado al Cierviclople o como se llame.
-				Deerclops2: Has matado al Cierviclople o como se llame.
-				Wall1: No has matado al Muro de carne.
-				Wall2: Has matado al Muro de carne.
-				Hardmode: Estamos en Hardmode.
-				NotHardmode: No estamos en Hardmode.
-				QueenSlime1: No has matado al Reina Slime.
-				QueenSlime2: Has matado al Reina Slime.
-				Twins1: No has matado a los gemelos.
-				Twins2: Has matado a los gemelos.
-				Destroyer1: No has matado al destructor
-				Destroyer2: Has matado  al destructor
-				SkeletronPrime1: No has matado a Skeletron v2.
-				SkeletronPrime2: Has matado a Skeletron v2.
-				Plantera1: No has matado a Plantera.
-				Plantera2: Has matado a Plantera.
-				Golem1: No has matado al Golem.
-				Golem2: Has matado al Golem.
-				Fishron1: No has matado al peixe.
-				Fishron2: Has matado al peixe.
-				EmpressOfLight1: No has matado a la emperatriz de luz.
-				EmpressOfLight2: Has matado a la emperatriz de luz.
-				AncientCultist1: No has matado a los cultistas.
-				AncientCultist2: Has matado a los cultistas.
-				Towers1: No has matado las torres.
-				Towers2: Has matado las torres.
-				Moonlord1: No has matado al Señor de la Luna.
-				Moonlord2: Has matado al Señor de la Luna.
+			CandyElf: {
+				StandardDialogue1: Everybody thinks I like winter, but I gotta say, I have a soft spot for my springtime festivities.
+				StandardDialogue2: Did you catch wind of Santa's list? Surprisingly, he's got the lowdown on just about everyone, neighborino.
+				StandardDialogue3: This year, I put in an honest day's work. I can't help but think I deserve a little extra, maybe a raise and a bigger house. Do you reckon there's anything you can do about that, neighborino?
+				StandardDialogue4: Working from home used to be peachy keen, I tell ya.
+				SantaClaus: Santa Claus is as jolly as a bunny on Christmas morning, diddly-iddly! *Showing you a handwritten paper that says: SANTA IS LISTENING*.
+				PartyGirl: Do you happen to know if {0} is throwin' a shindig? I'm just itchin' to put on my dancin' shoes!
 			}
 
-			CarverFrozen.RescueDialogue: ......
-
-			Carver: {
-				TemporalDialogue: Gracias por rescatarme, en un futuro podré ayudarte.
-				QuestNotFinished1: Lo siento, todavía necesito
-				QuestNotFinished2: para completar mi tarea.
-			}
-
-			EnchanterPrisioner.RescueDialogue: Puñetero cristal...
+			EnchanterPrisioner.RescueDialogue: Fucking crystal...
 
 			Enchanter: {
-				StandardDialogue1: Debes de tener algún conocimiento en magia para romper mi encantamiento de cristal.
-				StandardDialogue2: No soy el único mago que quedó atrapado en la mazmorra.
-				StandardDialogue3: Ciertos clones que aparecen en la mazmorra dan más [i:TheCollectors/MagicSoul] de lo normal.
-				InfoSoul: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
-				TalkALot: En realidad mi cometido aquí iba a ser otro, rollo el duende chapucero, pero los desarrolladores son un poco negados...
-				NotTalkALot: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
-				PartyIsUp: ¡¿Una fiesta sorpresa!?, pásame las pócimas del estante de arriba... ¡es hora de empocimarse!
-				Wizard: El maestro {0} últimamente flojea con la magia, nos es propio de él dejarse atrapar de esa manera.
-				PartyGirl: En mis tiempos de estudiante no me perdía ninguna de las fiestas de {0}, que ganas de que haga alguna.
-				Dryad: "{0} maneja una magia ancestral muy extraña, ardo en deseos de conocer sus secretos."
-				InvasionGenerica: No se que manía tienen con invadir este pueblo constantemente.
-				FrostInvasion1: Ojalá una invasión de muñecos de nieve para probar mi nuevo báculo de rubí.
-				FrostInvasion2: Que maravilla de báculo, te aconsejo su compra para cuando vayas a zonas muy frías.
-				AncientCultist1: ¿Donde se habrán metido esos fanáticos...?
-				AncientCultist2: Pacece ser que los cultistas estaban siendo manipulados, nos invitan a una ronda de buenas pócimas, todo arreglado.
+				StandardDialogue1: You must have some knowledge of magic to break my crystal enchantment.
+				StandardDialogue2: I'm not the only wizard who got trapped in the dungeon.
+				StandardDialogue3: Certain clones that appear in the dungeon give more [i:TheCollectors/MagicSoul] than normal.
+				InfoSoul: Magical creatures drop [i:TheCollectors/MagicSoul], i accept them as currency.
+				TalkALot: Actually, my role here was going to be something else, like the Goblin Tinkerer, but the developers are a bit useless...
+				NotTalkALot: I'm an expert in Gem Staves, if you bring me [i:TheCollectors/MagicSoul] I'll exchange them for one.
+				PartyIsUp: A surprise party!?, pass me the potions from the top shelf... it's time to get potionped!
+				Wizard: Master {0} has been lazy with magic lately, it's not like him to get caught up like that.
+				PartyGirl: In my student days I didn't miss any of {0}'s parties, I can't wait for them to do one.
+				Dryad: "{0} wields some very strange ancient magic, I am burning to learn its secrets."
+				InvasionGenerica: I don't know how determined they are to constantly invade this town.
+				FrostInvasion1: Hopefully an invasion of snowmen to test my new ruby staff.
+				FrostInvasion2: What a wonderful staff, I recommend buying it for when you go to very cold areas.
+				AncientCultist1: Where have those fanatics gone...?
+				AncientCultist2: It seems that the cultists were being manipulated, they invite us to a round of good potions, all arranged.
 			}
 
 			McMoneyPants: {
-				StandardDialogue1: Puedes comprar la hucha que te enseña el atractivo mercader, o ver lo que hay dentro de la terracaja misteriosa.
-				StandardDialogue2: De aquí a unos años, hasta el mercader usará mi modelo de negocio.
-				StandardDialogue3: ¿Quieres construir aparatos pero no dispones de materiales?, el único riesgo para obtenerlos aquí es el de tu bolsillo.
-				StandardDialogue4: Quién no se fabrica cosas molonas es porque no quiere.
-				NotTalkALot: Necesitas objetos para avanzar en tu aventura y te da miedo perder esa fortuna acumulada, soy el hombre que buscas.
-				TalkALot: En realidad lleno mis cajas con las cosas que sueltan otros jugadores.
-				Nurse: La sanidad privada es el futuro, {0} le sabe.
-				TaxCollector: No es un mal modelo de negocio el de {0}, pero debería apretar un poco más.
-				GoblinTinkerer: Es mía la idea de que las mejoras de equipo que ofrece {0} fueran completamente aleatorias. Antes te dejaba elegir a ti que mejora poner, vaya ruina de negocio.
-				FaltanNPCs: ¿No te interesan unas cuantas Terrabox?.
-				InvasionGenerica: Madre de dios, cuanto primo... digo potenciales clientes.
-				NotInvasionGenerica: Aquí hace falta una buena raid, necesito vender más Terrabox.
+				StandardDialogue1: You can buy the piggy bank that the handsome merchant shows you, or see what's inside the mysterious crate.
+				StandardDialogue2: In a few years, even the merchant will use my business model.
+				StandardDialogue3: Do you want to build gadgets but you don't have the materials? The only risk to get them here is your pocket.
+				StandardDialogue4: Who doesn't make cool things is because they don't want to.
+				NotTalkALot: You need objects to advance in your adventure and you are afraid of losing that accumulated fortune, I am the man you are looking for.
+				TalkALot: I actually fill my crates with things other players drop.
+				Nurse: Private healthcare is the future, {0} knows.
+				TaxCollector: It's not a bad business model for {0}, but it should push a little harder.
+				GoblinTinkerer: It's my idea that the gear upgrades {0} offers were completely random. Before I let you choose which improvement to put, what a ruin of business.
+				FaltanNPCs: Aren't you interested in a few Terraboxes?
+				InvasionGenerica: Mother of God, what a cousin... I mean potential clients.
+				NotInvasionGenerica: A good raid is needed here, I need to sell more Terrabox.
 			}
 
 			MeteormanBroken.RescueDialogue: Menuda hostia colega, gracias por ayudarme.
 
 			Meteorman: {
-				StandardDialogue1: Anda que no teneis buenas piedras por aquí ni nada, menudas delicias...
-				StandardDialogue2: El equipamiento que forjas con meteorito no está nada mal, pero todavía se le puede sacar más potencial.
-				StandardDialogue3: Una pena lo de mi casa en el espacio, pero bueno, tampoco se está nada mal por aquí.
-				StandardDialogue4: No se como lo que hicisteis, pero habeis debilitado el sello del Señor de la Luna, no tardó nada en destruir mi base en el espacio, por eso terminé estrellandome aqui.
-				NotTalkALot: Pareces buena persona, seguro que terminamos siendo amigos.
-				TalkALot: Pero si es mi buen amigo 'Playername', ¿como te va?.
-				Demolitionist: "{0} prepara unas salsas explosivas que están de vicio."
-				Dryad: Sino fuera por {0}, no seguiría aquí, le estoy muy agradecido.
-				SantaClaus: Pero si es mi amigo {0}, antes siempre se pasaba por mi meteorito a repostar, y de paso me dejaba carbón del bueno.
-				FaltanNPCs: A este pueblo le falta buena gente.
-				InvasionGenerica: No se que manía tienen con invadir este pueblo constantemente.
-				MartianInvasion1: Me gustaría saber que le ha pasado a mi amigo...
-				MartianInvasion2: ¡¿Los marcianos están atacando?!, no lo entiendo, espero que mi amigo esté bien.
-				MartianInvasion3: Gracias a ti mi amigo está a salvo.
-				MartianInvasion4: Tus compañeros siguen viniendo, ojalá se fueran pacificamente...
-				MeteoriteHardenerSolution1: Podemos sacarle más rendimiento al meteorito, con mi clentamintor y una solución especial lo podríamos conseguir, pero me va a llevar algo de tiempo preparar la solución.
-				MeteoriteHardenerSolution2: Me llevó algo mas de lo esperado, pero por fin la tengo, con esto podemos mejorar el meteorito.
-				MeteoriteOre: Por ahora deberíamos hacer acopio de mineral de meteorito, cuando recupere mis herramientas podremos hacer cosas chulas.
-				RefinedMeteoriteOre: Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Mythril.
-				SoilsDialogue1: En mi tiempo libre soy aficcionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares
-				SoilsDialogue2: ¡Que diversidad de minerales hay en la Tierra!, podremos conseguir multitud de nuevos frutos ricos en minerales.
-				SoilsDialogue3: Parece que las ardillas cambian de color cuando comen los frutos de los árboles mineralosos, igual te encuentras alguna en los árboles.
-				SoilsDialogue4: A algunos conejos les gusta hacer sus madrigueras en los sustratos que preparo, por algún motivo los hacen cambiar de color...
+				StandardDialogue1: Come on, you don't have good stones around here or anything, what a delight...
+				StandardDialogue2: The equipment you forge with meteorite is not bad at all, but there is still more potential to be made of it.
+				StandardDialogue3: Shame about my house in space, but hey, it's not bad around here either.
+				StandardDialogue4: I don't know how you did it, but you have weakened the seal of the Moon Lord, it didn't take long to destroy my base in space, that's why I ended up crashing here.
+				NotTalkALot: You seem like a nice person, I'm sure we ended up being friends.
+				TalkALot: But if it's my good friend {PlayerName}, how's it going?
+				Demolitionist: "{0} make some explosive sauces that are addicting."
+				Dryad: If it wasn't because of {0}, I wouldn't be here. I'm so grateful.
+				SantaClaus: Isn't this my friend {0}? Long time ago, he always dropped by the meteorite to refuel. He used to give me good coal each time.
+				FaltanNPCs: This town lacks nice people.
+				InvasionGenerica: Again? They never stop storming this town.
+				MartianInvasion1: I'd like to know what happened to my friend...
+				MartianInvasion2: Martians are attacking us?! I don't get it. I hope my friend is okay.
+				MartianInvasion3: Thanks to you, my friend is safe and sound.
+				MartianInvasion4: Your fellows keep coming. I wish they just leave peacefully...
+				MeteoriteHardenerSolution1: We can get the best efficiency of the meteorite with my clentaminator and a special solution. But it's going to take me some time to prepare the solution first.
+				MeteoriteHardenerSolution2: It took a bit more than I thought but finally I have it. We can use this to improve the meteorite.
+				MeteoriteOre: By the moment we should hoard meteorite ores. Once I find my tools back we can craft neat things.
+				RefinedMeteoriteOre: In order to pick this new meteorite we need a better pick. At least a Mythril [i:MythrilPickaxe] one.
+				SoilsDialogue1: On my spare time I like to garden. I am able to combine dirt and minerals to create different soils. They can grow exotic trees.
+				SoilsDialogue2: What a mineral diversity there is on the Earth! We can get a new bunch of new mineral-rich fruits.
+				SoilsDialogue3: It looks that squirrels change their colour when they eat mineral fruits. You might find some squirrel in those trees.
+				SoilsDialogue4: Some rabbits like to make their den under my mineral soils. Somehow it affects their colouring...
 			}
 
 			Ninja: {
-				StandardDialogue1: Gracias por rescatarme, intentaré ayudarte en lo que pueda con mis humildes artes ninja.
-				StandardDialogue2: Odio el arroz blanco sin nada.
-				StandardDialogue3: La mejor manera de esquivar al Ojo de Cthulhu es en un ángulo de 90º.
-				StandardDialogue4: Que deshonra para un ninja, ser atrapado por ese Slime gigante.
-				TalkALot: Cuando mi deseo alcance las estrellas, ¡sobrepasaré a la misma luz! ¡Sí, es lo que yo llamo el 'Battle Changue'!, Permiteme que lo explique, la estrella de la que hablamos aquí , no es ninguna de las estrellas del cielo, es una estrella abstracta y espiritual...
-				NotTalkALot: Cuando mi deseo alcance las estrellas..., ¿uh?, no sabía que estabas por aquí, ¿no estarías escuchando verdad?.
-				Guide1: ¿Sabías que {0} es mi hermano?.
-				Guide2: "{0} es el aprendiz más aventajado de Master-san."
-				PartyGirl1: Mira que estrellas ninja festivas más chulas, tengo que enseñarselas a {0}.
-				PartyGirl2: Que ganas tengo de que sea el Obon, aprovecharé los fuegos artificiales para declararme a {0}, deseame suerte.
-				OtrosNPCs: ¿Ese muñeco todo quemado no se parece a mi hermano?.
-				NotInvansionGenerica: A veces invaden el pueblo, nadie sabe muy bien porqué, pero al final sirven de entrenamiento.
-				InvasionGenerica: ¡Cuantos enemigos 'playername'!, recuerda activar el ¡Battle Changue!.
-				QueenSlime1: Estaba investigando unos asuntos con Master-San, pero ya sabes, Slimes...
-				QueenSlime2: No esperaba menos de Master-San, ni un sólo rasguño.
-				SlimeRain1: Corre el rumor de que a veces el tiempo se pone loco y llueven slimes, menudas tonterías dice la gente.
-				SlimeRain2: ¡El rumor era cierto, si valoras tu vida corre!.
-				BattleChangue: Venga, vamos a poner en práctica el ¡BattleChangue!
+				StandardDialogue1: Thank you for rescuing me. I will try to help you on whatever you need with my humble ninja arts.
+				StandardDialogue2: I hate unseasoned white rice.
+				StandardDialogue3: The easiest way to dodge the Eye of Cthulhu is a right angle.
+				StandardDialogue4: What a shame for a ninja. To be trapped by that giant Slime.
+				TalkALot: When my wish reaches the sky, I will surpass the light itself! Yes, that's what I call the 'Battle Change'!, Let me explain it: the star we talked about was not any of the stars in the night. It's an abstact star. Spiritual...
+				NotTalkALot: When my wish reaches the sky... huh? I didn't know you were around. You weren't listening, right?.
+				Guide1: Did you know that {0} is my brother?.
+				Guide2: "{0} is the most outstanding disciple of Master-san."
+				PartyGirl1: Look at these beautiful ninja stars, I have to show them to {0}.
+				PartyGirl2: I am excited for the Obon. I will use the fireworks to declare my love to {0}, wish me good luck.
+				OtrosNPCs: That burnt doll... doesn't it look like my brother?.
+				NotInvansionGenerica: Sometimes they storm the town. Nobody knows why, but at least it's a good combat practice.
+				InvasionGenerica: So many enemies, 'playername'!, remember to enable the Battle Change!.
+				QueenSlime1: I was researching something with Master-San. But you know...Slimes....
+				QueenSlime2: I wasn't expecting less from Master-San. Not even a scratch.
+				SlimeRain1: There's a rumour going around. It says that sometimes weather goes crazy and slimes rain. People is speaking nonsense.
+				SlimeRain2: The legends were true! Run for your life!.
+				BattleChange: Come on, let's practice the Battle Change!
 			}
 
-			StarMerchant.TemporalDialogue: Hola, vengo de la lejana China, ha sido un viaje muy largo, por ahora descansaré una temporada.
-
-			CopperGuard: {
-				StandardDialogue1: La defensa de esta casa es mi única prioridad, estoy aquí para cumplir con mi deber.
-				StandardDialogue2: Mi deber es proteger y servir, mi lealtad es al pueblo de esta ciudad.
-				StandardDialogue3: Pulir mi armadura otorga beneficios mágicos.
-			}
-
-			Guide.Ninja: Gracias por rescatar a mi hermano {$Mods.TheCollectors.NPCName.Ninja}.
-			GoblinTinkerer.McMoneyPants: He de reconocer que he aprendido mucho de finanzas, pero creo que {$Mods.TheCollectors.NPCName.McMoneyPants} vuela demasiado cerca del sol.
+			Guide.Ninja: Thank you for rescuing my brother {$Mods.TheCollectors.NPCName.Ninja}.
+			GoblinTinkerer.McMoneyPants: I reckon I have learned a lot about finances but I think {$Mods.TheCollectors.NPCName.McMoneyPants} flies too close to the sun.
 		}
 
 		Items: {
@@ -560,20 +412,15 @@ Mods: {
 			#............................................................................................................Accesories
 			MeteormanHeart: {
 				DisplayName: Meteorman Heart
-				Tooltip: Grants Meteor Body
-			}
-
-			StatueDetector: {
-				DisplayName: Radar Statue
-				Tooltip: Shows the location of nearby statues on the map
+				Tooltip: ""
 			}
 
 			TCMeteorWings: {
 				DisplayName: Meteoric Impulse Wings
 				Tooltip:
 					'''
-					{$CommonItemTooltip.Wings}
-					"¡Hasta el infinito y más allá!"
+					Allows flight and slow fall
+					"To Infinity and Beyond!"
 					'''
 			}
 
@@ -947,12 +794,12 @@ Mods: {
 
 			GoldBunnyItem: {
 				DisplayName: Gold Bunny
-				Tooltip: Totalmente diferente al conejo dorado vanilla
+				Tooltip: Totally different from vanilla golden bunny
 			}
 
 			GoldSquirrelItem: {
 				DisplayName: Gold Squirrel
-				Tooltip: ""
+				Tooltip: Totally different from vanilla golden squirrel
 			}
 
 			PlatinumSquirrelItem: {
@@ -1356,7 +1203,7 @@ Mods: {
 			
 			TerraCoin: {
 				DisplayName: Terra Coin
-				Tooltip: Moneda especial del Terraria.
+				Tooltip: Terraria special coin.
 			}
 
 			DyesTerrabox: {
@@ -1364,7 +1211,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquier tinte.
+					You can get any of Dye.
 					'''
 			}
 
@@ -1373,7 +1220,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir el Ankh Shield.
+					You can get any of the materials to build the Ankh Shield.
 					'''
 			}
 
@@ -1382,7 +1229,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir el Shellphone.
+					You can get any of the materials to build the Shellphone.
 					'''
 			}
 
@@ -1391,7 +1238,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir las Terraspark Boots.
+					You can get any of the materials to build the Terraspark Boots.
 					'''
 			}
 
@@ -1400,7 +1247,25 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir la Zenith.
+					You can get any of the materials to build the Zenith.
+					'''
+			}
+
+			BaitTerrabox: {
+				DisplayName: Bait mysterious terrabox
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					You can get any of the materials to use as bait.
+					'''
+			}
+
+			StoryPaintings: {
+				DisplayName: Story Paintings
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Open it to discover the incredible adventures of the Meteorman and the Ninja.
 					'''
 			}
 
@@ -1579,37 +1444,47 @@ Mods: {
 			#............................................................................................................Placeable Banners
 			ClawclopsBanner: {
 				DisplayName: Clawclops Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Garrojo'"
+				Tooltip: "'Nearby players get a bonus against: Clawclops'"
 			}
 
 			CorruptedFlameElementalBanner: {
 				DisplayName: Corrupted Flame Elemental Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Llama elemental corrupta'"
+				Tooltip: "'Nearby players get a bonus against: Corrupted Flame Elemental'"
 			}
 
 			EyelingBanner: {
 				DisplayName: Eyeling Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Eyeling'"
+				Tooltip: "'Nearby players get a bonus against: Eyeling'"
 			}
 
 			SkitteringHuskBanner: {
 				DisplayName: Skittering Husk Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Cascar�n resbaladizo'"
+				Tooltip: "'Nearby players get a bonus against: Skittering Husk'"
 			}
 
 			MeteoriteFairyBanner: {
 				DisplayName: Meteorite Fairy Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Meteorite Fairy'"
+				Tooltip: "'Nearby players get a bonus against: Meteorite Fairy'"
 			}
 
 			MeteoriteManBanner: {
 				DisplayName: Meteor Body Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Meteor Body'"
+				Tooltip: "'Nearby players get a bonus against: Meteor Body'"
 			}
 
 			MeteoriteWormBanner: {
 				DisplayName: Meteorite Worm Banner
-				Tooltip: "'Los jugadores cercanos obtienen una bonificación contra: Meteorite Worm'"
+				Tooltip: "'Nearby players get a bonus against: Meteorite Worm'"
+			}
+
+			TCBigMeteoriteSlime: {
+				DisplayName: Big Meteorite Slime Banner
+				Tooltip: "'Nearby players get a bonus against: Big Meteorite Slime'"
+			}
+
+			TCMeteoriteSlime: {
+				DisplayName: Meteorite Slime Banner
+				Tooltip: "'Nearby players get a bonus against: Meteorite Slime'"
 			}
 
 			#............................................................................................................Placeable Bosses
@@ -1630,7 +1505,7 @@ Mods: {
 					'''
 					Meteorman Collection Vol.1
 					What are those strange bright cracks in the moon?.
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1640,7 +1515,7 @@ Mods: {
 					'''
 					Meteorman Collection Vol.2
 					The moonburst reaches the home of the Meteorite Man.
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1650,7 +1525,7 @@ Mods: {
 					'''
 					Meteorman Collection Vol.3
 					Part of the meteorite is coming to Earth.
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1660,7 +1535,7 @@ Mods: {
 					'''
 					Meteorman Collection Vol.4
 					Meteor Man is shown in an unusual pose.
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1670,7 +1545,7 @@ Mods: {
 					'''
 					Meteorman Collection Vol.5
 					The Dryad heals the Meteorite Man.
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1680,7 +1555,7 @@ Mods: {
 					'''
 					Meteorman Collection Vol.Ex
 					Meteorite Man is shown planting some strange trees.
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1691,7 +1566,7 @@ Mods: {
 					Ninja Collection Vol.1
 					'The technique shown here consists of getting on
 					a high place and looking at the horizon'
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1701,7 +1576,7 @@ Mods: {
 					'''
 					Ninja Collection Vol.2
 					When you meet many enemies, it is best to mount a good brawl
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1712,7 +1587,7 @@ Mods: {
 					Ninja Collection Vol.3
 					'Here I am fooling the enemy with my classic
 					slip, with this he will lower his guard'
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1723,7 +1598,7 @@ Mods: {
 					Ninja Collection Vol.4
 					'The enemy was more skilled than I thought, 
 					so I had to resort to asking for help'
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1734,7 +1609,7 @@ Mods: {
 					Ninja Collection Vol.5
 					'This is a very complex technique, few manage to carry
 					it out successfully, gratitude is no small feat'
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1745,7 +1620,7 @@ Mods: {
 					Ninja Collection Vol.Ex
 					'Ah yes, the classic training sequence, it is actually 
 					the best ninja technique to increase your ninja points'
-					By thyflyingraccons
+					By JD
 					'''
 			}
 
@@ -1851,7 +1726,7 @@ Mods: {
 			}
 
 			RefinedMeteoriteCraftingStation: {
-				DisplayName: Refined Meteorite Crafting Station
+				DisplayName: Meteorefiner
 				Tooltip: Used for special crafting
 			}
 
@@ -1995,76 +1870,100 @@ Mods: {
 
 			AmethystStaffTier1: {
 				DisplayName: Poisonous Amethyst Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.AmethystStaffTier1
+				Tooltip: Has a chance of inflicting 'Poisoned'
 			}
 
 			AmethystStaffTier2: {
 				DisplayName: Extremely Poisonous Amethyst Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.AmethystStaffTier2
+				Tooltip: Has a chance of inflicting 'Poisoned' and 'Acid Venom'
 			}
 
 			TopazStaffTier1: {
 				DisplayName: Opulent Topaz Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.TopazStaffTier1
+				Tooltip: Has a chance of inflicting 'Midas'
 			}
 
 			TopazStaffTier2: {
 				DisplayName: Greedy Opulent Topaz Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.TopazStaffTier2
+				Tooltip:
+					'''
+					Has a chance of inflicting 'Midas'
+					Grants Panic!, Water Candle y Battle upon hitting the enemy
+					'''
 			}
 
 			SapphireStaffTier1: {
 				DisplayName: Freezing Sapphire Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.SapphireStaffTier1
+				Tooltip: Has a chance of inflicting 'Frostburn'
 			}
 
 			SapphireStaffTier2: {
 				DisplayName: Protective Freezing Sapphire Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.SapphireStaffTier2
+				Tooltip:
+					'''
+					Has a chance of inflicting 'Frostburn'
+					If the player has <50% health, Ice Barrier activates upon hitting the enemy
+					'''
 			}
 
 			EmeraldStaffTier1: {
 				DisplayName: Spiky Emerald Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.EmeraldStaffTier1
+				Tooltip: Grants Thorns upon hitting the enemy
 			}
 
 			EmeraldStaffTier2: {
 				DisplayName: Spiky Nature Emerald Staff
 				Tooltip:
 					'''
-					Otorga Espinas 
-					Si el jugador tiene <50% de vida, se activa Hoja de cristal
+					Grants Thorns upon hitting the enemy
+					If the player has <50% health, Leaf Crystal activates upon hitting the enemy
 					'''
 			}
 
 			AmberStaffTier1: {
-				DisplayName: Amber Staff Tier 1
-				Tooltip: Mods.TheCollectors.ItemTooltip.AmberStaffTier1
+				DisplayName: Honeyed Amber Staff
+				Tooltip: Grants Honey upon hitting the enemy
 			}
 
 			AmberStaffTier2: {
-				DisplayName: Amber Staff Tier 2
-				Tooltip: Mods.TheCollectors.ItemTooltip.AmberStaffTier2
+				DisplayName: Amberjelly Staff
+				Tooltip:
+					'''
+					Grants Honey upon hitting the enemy
+					Exploding projectiles release bees
+					'''
 			}
 
 			RubyStaffTier1: {
 				DisplayName: Burning Ruby Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.RubyStaffTier1
+				Tooltip: Has a chance of inflicting 'On Fire!'
 			}
 
 			RubyStaffTier2: {
 				DisplayName: Explosive Burning Ruby Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.RubyStaffTier2
+				Tooltip:
+					'''
+					Has a chance of inflicting 'On Fire!'
+					Fire multiple projectiles
+					'''
 			}
 
 			DiamondStaffTier1: {
 				DisplayName: Heal Seeker Diamond Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.DiamondStaffTier1
+				Tooltip:
+					'''
+					Fire a homing projectile
+					Heals 10% of damage dealt
+					'''
 			}
 
 			DiamondStaffTier2: {
 				DisplayName: Homing Diamond Staff
-				Tooltip: Mods.TheCollectors.ItemTooltip.DiamondStaffTier2
+				Tooltip:
+					'''
+					Fire a homing projectile that explodes into more homing projectiles
+					Each projectile heals for 10% of the damage dealt
+					'''
 			}
 
 			PearlStaff: {
@@ -2080,7 +1979,7 @@ Mods: {
 
 			MeteoriteFlail: {
 				DisplayName: Meteorite Flail
-				Tooltip: This is a modded flail with custom behavior.
+				Tooltip: Has a chance of inflicting 'On Fire!' to enemies
 			}
 
 			MeteoriteSpear: {
@@ -2094,12 +1993,12 @@ Mods: {
 
 			MeteoriteYoyo: {
 				DisplayName: Meteorite Yoyo
-				Tooltip: "'Puede infligir �En llamas! a los enemigos'"
+				Tooltip: Has a chance of inflicting 'On Fire!' to enemies
 			}
 
 			MeteorSword: {
 				DisplayName: Meteor Sword
-				Tooltip: Inflicts On Fire
+				Tooltip: Has a chance of inflicting 'On Fire!' to enemies
 			}
 
 			RefinedMeteorSword: {
@@ -2116,7 +2015,7 @@ Mods: {
 			#............................................................................................................Weapons Summon
 			MeteoriteWhip: {
 				DisplayName: Meteorite Whip
-				Tooltip: Mods.TheCollectors.ItemTooltip.MeteoriteWhip
+				Tooltip: Has a chance of inflicting 'On Fire!' to enemies
 			}
 
 			AdvancedMeteoriteWhip: {
@@ -2167,7 +2066,7 @@ Mods: {
 
 			HellstoneShuriken: {
 				DisplayName: Hellstone Shuriken
-				Tooltip: Mods.TheCollectors.ItemTooltip.HellstoneShuriken
+				Tooltip: Has a chance of inflicting 'On Fire!' to enemies
 			}
 
 			CopperShuriken: {
@@ -2177,6 +2076,11 @@ Mods: {
 
 			DemoniteShuriken: {
 				DisplayName: Demonite Shuriken
+				Tooltip: ""
+			}
+
+			CrimsonShuriken: {
+				DisplayName: Crimson Shuriken
 				Tooltip: ""
 			}
 
@@ -2202,7 +2106,7 @@ Mods: {
 
 			MeteoriteShuriken: {
 				DisplayName: Meteorite Shuriken
-				Tooltip: Mods.TheCollectors.ItemTooltip.MeteoriteShuriken
+				Tooltip: Has a chance of inflicting 'On Fire!' to enemies
 			}
 
 			MeteorJavelin: {
@@ -2263,7 +2167,7 @@ Mods: {
 
 			MonjaItem: {
 				DisplayName: Monja
-				Tooltip: Summons a Monja light
+				Tooltip: Summons Las Monjas' pet
 			}
 
 			MinionBossPetItem: {
@@ -2572,28 +2476,96 @@ Mods: {
 				Tooltip: ""
 			}
 
-			CrimsonShuriken: {
-				DisplayName: Crimson Shuriken
+			TCRefinedMeteorWings: {
+				DisplayName: Meteor Fairy Wings
+				Tooltip:
+					'''
+					Allows flight and slow fall
+					"Feel like a Space Fairy"
+					'''
+			}
+
+			PreHardmodePets: {
+				DisplayName: Pre Hardmode Pets
 				Tooltip: ""
 			}
 
-			TCBigMeteoriteSlime: {
-				DisplayName: T C Big Meteorite Slime
+			RedCandyCaneBed: {
+				DisplayName: Red Candy Cane Bed
 				Tooltip: ""
 			}
 
-			TCMeteoriteSlime: {
-				DisplayName: T C Meteorite Slime
+			RedCandyCaneChest: {
+				DisplayName: Red Candy Cane Chest
 				Tooltip: ""
 			}
 
-			StoryPaintings: {
-				DisplayName: Story Paintings
+			RedCandyCaneChestKey: {
+				DisplayName: Red Candy Cane Chest Key
 				Tooltip: ""
 			}
 
-			ExampleCampfire: {
-				DisplayName: Example Campfire
+			RedCandyCaneDoor: {
+				DisplayName: Red Candy Cane Door
+				Tooltip: ""
+			}
+
+			RedCandyCanePlatform: {
+				DisplayName: Red Candy Cane Platform
+				Tooltip: ""
+			}
+
+			RedCandyCaneTable: {
+				DisplayName: Red Candy Cane Table
+				Tooltip: ""
+			}
+
+			RedCandyCaneBathtub: {
+				DisplayName: Red Candy Cane Bathtub
+				Tooltip: ""
+			}
+
+			RedCandyCaneCraftingStation: {
+				DisplayName: Red Elvish Sweetifier
+				Tooltip: ""
+			}
+
+			RedCandyCaneLamp.DisplayName: Red Candy Cane Lamp
+
+			RedCandyCaneCandle: {
+				DisplayName: Red Candy Cane Candle
+				Tooltip: ""
+			}
+
+			RedCandyCaneChair: {
+				DisplayName: Red Candy Cane Chair
+				Tooltip: ""
+			}
+
+			RedCandyCaneLantern.DisplayName: Red Candy Cane Lantern
+
+			RedCandyCaneSofa: {
+				DisplayName: Red Candy Cane Sofa
+				Tooltip: ""
+			}
+
+			GraniteEnergyBanner: {
+				DisplayName: Granite Energy Banner
+				Tooltip: ""
+			}
+
+			GraniteSlimeBanner: {
+				DisplayName: Granite Slime Banner
+				Tooltip: ""
+			}
+
+			LihzardSlimeBanner: {
+				DisplayName: Lihzard Slime Banner
+				Tooltip: ""
+			}
+
+			ExampleMinecart: {
+				DisplayName: Example Minecart
 				Tooltip: ""
 			}
 		}
@@ -2612,11 +2584,6 @@ Mods: {
 			MeteorHoverboard: {
 				DisplayName: Meteor Hoverboard
 				Description: Great for exploring floating islands.
-			}
-
-			Monja: {
-				DisplayName: Monja
-				Description: Light Monja!
 			}
 
 			ShurikenjutsuBuff: {
@@ -2660,13 +2627,13 @@ Mods: {
 			}
 
 			LivingSpaceRockBuff: {
-				DisplayName: Living Space Rock Buff
-				Description: Mods.TheCollectors.Buffs.LivingSpaceRockBuff.Description
+				DisplayName: Living Space Rock
+				Description: This strange head won't go away...
 			}
 
 			MonjaBuff: {
-				DisplayName: Monja Buff
-				Description: Mods.TheCollectors.Buffs.MonjaBuff.Description
+				DisplayName: Monja
+				Description: Las Monjas, the best mod in the city
 			}
 
 			MeteorJavelinDebuff: {
@@ -2742,8 +2709,8 @@ Mods: {
 			MinionBossEye.DisplayName: Minion Boss Eye
 			LivingSpaceRockProjectile.DisplayName: Living Space Rock Projectile
 			MonjaProjectile.DisplayName: Monja Projectile
-			SpikedGreenSlimeSpike.DisplayName: Spiked Green Slime Spike
-			TCMeteoriteSlimeSpike.DisplayName: T C Meteorite Slime Spike
+			TCMeteoriteSlimeSpike.DisplayName: Meteorite Slime Spike
+			GraniteEnergyProjectile.DisplayName: Granite Energy Projectile
 		}
 
 		Tiles: {
@@ -2921,18 +2888,21 @@ Mods: {
 			RefinedMeteoriteLamp.MapEntry: Refined Meteorite Lamp
 			RefinedMeteoriteLantern.MapEntry: Refined Meteorite Lantern
 			RefinedMeteoriteChimney.MapEntry: Refined Meteorite Chimney
-		}
+			RedCandyCaneBed.MapEntry: Red Candy Cane Bed
 
-		Biomes: {
-			ExampleSurfaceBiome: {
-				DisplayName: Example Surface Biome
-				TownNPCDialogueName: the Example Surface Biome
+			RedCandyCaneChest: {
+				MapEntry0: Red Candy Cane Chest
+				MapEntry1: Red Candy Cane Chest
 			}
 
-			ExampleUndergroundBiome: {
-				DisplayName: Example Underground Biome
-				TownNPCDialogueName: the Example Underground Biome
-			}
+			RedCandyCaneDoorClosed.MapEntry: Red Candy Cane Door Closed
+			RedCandyCaneDoorOpen.MapEntry: Red Candy Cane Door Open
+			RedCandyCaneTable.MapEntry: Red Candy Cane Table
+			RedCandyCaneBathtub.MapEntry: Red Candy Cane Bathtub
+			RedCandyCaneCraftingStation.MapEntry: Red Elvish Sweetifier
+			RedCandyCaneCandle.MapEntry: Red Candy Cane Candle
+			RedCandyCaneLantern.MapEntry: Red Candy Cane Lantern
+			RedCandyCaneSofa.MapEntry: Red Candy Cane Sofa
 		}
 
 		Configs: {

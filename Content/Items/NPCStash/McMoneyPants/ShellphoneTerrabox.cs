@@ -30,10 +30,12 @@ namespace TheCollectors.Content.Items.NPCStash.McMoneyPants
 
 		public override void ModifyItemLoot(ItemLoot itemLoot) //from Origins Mod
 		{
+			itemLoot.Add(ItemDropRule.Common(ItemID.Terrarium, 1));
+
 			var purrela = new IItemDropRule[5] 
 			{
-				ItemDropRule.NotScalingWithLuck(ItemID.PlatinumBar, 1, 5, 10),
-				ItemDropRule.NotScalingWithLuck(ItemID.GoldBar, 1, 5, 10),
+				ItemDropRule.NotScalingWithLuck(ItemID.PlatinumOre, 1, 5, 10),
+				ItemDropRule.NotScalingWithLuck(ItemID.GoldOre, 1, 5, 10),
 				ItemDropRule.NotScalingWithLuck(ItemID.Chain, 1, 5, 10),
 				ItemDropRule.NotScalingWithLuck(ItemID.PlatinumWatch, 1),
 				ItemDropRule.NotScalingWithLuck(ItemID.GoldWatch, 1)

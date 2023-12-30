@@ -39,10 +39,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
             AddMapEntry(new Color(191, 142, 111), name);
         }
 
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Terraria.Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBench>());
-        }
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return settings.player.IsWithinSnappngRangeToTile(i, j, PlayerSittingHelper.ChairSittingMaxDistance);

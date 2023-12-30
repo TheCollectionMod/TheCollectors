@@ -68,6 +68,15 @@ namespace TheCollectors.Content.Items.Placeable.Banners
 				case 8:
 					item = ItemType<TCBigMeteoriteSlime>();
 					break;
+				case 9:
+					item = ItemType<LihzardSlimeBanner>();
+					break;
+				case 10:
+					item = ItemType<GraniteSlimeBanner>();
+					break;
+				case 11:
+					item = ItemType<GraniteEnergyBanner>();
+					break;
 				default:
 					return;
 			}
@@ -108,6 +117,15 @@ namespace TheCollectors.Content.Items.Placeable.Banners
 						break;
 					case 8:
 						type = ModContent.NPCType<NPCs.Enemies.Meteorite.TC_MeteoriteMotherSlime>();
+						break;
+					case 9:
+						type = ModContent.NPCType<NPCs.Enemies.Temple.LihzahrdSlime>();
+						break;
+					case 10:
+						type = ModContent.NPCType<NPCs.Enemies.Granite.GraniteSlime>();
+						break;
+					case 11:
+						type = ModContent.NPCType<NPCs.Enemies.Granite.GraniteEnergy>();
 						break;
 					default:
 						return;
@@ -217,6 +235,30 @@ namespace TheCollectors.Content.Items.Placeable.Banners
 		{
 			Item.createTile = TileType<TheCollectorsBanners>();
 			Item.placeStyle = 8;
+		}
+	}
+	public class LihzardSlimeBanner : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 9;
+		}
+	}
+	public class GraniteSlimeBanner : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 10;
+		}
+	}
+	public class GraniteEnergyBanner : ModBanner
+	{
+		public override void SafeSetDefaults()
+		{
+			Item.createTile = TileType<TheCollectorsBanners>();
+			Item.placeStyle = 11;
 		}
 	}
 }	

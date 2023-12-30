@@ -111,7 +111,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Terraria.Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCommandSign>());
+			//Terraria.Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCommandSign>());
 			Sign.KillSign(i, j);
 		}
 

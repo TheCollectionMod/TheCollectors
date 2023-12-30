@@ -34,10 +34,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AdjTiles = new int[] { TileID.Fireplace };
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Terraria.Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteFireplace>());
-		}
 		public override void MouseOver(int i, int j)
 		{
 			Player player = Main.LocalPlayer;

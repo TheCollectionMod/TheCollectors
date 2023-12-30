@@ -19,7 +19,7 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 		{
 			/*DisplayName.SetDefault("Meteorite Worm");*/
 
-			var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+			var drawModifier = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{ // Influences how the NPC looks in the Bestiary
 				CustomTexturePath = "TheCollectors/Content/NPCs/Enemies/Meteorite/MeteoriteWorm_Bestiary", // If the NPC is multiple parts like a worm, a custom texture for the Bestiary is encouraged.
 				Position = new Vector2(40f, 24f),
@@ -92,7 +92,7 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 					Vector2 direction = (target.Center - NPC.Center).SafeNormalize(Vector2.UnitX);
 					direction = direction.RotatedByRandom(MathHelper.ToRadians(10));
 
-					int projectile = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center, direction * 1, ProjectileID.ShadowBeamHostile, 5, 0, Main.myPlayer);
+					int projectile = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center, direction * 1, ProjectileID.InfernoHostileBolt, 5, 0, Main.myPlayer);
 					Main.projectile[projectile].timeLeft = 300;
 					attackCounter = 500;
 					NPC.netUpdate = true;
@@ -112,7 +112,7 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 		{
 			// DisplayName.SetDefault("Meteorite Worm");
 
-			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{
 				Hide = true // Hides this NPC from the Bestiary, useful for multi-part NPCs whom you only want one entry.
 			};
@@ -137,7 +137,7 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 		{
 			// DisplayName.SetDefault("Meteorite Worm");
 
-			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{
 				Hide = true // Hides this NPC from the Bestiary, useful for multi-part NPCs whom you only want one entry.
 			};
@@ -148,9 +148,10 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 		{
 			NPC.CloneDefaults(NPCID.DiggerTail);
 			NPC.aiStyle = -1;
-		}
+			NPC.lifeMax = 100;
+	}
 
-		public override void Init()
+	public override void Init()
 		{
 			MeteoriteWormHead.CommonWormInit(this);
 		}

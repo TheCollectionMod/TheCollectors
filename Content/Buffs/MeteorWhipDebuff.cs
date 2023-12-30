@@ -11,7 +11,7 @@ namespace TheCollectors.Content.Buffs
 		{
 			// This allows the debuff to be inflicted on NPCs that would otherwise be immune to all debuffs.
 			// Other mods may check it for different purposes.
-			BuffID.Sets.IsAnNPCWhipDebuff[Type] = true;
+			BuffID.Sets.IsATagBuff[Type] = true;
 		}
 	}
 		public class MeteorWhipAdvancedDebuff : ModBuff
@@ -20,7 +20,7 @@ namespace TheCollectors.Content.Buffs
 		public static readonly float TagDamageMultiplier = TagDamagePercent / 100f;
 
 		public override void SetStaticDefaults() {
-			BuffID.Sets.IsAnNPCWhipDebuff[Type] = true;
+			BuffID.Sets.IsATagBuff[Type] = true;
 		}
 	}
 

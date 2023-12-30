@@ -48,9 +48,9 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 		// This method allows you to determine how much light this block emits
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
-			r = 0.93f;
-			g = 0.11f;
-			b = 0.12f;
+			r = 1f;
+			g = 0.75f;
+			b = 1f;
 		}
 
 		// This method allows you to determine whether or not the tile will draw itself flipped in the world
@@ -145,9 +145,9 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			frame = Main.tileFrame[TileID.FireflyinaBottle];
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnimatedLantern>());
-		}
+		}*/
 	}
 }

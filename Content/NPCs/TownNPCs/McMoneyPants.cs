@@ -67,7 +67,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPCID.Sets.ShimmerTownTransform[Type] = true; // Allows for this NPC to have a different texture after touching the Shimmer liquid.
 
             // Influences how the NPC looks in the Bestiary
-            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f,
                 Direction = -1

@@ -12,7 +12,7 @@ namespace TheCollectors.Content.NPCs.Critters
 		{
 			NPCID.Sets.TownCritter[NPC.type] = true;
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.GemBunnyRuby];
-			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{
 				Velocity = 1f
 			};

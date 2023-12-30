@@ -33,11 +33,5 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(191, 142, 111), name);
 		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			SoundEngine.PlaySound(SoundID.NPCHit4);
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBathtub>());
-		}
 	}
 }

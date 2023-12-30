@@ -9,7 +9,6 @@ namespace TheCollectors.Content.Tiles.Trees
 
 		public override void SetStaticDefaults()
 		{
-
 			GoreID.Sets.SpecialAI[Type] = 3;
 		}
 	}

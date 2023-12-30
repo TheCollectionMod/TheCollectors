@@ -13,7 +13,7 @@ public class Eyeling : ModNPC
     {
         // DisplayName.SetDefault("Eyeling");
         Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Crab];
-        NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+        NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
         {
             Velocity = 1f // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
         };

@@ -11,8 +11,6 @@ using Terraria.ObjectData;
 
 namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 {
-	// This class shows off many things common to Lamp tiles in Terraria. The process for creating this example is detailed in: https://github.com/tModLoader/tModLoader/wiki/Advanced-Vanilla-Code-Adaption#examplelamp-tile
-	// If you can't figure out how to recreate a vanilla tile, see that guide for instructions on how to figure it out yourself.
 	internal class RefinedMeteoriteLantern : ModTile
 	{
 		private Asset<Texture2D> flameTexture;
@@ -25,10 +23,13 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			Main.tileNoAttach[Type] = true;
 			Main.tileWaterDeath[Type] = true;
 			Main.tileLavaDeath[Type] = true;
-			// Main.tileFlame[Type] = true; // This breaks it.
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
+			TileObjectData.newTile.Height = 2;
+			TileObjectData.newTile.Width = 1;
+			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
+			TileObjectData.newTile.DrawYOffset = 0;
 			TileObjectData.newTile.WaterDeath = true;
 			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -45,12 +46,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 				flameTexture = ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/RefinedMeteoriteSet/RefinedMeteoriteLantern_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
 			}
 		}
-
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteLantern>());
-		}
-
 		public override void HitWire(int i, int j)
 		{
 			Tile tile = Main.tile[i, j];
@@ -69,14 +64,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			if (Main.netMode != NetmodeID.SinglePlayer)
 			{
 				NetMessage.SendTileSquare(-1, i, topY + 1, 2, TileChangeType.None);
-			}
-		}
-
-		public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-		{
-			if (i % 2 == 1)
-			{
-				spriteEffects = SpriteEffects.FlipHorizontally;
 			}
 		}
 
@@ -140,11 +127,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 		public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 		{
 			SpriteEffects effects = SpriteEffects.None;
-
-			if (i % 2 == 1)
-			{
-				effects = SpriteEffects.FlipHorizontally;
-			}
 
 			Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 

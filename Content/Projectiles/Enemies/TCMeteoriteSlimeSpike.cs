@@ -52,7 +52,7 @@ namespace TheCollectors.Content.Projectiles.Enemies
 		}
 		public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
 		{
-			int buffType = BuffID.Burning;
+			int buffType = BuffID.OnFire;
 
 			int timeToAdd = 5 * 60; //This makes it 5 seconds, one second is 60 ticks
 			target.AddBuff(buffType, timeToAdd);

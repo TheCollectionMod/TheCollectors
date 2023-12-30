@@ -13,7 +13,7 @@ public class CorruptedFlameElemental : ModNPC
     {
         // DisplayName.SetDefault("Corrupted Flame Elemental");
         Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Wraith];
-        NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+        NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
         {
             Velocity = 1f // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
         };
@@ -35,7 +35,7 @@ public class CorruptedFlameElemental : ModNPC
         NPC.height = 58;
         NPC.damage = 50;
         NPC.defense = 30;
-        NPC.lifeMax = 1000/3;
+        NPC.lifeMax = 250;
         NPC.HitSound = SoundID.NPCHit54 with { Pitch = -0.45f, PitchVariance = 0.68f };
         NPC.DeathSound = SoundID.NPCDeath6 with { Pitch = 0.25f };
         NPC.value = 150f;

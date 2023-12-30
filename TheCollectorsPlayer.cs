@@ -18,6 +18,7 @@ namespace TheCollectors
         public bool LivingSpaceRock;
         public bool FlyingEyeling;
         public bool FireHealing;
+        public bool MeteorbodyBuff;
         public bool FakeCrystalLeafSet = false;
         public bool fullGraniteSet = false;
         public bool geodePickaxe = false;
@@ -43,6 +44,7 @@ namespace TheCollectors
             LivingSpaceRock = false;
             FlyingEyeling = false;
             FireHealing = false;
+            MeteorbodyBuff = false;
             FakeCrystalLeafSet = false;
             geodePickaxe = false;
             oysterRake = false;
@@ -56,7 +58,13 @@ namespace TheCollectors
             LeafCrystalEffectActive = true;
             leafCrystalEffectTimer = 600;
         }
-
+        public override void PostUpdateEquips()
+        {
+            if (MeteorbodyBuff)
+            {
+                Player.statDefense += 20;
+            }
+        }
         public override void PostUpdate()
         {
             if (Player.talkNPC == -1)

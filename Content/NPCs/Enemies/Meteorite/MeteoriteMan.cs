@@ -13,7 +13,7 @@ public class MeteoriteMan : ModNPC
     {
         // DisplayName.SetDefault("Meteorite Man");
         Main.npcFrameCount[NPC.type] = 9;
-        NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+        NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
         {
             // Influences how the NPC looks in the Bestiary
             Velocity = 1f // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
@@ -36,7 +36,7 @@ public class MeteoriteMan : ModNPC
         NPC.height = 52;
         NPC.damage = 50;
         NPC.defense = 30;
-        NPC.lifeMax = 400/3;
+        NPC.lifeMax = 60;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
         NPC.value = 150f;
@@ -54,13 +54,10 @@ public class MeteoriteMan : ModNPC
         if (!Main.dedServ)
         {
             Vector2 pos = NPC.position + new Vector2(Main.rand.Next(NPC.width - 8), Main.rand.Next(NPC.height / 2));
-            Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/ClawclopsGore1").Type);
+            Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/MeteorbodyGore1").Type);
 
             pos = NPC.position + new Vector2(Main.rand.Next(NPC.width - 8), Main.rand.Next(NPC.height / 2));
-            Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/ClawclopsGore2").Type);
-
-            pos = NPC.position + new Vector2(Main.rand.Next(NPC.width - 8), Main.rand.Next(NPC.height / 2));
-            Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/ClawclopsGore1").Type);
+            Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/MeteorbodyGore2").Type);
         }
     }
 
@@ -78,12 +75,19 @@ public class MeteoriteMan : ModNPC
 
     public override void ModifyNPCLoot(NPCLoot npcLoot)
     {
-        npcLoot.Add(new CommonDrop(ItemID.RottenChunk, 3));
+        npcLoot.Add(new CommonDrop(ItemID.Meteorite, 3));
     }
 
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
     {
         if (spawnInfo.Player.ZoneMeteor) return 0.15f;
         return 0f;
+    }
+    public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
+    {
+        int buffType = BuffID.OnFire;
+
+        int timeToAdd = 5 * 60; //This makes it 5 seconds, one second is 60 ticks
+        target.AddBuff(buffType, timeToAdd);
     }
 }    

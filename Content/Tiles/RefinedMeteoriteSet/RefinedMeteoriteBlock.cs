@@ -26,10 +26,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AddMapEntry(new Color(290, 51, 255), name);
 		}
 
-		public override void NumDust(int i, int j, bool fail, ref int num)
+		/*public override void NumDust(int i, int j, bool fail, ref int num)
 		{
 			num = fail ? 1 : 3;
-		}
+		}*/
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
 			base.ModifyLight(i, j, ref r, ref g, ref b);

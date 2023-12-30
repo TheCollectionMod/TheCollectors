@@ -14,7 +14,7 @@ namespace TheCollectors.Content.Mounts
 			MountData.fallDamage = 0.5f;
 			MountData.runSpeed = 5f;
 			MountData.dashSpeed = 7f;
-			MountData.flightTimeMax = 600;
+			MountData.flightTimeMax = 300;
 			MountData.fatigueMax = 0;
 			MountData.jumpHeight = 5;
 			MountData.acceleration = 0.19f;

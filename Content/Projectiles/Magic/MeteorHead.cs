@@ -41,7 +41,7 @@ namespace TheCollectors.Content.Projectiles.Magic
 			else if (Main.rand.NextBool(3))
 				target.AddBuff(BuffID.OnFire, 90, false);
 		}
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);

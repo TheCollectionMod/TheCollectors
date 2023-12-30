@@ -17,10 +17,10 @@ namespace TheCollectors.Content.Items.Placeable.RefinedMeteoriteSet
 		{
 			//Common Properties
 			Item.CloneDefaults(ItemID.ObsidianVase);
-			//Item.width = 12;
-			//Item.height = 12;
-			Item.createTile = ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteVase>();
-			//Item.createTile = TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteVase>();
+			Item.width = 12;
+			Item.height = 12;
+			Item.value = 500;
+			Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteVase>());
 		}
 	}
 }

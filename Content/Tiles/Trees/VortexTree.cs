@@ -3,10 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.GameContent;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-using ItemID = Terraria.ID.ItemID;
-using NPCID = Terraria.ID.NPCID;
 
 namespace TheCollectors.Content.Tiles.Trees
 {
@@ -54,7 +53,6 @@ namespace TheCollectors.Content.Tiles.Trees
 			None = 0,
 			Acorn,
 			NPC,
-			Gore,
 			Fruit
 		}
 		public override bool Shake(int x, int y, ref bool createLeaves)
@@ -63,7 +61,6 @@ namespace TheCollectors.Content.Tiles.Trees
 			options.Add(VortexTreeShakeEffect.None, 1f);
 			options.Add(VortexTreeShakeEffect.Acorn, 0.8f);
 			options.Add(VortexTreeShakeEffect.NPC, 0.8f);
-			//options.Add(CopperTreeShakeEffect.Gore, 0.5f);
 			options.Add(VortexTreeShakeEffect.Fruit, 0.8f);
 
 			VortexTreeShakeEffect effect = options;
@@ -75,22 +72,12 @@ namespace TheCollectors.Content.Tiles.Trees
 			else if (effect == VortexTreeShakeEffect.NPC)
 			{
 				WeightedRandom<int> npcType = new WeightedRandom<int>();
-				//npcType.Add(NPCID.GemSquirrelEmerald, 1);
 				npcType.Add(ModContent.NPCType<NPCs.Critters.VortexSquirrel>(),1); 
 
 				Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
 				Vector2 pos = new Vector2(x * 16, y * 16) + offset;
 				NPC.NewNPC(WorldGen.GetItemSource_FromTreeShake(x, y), (int)pos.X, (int)pos.Y, npcType);
 			}
-			/*else if (effect == CopperTreeShakeEffect.Gore)
-			{
-				WeightedRandom<int> goreType = new WeightedRandom<int>();
-				goreType.Add(911, 1); // Gores
-				goreType.Add(912, 0.6f); // Gores
-
-				Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-				Gore.NewGore(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, Vector2.Zero, goreType);
-			}*/
 			else if (effect == VortexTreeShakeEffect.Fruit)
 			{
 				WeightedRandom<int> getRepeats = new WeightedRandom<int>();
@@ -103,10 +90,9 @@ namespace TheCollectors.Content.Tiles.Trees
 				for (int i = 0; i < repeats; ++i)
 				{
 					Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, Main.rand.NextBool() ? ModContent.ItemType<Content.Items.Consumables.Food.VortexFruit>() : ModContent.ItemType<Content.Items.Consumables.Food.VortexFruit>(), 1);
+					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, ModContent.ItemType<Items.Consumables.Food.VortexFruit>(), Main.rand.Next(1, 3));
 				}
 			}
-
 			createLeaves = effect != VortexTreeShakeEffect.None;
 			return false;
 		}

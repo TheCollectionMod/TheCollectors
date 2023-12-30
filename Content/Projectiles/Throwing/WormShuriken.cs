@@ -45,7 +45,7 @@ namespace TheCollectors.Content.Projectiles.Throwing
 			SoundEngine.PlaySound(SoundID.WormDig, Projectile.position);
 		}
 
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
 			SoundEngine.PlaySound(SoundID.WormDig, Projectile.position);

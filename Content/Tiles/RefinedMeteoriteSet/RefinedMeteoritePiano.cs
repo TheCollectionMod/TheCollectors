@@ -1,5 +1,4 @@
 using Terraria.Localization;
-using TheCollectors.Content.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -46,17 +45,16 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			offsetY = 2;
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePiano>());
-		}
+		}*/
 
 		public override bool RightClick(int i, int j)
 		{
 			int rand = Main.rand.Next(2);
 			Terraria.Audio.SoundEngine.PlaySound(SoundID.Item94);
 			SoundEngine.PlaySound(SoundID.Item78);
-			//SoundEngine.PlaySound(new SoundStyle(rand == 0 ? "Sounds/Arpiano" : "Sounds/SoftMelodyPiano") with { PitchVariance = 0.05f }, new Vector2(i, j) * 16);
 			return true;
 		}
 

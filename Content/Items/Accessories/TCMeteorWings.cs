@@ -1,5 +1,5 @@
 using System.Linq;
-using TheCollectors.Common.Configs;
+//using TheCollectors.Common.Configs;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -11,16 +11,16 @@ namespace TheCollectors.Content.Items.Accessories
 	public class TCMeteorWings : ModItem
 	{
 		// To see how this config option was added, see ExampleModConfig.cs
-		public override bool IsLoadingEnabled(Mod mod) {
+		/*public override bool IsLoadingEnabled(Mod mod) {
 			return ModContent.GetInstance<TheCollectorsConfig>().WingsToggle;
-		}
+		}*/
 
 		public override void SetStaticDefaults() {
 			// These wings use the same values as the solar wings
 			// Fly time: 180 ticks = 3 seconds
 			// Fly speed: 9
 			// Acceleration multiplier: 2.5
-			ArmorIDs.Wing.Sets.Stats[Item.wingSlot] = new WingStats(180, 9f, 2.5f);
+			ArmorIDs.Wing.Sets.Stats[Item.wingSlot] = new WingStats(120, 7f, 1.5f);
 		}
 
 		public override void SetDefaults() {

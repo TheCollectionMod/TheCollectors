@@ -45,13 +45,18 @@ namespace TheCollectors.Common.GlobalNPCs
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.MagicSoul>(), 2, 25, 30)); 
             }
 
+            if (npc.type == NPCID.IceSlime)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneChestKey>(), 10));
+            }
+
             int[] MagicSoulPreHardmode = new int[3] {NPCID.GoblinSorcerer, NPCID.FireImp, NPCID.DarkCaster};
             int MagicSoulPreHardmodeLoot = 0;
             foreach (int drop in MagicSoulPreHardmode)
             {
                 if (npc.type == MagicSoulPreHardmode[MagicSoulPreHardmodeLoot])
                 {
-                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.MagicSoul>(), 10, 5, 10)); 
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Content.Items.MagicSoul>(), 5, 5, 10)); 
                 }
                 MagicSoulPreHardmodeLoot += 1;
             }

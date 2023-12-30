@@ -73,7 +73,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPCID.Sets.AttackAverageChance[NPC.type] = 10;
             NPCID.Sets.HatOffsetY[NPC.type] = 8; // Posición del Party Hat
 
-            NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
+            /*NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
             {
                 SpecificallyImmuneTo = new int[]
                  {
@@ -82,12 +82,12 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                     BuffID.ShadowFlame,
                     BuffID.Burning
                  }
-            });
+            });*/
 
             NPCID.Sets.ShimmerTownTransform[Type] = true; // Allows for this NPC to have a different texture after touching the Shimmer liquid.
 
             // Influences how the NPC looks in the Bestiary
-            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f,
                 Direction = -1
@@ -334,7 +334,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                             case 1:
                                 if (Main.hardMode)
                                 {
-                                    Main.npcChatCornerItem = ItemID.MythrilPickaxe;
+                                    Main.npcChatCornerItem = ItemID.AdamantitePickaxe;
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.RefinedMeteoriteOre");
                                 }
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.MeteoriteOre");

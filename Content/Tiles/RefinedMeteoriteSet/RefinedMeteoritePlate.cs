@@ -23,6 +23,14 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 		}
 		public override void SetStaticDefaults()
 		{
+			// Placement
+			TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
+			TileObjectData.newTile.WaterDeath = true;
+			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+			TileObjectData.addTile(Type);
+
+
 			// Properties
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
@@ -35,7 +43,12 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			AddMapEntry(new Color(191, 142, 111), Language.GetText("MapObject.Plate"));
 
 			// Placement
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
+			TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
+			TileObjectData.newTile.WaterDeath = true;
+			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+			TileObjectData.addTile(Type);
+			/*TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
 			TileObjectData.newTile.CoordinateHeights = new[] { 16 };
 			TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 			TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
@@ -47,7 +60,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
 			TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
 			TileObjectData.addAlternate(1); // Facing right will use the second texture style
-			TileObjectData.addTile(Type);
+			TileObjectData.addTile(Type);*/
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
@@ -55,10 +68,10 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			num = fail ? 1 : 3;
 		}
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
+		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePlate>());
-		}
+		}*/
 		public override void PlaceInWorld(int i, int j, Item item)
 		{
 			// Si el ítem colocado en el mundo es un ítem de comida, almacenamos su tipo en la propiedad "foodItem"

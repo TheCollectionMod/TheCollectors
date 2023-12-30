@@ -16,7 +16,7 @@ public class TC_MeteoriteSlime : ModNPC
     public override void SetStaticDefaults()
     {
         Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.SpikedIceSlime];
-        NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
+       /* NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
         {
             SpecificallyImmuneTo = new int[]
             {
@@ -25,14 +25,14 @@ public class TC_MeteoriteSlime : ModNPC
                     BuffID.ShadowFlame,
                     BuffID.Burning
             }
-        });
+        });*/
     }
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
         bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Meteor,
-                new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.MeteoriteSlime")
+                new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.TC_MeteoriteSlime")
             });
     }
 
@@ -43,7 +43,7 @@ public class TC_MeteoriteSlime : ModNPC
         NPC.height = 34;
         NPC.damage = 12;
         NPC.defense = 10;
-        NPC.lifeMax = 100;
+        NPC.lifeMax = 35;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
         NPC.value = 100f;
@@ -258,7 +258,7 @@ public class TC_MeteoriteSlime : ModNPC
 	}
 	public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
     {
-        int buffType = BuffID.Burning;
+        int buffType = BuffID.OnFire;
 
         int timeToAdd = 5 * 60; //This makes it 5 seconds, one second is 60 ticks
         target.AddBuff(buffType, timeToAdd);

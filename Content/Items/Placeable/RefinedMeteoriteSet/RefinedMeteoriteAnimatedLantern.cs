@@ -14,7 +14,6 @@ namespace TheCollectors.Content.Items.Placeable.RefinedMeteoriteSet
 		public override void SetDefaults()
 		{
 			Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteAnimatedLantern>());
-			Item.CloneDefaults(ItemID.FireflyinaBottle);
 			Item.value = 10000;
 		}
 	}

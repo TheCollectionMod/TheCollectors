@@ -1,26 +1,20 @@
 ﻿using Terraria;
-using Terraria.GameContent.Creative;
-using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace TheCollectors.Content.Items.Placeable.RefinedMeteoriteSet
 {
 	internal class RefinedMeteoriteLantern : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Refined Meteorite Lantern");
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+		// This example uses LocalizedText.Empty to prevent any translation key from being generated. This can be used for items that definitely won't have a tooltip, keeping the localization file cleaner.
+		public override LocalizedText Tooltip => LocalizedText.Empty;
 
 		public override void SetDefaults()
 		{
-			//Common Properties
-			Item.CloneDefaults(ItemID.BambooLantern);
-			Item.width = 12;
-			Item.height = 12;
-			Item.createTile = ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteLantern>();
+			Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.RefinedMeteoriteSet.RefinedMeteoriteLantern>());
+			Item.width = 10;
+			Item.height = 24;
+			Item.value = 500;
 		}
 	}
 }
-

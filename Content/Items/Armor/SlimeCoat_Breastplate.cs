@@ -19,7 +19,7 @@ namespace TheCollectors.Content.Items.Armor
 			Item.height = 18;
 			Item.value = Item.sellPrice(0, 1, 50, 0);
 			Item.rare = ItemRarityID.Blue;
-			Item.defense = 1;
+			Item.defense = 2;
 		}
 		public override void UpdateEquip(Player player)
 		{

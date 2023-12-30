@@ -8,8 +8,6 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.GameContent.Metadata;
-using static Terraria.ModLoader.ModContent;
-
 
 namespace TheCollectors.Content.Tiles.Trees
 {

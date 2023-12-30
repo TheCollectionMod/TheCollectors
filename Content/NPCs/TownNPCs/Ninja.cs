@@ -67,7 +67,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPCID.Sets.ShimmerTownTransform[Type] = true; // Allows for this NPC to have a different texture after touching the Shimmer liquid.
 
             // Influences how the NPC looks in the Bestiary
-            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f,  // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
                 Direction = -1  // -1 is left and 1 is right.
@@ -154,7 +154,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = "!Battle Changue!";
+            button2 = "¡Battle Change!";
         }
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
         { 
@@ -164,7 +164,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             }
             else
             {
-                Main.npcChatText = Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.BattleChangue");
+                Main.npcChatText = Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.BattleChange");
                 Main.LocalPlayer.AddBuff(ModContent.BuffType<Buffs.StealthBuff>(),36000); /*600 = 10seg*/
             }
         }
@@ -262,11 +262,11 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                     {
                                         case 1:
 
-                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl1", Main.npc[guide].GivenName);
+                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl1", Main.npc[partygirl].GivenName);
 
                                         default:
 
-                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl2", Main.npc[guide].GivenName);
+                                            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl2", Main.npc[partygirl].GivenName);
                                     }
                                 else return null;
                         }

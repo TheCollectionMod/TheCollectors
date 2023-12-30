@@ -17,7 +17,7 @@ public class TC_MeteoriteMotherSlime : ModNPC
     public override void SetStaticDefaults()
     {
         Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.MotherSlime];
-        NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
+        /*NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
         {
             SpecificallyImmuneTo = new int[]
             {
@@ -26,14 +26,14 @@ public class TC_MeteoriteMotherSlime : ModNPC
                     BuffID.ShadowFlame,
                     BuffID.Burning
             }
-        });
+        });*/
     }
 
     public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
     {
         bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Meteor,
-                new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.MeteoriteMotherSlime")
+                new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.TC_MeteoriteMotherSlime")
             });
     }
 
@@ -44,7 +44,7 @@ public class TC_MeteoriteMotherSlime : ModNPC
         NPC.height = 34;
         NPC.damage = 25;
         NPC.defense = 10;
-        NPC.lifeMax = 100;
+        NPC.lifeMax = 50;
         NPC.HitSound = SoundID.NPCHit1;
         NPC.DeathSound = SoundID.NPCDeath1;
         NPC.value = 300f;
@@ -62,6 +62,7 @@ public class TC_MeteoriteMotherSlime : ModNPC
         npcLoot.Add(ItemDropRule.Common(ItemID.Gel, 1, 1, 2));
         npcLoot.Add(ItemDropRule.Common(ItemID.Meteorite, 2, 2, 5));
         npcLoot.Add(ItemDropRule.Common(ItemID.Compass, 50));
+        npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChestKey>(), 10));
     }
 
     public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -111,4 +112,11 @@ public class TC_MeteoriteMotherSlime : ModNPC
             }
         }
     }*/
+    public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
+    {
+        int buffType = BuffID.OnFire;
+
+        int timeToAdd = 5 * 60; //This makes it 5 seconds, one second is 60 ticks
+        target.AddBuff(buffType, timeToAdd);
+    }
 }

@@ -76,7 +76,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPCID.Sets.ShimmerTownTransform[Type] = true; // Allows for this NPC to have a different texture after touching the Shimmer liquid.
 
             // Influences how the NPC looks in the Bestiary
-            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
+            NPCID.Sets.NPCBestiaryDrawModifiers drawModifiers = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Velocity = 1f,  // Draws the NPC in the bestiary as if its walking +1 tiles in the x direction
                 Direction = -1  // -1 is left and 1 is right. NPCs are drawn facing the left by default.
@@ -87,16 +87,16 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifiers);
 
             NPC.Happiness
+             //.SetBiomeAffection<ExampleSurfaceBiome>(AffectionLevel.Love) // Para los biomas del mod, cuando tenga
              .SetBiomeAffection<HallowBiome>(AffectionLevel.Like)
              .SetBiomeAffection<OceanBiome>(AffectionLevel.Dislike)
              .SetBiomeAffection<UndergroundBiome>(AffectionLevel.Hate)
-             //.SetBiomeAffection<ExampleSurfaceBiome>(AffectionLevel.Love) // Para los biomas del mod, cuando tenga
-             //.SetNPCAffection(ModContent.NPCType<RuneWizard>(), AffectionLevel.Love) // Para los NPCs del mod
              .SetNPCAffection(NPCID.Dryad, AffectionLevel.Love)
              .SetNPCAffection(NPCID.Wizard, AffectionLevel.Like)
+             //.SetNPCAffection(ModContent.NPCType<RuneWizard>(), AffectionLevel.Like) // Para los NPCs del mod
              .SetNPCAffection(NPCID.PartyGirl, AffectionLevel.Like)
-             .SetNPCAffection(NPCID.Cyborg, AffectionLevel.Dislike)
-             .SetNPCAffection(NPCID.GoblinTinkerer, AffectionLevel.Dislike);
+             .SetNPCAffection(NPCID.GoblinTinkerer, AffectionLevel.Dislike)
+             .SetNPCAffection(NPCID.Cyborg, AffectionLevel.Hate);
             //Princess is automatically set
 
             // This creates a "profile" for Ninja, which allows for different textures during a party and/or while the NPC is shimmered.
@@ -198,32 +198,32 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             var npcShop = new NPCShop(Type, ShopName)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.AmethystStaffTier1>())
                 {
-                    shopCustomPrice = 50,
+                    shopCustomPrice = 20,
                     shopSpecialCurrency = TheCollectors.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.TopazStaffTier1>())
                 {
-                    shopCustomPrice = 50,
+                    shopCustomPrice = 20,
                     shopSpecialCurrency = TheCollectors.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.SapphireStaffTier1>())
                 {
-                    shopCustomPrice = 50,
+                    shopCustomPrice = 30,
                     shopSpecialCurrency = TheCollectors.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.EmeraldStaffTier1>())
                 {
-                    shopCustomPrice = 50,
+                    shopCustomPrice = 30,
                     shopSpecialCurrency = TheCollectors.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.AmberStaffTier1>())
                 {
-                    shopCustomPrice = 50,
+                    shopCustomPrice = 40,
                     shopSpecialCurrency = TheCollectors.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.RubyStaffTier1>())
                 {
-                    shopCustomPrice = 50,
+                    shopCustomPrice = 40,
                     shopSpecialCurrency = TheCollectors.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.DiamondStaffTier1>())

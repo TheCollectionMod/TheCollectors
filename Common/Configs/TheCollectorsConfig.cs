@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿/*using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
 namespace TheCollectors.Common.Configs
@@ -21,4 +21,4 @@ namespace TheCollectors.Common.Configs
 		[ReloadRequired]
 		public bool WeaponWithGrowingDamageToggle;
 	}
-}
+}*/

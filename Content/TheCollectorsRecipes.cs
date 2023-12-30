@@ -73,17 +73,17 @@ namespace TheCollectors
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Armor.HarpyFeatherChest>(), 1)
 					.AddIngredient(ItemID.Feather, 25)
-					.AddTile(TileID.Furnaces)
+					.AddTile(TileID.SkyMill)
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Armor.HarpyFeatherBoots>(), 1)
 					.AddIngredient(ItemID.Feather, 20)
-					.AddTile(TileID.Furnaces)
+					.AddTile(TileID.SkyMill)
 					.Register();
 				
 				Recipe.Create(ModContent.ItemType<Content.Items.Armor.HarpyHairpin>(), 1)
 					.AddIngredient(ItemID.Feather, 15)
-					.AddTile(TileID.Furnaces)
+					.AddTile(TileID.SkyMill)
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Armor.RefinedMeteoriteHat>(), 1)
@@ -175,15 +175,15 @@ namespace TheCollectors
 					.AddTile(TileID.MythrilAnvil)
 					.Register();
 
-				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 1)
-					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.HardenedMeteoriteOre>(), 4)
-					.AddTile(TileID.Anvils)
-					.Register();
-
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteAnimatedLantern>(), 1)
 					.AddIngredient(ItemType<Content.Items.Consumables.Critters.MeteoriteFairyItem>(), 1)
 					.AddIngredient(ItemID.Bottle, 1)
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.HardenedMeteoriteOre>(), 4)
+					.AddTile(TileID.Anvils)
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBathtub>(), 1)
@@ -214,6 +214,12 @@ namespace TheCollectors
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCampfire>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTorch>(), 5)
+					.AddRecipeGroup("Wood", 10) //solo sirve madera normal, revisar
+					//.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandelabra>(), 1)
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 5)
 					.AddIngredient(ItemID.Torch, 3)
@@ -223,6 +229,13 @@ namespace TheCollectors
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCandle>(), 1)
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 4)
 					.AddIngredient(ItemID.Torch, 1)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChandelier>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 4)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTorch>(), 4)
+					.AddIngredient(ItemID.Chain, 1)
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
@@ -237,10 +250,21 @@ namespace TheCollectors
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChimney>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteClock>(), 1)
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
 					.AddRecipeGroup("IronBar", 3) //revisar
 					.AddIngredient(ItemID.Glass, 6)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteCommandSign>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 4)
+					.AddRecipeGroup("Wood", 6) //solo sirve madera normal, revisar
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
@@ -251,6 +275,19 @@ namespace TheCollectors
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteDresser>(), 1)
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 16)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteFireplace>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTorch>(), 2)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 2)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteFountain>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
+					.AddIngredient(ItemID.WaterBucket, 1)
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
@@ -273,8 +310,19 @@ namespace TheCollectors
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePlate>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 1)
+					.AddIngredient(ItemID.ClayBlock, 1)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoritePlatform>(), 2)
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 1)
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteShingles>(), 5)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 2)
+					.AddRecipeGroup("Wood", 2) //solo sirve madera normal, revisar
 					.Register();
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteSink>(), 1)
@@ -304,8 +352,25 @@ namespace TheCollectors
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
 
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTrashCan>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 6)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteVase>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 3)
+					.AddIngredient(ItemID.ClayBlock, 1)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();
+
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteWall>(), 4)
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 1)
+					.AddTile(TileID.WorkBenches)
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteWallAdvanced>(), 4)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteWall>(), 4)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTorch>(), 1)
 					.AddTile(TileID.WorkBenches)
 					.Register();
 
@@ -313,6 +378,206 @@ namespace TheCollectors
 					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBlock>(), 10)
 					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
 					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneBathtub>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 140)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneBed>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 150)
+					.AddIngredient(ItemID.Silk, 5)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneBench>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 80)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneBookcase>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 200)
+					.AddIngredient(ItemID.Book, 10)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneCampfire>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneTorch>(), 5)
+					.AddRecipeGroup("Wood", 10) //solo sirve madera normal, revisar
+												//.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneCandelabra>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 50)
+					.AddIngredient(ItemID.Torch, 3)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneCandle>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 40)
+					.AddIngredient(ItemID.Torch, 1)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneChandelier>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 40)
+					.AddIngredient(ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneTorch>(), 4)
+					.AddIngredient(ItemID.Chain, 1)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneChair>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 40)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneChest>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 80)
+					.AddRecipeGroup("IronBar", 2) //revisar
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneChimney>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 100)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneClock>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 100)
+					.AddRecipeGroup("IronBar", 3) //revisar
+					.AddIngredient(ItemID.Glass, 6)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneCommandSign>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 40)
+					.AddRecipeGroup("Wood", 6) //solo sirve madera normal, revisar
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneDoor>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 60)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneDresser>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 160)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneFireplace>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 100)
+					.AddIngredient(ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneTorch>(), 2)
+					.AddIngredient(ItemType<Content.Items.Placeable.RedCandyCaneSet.RefinedMeteoriteBar>(), 2)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneFountain>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 100)
+					.AddIngredient(ItemID.WaterBucket, 1)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneLamp>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 30)
+					.AddIngredient(ItemID.Torch, 1)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneLantern>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 60)
+					.AddIngredient(ItemID.Torch, 1)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCanePiano>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 150)
+					.AddIngredient(ItemID.Bone, 4)
+					.AddIngredient(ItemID.Book, 1)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCanePlate>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 10)
+					.AddIngredient(ItemID.ClayBlock, 1)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCanePlatform>(), 2)
+					.AddIngredient(ItemID.CandyCaneBlock, 10)
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneShingles>(), 5)
+					.AddIngredient(ItemID.CandyCaneBlock, 20)
+					.AddRecipeGroup("Wood", 2) //solo sirve madera normal, revisar
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneSink>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 60)
+					.AddIngredient(ItemID.WaterBucket, 1)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneSofa>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 50)
+					.AddIngredient(ItemID.Silk, 2)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneTable>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 80)
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.Register();
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneToilet>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 60)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneTorch>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 40)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneTrashCan>(), 1)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBar>(), 6)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneVase>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 30)
+					.AddIngredient(ItemID.ClayBlock, 1)
+					.AddTile(TileType<Content.Tiles.RefinedMeteoriteSet.RefinedMeteoriteCraftingStation>())
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneWallAdvanced>(), 4)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteWall>(), 4)
+					.AddIngredient(ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteTorch>(), 1)
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
+				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneWorkbench>(), 1)
+					.AddIngredient(ItemID.CandyCaneBlock, 100)
+					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileID.WorkBenches)
+					.Register();*/
+
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.ThrowingDummy>(), 1)
 					.AddRecipeGroup("Wood", 20) //solo sirve madera normal, revisar
@@ -391,6 +656,14 @@ namespace TheCollectors
 					.AddIngredient(ItemID.Book, 1)
 					.AddIngredient(ItemID.MeteoriteBar, 5)
 					.AddTile(TileID.Bookcases)
+					.Register();
+
+				//Weapons.Summon
+
+				Recipe.Create(ModContent.ItemType<Content.Items.Weapons.Summon.MeteoriteWhip>(), 1)
+					.AddIngredient(ItemID.Chain, 1)
+					.AddIngredient(ItemID.MeteoriteBar, 5)
+					.AddTile(TileID.Furnaces)
 					.Register();
 
 				//Weapons.Throwing

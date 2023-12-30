@@ -25,25 +25,20 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			Main.tileNoAttach[Type] = true;
 			Main.tileWaterDeath[Type] = true;
 			Main.tileLavaDeath[Type] = true;
-			TileID.Sets.DisableSmartCursor[Type] = true;
-			// Main.tileFlame[Type] = true; // This breaks it.
 
 			// Placement
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
-			TileObjectData.newTile.Height = 3; // because the template is for 1x2 not 1x3
-			TileObjectData.newTile.Width = 3; // because the template is for 1x2 not 1x3
-			TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 }; // because height changed
-			TileObjectData.newTile.Origin = new Point16(1, 0); // default
+			TileObjectData.newTile.Height = 3;
+			TileObjectData.newTile.Width = 3;
+			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
+			TileObjectData.newTile.DrawYOffset = 0;
 			TileObjectData.newTile.WaterDeath = true;
 			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 			TileObjectData.addTile(Type);
 
 			// Etc
-			LocalizedText name = CreateMapEntryName();
-			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-			AddMapEntry(new Color(253, 221, 3), name);
-			AdjTiles = new int[] { TileID.Chandeliers };
+			AddMapEntry(new Color(253, 221, 3), Language.GetText("MapObject.FloorLamp"));
 
 			// Assets
 			if (!Main.dedServ)
@@ -52,10 +47,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			}
 		}
 
-		/*public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32,16, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChandelier>());
-		}*/
 		public override void HitWire(int i, int j) //ExxoAvalonOrigins Mod
 
 		{
@@ -92,34 +83,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			}
 			NetMessage.SendTileSquare(-1, x, y + 1, 3);
 		}
-		/*public override void HitWire(int i, int j)
-		{
-			Tile tile = Main.tile[i, j];
-			int topY = j - tile.TileFrameY / 18 % 3;
-			short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
-
-			Main.tile[i, topY].TileFrameX += frameAdjustment;
-			Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
-			Main.tile[i, topY + 2].TileFrameX += frameAdjustment;
-
-			Wiring.SkipWire(i, topY);
-			Wiring.SkipWire(i, topY + 1);
-			Wiring.SkipWire(i, topY + 2);
-
-			// Avoid trying to send packets in singleplayer.
-			if (Main.netMode != NetmodeID.SinglePlayer)
-			{
-				NetMessage.SendTileSquare(-1, i, topY + 1, 3, TileChangeType.None);
-			}
-		}*/
-
-		/*public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-		{
-			if (i % 2 == 1)
-			{
-				spriteEffects = SpriteEffects.FlipHorizontally;
-			}
-		}*/
 
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
@@ -132,36 +95,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 				b = 1f;
 			}
 		}
-		/*public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
-		{
-			SpriteEffects effects = SpriteEffects.None;
 
-			Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
-
-			if (Main.drawToScreen)
-			{
-				zero = Vector2.Zero;
-			}
-
-			Tile tile = Main.tile[i, j];
-			int width = 16;
-			int offsetY = 0;
-			int height = 16;
-			short frameX = tile.TileFrameX;
-			short frameY = tile.TileFrameY;
-
-			TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
-
-			ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i);
-
-			for (int c = 0; c < 7; c++)
-			{
-				float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-				float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
-
-				spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
-			}
-		}*/
 		public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
 		{
 			if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
@@ -180,9 +114,9 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 				return;
 			}
 
-			int style = frameY / 48;
+			int style = frameY / 54;
 
-			if (frameY / 18 % 2 == 0)
+			if (frameY / 18 % 3 == 0)
 			{
 				int dustChoice = -1;
 
@@ -210,11 +144,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 		public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
 		{
 			SpriteEffects effects = SpriteEffects.None;
-
-			if (i % 2 == 1)
-			{
-				effects = SpriteEffects.FlipHorizontally;
-			}
 
 			Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 

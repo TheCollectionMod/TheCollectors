@@ -28,7 +28,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			DustType = DustID.FireflyHit;
 			HitSound = SoundID.Tink;
 			MineResist = 4f;
-			MinPick = 190;
+			MinPick = 180;
 		}
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)

@@ -10,77 +10,53 @@ Mods: {
 	TheCollectors: {
 		NPCs: {
 			#............................................................................................................TownNPCs
-			Archeologist: {
-				DisplayName: Arqueólogo
+			CandyElf: {
+				DisplayName: Elfo de los Caramelos
 
 				TownNPCMood: {
-					// Content: Estoy feliz.
-					// NoHome: Detesto no tener un hogar.
-					// FarFromHome: Estoy demasiado lejos de casa.
-					// LoveSpace: Me encanta tener tanto espacio.
-					// DislikeCrowded: No me gusta tener tan poco espacio.
-					// HateCrowded: Detesto tener poco espacio.
-					// LoveBiome: Adoro el biomedio {BiomeName}.
-					// LikeBiome: Me gusta el biomedio {BiomeName}.
-					// DislikeBiome: No me gusta el biomedio {BiomeName}.
-					// HateBiome: Detesto el biomedio {BiomeName}.
-					// LoveNPC: Adoro a {NPCName}.
-					// LikeNPC: Me gusta {NPCName}.
-					// DislikeNPC: "{NPCName} no me cae nada bien."
-					// HateNPC: Detesto a {NPCName}.
-					// LikeNPC_Princess: I like {NPCName}.
-					// Princess_LovesNPC: I like {NPCName}.
+					Content: Hola holita! ¡Hoy me siento feliz como una perdiz, vecinito!
+					NoHome: No tener una casita me agobia un poquitín, te cuento. Es como tener una abeja en el sombrerito.
+					FarFromHome: Me siento un poquitín lejos de casa, como un gatito abandonado sin su palito de rascar.
+					LoveSpace: Que gustirritín. ¡Tener tanto espacio es como ganar una partidita de los Juegos de los Elfos de Caramelo! ¡Más cómodo que el bolsillito de un canguro!.
+					DislikeCrowded: Dios mío. No me siento a gustito con tant gente a mi alrrededorcito. Es como una colmena durante la recogida de miel en la granjita de los Elfos de Caramelo!.
+					HateCrowded: ¡Vaya por diosito! No me gusta nadita lo agobiado que es esto. Es molesto como un pájaro carpintero a las 5 de la mañanita. ¡Y ya es decir!.
+					LikeBiome: Me siento a gustito en {BiomeName}, tan a gustito como tomando una tacita caliente de chocolate después de trabajar.
+					DislikeBiome: ¡Mecachis! No me agrada demasiado el {BiomeName}. Es como un ojo demoníaco llamando a tu puertita en medio de la noche.
+					HateBiome: Siendo honestos, {BiomeName} me da un poquito de repelusito. Es como cuando vi a Papá Noel sin el traje, y eso ya es decir mucho.
+					LoveNPC: ¡Carambita! ¡Me encanta {NPCName}! ¿Sabías que durante todo el año trabaja sin descanso para preparar la noche de navidad? *Una gota de sudor frío resbala por su frente*.
+					LikeNPC_Princess: ¡Canastos! La princesa {NPCName} debe ser la persona más dulce que conozco. ¡Tan dulce como los caramelos que fabricamos en Chuchelandia!
+					Princess_LovesNPC: "{NPCName} es muy simpática. Siempre está lleno de energía."
+					LoveBiome: ¡Recórcholis! Estoy enamorado del {BiomeName}. Es como un trocito del paraíso en la tierra. Una delicia.
+					LikeNPC: ¡Pero si es mi amiga {NPCName}! Hablar con ella es como una acampadita con malvaviscos en medio de la montaña.
+					DislikeNPC: "{NPCName} siempre está chinchando. No hace más que presumir de sus muebles. Creo que voy a buscar un poco de meteorito endurecido para hacer los míos. ¡Y van a ser más bonitos!"
+					HateNPC: Debo admitir que no soy muy fan de {NPCName}. No solía ser así de tacaño pero cambió completamente después de *mira al suelo y continúa ininteligiblemente*.
 				}
+
+				Census.SpawnCondition: Ten un bloque de caramelo [i:CandyCaneBlock] en el inventario
 			}
-
-			Carver: {
-				DisplayName: Tallista
-
-				TownNPCMood: {
-					// Content: Estoy feliz.
-					// NoHome: Detesto no tener un hogar.
-					// FarFromHome: Estoy demasiado lejos de casa.
-					// LoveSpace: Me encanta tener tanto espacio.
-					// DislikeCrowded: No me gusta tener tan poco espacio.
-					// HateCrowded: Detesto tener poco espacio.
-					// LoveBiome: Adoro el biomedio {BiomeName}.
-					// LikeBiome: Me gusta el biomedio {BiomeName}.
-					// DislikeBiome: No me gusta el biomedio {BiomeName}.
-					// HateBiome: Detesto el biomedio {BiomeName}.
-					// LoveNPC: Adoro a {NPCName}.
-					// LikeNPC: Me gusta {NPCName}.
-					// DislikeNPC: "{NPCName} no me cae nada bien."
-					// HateNPC: Detesto a {NPCName}.
-					// LikeNPC_Princess: I like {NPCName}.
-					// Princess_LovesNPC: I like {NPCName}.
-				}
-			}
-
-			CarverFrozen.DisplayName: Tallista congelada
 
 			Enchanter: {
 				DisplayName: Encantador
 
 				TownNPCMood: {
-					// Content: Gracias por romper el hechizo.
-					// NoHome: El aire libre está muy bien y todo eso, pero aún así, sigo necesitando de una habitación para trabajar con mis báculos.
-					// LoveSpace: En {BiomeName} puedo concentrarme al máximo.
-					// FarFromHome: Una escapadita de vez en cuando viene bien, pero va tocando volver, ¿no?.
-					// DislikeCrowded: Se empieza a respirar poca magia por aquí, que corra el aire.
-					// HateCrowded: Como vuelva a venir alguien a pedirme que le saque un conejo del sombrero... Me mudo al oceano, y eso que no me gusta.
-					// LikeBiome: En {BiomeName} se respira magia.
-					// DislikeBiome: "{BiomeName} me distrae demasiado, se pone uno todo ocioso."
-					// HateBiome: Ya me estás construyendo una habitación en un sitio más luminoso, bastante tuve ya...
-					// LoveNPC: Una pena que a {NPCName} le guste andar por la jungla, su magia me parece de lo más interesante.
-					// LikeNPC: Con {NPCName} por aquí, la fiesta está asegurada.
-					// LikeNPC_Princess: "{NPCName} seems friendly."
-					// DislikeNPC: No me extraña que a {NPCName} le llamen duende chapucero, menuda escopeta de feria el tío.
-					// DislikeBiome: No me gusta el biomedio {BiomeName}.
-					// LikeNPC_Princess: I like {NPCName}.
-					// Princess_LovesNPC: I like {NPCName}.
+					Content: Gracias por romper el hechizo.
+					NoHome: El aire libre está muy bien y todo eso, pero aún así, sigo necesitando de una habitación para trabajar con mis báculos.
+					LoveSpace: En {BiomeName} puedo concentrarme al máximo.
+					FarFromHome: Una escapadita de vez en cuando viene bien, pero va tocando volver, ¿no?.
+					DislikeCrowded: Se empieza a respirar poca magia por aquí, que corra el aire.
+					HateCrowded: Como vuelva a venir alguien a pedirme que le saque un conejo del sombrero... Me mudo al oceano, y eso que no me gusta.
+					LikeBiome: En {BiomeName} se respira magia.
+					DislikeBiome: "{BiomeName} me distrae demasiado, se pone uno todo ocioso."
+					HateBiome: Ya me estás construyendo una habitación en un sitio más luminoso, bastante tuve ya...
+					LoveNPC: Una pena que a {NPCName} le guste andar por la jungla, su magia me parece de lo más interesante.
+					LikeNPC: Con {NPCName} por aquí, la fiesta está asegurada.
+					DislikeNPC: No me extraña que a {NPCName} le llamen duende chapucero, menuda escopeta de feria el tío.
+					HateNPC: Odio las cosas de metal.
+					LikeNPC_Princess: "{NPCName} es agradable, viene a menudo a comprarme pociones."
+					Princess_LovesNPC: "{NPCName} siempre me invita a probar sus brebajes. Me gusta su frasco de pétalos sabor cereza [i:FlaskofParty]."
 				}
 
-				// Census.SpawnCondition: Rescue in Dungeon
+				Census.SpawnCondition: Rescátalo en la mazmorra
 			}
 
 			EnchanterPrisioner.DisplayName: Encantador encantado
@@ -89,50 +65,50 @@ Mods: {
 				DisplayName: Tío Gacha
 
 				TownNPCMood: {
-					// Content: Jeje, nuevos vecinos a los que poder timar..., digo vender mis fantasticos productos.
-					// NoHome: Voy a necesitar bastante espacio, un buen almacén, con caja fuerte por supuesto.
-					// LoveSpace: El bosque es el mejor lugar para mi negocio, suelo barato que nadie quiere.
-					// FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
-					// DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
-					// HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
-					// LikeBiome: ...
-					// LoveBiome: Aquí se respira negocio
-					// DislikeBiome: ...
-					// HateBiome: ...
-					// LikeNPC: Me encanta que {NPCName} cobre por sus servicios, la privatización es el futuro.
-					// LikeNPC_Princess: ¿{NPCName} es una princesa?, que maravilla, estos son unos primos...
-					// LoveNPC: Es bueno que la gente deje a otros administrar su dinero, {NPCName} lo sabe bien.
-					// DislikeNPC: ...
-					// HateNPC: ...
-					// Princess_LovesNPC: I like {NPCName}.
+					Content: Jeje, nuevos vecinos a los que poder timar..., digo vender mis fantasticos productos.
+					NoHome: Voy a necesitar bastante espacio, un buen almacén, con caja fuerte por supuesto.
+					LoveSpace: El bosque es el mejor lugar para mi negocio, suelo barato que nadie quiere.
+					FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
+					DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
+					HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
+					LoveBiome: Aquí se respira negocio
+					LikeBiome: ...
+					DislikeBiome: ...
+					HateBiome: I don't like cold climates, I have to spend my savings on heating my mansion.
+					LoveNPC: Es bueno que la gente deje a otros administrar su dinero, {NPCName} lo sabe bien.
+					LikeNPC: Me encanta que {NPCName} cobre por sus servicios, la privatización es el futuro.
+					DislikeNPC: ...
+					HateNPC: No sporto a {NPCName}. ¡Siempre regalando cosas! ¡No es así como funciona el sistema!
+					LikeNPC_Princess: ¿{NPCName} es una princesa?, que maravilla, estos son unos primos...
+					Princess_LovesNPC: Abrir Terracajas es muy emocionante. Espero encontrar el tinte especial en la Terracaja de Tintes algún día. Pero me siguen tocando Tintes rojos... Ya llevo 14...
 				}
 
-				// Census.SpawnCondition: Have a Terra Coin in inventary
+				Census.SpawnCondition: Ten una Terramoneda [i:TheCollectors/TerraCoin] en el inventario
 			}
 
 			Meteorman: {
 				DisplayName: Hombre de Meteorito
 
 				TownNPCMood: {
-					// Content: Que tierra tan verde y poco rocosa, muy buena para mis aficciones.
-					// NoHome: Podemos usar los restos de mi accidente para hacer unas casas, no se pueden desperdiciar.
-					// LoveSpace: Se respira paz.
-					// FarFromHome: No me encuentro cómodo tan lejos de casa, aunque mi casa real estaba a miles de kilómetros.
-					// DislikeCrowded: Empiezo a tener la lista de encargos un poco saturada.
-					// HateCrowded: Odio admitirlo, pero con tanta gente no puedo seguir el ritmo de los encargos.
-					// LikeBiome: Por ahora me gustaría quedarme en {BiomeName}, aunque por la noche haga fresquito.
-					// LoveBiome: cuando pueda
-					// DislikeBiome: "{BiomeName} es fantástico, pero no me siento muy seguro tan cerca del agua."
-					// HateBiome: Como pase otro día más en {BiomeName}, creo que tendré que empezar a llamarme el Hombre de Piedra normal y corriente.
-					// LikeNPC: Me cae muy bien {NPCName}, cuida mucho la naturaleza.
-					// LikeNPC_Princess: "{NPCName} se lleva bien con todo el mundo, como debe ser."
-					// LoveNPC: Mi negocio y el de {NPCName} funcionan muy bien juntos.
-					// DislikeNPC: Why is {NPCName} here? It's okay, me, just don't look him in the eye and he can't scare you...
-					// HateNPC: No me gusta como {NPCName}, se aprovecha de la gente, además odia a Papá Noel.
-					// Princess_LovesNPC: I like {NPCName}.
+					Content: Que tierra tan verde y poco rocosa, muy buena para mis aficciones.
+					NoHome: Podemos usar los restos de mi accidente para hacer unas casas, no se pueden desperdiciar.
+					LoveSpace: Se respira paz.
+					FarFromHome: No me encuentro cómodo tan lejos de casa, aunque mi casa real estaba a miles de kilómetros.
+					DislikeCrowded: Empiezo a tener la lista de encargos un poco saturada.
+					HateCrowded: Odio admitirlo, pero con tanta gente no puedo seguir el ritmo de los encargos.
+					LikeBiome: Por ahora me gustaría quedarme en {BiomeName}, aunque por la noche haga fresquito.
+					LoveBiome: cuando pueda
+					DislikeBiome: "{BiomeName} es fantástico, pero no me siento muy seguro tan cerca del agua."
+					HateBiome: Como pase otro día más en {BiomeName}, creo que tendré que empezar a llamarme el Hombre de Piedra normal y corriente.
+					LikeNPC: Me cae muy bien {NPCName}, cuida mucho la naturaleza.
+					LikeNPC_Princess: "{NPCName} se lleva bien con todo el mundo, como debe ser."
+					LoveNPC: Mi negocio y el de {NPCName} funcionan muy bien juntos.
+					// DislikeNPC: No tiene.
+					HateNPC: No me gusta como {NPCName}, se aprovecha de la gente, además odia a Papá Noel.
+					Princess_LovesNPC: "{NPCName} tiene unas ardillas adorables. ¡Nunca las había visto con el pelo tan brillante de esos colores!Y parece que también le gusta la jardinería. Creo que podría aprender una o dos cosas de él."
 				}
 
-				// Census.SpawnCondition: Rescue in Meteor crash
+				Census.SpawnCondition: Rescátalo en el Meteorito
 			}
 
 			MeteormanBroken.DisplayName: Hombre de Meteorito abatido
@@ -141,72 +117,25 @@ Mods: {
 				DisplayName: Ninja
 
 				TownNPCMood: {
-					// Content: Me gusta como está quedando el barrio.
-					// NoHome: Estoy entrenado para no necesitar una casa, pero no me vendría mal una la verdad.
-					// LoveSpace: Mataría por una casita en el bosque....
-					// FarFromHome: A ver si vamos volviendo ya, que son horas.
-					// DislikeCrowded: ¿Y ese grupo de gente corriendo de esa manera tan rara?.
-					// HateCrowded: Por aquí hay demasiada gente, todo el día tocando mis Shurikens.
-					// LoveBiome: No tiene.
-					// LikeBiome: Me gusta {BiomeName}, me recuerda a mis años de entrenamiento con Master San.
-					// DislikeBiome: "7,8 too much {BiomeName}."
-					// HateBiome: Demasiados colorines en {BiomeName}.
-					// LoveNPC: Entreno mejor cuando {NPCName} está disponible.
-					// LikeNPC: no tiene
-					// LikeNPC_Princess: No puedo evitar pensar que estoy en un RPG al ver a {NPCName}.
-					// DislikeNPC: Primero secuestra a mi maestro ¿y ahora pretende venir a vivir aquí? {NPCName} le echa mucha cara.
-					// HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos"
-					// Princess_LovesNPC: I like {NPCName}.
+					Content: Me gusta como está quedando el barrio.
+					NoHome: Estoy entrenado para no necesitar una casa, pero no me vendría mal una la verdad.
+					LoveSpace: Mataría por una casita en el bosque....
+					FarFromHome: A ver si vamos volviendo ya, que son horas.
+					DislikeCrowded: ¿Y ese grupo de gente corriendo de esa manera tan rara?.
+					HateCrowded: Por aquí hay demasiada gente, todo el día tocando mis Shurikens.
+					LoveBiome: No tiene.
+					LikeBiome: Me gusta {BiomeName}, me recuerda a mis años de entrenamiento con Master San.
+					DislikeBiome: "7,8 too much {BiomeName}."
+					HateBiome: Demasiados colorines en {BiomeName}.
+					LoveNPC: Entreno mejor cuando {NPCName} está disponible.
+					LikeNPC: no tiene
+					LikeNPC_Princess: No puedo evitar pensar que estoy en un RPG al ver a {NPCName}.
+					DislikeNPC: Primero secuestra a mi maestro ¿y ahora pretende venir a vivir aquí? {NPCName} le echa mucha cara.
+					HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos"
+					Princess_LovesNPC: "{NPCName} es el alma de todas las fiestas. Pero la última se fue un poco de las manos... La próxima vez voy a pasar del Lanzamiento de Shurikens a Ciegas. Menos mal que la enfermera estaba por allí... Bonito día, no?"
 				}
 
-				// Census.SpawnCondition: Kill King Slime
-			}
-
-			StarMerchant: {
-				DisplayName: Mercader Estelar
-
-				TownNPCMood: {
-					// Content: Estoy feliz.
-					// NoHome: Detesto no tener un hogar.
-					// FarFromHome: Estoy demasiado lejos de casa.
-					// LoveSpace: Me encanta tener tanto espacio.
-					// DislikeCrowded: No me gusta tener tan poco espacio.
-					// HateCrowded: Detesto tener poco espacio.
-					// LoveBiome: Adoro el biomedio {BiomeName}.
-					// LikeBiome: Me gusta el biomedio {BiomeName}.
-					// DislikeBiome: No me gusta el biomedio {BiomeName}.
-					// HateBiome: Detesto el biomedio {BiomeName}.
-					// LoveNPC: Adoro a {NPCName}.
-					// LikeNPC: Me gusta {NPCName}.
-					// DislikeNPC: "{NPCName} no me cae nada bien."
-					// HateNPC: Detesto a {NPCName}.
-					// LikeNPC_Princess: I like {NPCName}.
-					// Princess_LovesNPC: I like {NPCName}.
-				}
-			}
-
-			CopperGuard: {
-				#............................................................................................................TownGuardians
-				DisplayName: Guardia de Cobre
-
-				TownNPCMood: {
-					// Content: Estoy feliz.
-					// NoHome: Detesto no tener un hogar.
-					// FarFromHome: Estoy demasiado lejos de casa.
-					// LoveSpace: Me encanta tener tanto espacio.
-					// DislikeCrowded: No me gusta tener tan poco espacio.
-					// HateCrowded: Detesto tener poco espacio.
-					// LoveBiome: Adoro el biomedio {BiomeName}.
-					// LikeBiome: Me gusta el biomedio {BiomeName}.
-					// DislikeBiome: No me gusta el biomedio {BiomeName}.
-					// HateBiome: Detesto el biomedio {BiomeName}.
-					// LoveNPC: Adoro a {NPCName}.
-					// LikeNPC: Me gusta {NPCName}.
-					// DislikeNPC: "{NPCName} no me cae nada bien."
-					// HateNPC: Detesto a {NPCName}.
-					// LikeNPC_Princess: I like {NPCName}.
-					// Princess_LovesNPC: I like {NPCName}.
-				}
+				Census.SpawnCondition: Mata al Rey Slime
 			}
 
 			#............................................................................................................Enemies
@@ -217,12 +146,10 @@ Mods: {
 			MeteoriteMan.DisplayName: Cuerpo de meteorito
 			TC_MeteoriteMotherSlime.DisplayName: Gran slime de meteorito
 			TC_MeteoriteSlime.DisplayName: Slime de meteorito
-			MeteoriteSlime.DisplayName: Slime de meteorito
 			MeteoriteWormBody.DisplayName: Gusano meteoro
 			MeteoriteWormHead.DisplayName: Gusano meteoro
 			MeteoriteWormTail.DisplayName: Gusano meteoro
-			TCMeteorBossBody.DisplayName: Jefe meteorito
-			TCMeteorBossMinion.DisplayName: Súbdito del jefe de meteorito
+			GraniteEnergy.DisplayName: Granitostra
 			GraniteSlime.DisplayName: Slime de granito
 			LihzahrdSlime.DisplayName: Slime de templo
 			#............................................................................................................Critters
@@ -291,26 +218,23 @@ Mods: {
 
 		Bestiary: {
 			#........................................................................................................................................................TownNPCs
-			Archeologist: El Arqueólogo provee con útiles objetos básicos para el jugador nuevo. Parece tener cierta investigación en proceso...
-			Carver: Antigua miembro de una tribu especialista en tallar madera, se encontraba congelada.
-			Enchanter: Víctima de sus propios encantamientos, el ahora líberado encantador promete no volver a pifiarla.
+			Enchanter: Víctima de sus propios encantamientos, el ahora liberado encantador promete no volver a pifiarla.
 			McMoneyPants: Todos los que os burlais de mis terracajas misteriosas no borréis está descripción que nos reiemos todos al cabo de un tiempo.
 			Meteorman: El hombre de meteorito viene del meteoro para realizar meteóricas tareas. Es una roca guay.
 			Ninja: Discípulo del legendario Master San, experto en armas arrojadizas, o eso dice. Es el hermano del Guía.
-			StarMerchant: Futura actualización.
-			#........................................................................................................................................................TownGuardians
-			CopperGuard: Gracias a la mágia, esta vieja armadura ha cobrado vida, listo para servir.
+			CandyElf: Procedente del Polo Norte, el Elfo de los Caramelos espera pacientemente a la estación invernal para entregar regalos a quienes se porten bien.
 			#........................................................................................................................................................Enemies
 			Clawclops: Go, go, go, go, go, go, go, go, go, go! Gotta go fast, gotta go fast! Gotta go faster, faster, faster, faster, faster!.
 			CorruptedFlameElemental: Elemental de fuego afectado por la corrupción, no presenta más cambios que un color verdoso que antes no tenía.
-			Eyeling: Feroz bestia corrupta de 8 patas... o mas bien, inofensivo pseudocangrejo corrupto, hay quien dice que se puede domesticar.
+			Eyeling: Feroz bestia corrupta de 4 patas... o mas bien, inofensivo pseudocangrejo corrupto, hay quien dice que se puede domesticar.
 			SkitteringHusk: Un mero cascarón de lo que fue habitante de estas tierras ahora contaminadas por la Corrupción.
 			GraniteSlime: Un slime normal y corriente, pero endurecido por el granito de las cuevas.
+			GraniteEnergy: Esta ostra de granito nació en entornos de alta presión y su concha puede soportar hasta 5000 atm. La gravedad parece no afectarle.
 			LihzahrdSlime: Los slimes se han colado en el templo, y como no, ya se han adaptado al medio.
 			MeteoriteWorm: ¡Gusanos espaciales... en la tierra!
-			MeteoriteMan.DisplayName: Mira tu donde estaba el resto de todas esas cabezas sueltas...
-			// TC_MeteoriteMotherSlime: Algunos slimes hicieron pelota y ahora es un único slime enorme.
-			// TC_MeteoriteSlime: Por algún motivo que no logro comprender, algunos slimes en vez de arder ahora echan pinchos de fuego.
+			MeteoriteMan: Mira tú donde estaba el resto de esas cabezas flotantes...
+			TC_MeteoriteMotherSlime: Algunos slimes se juntaron y ahora son un solo slime gigante.
+			TC_MeteoriteSlime: Por alguna razón que no logro entender, algunos slimes en vez de arder ahora disparan pinchos de fuego.
 			#........................................................................................................................................................Critters
 			MeteorFairy: Extrañas esquirlas de fuego que parecen tener vida propia.
 			CopperBunny: Estos coloridos conejitos adquirieron estes brillantes aspectos después de hacer sus madrigueras en los sustratos especiales del hombre de meteorito.
@@ -377,77 +301,13 @@ Mods: {
 
 		#This is used to display the NPC's dialogues.
 		Dialogue: {
-			Archeologist: {
-				LoreNPCsButton: Lore - NPCs.
-				LoreBossesButton: Lore - Jefes.
-				LoreNPCsChat: En una próxima update.
-				LoreBossesChat: En una próxima update.
-				ChangeButtons: Cambiar botón.
-				StandardDialogue1: Standard Dialogue 1.
-				StandardDialogue2: Standard Dialogue 2.
-				StandardDialogue3: Standard Dialogue 3.
-				StandardDialogue4: Standard Dialogue 4.
-				StandardDialogue5: Standard Dialogue 5.
-				InfoLore: Info Lore.
-				TalkALot: Talk A Lot.
-				NotTalkALot: Not Talk A Lot.
-				BestiaryGirl: Chica bestia {0}.
-				Dryad: Driada {0}.
-				Guide: Guía {0}.
-				Ninja: Ninja {0}.
-				WitchDoctor: Doctor brujo {0}.
-				FaltanNPCs: Faltan NPCs, ¿que puñetas es este chat?.
-				GoblinInvasion: Hay invasión de goblins.
-				FrostLegionInvasion: Hay invasión de hielo.
-				PiratesInvansion: Hay invasión pirata.
-				MartianInvansion: Hay invasión marciana.
-				NotInvasion: No hay invasión.
-				SlimeKing1: No has matado al Rey Slime.
-				SlimeKing2: Has matado al Rey Slime.
-				EyeofCthulhu1: No has matado al Ojo de Cthulhu.
-				EyeofCthulhu2: Has matado al Ojo de Cthulhu.
-				BrainWorm1: No has matado al Devoramundos.
-				BrainWorm2: Has matado al Devoramundos.
-				QueenBee1: No has matado a la Abeja Reina.
-				QueenBee2: Has matado a la Abeja Reina.
-				Skeletron1: No has matado a Skeletron.
-				Skeletron2: Has matado a Skeletron.
-				Deerclops1: No has matado al Cierviclople o como se llame.
-				Deerclops2: Has matado al Cierviclople o como se llame.
-				Wall1: No has matado al Muro de carne.
-				Wall2: Has matado al Muro de carne.
-				Hardmode: Estamos en Hardmode.
-				NotHardmode: No estamos en Hardmode.
-				QueenSlime1: No has matado al Reina Slime.
-				QueenSlime2: Has matado al Reina Slime.
-				Twins1: No has matado a los gemelos.
-				Twins2: Has matado a los gemelos.
-				Destroyer1: No has matado al destructor
-				Destroyer2: Has matado  al destructor
-				SkeletronPrime1: No has matado a Skeletron v2.
-				SkeletronPrime2: Has matado a Skeletron v2.
-				Plantera1: No has matado a Plantera.
-				Plantera2: Has matado a Plantera.
-				Golem1: No has matado al Golem.
-				Golem2: Has matado al Golem.
-				Fishron1: No has matado al peixe.
-				Fishron2: Has matado al peixe.
-				EmpressOfLight1: No has matado a la emperatriz de luz.
-				EmpressOfLight2: Has matado a la emperatriz de luz.
-				AncientCultist1: No has matado a los cultistas.
-				AncientCultist2: Has matado a los cultistas.
-				Towers1: No has matado las torres.
-				Towers2: Has matado las torres.
-				Moonlord1: No has matado al Señor de la Luna.
-				Moonlord2: Has matado al Señor de la Luna.
-			}
-
-			CarverFrozen.RescueDialogue: ......
-
-			Carver: {
-				TemporalDialogue: Gracias por rescatarme, en un futuro podré ayudarte.
-				QuestNotFinished1: Lo siento, todavía necesito
-				QuestNotFinished2: para completar mi tarea.
+			CandyElf: {
+				StandardDialogue1: La gente piensa que me gusta el inviernito, pero mi época favorita son las vacacioncitas de primavera.
+				StandardDialogue2: ¿Sabías que Papá Noel tiene una lista con todas las personitas del mundo? Te sorprendería saber la cantidad de informacioncita que tiene, vecinito.
+				StandardDialogue3: Este año trabajé un montoncete. No puedo eviar pensar que debería cobrar un poquiiiito más. Y también una casita un poco más grandecita. Ya me entiendes, vecinito.
+				StandardDialogue4: Echo de menos el trabajo a distancia desde mi casita.
+				SantaClaus: Papá Noel es un hombre la mar de simpático, no crees, vecinito? *Mientras habla, te enseña un papel arrugado que dice: PAPÁ NOEL ESTÁ ESCUCHANDO*.
+				PartyGirl: ¿Por casualidad no sabrías si {0} está montando alguna juerguilla? ¡Estoy deseando pegarme unos buenos bailecitos!
 			}
 
 			EnchanterPrisioner.RescueDialogue: Puñetero cristal...
@@ -506,7 +366,7 @@ Mods: {
 				MeteoriteHardenerSolution1: Podemos sacarle más rendimiento al meteorito, con mi clentamintor y una solución especial lo podríamos conseguir, pero me va a llevar algo de tiempo preparar la solución.
 				MeteoriteHardenerSolution2: Me llevó algo mas de lo esperado, pero por fin la tengo, con esto podemos mejorar el meteorito.
 				MeteoriteOre: Por ahora deberíamos hacer acopio de mineral de meteorito, cuando recupere mis herramientas podremos hacer cosas chulas.
-				RefinedMeteoriteOre: Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Mythril.
+				RefinedMeteoriteOre: Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Adamantita o Titanio.
 				SoilsDialogue1: En mi tiempo libre soy aficcionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares
 				SoilsDialogue2: ¡Que diversidad de minerales hay en la Tierra!, podremos conseguir multitud de nuevos frutos ricos en minerales.
 				SoilsDialogue3: Parece que las ardillas cambian de color cuando comen los frutos de los árboles mineralosos, igual te encuentras alguna en los árboles.
@@ -531,15 +391,7 @@ Mods: {
 				QueenSlime2: No esperaba menos de Master-San, ni un sólo rasguño.
 				SlimeRain1: Corre el rumor de que a veces el tiempo se pone loco y llueven slimes, menudas tonterías dice la gente.
 				SlimeRain2: ¡El rumor era cierto, si valoras tu vida corre!.
-				BattleChangue: Venga, vamos a poner en práctica el ¡BattleChangue!
-			}
-
-			StarMerchant.TemporalDialogue: Hola, vengo de la lejana China, ha sido un viaje muy largo, por ahora descansaré una temporada.
-
-			CopperGuard: {
-				StandardDialogue1: La defensa de esta casa es mi única prioridad, estoy aquí para cumplir con mi deber.
-				StandardDialogue2: Mi deber es proteger y servir, mi lealtad es al pueblo de esta ciudad.
-				StandardDialogue3: Pulir mi armadura otorga beneficios mágicos.
+				BattleChange: Venga, vamos a poner en práctica el ¡BattleChangue!
 			}
 
 			Guide.Ninja: Gracias por rescatar a mi hermano {$Mods.TheCollectors.NPCName.Ninja}.
@@ -560,12 +412,7 @@ Mods: {
 			#............................................................................................................Accesories
 			MeteormanHeart: {
 				DisplayName: Corazón de meteorito
-				Tooltip: Aumenta la defensa en 20
-			}
-
-			StatueDetector: {
-				// DisplayName: Radar Statue
-				// Tooltip: Shows the location of nearby statues on the map
+				Tooltip: ""
 			}
 
 			TCMeteorWings: {
@@ -1380,7 +1227,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir el Ankh Shield
+					Puede tocar cualquiera de los materiales para construir el Escudo de cruz ansata
 					'''
 			}
 
@@ -1389,7 +1236,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir el Shellphone
+					Puede tocar cualquiera de los materiales para construir el Teleconcha
 					'''
 			}
 
@@ -1398,7 +1245,7 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir las Terraspark Boots
+					Puede tocar cualquiera de los materiales para construir las Botas de terrachispa
 					'''
 			}
 
@@ -1407,7 +1254,25 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Puede tocar cualquiera de los materiales para construir la Zenith
+					Puede tocar cualquiera de los materiales para construir la Cénit
+					'''
+			}
+
+			BaitTerrabox: {
+				DisplayName: Terracaja misteriosa - Cebo
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Puede tocar cualquier material que se usa como cebo
+					'''
+			}
+
+			StoryPaintings: {
+				DisplayName: Galería del coleccionista
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Ábrela para descubrir las increibles aventuras del Hombre de Meteorito y el Ninja.
 					'''
 			}
 
@@ -1617,6 +1482,16 @@ Mods: {
 			MeteoriteWormBanner: {
 				DisplayName: Estandarte de Gusano meteoro
 				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Gusano meteoro
+			}
+
+			TCBigMeteoriteSlime: {
+				DisplayName: Big Meteorite Slime Banner
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Gran Slime de Meteorito
+			}
+
+			TCMeteoriteSlime: {
+				DisplayName: Meteorite Slime Banner
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Slime de Meteorito
 			}
 
 			#............................................................................................................Placeable Bosses
@@ -1833,7 +1708,7 @@ Mods: {
 			}
 
 			RefinedMeteoriteChestLocked: {
-				// DisplayName: Refined Meteorite Chest Locked
+				DisplayName: Cofre cerrado de meteorito refinado
 				// Tooltip: ""
 			}
 
@@ -1893,7 +1768,7 @@ Mods: {
 			}
 
 			RefinedMeteoritePlate: {
-				// DisplayName: Refined Meteorite Plate
+				DisplayName: Plato de meteorito refinado
 				// Tooltip: ""
 			}
 
@@ -2202,6 +2077,11 @@ Mods: {
 				// Tooltip: ""
 			}
 
+			CrimsonShuriken: {
+				DisplayName: Estrella ninja carmesí
+				// Tooltip: ""
+			}
+
 			GoldShuriken: {
 				DisplayName: Estrella ninja de oro
 				// Tooltip: ""
@@ -2268,7 +2148,7 @@ Mods: {
 			}
 
 			RefinedMeteoriteMinecartItem: {
-				// DisplayName: Refined Meteorite Minecart
+				DisplayName: Vagoneta de meteorito refinado
 				// Tooltip: ""
 			}
 
@@ -2285,7 +2165,7 @@ Mods: {
 
 			MonjaItem: {
 				// DisplayName: Monja
-				Tooltip: Invoca una monja luminosa
+				Tooltip: Invoca a la mascota de Las Monjas
 			}
 
 			MinionBossPetItem: {
@@ -2594,28 +2474,96 @@ Mods: {
 				// Tooltip: ""
 			}
 
-			CrimsonShuriken: {
-				DisplayName: Estrella ninja carmesí
+			TCRefinedMeteorWings: {
+				DisplayName: Alas de hada meteoro
+				Tooltip:
+					'''
+					Permite volar y caer lentamente
+					"Siéntete como un Hada Espacial"
+					'''
+			}
+
+			PreHardmodePets: {
+				// DisplayName: Pre Hardmode Pets
 				// Tooltip: ""
 			}
 
-			TCBigMeteoriteSlime: {
-				// DisplayName: T C Big Meteorite Slime
+			RedCandyCaneBed: {
+				DisplayName: Cama de caramelo rojo
 				// Tooltip: ""
 			}
 
-			TCMeteoriteSlime: {
-				// DisplayName: T C Meteorite Slime
+			RedCandyCaneChest: {
+				DisplayName: Cofre de caramelo rojo
 				// Tooltip: ""
 			}
 
-			StoryPaintings: {
-				// DisplayName: Story Paintings
+			RedCandyCaneChestKey: {
+				DisplayName: Llave de cofre de caramelo rojo
 				// Tooltip: ""
 			}
 
-			ExampleCampfire: {
-				// DisplayName: Example Campfire
+			RedCandyCaneDoor: {
+				DisplayName: Puerta de caramelo rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCanePlatform: {
+				DisplayName: Plataforma de caramelo rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCaneTable: {
+				DisplayName: Mesa de caramelo rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCaneBathtub: {
+				DisplayName: Bañera de caramelo rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCaneCraftingStation: {
+				DisplayName: Elficarameleador rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCaneLamp.DisplayName: Lámpara de caramelo rojo
+
+			RedCandyCaneCandle: {
+				DisplayName: Vela de caramelo rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCaneChair: {
+				DisplayName: Silla de caramelo rojo
+				// Tooltip: ""
+			}
+
+			RedCandyCaneLantern.DisplayName: Linterna de caramelo rojo
+
+			RedCandyCaneSofa: {
+				DisplayName: Sofá de caramelo rojo
+				// Tooltip: ""
+			}
+
+			GraniteEnergyBanner: {
+				DisplayName: Estandarte de Granitostra
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Granitostra
+			}
+
+			GraniteSlimeBanner: {
+				DisplayName: Estandarte de Slime de granito
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Garrojo
+			}
+
+			LihzardSlimeBanner: {
+				DisplayName: Estandarte de Slime de templo
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Slime de templo
+			}
+
+			ExampleMinecart: {
+				// DisplayName: Example Minecart
 				// Tooltip: ""
 			}
 		}
@@ -2634,11 +2582,6 @@ Mods: {
 			MeteorHoverboard: {
 				DisplayName: Hoverboard meteórico
 				Description: Estupendo para explorar islas flotantes
-			}
-
-			Monja: {
-				// DisplayName: Monja
-				Description: ¡Monja luminosa!
 			}
 
 			ShurikenjutsuBuff: {
@@ -2687,8 +2630,8 @@ Mods: {
 			}
 
 			MonjaBuff: {
-				// DisplayName: Monja Buff
-				// Description: Mods.TheCollectors.Buffs.MonjaBuff.Description
+				// DisplayName: Monja
+				Description: Las Monjas, el mejor mod de la ciudad
 			}
 
 			MeteorJavelinDebuff: {
@@ -2764,14 +2707,14 @@ Mods: {
 			// MinionBossEye.DisplayName: Minion Boss Eye
 			// LivingSpaceRockProjectile.DisplayName: Living Space Rock Projectile
 			// MonjaProjectile.DisplayName: Monja Projectile
-			// SpikedGreenSlimeSpike.DisplayName: Spiked Green Slime Spike
-			// TCMeteoriteSlimeSpike.DisplayName: T C Meteorite Slime Spike
+			// TCMeteoriteSlimeSpike.DisplayName: Meteorite Slime Spike
+			// GraniteEnergyProjectile.DisplayName: Granite Energy Projectile
 		}
 
 		Tiles: {
 			RefinedMeteoriteChest: {
-				// ContainerName: Refined Meteorite Chest
-				// MapEntry: Refined Meteorite Chest
+				ContainerName: Cofre
+				MapEntry: Cofre de meteorito refinado
 				MapEntry0: Cofre de meteorito refinado
 				MapEntry1: Cofre de meteorito refinado cerrado
 			}
@@ -2841,120 +2784,123 @@ Mods: {
 			TitaniumSoilTile.MapEntry: Sustrato de titanio
 			TungstenSoilTile.MapEntry: Sustrato de tungsteno
 			VortexSoilTile.MapEntry: Sustrato de vórtice
-			// TheCollectorsBanners.MapEntry: Banner
+			TheCollectorsBanners.MapEntry: Estandarte
 			// MeteormanPaintings.MapEntry: Painting
 			// NinjaPaintings.MapEntry: Painting
-			AdamantiteBunnyCageTile.MapEntry: Jaula de conejo de adamantita
-			// AdamantiteSquirrelCageTile.MapEntry: Adamantite Squirrel Cage
-			ChlorophyteBunnyCageTile.MapEntry: Jaula de conejo de clorofita
-			// ChlorophyteSquirrelCageTile.MapEntry: Chlorophyte Squirrel Cage
+			AdamantiteBunnyCageTile.MapEntry: Jaula de ardilla de adamantita
+			AdamantiteSquirrelCageTile.MapEntry: Jaula de conejo de adamantita
+			ChlorophyteBunnyCageTile.MapEntry: Jaula de ardilla de clorofita
+			ChlorophyteSquirrelCageTile.MapEntry: Jaula de ardilla de clorofita
 			CobaltBunnyCageTile.MapEntry: Jaula de conejo de cobalto
-			// CobaltSquirrelCageTile.MapEntry: Cobalt Squirrel Cage
+			CobaltSquirrelCageTile.MapEntry: Jaula de ardilla de cobalto
 			CopperBunnyCageTile.MapEntry: Jaula de conejo de cobre
-			// CopperSquirrelCageTile.MapEntry: Copper Squirrel Cage
+			CopperSquirrelCageTile.MapEntry: Jaula de ardilla de cobre
 			CrimtaneBunnyCageTile.MapEntry: Jaula de conejo carmesí
-			// CrimtaneSquirrelCageTile.MapEntry: Crimtane Squirrel Cage
+			CrimtaneSquirrelCageTile.MapEntry: Jaula de ardilla carmesí
 			DemoniteBunnyCageTile.MapEntry: Jaula de conejo endemoniado
-			// DemoniteSquirrelCageTile.MapEntry: Demonite Squirrel Cage
+			DemoniteSquirrelCageTile.MapEntry: Jaula de ardilla endemoniada
 			GoldBunnyCageTile.MapEntry: Jaula de conejo de oro
-			// GoldSquirrelCageTile.MapEntry: Gold Squirrel Cage
+			GoldSquirrelCageTile.MapEntry: Jaula de ardilla de oro
 			HallowedBunnyCageTile.MapEntry: Jaula de conejo sagrado
-			// HallowedSquirrelCageTile.MapEntry: Hallowed Squirrel Cage
+			HallowedSquirrelCageTile.MapEntry: Jaula de ardilla sagrada
 			HardenedMeteoriteBunnyCageTile.MapEntry: Jaula de conejo de meteorito endurecido
-			// HardenedMeteoriteSquirrelCageTile.MapEntry: Hardened Meteorite Squirrel Cage
+			HardenedMeteoriteSquirrelCageTile.MapEntry: Jaula de ardilla de meteorito endurecido
 			HellstoneBunnyCageTile.MapEntry: Jaula de conejo infernal
-			// HellstoneSquirrelCageTile.MapEntry: Hellstone Squirrel Cage
+			HellstoneSquirrelCageTile.MapEntry: Jaula de ardilla infernal
 			IronBunnyCageTile.MapEntry: Jaula de conejo de hierro
-			// IronSquirrelCageTile.MapEntry: Iron Squirrel Cage
+			IronSquirrelCageTile.MapEntry: Jaula de ardilla de hierro
 			LeadBunnyCageTile.MapEntry: Jaula de conejo de plomo
-			// LeadSquirrelCageTile.MapEntry: Lead Squirrel Cage
+			LeadSquirrelCageTile.MapEntry: Jaula de ardilla de plomo
 			LuminiteBunnyCageTile.MapEntry: Jaula de conejo de luminita
-			// LuminiteSquirrelCageTile.MapEntry: Luminite Squirrel Cage
+			LuminiteSquirrelCageTile.MapEntry: Jaula de ardilla de luminita
 			MeteoriteBunnyCageTile.MapEntry: Jaula de conejo de meteorito
-			// MeteoriteSquirrelCageTile.MapEntry: Meteorite Squirrel Cage
+			MeteoriteSquirrelCageTile.MapEntry: Jaula de ardilla de meteorito
 			MythrilBunnyCageTile.MapEntry: Jaula de conejo de mythril
-			// MythrilSquirrelCageTile.MapEntry: Mythril Squirrel Cage
+			MythrilSquirrelCageTile.MapEntry: Jaula de ardilla de mythril
 			NebulaBunnyCageTile.MapEntry: Jaula de conejo nebuloso
-			// NebulaSquirrelCageTile.MapEntry: Nebula Squirrel Cage
+			NebulaSquirrelCageTile.MapEntry: Jaula de ardilla nebulosa
 			ObsidianBunnyCageTile.MapEntry: Jaula de conejo de obsidiana
-			// ObsidianSquirrelCageTile.MapEntry: Obsidian Squirrel Cage
+			ObsidianSquirrelCageTile.MapEntry: Jaula de ardilla de obsidiana
 			OrichalcumBunnyCageTile.MapEntry: Jaula de conejo de oricalco
-			// OrichalcumSquirrelCageTile.MapEntry: Orichalcum Squirrel Cage
+			OrichalcumSquirrelCageTile.MapEntry: Jaula de ardilla de oricalco
 			PalladiumBunnyCageTile.MapEntry: Jaula de conejo de paladio
-			// PalladiumSquirrelCageTile.MapEntry: Palladium Squirrel Cage
+			PalladiumSquirrelCageTile.MapEntry: Jaula de ardilla de paladio
 			PlatinumBunnyCageTile.MapEntry: Jaula de conejo de platino
-			// PlatinumSquirrelCageTile.MapEntry: Platinum Squirrel Cage
+			PlatinumSquirrelCageTile.MapEntry: Jaula de ardilla de platino
 			ShroomiteBunnyCageTile.MapEntry: Jaula de conejo de piñonita
-			// ShroomiteSquirrelCageTile.MapEntry: Shroomite Squirrel Cage
+			ShroomiteSquirrelCageTile.MapEntry: Jaula de ardilla de piñonita
 			SilverBunnyCageTile.MapEntry: Jaula de conejo de plata
-			// SilverSquirrelCageTile.MapEntry: Silver Squirrel Cage
+			SilverSquirrelCageTile.MapEntry: Jaula de ardilla de plata
 			SolarBunnyCageTile.MapEntry: Jaula de conejo solar
-			// SolarSquirrelCageTile.MapEntry: Solar Squirrel Cage
+			SolarSquirrelCageTile.MapEntry: Jaula de ardilla solar
 			SpectreBunnyCageTile.MapEntry: Jaula de conejo espectral
-			// SpectreSquirrelCageTile.MapEntry: Spectre Squirrel Cage
+			SpectreSquirrelCageTile.MapEntry: Jaula de ardilla espectral
 			StardustBunnyCageTile.MapEntry: Jaula de conejo de polvo estelar
-			// StardustSquirrelCageTile.MapEntry: Stardust Squirrel Cage
+			StardustSquirrelCageTile.MapEntry: Jaula de ardilla de polvo estelar
 			SturdyFossilBunnyCageTile.MapEntry: Jaula de conejo de fósil férreo
-			// SturdyFossilSquirrelCageTile.MapEntry: Sturdy Fossil Squirrel Cage
+			SturdyFossilSquirrelCageTile.MapEntry: Jaula de ardilla de fósil férreo
 			TinBunnyCageTile.MapEntry: Jaula de conejo de estaño
-			// TinSquirrelCageTile.MapEntry: Tin Squirrel Cage
+			TinSquirrelCageTile.MapEntry: Jaula de ardilla de estaño
 			TitaniumBunnyCageTile.MapEntry: Jaula de conejo de titanio
-			// TitaniumSquirrelCageTile.MapEntry: Titanium Squirrel Cage
+			TitaniumSquirrelCageTile.MapEntry: Jaula de ardilla de titanio
 			TungstenBunnyCageTile.MapEntry: Jaula de conejo de tungsteno
-			// TungstenSquirrelCageTile.MapEntry: Tungsten Squirrel Cage
+			TungstenSquirrelCageTile.MapEntry: Jaula de ardilla de tungsteno
 			VortexBunnyCageTile.MapEntry: Jaula de conejo de vórtice
-			// VortexSquirrelCageTile.MapEntry: Vortex Squirrel Cage
+			VortexSquirrelCageTile.MapEntry: Jaula de ardilla de vórtice
 			// ThrowingDummy.MapEntry: Throwing Dummy
-			// AdamantiteTreeSapling.MapEntry: Adamantite Sapling
-			// ChlorophyteTreeSapling.MapEntry: Chlorophyte Sapling
-			// CobaltTreeSapling.MapEntry: Cobalt Sapling
-			// CopperTreeSapling.MapEntry: Copper Sapling
-			// CrimtaneTreeSapling.MapEntry: Crimtane Sapling
-			// DemoniteTreeSapling.MapEntry: Demonite Sapling
-			// GoldTreeSapling.MapEntry: Gold Sapling
-			// HallowTreeSapling.MapEntry: Hallow Sapling
-			// HardenedMeteoriteTreeSapling.MapEntry: Hardened Meteorite Sapling
-			// HellstoneTreeSapling.MapEntry: Hellstone Sapling
-			// IronTreeSapling.MapEntry: Iron Sapling
-			// LeadTreeSapling.MapEntry: Lead Sapling
-			// LuminiteTreeSapling.MapEntry: Luminite Sapling
-			// MeteoriteTreeSapling.MapEntry: Meteorite Sapling
-			// MythrilTreeSapling.MapEntry: Mythril Sapling
-			// NebulaTreeSapling.MapEntry: Nebula Sapling
-			// ObsidianTreeSapling.MapEntry: Obsidian Sapling
-			// OrichalcumTreeSapling.MapEntry: Orichalcum Sapling
-			// PalladiumTreeSapling.MapEntry: Palladium Sapling
-			// PlatinumTreeSapling.MapEntry: Platinum Sapling
-			// ShroomiteTreeSapling.MapEntry: Shroomite Sapling
-			// SilverTreeSapling.MapEntry: Silver Sapling
-			// SolarTreeSapling.MapEntry: Solar Sapling
-			// SpectreTreeSapling.MapEntry: Spectre Sapling
-			// StardustTreeSapling.MapEntry: Stardust Sapling
-			// SturdyFossilTreeSapling.MapEntry: Sturdy Fossil Sapling
-			// TinTreeSapling.MapEntry: Tin Sapling
-			// TitaniumTreeSapling.MapEntry: Titanium Sapling
-			// TungstenTreeSapling.MapEntry: Tungsten Sapling
-			// VortexTreeSapling.MapEntry: Vortex Sapling
+			AdamantiteTreeSapling.MapEntry: Retoño de Adamantita
+			ChlorophyteTreeSapling.MapEntry: Retoño de Clorofita
+			CobaltTreeSapling.MapEntry: Retoño de Cobalto
+			CopperTreeSapling.MapEntry: Retoño de Cobre
+			CrimtaneTreeSapling.MapEntry: Retoño Carmesí
+			DemoniteTreeSapling.MapEntry: Retoño Endemoniado
+			GoldTreeSapling.MapEntry: Retoño Dorado
+			HallowTreeSapling.MapEntry: Retoño Sagrado
+			HardenedMeteoriteTreeSapling.MapEntry: Retoño de Meteorito Endurecido
+			HellstoneTreeSapling.MapEntry: Retoño Infernal
+			IronTreeSapling.MapEntry: Retoño de Hierro
+			LeadTreeSapling.MapEntry: Retoño de Plomo
+			LuminiteTreeSapling.MapEntry: Retoño de Luminita
+			MeteoriteTreeSapling.MapEntry: Retoño de Meteorito
+			MythrilTreeSapling.MapEntry: Retoño de Mythril
+			NebulaTreeSapling.MapEntry: Retoño Nebuloso
+			ObsidianTreeSapling.MapEntry: Retoño de Obsidiana
+			OrichalcumTreeSapling.MapEntry: Retoño de Oricalco
+			PalladiumTreeSapling.MapEntry: Retoño de Paladio
+			PlatinumTreeSapling.MapEntry: Retoño de Platino
+			ShroomiteTreeSapling.MapEntry: Retoño de Piñonita
+			SilverTreeSapling.MapEntry: Retoño de Plata
+			SolarTreeSapling.MapEntry: Retoño Solar
+			SpectreTreeSapling.MapEntry: Retoño Espectral
+			StardustTreeSapling.MapEntry: Retoño de Polvo Estelar
+			SturdyFossilTreeSapling.MapEntry: Retoño de Fósil Férreo
+			TinTreeSapling.MapEntry: Retoño de Estaño
+			TitaniumTreeSapling.MapEntry: Retoño de Titanio
+			TungstenTreeSapling.MapEntry: Retoño de Tungsteno
+			VortexTreeSapling.MapEntry: Retoño de Vórtice
 			RefinedMeteoriteBeam.MapEntry: Columna
 			RefinedMeteoriteBlock.MapEntry: Bloque
 			RefinedMeteoriteCandelabra.MapEntry: Candelabro
 			RefinedMeteoriteCandle.MapEntry: Vela
 			RefinedMeteoriteChandelier.MapEntry: Lámpara de araña
-			RefinedMeteoriteLamp.MapEntry: Lámpara
+			RefinedMeteoriteLamp.MapEntry: Lámpara de suelo de meteorito refinado
 			RefinedMeteoriteLantern.MapEntry: Linterna
 			RefinedMeteoriteChimney.MapEntry: Chimenea
-		}
+			RedCandyCaneBed.MapEntry: Cama de caramelo rojo
 
-		Biomes: {
-			ExampleSurfaceBiome: {
-				// DisplayName: Example Surface Biome
-				// TownNPCDialogueName: the Example Surface Biome
+			RedCandyCaneChest: {
+				MapEntry0: Cofre de caramelo rojo
+				MapEntry1: Cofre de caramelo rojo
 			}
 
-			ExampleUndergroundBiome: {
-				// DisplayName: Example Underground Biome
-				// TownNPCDialogueName: the Example Underground Biome
-			}
+			RedCandyCaneDoorClosed.MapEntry: Puerta cerrada de caramelo rojo
+			RedCandyCaneDoorOpen.MapEntry: Puerta abierta de caramelo rojo
+			RedCandyCaneTable.MapEntry: Mesa de caramelo rojo
+			RedCandyCaneBathtub.MapEntry: Bañera de caramelo rojo
+			RedCandyCaneCraftingStation.MapEntry: Elficarameleador rojo
+			RedCandyCaneCandle.MapEntry: Vela de caramelo rojo
+			RedCandyCaneLantern.MapEntry: Linterna de caramelo rojo
+			RedCandyCaneSofa.MapEntry: Sofa de caramelo rojo
 		}
 
 		Configs: {

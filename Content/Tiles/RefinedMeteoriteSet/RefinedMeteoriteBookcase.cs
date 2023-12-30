@@ -25,7 +25,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
-			DustType = ModContent.DustType<Sparkle>();
+			DustType = ModContent.DustType<RMSparkle>();
 			AdjTiles = new int[] { TileID.Bookcases };
 
 			// Names

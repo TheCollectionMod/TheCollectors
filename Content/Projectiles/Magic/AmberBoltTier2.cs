@@ -41,7 +41,7 @@ namespace TheCollectors.Content.Projectiles.Magic
 				player.AddBuff(BuffID.Honey, 18000, false);
 			}
 		}
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			Player player = Main.player[Projectile.owner];
 			Terraria.Audio.SoundEngine.PlaySound(SoundID.Item94, Projectile.Center);

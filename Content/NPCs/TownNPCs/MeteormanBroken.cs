@@ -28,14 +28,14 @@ namespace TheCollectors.Content.NPCs.TownNPCs
 		{
 			// DisplayName.SetDefault("Injured Meteorman");
 			Main.npcFrameCount[NPC.type] = 1;
-			NPCID.Sets.NPCBestiaryDrawModifiers bestiaryData = new(0)
+			NPCID.Sets.NPCBestiaryDrawModifiers bestiaryData = new()
 			{
 				Hide = true // Hides this NPC from the bestiary
 			};
 			NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, bestiaryData);
 
 			//NPCID.Sets.TownCritter[NPC.type] = true;
-			NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
+			/*NPCID.Sets.DebuffImmunitySets.Add(NPC.type, new Terraria.DataStructures.NPCDebuffImmunityData
 			{
 				SpecificallyImmuneTo = new int[]
 				{
@@ -44,7 +44,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                     BuffID.ShadowFlame,
 					BuffID.Burning
 				}
-			});
+			});*/
 		}
 		public override void SetDefaults()
 		{

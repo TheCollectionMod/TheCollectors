@@ -27,7 +27,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 
         public override void KillMultiTile(int i, int j, int TileFrameX, int TileFrameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 48, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChimney>());
+            //Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 48, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteChimney>());
             ModContent.GetInstance<RefinedMeteoriteChimneyTE>().Kill(i, j);
         }
 

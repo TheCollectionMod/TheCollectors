@@ -41,10 +41,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(191, 142, 111), name);
 		}
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<Content.Items.Placeable.RefinedMeteoriteSet.RefinedMeteoriteBed>());
-		}
+
 		public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
 		{
 			return true;
@@ -64,12 +61,6 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			// You might need to mess with the info here if your bed is not a typical 4x2 tile
 			info.VisualOffset.Y += 4f; // Move player down a notch because the bed is not as high as a regular bed
 		}
-
-		/*public override void NumDust(int i, int j, bool fail, ref int num)
-		{
-			num = 1;
-		}
-		*/
 
 		public override bool RightClick(int i, int j)
 		{

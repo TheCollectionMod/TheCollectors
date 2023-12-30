@@ -68,7 +68,7 @@ namespace TheCollectors.Content.Projectiles.Magic
 		{
 			target.immune[Projectile.owner] = 15;
 		}
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			Player player = Main.player[Projectile.owner];
 			Terraria.Audio.SoundEngine.PlaySound(SoundID.Item94, Projectile.Center);
