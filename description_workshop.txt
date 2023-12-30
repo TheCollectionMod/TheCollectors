@@ -20,6 +20,11 @@ The Collectors is a mod that expands the catalog of vanilla items, aiming to imp
 - 30 fruits
 and more!
 
+~Languages~
+- English.
+- Spanish.
+- French (Coming soon)
+
 ~Cross mod support~
 - Support for Census.
 - Bosses As NPCs.
