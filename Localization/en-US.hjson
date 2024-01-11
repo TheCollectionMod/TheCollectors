@@ -2568,6 +2568,11 @@ Mods: {
 				DisplayName: Example Minecart
 				Tooltip: ""
 			}
+
+			RedCandyCaneDresser: {
+				DisplayName: Red Candy Cane Dresser
+				Tooltip: ""
+			}
 		}
 
 		Buffs: {
@@ -2903,6 +2908,7 @@ Mods: {
 			RedCandyCaneCandle.MapEntry: Red Candy Cane Candle
 			RedCandyCaneLantern.MapEntry: Red Candy Cane Lantern
 			RedCandyCaneSofa.MapEntry: Red Candy Cane Sofa
+			RedCandyCaneDresser.MapEntry: Red Candy Cane Dresser
 		}
 
 		Configs: {

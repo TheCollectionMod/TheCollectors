@@ -2566,6 +2566,11 @@ Mods: {
 				// DisplayName: Example Minecart
 				// Tooltip: ""
 			}
+
+			RedCandyCaneDresser: {
+				DisplayName: Aparador de caramelo rojo
+				// Tooltip: ""
+			}
 		}
 
 		Buffs: {
@@ -2901,6 +2906,7 @@ Mods: {
 			RedCandyCaneCandle.MapEntry: Vela de caramelo rojo
 			RedCandyCaneLantern.MapEntry: Linterna de caramelo rojo
 			RedCandyCaneSofa.MapEntry: Sofa de caramelo rojo
+			RedCandyCaneDresser.MapEntry: Aparador de caramelo rojo
 		}
 
 		Configs: {

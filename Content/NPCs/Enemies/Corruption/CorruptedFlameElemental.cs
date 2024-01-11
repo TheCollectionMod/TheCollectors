@@ -50,7 +50,7 @@ public class CorruptedFlameElemental : ModNPC
         BannerItem = ModContent.ItemType<Content.Items.Placeable.Banners.CorruptedFlameElementalBanner>();
     }
 
-    public override void OnKill()
+   /* public override void OnKill()
     {
         if (!Main.dedServ)
         {
@@ -63,7 +63,7 @@ public class CorruptedFlameElemental : ModNPC
             pos = NPC.position + new Vector2(Main.rand.Next(NPC.width - 8), Main.rand.Next(NPC.height / 2));
             Gore.NewGore(NPC.GetSource_Death(), pos, NPC.velocity, ModContent.Find<ModGore>("TheCollectors/ClawclopsGore1").Type);
         }
-    }
+    }*/
 
     public override void HitEffect(NPC.HitInfo hit) 
     {
