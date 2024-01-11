@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -12,9 +13,10 @@ namespace TheCollectors.Content.Items.Armor
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
-
-		public override void SetDefaults()
+            SetBonusText = this.GetLocalization("SetBonus");
+        }
+        public static LocalizedText SetBonusText { get; private set; }
+        public override void SetDefaults()
 		{
 			Item.width = 18;
 			Item.height = 18;
@@ -36,11 +38,7 @@ namespace TheCollectors.Content.Items.Armor
 
 		public override void UpdateArmorSet(Player player)
 		{
-			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
-							+ "\nEmits an aura of light"
-							+ "\nReduced damage taken when under half health"
-							+ "\n20% reduced mana usage"
-							+ "\nRefined Meteor Staff don't consume mana"; //Revisar
+            player.setBonus = SetBonusText.Value;
 			player.AddBuff(BuffID.Shine, 2);
 			player.buffImmune[BuffID.OnFire] = true;
 			player.buffImmune[BuffID.Burning] = true;
@@ -50,10 +48,6 @@ namespace TheCollectors.Content.Items.Armor
 				player.AddBuff(ModContent.BuffType<Buffs.MeteorbodyBuff>(), 3600, false);
 			}
 			player.manaCost -= 0.2f;    //20% decreased mana cost 
-			/*if (Main.LocalPlayer.HasItem(ItemID.MeteorStaff))
-			{
-				player.spaceGun = true;
-			}*/
 		}
 
 		public override void ArmorSetShadows(Player player)

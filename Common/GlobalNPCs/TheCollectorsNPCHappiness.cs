@@ -18,8 +18,10 @@ namespace TheCollectors.Common.GlobalNPCs
             var enchanterHappiness = NPCHappiness.Get(enchanterType);
             var guideHappiness = NPCHappiness.Get(NPCID.Guide); // Get the key into The Guide's happiness
             var partygirlHappiness = NPCHappiness.Get(NPCID.PartyGirl); // Get the key into The PartyGirl's happiness
+            var bestiarygirllHappiness = NPCHappiness.Get(NPCID.BestiaryGirl); // Get the key into The BestiaryGirl's happiness
 
             guideHappiness.SetNPCAffection(ninjaType, AffectionLevel.Love); // Make the Guide love Ninja!
+            bestiarygirllHappiness.SetNPCAffection(ninjaType, AffectionLevel.Like); // Make the BestiaryGirl like Ninja!
             partygirlHappiness.SetNPCAffection(ninjaType, AffectionLevel.Like); // Make the PartyGirl like Ninja!
             partygirlHappiness.SetNPCAffection(enchanterType, AffectionLevel.Like); // Make the PartyGirl like Ninja!
                                                                                     

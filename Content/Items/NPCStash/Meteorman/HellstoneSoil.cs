@@ -54,8 +54,11 @@ namespace TheCollectors.Content.Items.NPCStash.Meteorman
 	{
 		public override void SetStaticDefaults()
 		{
-			TileID.Sets.Ore[Type] = true;
-			Main.tileSpelunker[Type] = true; // The tile will be affected by spelunker highlighting
+            TileID.Sets.Grass[Type] = true;
+            TileID.Sets.Conversion.Grass[Type] = true;
+            TileID.Sets.CanBeClearedDuringGeneration[Type] = true;
+            //TileID.Sets.Ore[Type] = true;
+            Main.tileSpelunker[Type] = true; // The tile will be affected by spelunker highlighting
 			Main.tileShine2[Type] = false; // Modifies the draw color slightly.
 			Main.tileShine[Type] = 875; // How often tiny dust appear off this tile. Larger is less frequently
 			Main.tileMergeDirt[Type] = true;
@@ -65,7 +68,7 @@ namespace TheCollectors.Content.Items.NPCStash.Meteorman
 			Main.tileLighted[Type] = true;
 			Main.tileLavaDeath[Type] = false;
 
-			LocalizedText name = CreateMapEntryName();
+            LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(238, 102, 70), name);
 
 			DustType = DustID.GoldFlame;

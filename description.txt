@@ -1,29 +1,13 @@
-The Collectors
-The Collectors is a mod that expands the catalog of vanilla items, aiming to improve the experience and importance of existing ores. It currently adds:
-- 5 town NPC
-- 11 enemies with banners
-- 61 critters
-- 3 pets
-- 1 mount
-- 43 furnitures
-- 4 ores
-- 32 blocks
-- 2 walls
-- 12 paintings
-- 1 accesory
-- 2 wings
-- 3 ammo
-- 21 armor pieces
-- 2 vanity pieces
-- 4 Tools
-- 46 Weapons
-- 30 fruits
-and more!
+The Collectors is a mod that expands the catalog of vanilla items, aiming to improve the experience and importance of existing ores and enriches the world's lore through collectible paintings that uncover the hidden backstories of your town NPCs (currently featuring the Meteorman and the Ninja). 
+
+It currently adds:
+- Multiple NPCs (5 Town NPCs, 12 enemies with banners and 61 critters).
+- +200 Items (Including Weapons, Armor pieces, Furniture, Blocks, Fruits, Paintings, Tools, Ores, Ammo, Wings, Vanity pieces, Walls, Pets, a Mount, an Accessory and more!!).
 
 ~Languages~
 - English.
 - Spanish.
-- French (Coming soon)
+- French.
 
 ~Cross mod support~
 - Support for Census.
@@ -32,12 +16,29 @@ and more!
 ~Developers~
 Code: Sensei, Algebr4, Allul
 Art: JD, Sensei
-Sporadic testing: Muarestím
+Sporadic testing: Little Mauro
 
 ~Acknowledgments~
-- Rijam's Mod (code injured NPC) (Code for Spike Slime)
+- Rijam's Mod (Code for injured NPC and Spike Slime)
 - Calamity Vanities Mod
 - https://github.com/gardenappl/Miscellania (fireplace and chimmey code)
 - Some more I can't remember, sorry.
 
 https://github.com/TheCollectionMod/TheCollectors 
+
+v0.1.1
+- Added drop to Meteorite Worm.
+- Added Candy Cane Dresser.
+- Added recipes for Hallowed bar and Spectre Bar.
+- minor bugfixes 
+
+v0.2.0 (Various Fixes)
+- Added French localization.
+- Added Achievements.
+- Fertilizer now work on trees.
+- Hellstone Trees drops Hellstone Squirrel.
+- Fixed the bugs with dialogue boxes not working fine.
+- The Enchanter doesn't swear when you find him. (English only)
+- The Gacha Guy now sells the Bait crate.
+- The critters are now affected by the Guide of Critter.
+- Minor bugfixes, translations and typos.

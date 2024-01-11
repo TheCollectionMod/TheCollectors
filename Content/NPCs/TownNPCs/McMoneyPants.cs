@@ -1,22 +1,23 @@
-using System.Collections.Generic;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Personalities;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using Terraria.GameContent;
-using Microsoft.Xna.Framework;
-using Terraria.Utilities;
 using System;
-using Terraria.Audio;
-using Terraria.GameContent.ItemDropRules;
-using Terraria.DataStructures;
-using Terraria.ModLoader.IO;
-using TheCollectors.Content.Items;
+using System.Collections.Generic;
 using System.Linq;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.GameContent;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Personalities;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.Utilities;
+using TheCollectors.Content.Currencies;
+using TheCollectors.Content.Items;
 
 namespace TheCollectors.Content.NPCs.TownNPCs
 {
@@ -39,7 +40,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         {
             return NPCProfile;
         }
-        public override List<string> SetNPCNameList()
+        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>()
             {
@@ -95,7 +96,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPC.friendly = true;
             NPC.width = 36;
             NPC.height = 48;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 10;
             NPC.defense = 15;
             NPC.lifeMax = 250;
@@ -181,35 +182,45 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
-                .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.StoryPaintings>())
+                .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.NinjaPaintings>())
                 {
                     shopCustomPrice = 1,
-                    shopSpecialCurrency = TheCollectors.TerraCoinId
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
+                })
+               .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.MeteormanPaintings>())
+               {
+                    shopCustomPrice = 1,
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
+               })
+                .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.BaitTerrabox>())
+                {
+                    shopCustomPrice = 1,
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.DyesTerrabox>())
                 {
                      shopCustomPrice = 1,
-                     shopSpecialCurrency = TheCollectors.TerraCoinId
+                     shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.ShellphoneTerrabox>())
                 {
                     shopCustomPrice = 1,
-                    shopSpecialCurrency = TheCollectors.TerraCoinId
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.AnkhShieldTerrabox>())
                 {
                     shopCustomPrice = 1,
-                    shopSpecialCurrency = TheCollectors.TerraCoinId
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.TerrasparkBootsTerrabox>())
                 {
                     shopCustomPrice = 1,
-                    shopSpecialCurrency = TheCollectors.TerraCoinId
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.ZenithTerrabox>())
                 {
                     shopCustomPrice = 1,
-                    shopSpecialCurrency = TheCollectors.TerraCoinId
+                    shopSpecialCurrency = TheCollectorsCurrencies.TerraCoinId
                 }, Condition.DownedMoonLord);
 
             npcShop.Register(); // Name of this shop tab
@@ -239,7 +250,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.NotTalkALot");
                         }
                     }
-                    return null;
+                    break;
                 case 1:
                     {
                         int nurse = NPC.FindFirstNPC(NPCID.Nurse);
@@ -253,20 +264,20 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.Nurse", Main.npc[nurse].GivenName);
                                 }
-                                else return null;
+                                break;
 
                             case 1:
                                 if (taxcollector >= 0)
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.TaxCollector", Main.npc[taxcollector].GivenName);
                                 }
-                                else return null;
+                                break;
                             case 2:
                                 if (goblintinkerer >= 0)
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.GoblinTinkerer", Main.npc[goblintinkerer].GivenName);
                                 }
-                                else return null;
+                                break;
                         }
                     }
                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.FaltanNPCs");
@@ -292,7 +303,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                         }
                     }
             }
-            return null;
+            return Language.GetTextValue("Mods.TheCollectors.Dialogue.McMoneyPants.StandardDialogue1");
         }
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

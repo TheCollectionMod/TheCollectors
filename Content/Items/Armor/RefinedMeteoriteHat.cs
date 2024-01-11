@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -12,9 +13,11 @@ namespace TheCollectors.Content.Items.Armor
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
+            SetBonusText = this.GetLocalization("SetBonus");
+        }
+        public static LocalizedText SetBonusText { get; private set; }
 
-		public override void SetDefaults() {
+        public override void SetDefaults() {
 			Item.width = 18;
 			Item.height = 18;
 			Item.value = Item.sellPrice(0, 1, 50, 0);
@@ -31,11 +34,7 @@ namespace TheCollectors.Content.Items.Armor
 		}
 		public override void UpdateArmorSet(Player player)
 		{
-			player.setBonus = "Immunity to 'On Fire','Burning' and lava"
-							+ "\nEmits an aura of light"
-							+ "\nReduced damage taken when under half health"
-							+ "\nReduced the aggro from enemies";
-
+            player.setBonus = SetBonusText.Value;
 			player.AddBuff(BuffID.Shine, 2);
 			player.buffImmune[BuffID.OnFire] = true;
 			player.buffImmune[BuffID.Burning] = true;

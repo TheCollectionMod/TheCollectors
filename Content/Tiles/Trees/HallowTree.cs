@@ -5,101 +5,73 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Utilities;
+using TheCollectors.Content.Items.NPCStash.Meteorman;
 
 namespace TheCollectors.Content.Tiles.Trees
 {
-    class HallowTree : ModTree
-	{
-		public override TreePaintingSettings TreeShaderSettings => new TreePaintingSettings
-		{
-			UseSpecialGroups = true,
-			SpecialGroupMinimalHueValue = 11f / 72f,
-			SpecialGroupMaximumHueValue = 0.25f,
-			SpecialGroupMinimumSaturationValue = 0.88f,
-			SpecialGroupMaximumSaturationValue = 1f
-		};
-		public override void SetStaticDefaults()
-		{
-			GrowsOnTileId = new int[1] { ModContent.TileType<Items.NPCStash.Meteorman.HallowedSoilTile>() };
-		}
-		public override Asset<Texture2D> GetTexture()
-		{
-			return ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/Trees/HallowTree");
-		}       // This is the primary texture for the trunk. Branches and foliage use different settings.
-		public override Asset<Texture2D> GetBranchTextures()
-		{
-			return ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/Trees/HallowTree_Branches");
-		}       // Branch Textures
-		public override Asset<Texture2D> GetTopTextures()
-		{
-			return ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/Trees/HallowTree_Tops");
-		}       // Top Textures
-		public override int SaplingGrowthType(ref int style)
-		{
-			style = 0;
-			return ModContent.TileType<HallowTreeSapling>();
-		} 
-		public override void SetTreeFoliageSettings(Tile tile, ref int xoffset, ref int treeFrame, ref int floorY, ref int topTextureFrameWidth, ref int topTextureFrameHeight)
-		{
-			// This is where fancy code could go, but let's save that for an advanced example
-		}
-		public override int DropWood()
-		{
-			return ModContent.ItemType<Content.Items.NPCStash.Meteorman.HallowedOre>();
-		}
-		public enum HallowTreeShakeEffect
-		{
-			None = 0,
-			Acorn,
-			NPC,
-			Fruit
-		}
-		public override bool Shake(int x, int y, ref bool createLeaves)
-		{
-			WeightedRandom<HallowTreeShakeEffect> options = new WeightedRandom<HallowTreeShakeEffect>();
-			options.Add(HallowTreeShakeEffect.None, 1f);
-			options.Add(HallowTreeShakeEffect.Acorn, 0.8f);
-			options.Add(HallowTreeShakeEffect.NPC, 0.8f);
-			options.Add(HallowTreeShakeEffect.Fruit, 0.8f);
+    public class HallowTree : ModTree
+    {
+        private Asset<Texture2D> texture;
+        private Asset<Texture2D> branchesTexture;
+        private Asset<Texture2D> topsTexture;
+        public override TreePaintingSettings TreeShaderSettings => new TreePaintingSettings
+        {
+            UseSpecialGroups = true,
+            SpecialGroupMinimalHueValue = 11f / 72f,
+            SpecialGroupMaximumHueValue = 0.25f,
+            SpecialGroupMinimumSaturationValue = 0.88f,
+            SpecialGroupMaximumSaturationValue = 1f
+        };
+        public override void SetStaticDefaults()
+        {
+            GrowsOnTileId = [ModContent.TileType<HallowedSoilTile>()];
+            texture = ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/Trees/HallowTree");
+            branchesTexture = ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/Trees/HallowTree_Branches");
+            topsTexture = ModContent.Request<Texture2D>("TheCollectors/Content/Tiles/Trees/HallowTree_Tops");
+        }
+        public override Asset<Texture2D> GetTexture()
+        {
+            return texture;
+        }
+        public override int SaplingGrowthType(ref int style)
+        {
+            style = 0;
+            return ModContent.TileType<HallowTreeSapling>();
+        }
+        public override void SetTreeFoliageSettings(int i, int j, Tile tile, int xoffset, ref int treeFrame, int floorY, ref int topTextureFrameWidth, ref int topTextureFrameHeight)
+        {
+            // This is where fancy code could go, but let's save that for an advanced example
+        }
+        public override Asset<Texture2D> GetBranchTextures() => branchesTexture;
+        public override Asset<Texture2D> GetTopTextures() => topsTexture;
+        public override int DropWood()
+        {
+            return ModContent.ItemType<Content.Items.NPCStash.Meteorman.HallowedOre>();
+        }
+        public override bool Shake(int x, int y, ref bool createLeaves)
+        {
+            switch (Main.rand.Next(3))
+            {
+                case 0:
+                    Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16, ItemID.Acorn);
+                    break;
 
-			HallowTreeShakeEffect effect = options;
-			if (effect == HallowTreeShakeEffect.Acorn)
-			{
-				Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-				Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, ItemID.Acorn, Main.rand.Next(1, 3));
-			}
-			else if (effect == HallowTreeShakeEffect.NPC)
-			{
-				WeightedRandom<int> npcType = new WeightedRandom<int>();
-				npcType.Add(ModContent.NPCType<NPCs.Critters.HallowedSquirrel>(),1); 
+                case 1:
+                    Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16, ModContent.ItemType<Items.Consumables.Food.HallowedFruit>());
+                    break;
 
-				Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-				Vector2 pos = new Vector2(x * 16, y * 16) + offset;
-				NPC.NewNPC(WorldGen.GetItemSource_FromTreeShake(x, y), (int)pos.X, (int)pos.Y, npcType);
-			}
-			else if (effect == HallowTreeShakeEffect.Fruit)
-			{
-				WeightedRandom<int> getRepeats = new WeightedRandom<int>();
-				getRepeats.Add(1, 1f);
-				getRepeats.Add(2, 0.2f);
-				getRepeats.Add(4, 0.1f);
-				getRepeats.Add(8, 0.01f);
-
-				int repeats = getRepeats;
-				for (int i = 0; i < repeats; ++i)
-				{
-					Vector2 offset = this.GetRandomTreePosition(Main.tile[x, y]);
-					Item.NewItem(WorldGen.GetItemSource_FromTreeShake(x, y), new Vector2(x, y) * 16 + offset, ModContent.ItemType<Content.Items.Consumables.Food.HallowedFruit>(), Main.rand.Next(1, 3));
-				}
-			}
-
-			createLeaves = effect != HallowTreeShakeEffect.None;
-			return false;
-		}
-		public override int TreeLeaf()
-		{
-			return ModContent.GoreType<HallowTreeLeaf>();
-		}
-	}
+                default:
+                    if (Main.netMode != NetmodeID.MultiplayerClient)
+                    {
+                        NPC.NewNPC(WorldGen.GetItemSource_FromTreeShake(x, y), x * 16, y * 16, ModContent.NPCType<NPCs.Critters.HallowedSquirrel>());
+                    }
+                    break;
+            }
+            return false;
+        }
+        public override int TreeLeaf()
+        {
+            return ModContent.GoreType<HallowTreeLeaf>();
+        }
+    }
 }

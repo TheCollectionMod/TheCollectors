@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.ItemDropRules;
 
 namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 
@@ -46,8 +47,12 @@ namespace TheCollectors.Content.NPCs.Enemies.Meteorite;
 				new FlavorTextBestiaryInfoElement("Mods.TheCollectors.Bestiary.MeteoriteWorm")
 			});
 		}
-
-		public override void Init()
+		public override void ModifyNPCLoot(NPCLoot npcLoot)
+		{
+		npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<Mounts.RefinedMeteoriteMinecartItem>(), 100));
+		npcLoot.Add(ItemDropRule.Common(ItemID.Meteorite, 2, 2, 5));
+		}
+	public override void Init()
 		{
 			// Set the segment variance
 			// If you want the segment length to be constant, set these two properties to the same value

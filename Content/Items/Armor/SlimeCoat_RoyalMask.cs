@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -12,9 +13,10 @@ namespace TheCollectors.Content.Items.Armor
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
-
-		public override void SetDefaults() {
+            SetBonusText = this.GetLocalization("SetBonus");
+        }
+        public static LocalizedText SetBonusText { get; private set; }
+        public override void SetDefaults() {
 			Item.width = 18;
 			Item.height = 18;
 			Item.value = Item.sellPrice(0, 1, 50, 0);
@@ -56,12 +58,7 @@ namespace TheCollectors.Content.Items.Armor
 		}
 		public override void UpdateArmorSet(Player player)
 		{
-			player.setBonus = "3% Increased minion damage"
-							+ "\nIncreases your max number of minions by 1."
-							+ "\nAllows to walk on water and honey."
-							+ "\nYou are slimy and sticky."
-							+ "\nSlimes become friendly.";
-			
+            player.setBonus = SetBonusText.Value; 
 			player.AddBuff(BuffID.Slimed, 2);
 			player.GetDamage(DamageClass.Summon) += 0.03f;   /*3% increased damage*/
 			player.maxMinions += 1;

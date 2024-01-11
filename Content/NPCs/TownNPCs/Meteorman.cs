@@ -50,7 +50,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         {
             tag["numberOfTimesTalkedTo"] = NumberOfTimesTalkedTo;
         }
-        public override List<string> SetNPCNameList()
+        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>()
             {
@@ -117,7 +117,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPC.friendly = true;
             NPC.width = 36;
             NPC.height = 48;
-            NPC.aiStyle = 7; // Town NPC AI Style
+            NPC.aiStyle = NPCAIStyleID.Passive; // Town NPC AI Style
             NPC.damage = 30;
             NPC.defense = 40;
             NPC.lifeMax = 500;
@@ -239,6 +239,12 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         }
         public override string GetChat()
         {
+            List<string> StandardDialogue = new List<string> {
+            Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue1"),
+            Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue2"),
+            Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue3"),
+            Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue4")
+         };
             NumberOfTimesTalkedTo++;
             switch (Main.rand.Next(5))
             {
@@ -247,22 +253,22 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                         switch (Main.rand.Next(5))
                         {
                             case 0:
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue1");
+                                return StandardDialogue[0];
                             case 1:
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue2");
+                                return StandardDialogue[1];
                             case 2:
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue3");
+                                return StandardDialogue[2];
                             case 3:
-                                return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.StandardDialogue4");
+                                return StandardDialogue[3];
                             case 4:
                                 if (NumberOfTimesTalkedTo >= 10)
                                 {
-                                    return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.TalkALot");
+                                    return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.TalkALot", Main.LocalPlayer.name);
                                 }
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.NotTalkALot");
                         }
                     }
-                    return null;
+                    break;
                 case 1:
                     {
                         int dryad = NPC.FindFirstNPC(NPCID.Dryad);
@@ -276,20 +282,20 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.Dryad", Main.npc[dryad].GivenName);
                                 }
-                                else return null;
+                                break;
 
                             case 1:
                                 if (demolitionist >= 0 && Main.rand.NextBool(4))
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.Demolitionist", Main.npc[demolitionist].GivenName);
                                 }
-                                else return null;
+                                break;
                             case 2:
                                 if (santaclaus >= 0 && Main.rand.NextBool(4))
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.SantaClaus", Main.npc[santaclaus].GivenName);
                                 }
-                                else return null;
+                                break;
                         }
                     }
                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.FaltanNPCs");
@@ -319,7 +325,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 }
                                 return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.MartianInvasion1");
                         }
-                    }
+                    } 
                 case 3:
                     {
                         switch (Main.rand.Next(2))
@@ -340,7 +346,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.MeteoriteOre");
                         }
                     }
-                    return null;
+                    break; 
                 case 4:
                     {
                         switch (Main.rand.Next(4))
@@ -355,9 +361,9 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 return Language.GetTextValue("Mods.TheCollectors.Dialogue.Meteorman.SoilsDialogue4");
                         }
                     }
-                    return null;
+                    break;
             }
-            return null;
+            return Main.rand.Next(StandardDialogue);
         }
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

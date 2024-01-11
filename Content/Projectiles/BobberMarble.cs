@@ -10,20 +10,20 @@ namespace TheCollectors.Content.Projectiles
 {
 	public class BobberMarble : ModProjectile
 	{
-        public static readonly Color[] PossibleLineColors = new Color[] {
+        public static readonly Color[] PossibleLineColors = [
             new Color(128, 128, 0), // A gold color
 			new Color(230, 0, 0) // A red color
-		};
+		];
 
         // This holds the index of the fishing line color in the PossibleLineColors array.
         private int fishingLineColorIndex;
 
         private Color FishingLineColor => PossibleLineColors[fishingLineColorIndex];
 
-        public override void SetStaticDefaults()
+       /* public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Marble Bobber");
-        }
+        }*/
 
         public override void SetDefaults()
         {
@@ -56,7 +56,7 @@ namespace TheCollectors.Content.Projectiles
             }
         }
 
-        public override void ModifyFishingLine(ref Vector2 lineOriginOffset, ref Color lineColor)
+        public override void ModifyFishingLine(ref Vector2 lineOriginOffset, ref Color lineColor)/* tModPorter Note: Removed. Use ModItem.ModifyFishingLine */
         {
             // Change these two values in order to change the origin of where the line is being drawn.
             // This will make it draw 47 pixels right and 31 pixels up from the player's center, while they are looking right and in normal gravity.

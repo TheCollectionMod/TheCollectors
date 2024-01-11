@@ -37,9 +37,7 @@ namespace TheCollectors.Content.Tiles.Trees
 
             TileObjectData.addTile(Type);
 
-            LocalizedText name = CreateMapEntryName();
-            // name.SetDefault("Adamantite Sapling");
-            AddMapEntry(new Color(120, 0, 70), name);
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Sapling"));
 
             TileID.Sets.TreeSapling[Type] = true;
             TileID.Sets.CommonSapling[Type] = true;
@@ -47,7 +45,7 @@ namespace TheCollectors.Content.Tiles.Trees
             TileMaterials.SetForTileId(Type, TileMaterials._materialsByName["Plant"]); // Make this tile interact with golf balls in the same way other plants do
 
             DustType = DustID.Adamantite;
-            AdjTiles = new int[] { TileID.Saplings };
+            AdjTiles = [TileID.Saplings];
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {

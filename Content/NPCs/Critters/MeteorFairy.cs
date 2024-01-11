@@ -14,8 +14,9 @@ namespace TheCollectors.Content.NPCs.Critters
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Meteor Fairy");
-			NPCID.Sets.TownCritter[NPC.type] = true;
+            // DisplayName.SetDefault("Meteor Fairy");
+            NPCID.Sets.CountsAsCritter[Type] = true;
+            NPCID.Sets.TownCritter[NPC.type] = true;
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.FairyCritterPink];
 			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{

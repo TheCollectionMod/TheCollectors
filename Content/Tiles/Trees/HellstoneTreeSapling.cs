@@ -39,9 +39,7 @@ namespace TheCollectors.Content.Tiles.Trees
 
             TileObjectData.addTile(Type);
 
-            LocalizedText name = CreateMapEntryName();
-            // name.SetDefault("Hellstone Sapling");
-            AddMapEntry(new Color(120, 0, 70), name);
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Sapling"));
 
             TileID.Sets.TreeSapling[Type] = true;
             TileID.Sets.CommonSapling[Type] = true;
@@ -63,15 +61,15 @@ namespace TheCollectors.Content.Tiles.Trees
             }
         }
         public override void RandomUpdate(int i, int j)
-        {
-            if (!WorldGen.genRand.NextBool(20))
-                return;
+         {
+             if (!WorldGen.genRand.NextBool(20))
+                 return;
 
-            bool growSucess = WorldGen.GrowTree(i, j);
-            bool isPlayerNear = WorldGen.PlayerLOS(i, j);
+             bool growSucess = WorldGen.GrowTree(i, j);
+             bool isPlayerNear = WorldGen.PlayerLOS(i, j);
 
-            if (growSucess && isPlayerNear)
-                WorldGen.TreeGrowFXCheck(i, j);
-        }
+             if (growSucess && isPlayerNear)
+                 WorldGen.TreeGrowFXCheck(i, j);
+         }
     }
 }

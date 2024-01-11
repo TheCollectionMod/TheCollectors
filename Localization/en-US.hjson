@@ -83,7 +83,7 @@ Mods: {
 					Princess_LovesNPC: Terraboxes are so exciting. I hope to get the special dye in the DyesTerrabox. However I have already 14 Red Dye.
 				}
 
-				Census.SpawnCondition: Have a Terra Coin [i:TheCollectors/TerraCoin] in inventary
+				Census.SpawnCondition: Have a Terra Coin [i:TheCollectors/TerraCoin] in inventory
 			}
 
 			Meteorman: {
@@ -95,8 +95,8 @@ Mods: {
 					LoveSpace: It breathes peace.
 					FarFromHome: I don't feel at ease this far from home. Even if my real house was millions of kilometers away.
 					DislikeCrowded: I start having my commission list a bit swamped.
-					HateCrowded: I hate to admit, but with that much people I can't fulfill the commission list.
-					LikeBiome: By the now I would like to stay in {BiomeName}, despite during the night it cools down.
+					HateCrowded: I hate to admit, but with so many people I can't fulfill the commission list.
+					LikeBiome: By the now I would like to stay in {BiomeName}, even though it cools down at night.
 					LoveBiome: cuando pueda
 					DislikeBiome: "{BiomeName} is fantastic, but I don't feel very safe this close to the water."
 					HateBiome: If I spend one more day in {BiomeName}, I think I will become the Regular-Stoneman.
@@ -131,11 +131,12 @@ Mods: {
 					LikeNPC: no tiene
 					LikeNPC_Princess: I can't avoid thinking I'm in an RPG when I see {NPCName}.
 					DislikeNPC: First, it kidnaps my master. And now he wants to move here? How insolent {NPCName} is.
-					HateNPC: "{NPCName} bring me slimy memories... and not the good ones"
+					HateNPC: "{NPCName} bring me slimy memories... and not the good ones."
 					Princess_LovesNPC: "{NPCName} brings fun to the parties. Last one went a bit wild... Next time we'd better avoid throwing Shurikens blinfolded. Luckily the nurse was around, however that poor boy...What a shiny day, isn't it?"
 				}
 
 				Census.SpawnCondition: Kill King Slime
+				DeathMessage: Mods.TheCollectors.NPCs.Ninja.DeathMessage
 			}
 
 			#............................................................................................................Enemies
@@ -151,6 +152,7 @@ Mods: {
 			MeteoriteWormTail.DisplayName: Meteorite Worm
 			GraniteEnergy.DisplayName: Granitoyster
 			GraniteSlime.DisplayName: Granite Slime
+			GraniteBerserker.DisplayName: Granite Berserker
 			LihzahrdSlime.DisplayName: Lihzahrd Slime
 			#............................................................................................................Critters
 			MeteorFairy.DisplayName: Meteorite Fairy
@@ -214,6 +216,31 @@ Mods: {
 			NebulaSquirrel.DisplayName: Nebula Squirrel
 			StardustSquirrel.DisplayName: Stardust Squirrel
 			VortexSquirrel.DisplayName: Vortex Squirrel
+
+			Archeologist: {
+				DisplayName: Archeologist
+
+				TownNPCMood: {
+					Content: Estoy feliz.
+					NoHome: Detesto no tener un hogar.
+					FarFromHome: Estoy demasiado lejos de casa.
+					LoveSpace: Me encanta tener tanto espacio.
+					DislikeCrowded: No me gusta tener tan poco espacio.
+					HateCrowded: Detesto tener poco espacio.
+					LoveBiome: Adoro el biomedio {BiomeName}.
+					LikeBiome: Me gusta el biomedio {BiomeName}.
+					DislikeBiome: No me gusta el biomedio {BiomeName}.
+					HateBiome: Detesto el biomedio {BiomeName}.
+					LoveNPC: Adoro a {NPCName}.
+					LikeNPC: Me gusta {NPCName}.
+					DislikeNPC: "{NPCName} no me cae nada bien."
+					HateNPC: Detesto a {NPCName}.
+					LikeNPC_Princess: Me gusta {NPCName}.
+					Princess_LovesNPC: Me gusta {NPCName}.
+				}
+
+				Census.SpawnCondition: Conditions unknown
+			}
 		}
 
 		Bestiary: {
@@ -310,7 +337,7 @@ Mods: {
 				PartyGirl: Do you happen to know if {0} is throwin' a shindig? I'm just itchin' to put on my dancin' shoes!
 			}
 
-			EnchanterPrisioner.RescueDialogue: Fucking crystal...
+			EnchanterPrisioner.RescueDialogue: Damn crystal...
 
 			Enchanter: {
 				StandardDialogue1: You must have some knowledge of magic to break my crystal enchantment.
@@ -319,7 +346,7 @@ Mods: {
 				InfoSoul: Magical creatures drop [i:TheCollectors/MagicSoul], i accept them as currency.
 				TalkALot: Actually, my role here was going to be something else, like the Goblin Tinkerer, but the developers are a bit useless...
 				NotTalkALot: I'm an expert in Gem Staves, if you bring me [i:TheCollectors/MagicSoul] I'll exchange them for one.
-				PartyIsUp: A surprise party!?, pass me the potions from the top shelf... it's time to get potionped!
+				PartyIsUp: A surprise party!?, pass me the potions from the top shelf... it's time to potion up!
 				Wizard: Master {0} has been lazy with magic lately, it's not like him to get caught up like that.
 				PartyGirl: In my student days I didn't miss any of {0}'s parties, I can't wait for them to do one.
 				Dryad: "{0} wields some very strange ancient magic, I am burning to learn its secrets."
@@ -348,7 +375,7 @@ Mods: {
 			MeteormanBroken.RescueDialogue: Menuda hostia colega, gracias por ayudarme.
 
 			Meteorman: {
-				StandardDialogue1: Come on, you don't have good stones around here or anything, what a delight...
+				StandardDialogue1: You guys sure have some fine stones around here!
 				StandardDialogue2: The equipment you forge with meteorite is not bad at all, but there is still more potential to be made of it.
 				StandardDialogue3: Shame about my house in space, but hey, it's not bad around here either.
 				StandardDialogue4: I don't know how you did it, but you have weakened the seal of the Moon Lord, it didn't take long to destroy my base in space, that's why I ended up crashing here.
@@ -376,7 +403,7 @@ Mods: {
 			Ninja: {
 				StandardDialogue1: Thank you for rescuing me. I will try to help you on whatever you need with my humble ninja arts.
 				StandardDialogue2: I hate unseasoned white rice.
-				StandardDialogue3: The easiest way to dodge the Eye of Cthulhu is a right angle.
+				StandardDialogue3: The easiest way to dodge the Eye of Cthulhu is at a 90-degree angle.
 				StandardDialogue4: What a shame for a ninja. To be trapped by that giant Slime.
 				TalkALot: When my wish reaches the sky, I will surpass the light itself! Yes, that's what I call the 'Battle Change'!, Let me explain it: the star we talked about was not any of the stars in the night. It's an abstact star. Spiritual...
 				NotTalkALot: When my wish reaches the sky... huh? I didn't know you were around. You weren't listening, right?.
@@ -384,18 +411,25 @@ Mods: {
 				Guide2: "{0} is the most outstanding disciple of Master-san."
 				PartyGirl1: Look at these beautiful ninja stars, I have to show them to {0}.
 				PartyGirl2: I am excited for the Obon. I will use the fireworks to declare my love to {0}, wish me good luck.
+				BestiaryGirl1: "{0} possesses a fascinating survival instinct. She can hear a single leaf fall from miles away."
+				BestiaryGirl2: "{0} bestial form has awakened, and her aura is completely overwhelming... She keeps tracking my scent and getting dangerously close. I... I must maintain my focus!"
 				OtrosNPCs: That burnt doll... doesn't it look like my brother?.
 				NotInvansionGenerica: Sometimes they storm the town. Nobody knows why, but at least it's a good combat practice.
 				InvasionGenerica: So many enemies, 'playername'!, remember to enable the Battle Change!.
 				QueenSlime1: I was researching something with Master-San. But you know...Slimes....
 				QueenSlime2: I wasn't expecting less from Master-San. Not even a scratch.
-				SlimeRain1: There's a rumour going around. It says that sometimes weather goes crazy and slimes rain. People is speaking nonsense.
+				SlimeRain1: There's a rumour going around. It says that sometimes weather goes crazy and slimes rain. People are speaking nonsense.
 				SlimeRain2: The legends were true! Run for your life!.
 				BattleChange: Come on, let's practice the Battle Change!
 			}
 
-			Guide.Ninja: Thank you for rescuing my brother {$Mods.TheCollectors.NPCName.Ninja}.
-			GoblinTinkerer.McMoneyPants: I reckon I have learned a lot about finances but I think {$Mods.TheCollectors.NPCName.McMoneyPants} flies too close to the sun.
+			Guide.Ninja: Thank you for rescuing my brother {0}.
+			GoblinTinkerer.McMoneyPants: I reckon I have learned a lot about finances but I think {0} flies too close to the sun.
+
+			Zoologist: {
+				Ninja1: "{0} has some totally wild reflexes! I wish I could move that fast!."
+				Ninja2: Grrr... {0}'s scent is so intense it makes me nervous... in a good way!.
+			}
 		}
 
 		Items: {
@@ -444,6 +478,11 @@ Mods: {
 			GraniteArmorHelmet: {
 				DisplayName: Granite Helmet
 				Tooltip: ""
+				SetBonus:
+					'''
+					10% Increased melee damage
+					Grants 'Endurance' buff.
+					'''
 			}
 
 			GraniteArmorBreastplate: {
@@ -469,11 +508,23 @@ Mods: {
 			HarpyFeatherHat: {
 				DisplayName: Harpy Feather Crown
 				Tooltip: 3% Increased minion damage
+				SetBonus:
+					'''
+					9% Increased minion damage
+					Increases your max number of minions by 2.
+					Grants 'Featherfall' buff.
+					'''
 			}
 
 			HarpyHairpin: {
 				DisplayName: Harpy Hairpin
 				Tooltip: 3% Increased minion damage
+				SetBonus:
+					'''
+					9% Increased minion damage
+					Increases your max number of minions by 2.
+					Grants 'Battle' buff.
+					'''
 			}
 
 			RefinedMeteoriteBreastplate: {
@@ -488,6 +539,13 @@ Mods: {
 					20% increased throwing damage
 					10% increased throwing critical strike chance
 					'''
+				SetBonus:
+					'''
+					Immunity to 'On Fire','Burning' and lava
+					Emits an aura of light
+					Reduced damage taken when under half health
+					Reduced the aggro from enemies
+					'''
 			}
 
 			RefinedMeteoriteHeadgear: {
@@ -496,6 +554,13 @@ Mods: {
 					'''
 					+100 max mana
 					+12% increased magic damage and critical strike chance
+					'''
+				SetBonus:
+					'''
+					Immunity to 'On Fire','Burning' and lava
+					Emits an aura of light
+					Reduced damage taken when under half health
+					20% reduced mana usage
 					'''
 			}
 
@@ -507,6 +572,15 @@ Mods: {
 					+10% increased melee critical strike chance.
 					+10% increased melee speed.
 					'''
+				SetBonus:
+					'''
+					Immunity to 'On Fire','Burning' and lava
+					Emits an aura of light
+					Reduced damage taken when under half health
+					19% Increased melee speed
+					19% Increases movement speed
+					Increases maximum life by 25
+					'''
 			}
 
 			RefinedMeteoriteHood: {
@@ -515,6 +589,13 @@ Mods: {
 					'''
 					Increases your max number of minions by 1.
 					Increases minion damage by 15%.
+					'''
+				SetBonus:
+					'''
+					Immunity to 'On Fire','Burning' and lava
+					Emits an aura of light
+					Reduced damage taken when under half health
+					Increases your max number of minions by 2.
 					'''
 			}
 
@@ -534,6 +615,13 @@ Mods: {
 					15% increased ranged damage
 					8% increased ranged critical strike chance
 					'''
+				SetBonus:
+					'''
+					Immunity to 'On Fire','Burning' and lava
+					Emits an aura of light
+					Reduced damage taken when under half health
+					20% chance to not consume ammo
+					'''
 			}
 
 			SlimeCoat_Breastplate: {
@@ -549,11 +637,26 @@ Mods: {
 			SlimeCoat_Mask: {
 				DisplayName: Slime Coat - Mask
 				Tooltip: 1% Increased minion damage
+				SetBonus:
+					'''
+					3% Increased minion damage
+					Increases your max number of minions by 1.
+					Allows to walk on water and honey.
+					You are slimy and sticky.
+					'''
 			}
 
 			SlimeCoat_RoyalMask: {
 				DisplayName: Slime Coat - Royal Mask
 				Tooltip: 1% Increased minion damage
+				SetBonus:
+					'''
+					3% Increased minion damage
+					Increases your max number of minions by 1.
+					Allows to walk on water and honey.
+					You are slimy and sticky.
+					Slimes become friendly.
+					'''
 			}
 
 			WyvernBreastplate: {
@@ -579,6 +682,11 @@ Mods: {
 				Tooltip:
 					'''
 					12% Increased minion damage.
+					Increases your max number of minions by 1.
+					'''
+				SetBonus:
+					'''
+					10% Increased minion damage
 					Increases your max number of minions by 1.
 					'''
 			}
@@ -863,7 +971,7 @@ Mods: {
 			}
 
 			TitaniumSquirrelItem: {
-				DisplayName: Titanuim Squirrel
+				DisplayName: Titanium Squirrel
 				Tooltip: ""
 			}
 
@@ -1207,7 +1315,7 @@ Mods: {
 			}
 
 			DyesTerrabox: {
-				DisplayName: Dyes mysterious terrabox
+				DisplayName: Dyes Mysterious terrabox
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
@@ -1216,7 +1324,7 @@ Mods: {
 			}
 
 			AnkhShieldTerrabox: {
-				DisplayName: AnkhShield mysterious terrabox
+				DisplayName: Ankh Shield Mysterious Terrabox
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
@@ -1225,7 +1333,7 @@ Mods: {
 			}
 
 			ShellphoneTerrabox: {
-				DisplayName: Shellphone mysterious terrabox
+				DisplayName: Shellphone Mysterious Terrabox
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
@@ -1234,7 +1342,7 @@ Mods: {
 			}
 
 			TerrasparkBootsTerrabox: {
-				DisplayName: Terraspark Boots mysterious terrabox
+				DisplayName: Terraspark Boots Mysterious Terrabox
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
@@ -1243,7 +1351,7 @@ Mods: {
 			}
 
 			ZenithTerrabox: {
-				DisplayName: Zenith mysterious terrabox
+				DisplayName: Zenith Mysterious Terrabox
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
@@ -1252,7 +1360,7 @@ Mods: {
 			}
 
 			BaitTerrabox: {
-				DisplayName: Bait mysterious terrabox
+				DisplayName: Bait Mysterious Terrabox
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
@@ -1266,6 +1374,24 @@ Mods: {
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
 					Open it to discover the incredible adventures of the Meteorman and the Ninja.
+					'''
+			}
+
+			MeteormanPaintings: {
+				DisplayName: The Collector's Mint - Stellar Odyssey
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Don't touch that dial and call now! Open it to discover the incredible adventures of Meteorite Man.
+					'''
+			}
+
+			NinjaPaintings: {
+				DisplayName: The Collector's Mint - The Ninja Way
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					Don't touch that dial and call now! Open it to discover the incredible adventures of the Ninja.
 					'''
 			}
 
@@ -1500,21 +1626,21 @@ Mods: {
 
 			#............................................................................................................Placeable Paintings
 			MeteormanPaintingVol1: {
-				DisplayName: Moon rift
+				DisplayName: Lunar Rift
 				Tooltip:
 					'''
 					Meteorman Collection Vol.1
-					What are those strange bright cracks in the moon?.
+					I wonder what those strange, bright cracks in the moon could mean...
 					By JD
 					'''
 			}
 
 			MeteormanPaintingVol2: {
-				DisplayName: Space collision
+				DisplayName: Space Collision
 				Tooltip:
 					'''
 					Meteorman Collection Vol.2
-					The moonburst reaches the home of the Meteorite Man.
+					The devastating moonburst reaches the home of the Meteorite Man.
 					By JD
 					'''
 			}
@@ -1524,37 +1650,37 @@ Mods: {
 				Tooltip:
 					'''
 					Meteorman Collection Vol.3
-					Part of the meteorite is coming to Earth.
+					A massive fragment of the shattered meteorite is hurtling towards Earth.
 					By JD
 					'''
 			}
 
 			MeteormanPaintingVol4: {
-				DisplayName: Deadly arrival
+				DisplayName: Deadly Arrival
 				Tooltip:
 					'''
 					Meteorman Collection Vol.4
-					Meteor Man is shown in an unusual pose.
+					The Meteorite Man is shown collapsed inside a smoking crater in a very unusual pose.
 					By JD
 					'''
 			}
 
 			MeteormanPaintingVol5: {
-				DisplayName: On the third day he rose
+				DisplayName: On the Third Day He Rose
 				Tooltip:
 					'''
 					Meteorman Collection Vol.5
-					The Dryad heals the Meteorite Man.
+					The Dryad uses her sacred nature magic to heal the wounded Meteorite Man.
 					By JD
 					'''
 			}
 
 			MeteormanPaintingVolEx: {
-				DisplayName: A new life
+				DisplayName: A New Life
 				Tooltip:
 					'''
 					Meteorman Collection Vol.Ex
-					Meteorite Man is shown planting some strange trees.
+					The Meteorite Man is shown safely planting some strange mineral trees in his new home.
 					By JD
 					'''
 			}
@@ -1608,7 +1734,7 @@ Mods: {
 					'''
 					Ninja Collection Vol.5
 					'This is a very complex technique, few manage to carry
-					it out successfully, gratitude is no small feat'
+					it out successfully, gratitude is no joke'
 					By JD
 					'''
 			}
@@ -1618,7 +1744,7 @@ Mods: {
 				Tooltip:
 					'''
 					Ninja Collection Vol.Ex
-					'Ah yes, the classic training sequence, it is actually 
+					'Ah yes, the classic training montage, it is actually 
 					the best ninja technique to increase your ninja points'
 					By JD
 					'''
@@ -2568,6 +2694,41 @@ Mods: {
 				DisplayName: Example Minecart
 				Tooltip: ""
 			}
+
+			RedCandyCaneDresser: {
+				DisplayName: Red Candy Cane Dresser
+				Tooltip: ""
+			}
+
+			TCStatueRadar: {
+				DisplayName: T C Statue Radar
+				Tooltip: ""
+			}
+
+			TCStatueRadarT2: {
+				DisplayName: T C Statue Radar T2
+				Tooltip: ""
+			}
+
+			TCStatueRadarT3: {
+				DisplayName: T C Statue Radar T3
+				Tooltip: ""
+			}
+
+			TCPaintingRadar: {
+				DisplayName: T C Painting Radar
+				Tooltip: ""
+			}
+
+			TCPaintingRadarT2: {
+				DisplayName: T C Painting Radar T2
+				Tooltip: ""
+			}
+
+			ExampleBlock: {
+				DisplayName: Example Block
+				Tooltip: ""
+			}
 		}
 
 		Buffs: {
@@ -2903,6 +3064,7 @@ Mods: {
 			RedCandyCaneCandle.MapEntry: Red Candy Cane Candle
 			RedCandyCaneLantern.MapEntry: Red Candy Cane Lantern
 			RedCandyCaneSofa.MapEntry: Red Candy Cane Sofa
+			RedCandyCaneDresser.MapEntry: Red Candy Cane Dresser
 		}
 
 		Configs: {
@@ -2924,5 +3086,54 @@ Mods: {
 		}
 
 		Config.ItemHeader: Wings Toggle Header
+
+		Currencies: {
+			RedCandyCane: Candy Cane Block
+			MagicSoul: Magic Soul
+			TerraCoin: Terra Coin
+		}
+
+		InfoDisplays: {
+			StatueRadarDisplay.DisplayName: Statues
+			PaintingRadarDisplay.DisplayName: Painting
+			NoStatues: No statues nearby
+			OneStatue: A statue has been detected!
+			SeveralStatues: Several statues have been detected!
+			NoPaintings: No paintings nearby
+			OnePainting: A painting has been detected!
+			SeveralPaintings: Several paintings have been detected!
+		}
+
+		Achievements: {
+			NinjaHistoryAchievement: {
+				FriendlyName: The Ninja Way
+				Description: Acquire all paintings that narrate the adventures of the Ninja.
+			}
+
+			MeteormanHistoryAchievement: {
+				FriendlyName: Stellar Odyssey
+				Description: Acquire all paintings that narrate the adventures of the Meteorman.
+			}
+
+			GachaCoinAchievement: {
+				FriendlyName: Grindset Mindset
+				Description: Collect 1000 Terra Coins by defeating enemies.
+			}
+
+			AllBunniesAchievement: {
+				FriendlyName: Follow the Copper Rabbit
+				Description: Acquire all mineral bunny variants. You took the copper pill.
+			}
+
+			AllFruitsAchievement: {
+				FriendlyName: An Apple a Day Keeps the Blacksmith Away
+				Description: Acquire all mineral fruit variants. Definitely not part of a balanced diet.
+			}
+
+			AllSquirrelsAchievement: {
+				FriendlyName: That's Nuts!
+				Description: Acquire all mineral squirrel variants. They would crack the world open for a single mineral acorn.
+			}
+		}
 	}
 }

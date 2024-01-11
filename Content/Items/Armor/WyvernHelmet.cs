@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -12,9 +13,10 @@ namespace TheCollectors.Content.Items.Armor
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-		}
-
-		public override void SetDefaults() {
+            SetBonusText = this.GetLocalization("SetBonus");
+        }
+        public static LocalizedText SetBonusText { get; private set; }
+        public override void SetDefaults() {
 			Item.width = 18;
 			Item.height = 18;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
@@ -34,9 +36,7 @@ namespace TheCollectors.Content.Items.Armor
 
 		public override void UpdateArmorSet(Player player)
 		{
-			player.setBonus = "10% Increased minion damage"
-							+ "\nIncreases your max number of minions by 1.";
-
+            player.setBonus = SetBonusText.Value; 
 			player.GetDamage(DamageClass.Summon) += 0.10f;   /*10% increased damage*/
 			player.maxMinions += 1;
 		}

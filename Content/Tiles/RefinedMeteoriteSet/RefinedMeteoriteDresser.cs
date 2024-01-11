@@ -171,7 +171,7 @@ namespace TheCollectors.Content.Tiles.RefinedMeteoriteSet
 			}
 			else
 			{
-				string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY); // This gets the ContainerName text for the currently selected language
+				string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY)/* tModPorter Note: new method takes in FrameX and FrameY */; // This gets the ContainerName text for the currently selected language
 
 				if (Main.chest[chestIndex].name != "")
 				{

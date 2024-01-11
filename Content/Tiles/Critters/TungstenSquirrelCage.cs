@@ -1,61 +1,57 @@
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Microsoft.Xna.Framework;
+using TheCollectors.Content.Items.Consumables.Critters;
 
 namespace TheCollectors.Content.Tiles.Critters
 {
-	public class TungstenSquirrelCage : ModItem
-	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Tungsten Squirrel Cage");
-		}
-		public override void SetDefaults()
-		{
-			Item.CloneDefaults(ItemID.AmberBunnyCage);
-			Item.createTile = ModContent.TileType<TungstenSquirrelCageTile>();
-		}
-		public override void AddRecipes()
-		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<Content.Items.Consumables.Critters.TungstenSquirrelItem>(), 1);
-			recipe.AddIngredient(ItemID.Terrarium, 1);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.Register();
-		}
-	}
-	public class TungstenSquirrelCageTile : ModTile
-	{
-		public override void SetStaticDefaults()
-		{
-			Main.tileFrameImportant[Type] = true;
-			Main.tileLighted[Type] = true;
-			Main.tileLavaDeath[Type] = true;
-			//TileObjectData.newTile.CopyFrom(TileObjectData.StyleSmallCage);  //The StyleSmallCage es la del ratón
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
-			TileObjectData.newTile.Height = 3;
-			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
-			TileObjectData.addTile(Type);
-			AnimationFrameHeight = 54;
-			LocalizedText name = CreateMapEntryName();
-			AddMapEntry(new Color(122, 217, 232), name);
-		}
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ModContent.ItemType<TungstenSquirrelCage>());
-		}
-		public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
-		{
-			Tile tile = Main.tile[i, j];
-			Main.critterCage = true;
-			int left = i - tile.TileFrameX / 18;
-			int top = j - tile.TileFrameY / 18;
-			int offset = left / 3 * (top / 3);
-			offset %= Main.cageFrames;
-			frameYOffset = Main.squirrelCageFrame[offset] * AnimationFrameHeight;
-		}
-	}
+    public class TungstenSquirrelCage : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.CloneDefaults(ItemID.AmberSquirrelCage);
+            Item.createTile = ModContent.TileType<TungstenSquirrelCageTile>();
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<TungstenSquirrelItem>(), 1)
+                .AddIngredient(ItemID.Terrarium, 1)
+                .AddTile(TileID.WorkBenches)
+                .SortAfterFirstRecipesOf(ItemID.AmberSquirrelCage)
+                .Register();
+        }
+    }
+    public class TungstenSquirrelCageTile : ModTile
+    {
+        public override void SetStaticDefaults()
+        {
+            TileID.Sets.CritterCageLidStyle[Type] = TileID.Sets.CritterCageLidStyle[TileID.AmberSquirrelCage];
+            Main.tileFrameImportant[Type] = Main.tileFrameImportant[TileID.AmberSquirrelCage];
+            Main.tileLavaDeath[Type] = Main.tileLavaDeath[TileID.AmberSquirrelCage];
+            Main.tileSolidTop[Type] = Main.tileSolidTop[TileID.AmberSquirrelCage];
+            Main.tileTable[Type] = Main.tileTable[TileID.AmberSquirrelCage];
+            AdjTiles = [TileID.AmberSquirrelCage, TileID.SquirrelGoldCage];
+            AnimationFrameHeight = 54;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.AmberSquirrelCage, 0));
+            TileObjectData.addTile(Type);
+
+            AddMapEntry(new Color(122, 217, 232), ModContent.GetInstance<TungstenSquirrelCage>().DisplayName);
+        }
+        public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
+        {
+            offsetY = 2;
+            Main.critterCage = true;
+        }
+        public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
+        {
+            Tile tile = Main.tile[i, j];
+            int tileCageFrameIndex = TileDrawing.GetBigAnimalCageFrame(i, j, tile.TileFrameX, tile.TileFrameY);
+            frameYOffset = Main.squirrelCageFrame[tileCageFrameIndex] * AnimationFrameHeight;
+        }
+    }
 }

@@ -65,10 +65,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
 		public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position) => false;
 		public override string GetChat()
 		{
-			WeightedRandom<string> chat = new WeightedRandom<string>();
-
-			chat.Add(Language.GetTextValue("Mods.TheCollectors.Dialogue.MeteormanBroken.RescueDialogue"));
-			return chat; // chat is implicitly cast to a string.
+            return Language.GetTextValue("Mods.TheCollectors.Dialogue.MeteormanBroken.RescueDialogue");
 		}
 		public override bool CanChat() //from Calamity's Vanities
 		{

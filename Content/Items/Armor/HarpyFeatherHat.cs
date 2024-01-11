@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Content.Items.Armor
@@ -13,8 +14,10 @@ namespace TheCollectors.Content.Items.Armor
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true; // Draw hair as if a hat was covering the top. Used by Wizards Hat
-		}
-		public override void SetDefaults() {
+            SetBonusText = this.GetLocalization("SetBonus");
+        }
+        public static LocalizedText SetBonusText { get; private set; }
+        public override void SetDefaults() {
 			Item.width = 24;
 			Item.height = 22;
 			Item.value = Item.sellPrice(0, 1, 50, 0);
@@ -30,10 +33,7 @@ namespace TheCollectors.Content.Items.Armor
 		}
 		public override void UpdateArmorSet(Player player)
 		{
-			player.setBonus = "9% Increased minion damage"
-							+ "\nIncreases your max number of minions by 2."
-							+ "\nGrants 'Featherfall' buff.";
-			
+            player.setBonus = SetBonusText.Value;
 			player.AddBuff(BuffID.Featherfall, 2);
 			player.GetDamage(DamageClass.Summon) += 0.09f;   // 9 % increased minion damage/
 			player.maxMinions += 2;

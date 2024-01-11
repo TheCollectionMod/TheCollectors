@@ -1,5 +1,5 @@
 displayName = The Collectors
 author = Sensei
-version = 0.1
+version = 0.2.0
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
 homepage = https://github.com/TheCollectionMod/TheCollectors 

@@ -18,7 +18,7 @@ Mods: {
 					NoHome: No tener una casita me agobia un poquitín, te cuento. Es como tener una abeja en el sombrerito.
 					FarFromHome: Me siento un poquitín lejos de casa, como un gatito abandonado sin su palito de rascar.
 					LoveSpace: Que gustirritín. ¡Tener tanto espacio es como ganar una partidita de los Juegos de los Elfos de Caramelo! ¡Más cómodo que el bolsillito de un canguro!.
-					DislikeCrowded: Dios mío. No me siento a gustito con tant gente a mi alrrededorcito. Es como una colmena durante la recogida de miel en la granjita de los Elfos de Caramelo!.
+					DislikeCrowded: Dios mío. No me siento a gustito con tanta gente a mi alrededorcito. Es como una colmena durante la recogida de miel en la granjita de los Elfos de Caramelo!.
 					HateCrowded: ¡Vaya por diosito! No me gusta nadita lo agobiado que es esto. Es molesto como un pájaro carpintero a las 5 de la mañanita. ¡Y ya es decir!.
 					LikeBiome: Me siento a gustito en {BiomeName}, tan a gustito como tomando una tacita caliente de chocolate después de trabajar.
 					DislikeBiome: ¡Mecachis! No me agrada demasiado el {BiomeName}. Es como un ojo demoníaco llamando a tu puertita en medio de la noche.
@@ -71,7 +71,7 @@ Mods: {
 					FarFromHome: No no no no, este es un sitio horrible, quien va a venir a comprar aquí.
 					DislikeCrowded: A la mayoria de la gente no le gusta el bullicio, pero no a mi, más gente, más negocio.
 					HateCrowded: ¡Mira cuanta gente!, hora de subir los precios.
-					LoveBiome: Aquí se respira negocio
+					LoveBiome: Aquí se respira negocio.
 					LikeBiome: ...
 					DislikeBiome: ...
 					HateBiome: I don't like cold climates, I have to spend my savings on heating my mansion.
@@ -128,14 +128,15 @@ Mods: {
 					DislikeBiome: "7,8 too much {BiomeName}."
 					HateBiome: Demasiados colorines en {BiomeName}.
 					LoveNPC: Entreno mejor cuando {NPCName} está disponible.
-					LikeNPC: no tiene
+					LikeNPC: Me agrada la compañía de {NPCName}. Sus movimientos son impredecibles y sigo intentando descifrar su técnica de combate.
 					LikeNPC_Princess: No puedo evitar pensar que estoy en un RPG al ver a {NPCName}.
 					DislikeNPC: Primero secuestra a mi maestro ¿y ahora pretende venir a vivir aquí? {NPCName} le echa mucha cara.
-					HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos"
+					HateNPC: "{NPCName} me trae unos gelatinosos recuerdos... y no de los buenos."
 					Princess_LovesNPC: "{NPCName} es el alma de todas las fiestas. Pero la última se fue un poco de las manos... La próxima vez voy a pasar del Lanzamiento de Shurikens a Ciegas. Menos mal que la enfermera estaba por allí... Bonito día, no?"
 				}
 
 				Census.SpawnCondition: Mata al Rey Slime
+				// DeathMessage: Mods.TheCollectors.NPCs.Ninja.DeathMessage
 			}
 
 			#............................................................................................................Enemies
@@ -151,6 +152,7 @@ Mods: {
 			MeteoriteWormTail.DisplayName: Gusano meteoro
 			GraniteEnergy.DisplayName: Granitostra
 			GraniteSlime.DisplayName: Slime de granito
+			GraniteBerserker.DisplayName: Berserker de granito
 			LihzahrdSlime.DisplayName: Slime de templo
 			#............................................................................................................Critters
 			MeteorFairy.DisplayName: Hada meteoro
@@ -211,16 +213,41 @@ Mods: {
 			SpectreSquirrel.DisplayName: Ardilla espectral
 			LuminiteSquirrel.DisplayName: Ardilla de luminita
 			SolarSquirrel.DisplayName: Ardilla solar
-			NebulaSquirrel.DisplayName: Ardilla nebuloso
+			NebulaSquirrel.DisplayName: Ardilla nebulosa
 			StardustSquirrel.DisplayName: Ardilla de polvo estelar
 			VortexSquirrel.DisplayName: Ardilla vórtice
+
+			Archeologist: {
+				// DisplayName: Archeologist
+
+				TownNPCMood: {
+					// Content: Estoy feliz.
+					// NoHome: Detesto no tener un hogar.
+					// FarFromHome: Estoy demasiado lejos de casa.
+					// LoveSpace: Me encanta tener tanto espacio.
+					// DislikeCrowded: No me gusta tener tan poco espacio.
+					// HateCrowded: Detesto tener poco espacio.
+					// LoveBiome: Adoro el biomedio {BiomeName}.
+					// LikeBiome: Me gusta el biomedio {BiomeName}.
+					// DislikeBiome: No me gusta el biomedio {BiomeName}.
+					// HateBiome: Detesto el biomedio {BiomeName}.
+					// LoveNPC: Adoro a {NPCName}.
+					// LikeNPC: Me gusta {NPCName}.
+					// DislikeNPC: "{NPCName} no me cae nada bien."
+					// HateNPC: Detesto a {NPCName}.
+					// LikeNPC_Princess: Me gusta {NPCName}.
+					// Princess_LovesNPC: Me gusta {NPCName}.
+				}
+
+				// Census.SpawnCondition: Conditions unknown
+			}
 		}
 
 		Bestiary: {
 			#........................................................................................................................................................TownNPCs
 			Enchanter: Víctima de sus propios encantamientos, el ahora liberado encantador promete no volver a pifiarla.
 			McMoneyPants: Todos los que os burlais de mis terracajas misteriosas no borréis está descripción que nos reiemos todos al cabo de un tiempo.
-			Meteorman: El hombre de meteorito viene del meteoro para realizar meteóricas tareas. Es una roca guay.
+			Meteorman: El hombre de Meteorito viene del meteoro para realizar meteóricas tareas. Es una roca guay.
 			Ninja: Discípulo del legendario Master San, experto en armas arrojadizas, o eso dice. Es el hermano del Guía.
 			CandyElf: Procedente del Polo Norte, el Elfo de los Caramelos espera pacientemente a la estación invernal para entregar regalos a quienes se porten bien.
 			#........................................................................................................................................................Enemies
@@ -316,7 +343,7 @@ Mods: {
 				StandardDialogue1: Debes de tener algún conocimiento en magia para romper mi encantamiento de cristal.
 				StandardDialogue2: No soy el único mago que quedó atrapado en la mazmorra.
 				StandardDialogue3: Ciertos clones que aparecen en la mazmorra dan más [i:TheCollectors/MagicSoul] de lo normal.
-				InfoSoul: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
+				InfoSoul: Las criaturas mágicas sueltan [i:TheCollectors/MagicSoul], las acepto como moneda.
 				TalkALot: En realidad mi cometido aquí iba a ser otro, rollo el duende chapucero, pero los desarrolladores son un poco negados...
 				NotTalkALot: Soy experto en los Báculos de gemas, si me traes [i:TheCollectors/MagicSoul] te las cambio por alguno.
 				PartyIsUp: ¡¿Una fiesta sorpresa!?, pásame las pócimas del estante de arriba... ¡es hora de empocimarse!
@@ -353,7 +380,7 @@ Mods: {
 				StandardDialogue3: Una pena lo de mi casa en el espacio, pero bueno, tampoco se está nada mal por aquí.
 				StandardDialogue4: No se como lo que hicisteis, pero habeis debilitado el sello del Señor de la Luna, no tardó nada en destruir mi base en el espacio, por eso terminé estrellandome aqui.
 				NotTalkALot: Pareces buena persona, seguro que terminamos siendo amigos.
-				TalkALot: Pero si es mi buen amigo 'Playername', ¿como te va?.
+				TalkALot: Pero si es mi buen amigo {0}, ¿como te va?.
 				Demolitionist: "{0} prepara unas salsas explosivas que están de vicio."
 				Dryad: Sino fuera por {0}, no seguiría aquí, le estoy muy agradecido.
 				SantaClaus: Pero si es mi amigo {0}, antes siempre se pasaba por mi meteorito a repostar, y de paso me dejaba carbón del bueno.
@@ -363,11 +390,11 @@ Mods: {
 				MartianInvasion2: ¡¿Los marcianos están atacando?!, no lo entiendo, espero que mi amigo esté bien.
 				MartianInvasion3: Gracias a ti mi amigo está a salvo.
 				MartianInvasion4: Tus compañeros siguen viniendo, ojalá se fueran pacificamente...
-				MeteoriteHardenerSolution1: Podemos sacarle más rendimiento al meteorito, con mi clentamintor y una solución especial lo podríamos conseguir, pero me va a llevar algo de tiempo preparar la solución.
+				MeteoriteHardenerSolution1: Podemos sacarle más rendimiento al meteorito, con mi clentaminator y una solución especial lo podríamos conseguir, pero me va a llevar algo de tiempo preparar la solución.
 				MeteoriteHardenerSolution2: Me llevó algo mas de lo esperado, pero por fin la tengo, con esto podemos mejorar el meteorito.
 				MeteoriteOre: Por ahora deberíamos hacer acopio de mineral de meteorito, cuando recupere mis herramientas podremos hacer cosas chulas.
 				RefinedMeteoriteOre: Para poder picar este nuevo meteorito vamos a necesitar un buen pico, por lo menos uno de Adamantita o Titanio.
-				SoilsDialogue1: En mi tiempo libre soy aficcionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares
+				SoilsDialogue1: En mi tiempo libre soy aficionado a la agricultura, soy capaz de combinar tierra y minerales para hacer unos sustratos que hacen crecer árboles peculiares
 				SoilsDialogue2: ¡Que diversidad de minerales hay en la Tierra!, podremos conseguir multitud de nuevos frutos ricos en minerales.
 				SoilsDialogue3: Parece que las ardillas cambian de color cuando comen los frutos de los árboles mineralosos, igual te encuentras alguna en los árboles.
 				SoilsDialogue4: A algunos conejos les gusta hacer sus madrigueras en los sustratos que preparo, por algún motivo los hacen cambiar de color...
@@ -384,6 +411,8 @@ Mods: {
 				Guide2: "{0} es el aprendiz más aventajado de Master-san."
 				PartyGirl1: Mira que estrellas ninja festivas más chulas, tengo que enseñarselas a {0}.
 				PartyGirl2: Que ganas tengo de que sea el Obon, aprovecharé los fuegos artificiales para declararme a {0}, deseame suerte.
+				BestiaryGirl1: "{0} tiene un instinto de supervivencia fascinante. Es capaz de escuchar una hoja caer a kilómetros de distancia."
+				BestiaryGirl2: "{0} ha despertado su forma bestial y su aura es completamente abrumadora...No para de rastrear mi olor y de acercarse peligrosamente. ¡Y-Yo... debo mantener la concentración!"
 				OtrosNPCs: ¿Ese muñeco todo quemado no se parece a mi hermano?.
 				NotInvansionGenerica: A veces invaden el pueblo, nadie sabe muy bien porqué, pero al final sirven de entrenamiento.
 				InvasionGenerica: ¡Cuantos enemigos 'playername'!, recuerda activar el ¡Battle Changue!.
@@ -391,11 +420,16 @@ Mods: {
 				QueenSlime2: No esperaba menos de Master-San, ni un sólo rasguño.
 				SlimeRain1: Corre el rumor de que a veces el tiempo se pone loco y llueven slimes, menudas tonterías dice la gente.
 				SlimeRain2: ¡El rumor era cierto, si valoras tu vida corre!.
-				BattleChange: Venga, vamos a poner en práctica el ¡BattleChangue!
+				BattleChange: Venga, vamos a poner en práctica el ¡Battle Changue!
 			}
 
-			Guide.Ninja: Gracias por rescatar a mi hermano {$Mods.TheCollectors.NPCName.Ninja}.
-			GoblinTinkerer.McMoneyPants: He de reconocer que he aprendido mucho de finanzas, pero creo que {$Mods.TheCollectors.NPCName.McMoneyPants} vuela demasiado cerca del sol.
+			Guide.Ninja: Gracias por rescatar a mi hermano {0}.
+			GoblinTinkerer.McMoneyPants: He de reconocer que he aprendido mucho de finanzas, pero creo que {0} vuela demasiado cerca del sol.
+
+			Zoologist: {
+				Ninja1: ¡{0} tiene unos reflejos completamente salvajes! ¡Ojalá me enseñara a moverme así de rápido!.
+				Ninja2: ¡Grrr... el olor de {0} es tan intenso que me pone nerviosa... ¡y me encanta!.
+			}
 		}
 
 		Items: {
@@ -452,6 +486,11 @@ Mods: {
 			GraniteArmorHelmet: {
 				DisplayName: Casco de granito
 				// Tooltip: ""
+				SetBonus:
+					'''
+					10% de daño cuerpo a cuerpo aumentado
+					Otorga el efecto de 'Resistencia'
+					'''
 			}
 
 			GraniteArmorBreastplate: {
@@ -477,11 +516,23 @@ Mods: {
 			HarpyFeatherHat: {
 				DisplayName: Corona de plumas de arpía
 				Tooltip: Aumenta un 3% el daño de invocación
+				SetBonus:
+					'''
+					Aumenta un 9% el daño de invocación
+					Aumenta en 2 el máximo de minions 
+					Otorga el efecto "Caída'
+					'''
 			}
 
 			HarpyHairpin: {
 				DisplayName: Horquilla de arpía
 				Tooltip: Aumenta un 3% el daño de invocación
+				SetBonus:
+					'''
+					Aumenta un 9% el daño de invocación
+					Aumenta en 2 el máximo de minions 
+					Otorga el efecto "Batalla'
+					'''
 			}
 
 			RefinedMeteoriteBreastplate: {
@@ -496,6 +547,13 @@ Mods: {
 					Aumenta un 20% el daño arrojadizo
 					Aumenta un 10% la probabilidad de ataque arrojadizo crítico
 					'''
+				SetBonus:
+					'''
+					Inmunidad a '¡En llamas!', 'Ardiendo' y a la lava
+					Emite un aura de luz
+					Daño recibido reducido cuando tienes menos de la mitad de la vida
+					Reduce la agresividad de los enemigos hacia ti
+					'''
 			}
 
 			RefinedMeteoriteHeadgear: {
@@ -505,11 +563,27 @@ Mods: {
 					Aumenta el maná máximo en 100
 					Aumenta un 12% el daño y la probabilidad de ataque crítico mágico
 					'''
+				SetBonus:
+					'''
+					Inmunidad a '¡En llamas!', 'Ardiendo' y a la lava
+					Emite un aura de luz
+					Daño recibido reducido cuando tienes menos de la mitad de la vida
+					Reduce el uso de maná un 20%
+					'''
 			}
 
 			RefinedMeteoriteHelmet: {
 				DisplayName: Casco de meteorito refinado
 				Tooltip: Aumenta un 10% el daño, la velocidad y la probabilidad de ataque crítico en el cuerpo a cuerpo
+				SetBonus:
+					'''
+					Inmunidad a '¡En llamas!', 'Ardiendo' y a la lava
+					Emite un aura de luz
+					Daño recibido reducido cuando tienes menos de la mitad de la vida
+					Aumenta un 19% la velocidad en el cuerpo a cuerpo
+					Aumenta un 19% la velocidad de movimiento
+					Aumenta la vida máxima en 25
+					'''
 			}
 
 			RefinedMeteoriteHood: {
@@ -518,6 +592,13 @@ Mods: {
 					'''
 					Aumenta en 1 el máximo de súbditos que puedes tener
 					Aumenta un 15% el daño de invocación
+					'''
+				SetBonus:
+					'''
+					Inmunidad a '¡En llamas!', 'Ardiendo' y a la lava
+					Emite un aura de luz
+					Daño recibido reducido cuando tienes menos de la mitad de la vida
+					Aumenta en 2 el máximo de minions
 					'''
 			}
 
@@ -537,6 +618,13 @@ Mods: {
 					Aumenta un 15% el daño de los ataques a distancia
 					Aumenta un 8% la probabilidad de asestar críticos a distancia
 					'''
+				SetBonus:
+					'''
+					Inmunidad a '¡En llamas!', 'Ardiendo' y a la lava
+					Emite un aura de luz
+					Daño recibido reducido cuando tienes menos de la mitad de la vida
+					20% de probabilidad de no consumir munición
+					'''
 			}
 
 			SlimeCoat_Breastplate: {
@@ -552,6 +640,13 @@ Mods: {
 			SlimeCoat_Mask: {
 				DisplayName: Recubrimiento de Slime - Máscara
 				Tooltip: Aumenta un 1% el daño de invocación
+				SetBonus:
+					'''
+					Aumenta un 3% el daño de invocación
+					Aumenta en 1 el máximo de minions
+					Permite caminar sobre el agua y la miel
+					Eres baboso y pegajoso
+					'''
 			}
 
 			SlimeCoat_RoyalMask: {
@@ -560,6 +655,14 @@ Mods: {
 					'''
 					Aumenta un 1% el daño de invocación
 					Los slimes serán amistosos
+					'''
+				SetBonus:
+					'''
+					Aumenta un 3% el daño de invocación
+					Aumenta en 1 el máximo de minions
+					Permite caminar sobre el agua y la miel
+					Eres baboso y pegajoso
+					Los slimes se vuelven amistosos
 					'''
 			}
 
@@ -587,6 +690,11 @@ Mods: {
 					'''
 					Aumenta en 1 el máximo de súbditos que puedes tener
 					Aumenta un 21% el daño de invocación
+					'''
+				SetBonus:
+					'''
+					Aumenta un 10% el daño de invocación
+					Aumenta en 1 el máximo de minions
 					'''
 			}
 
@@ -755,7 +863,7 @@ Mods: {
 			}
 
 			NebulaBunnyItem: {
-				DisplayName: Conejo neboloso
+				DisplayName: Conejo nebuloso
 				// Tooltip: ""
 			}
 
@@ -835,7 +943,7 @@ Mods: {
 			}
 
 			ObsidianSquirrelItem: {
-				DisplayName: Ardilla de obisiana
+				DisplayName: Ardilla de obsidiana
 				// Tooltip: ""
 			}
 
@@ -880,7 +988,7 @@ Mods: {
 			}
 
 			HallowedSquirrelItem: {
-				DisplayName: Ardilla sagrado
+				DisplayName: Ardilla sagrada
 				// Tooltip: ""
 			}
 
@@ -910,7 +1018,7 @@ Mods: {
 			}
 
 			NebulaSquirrelItem: {
-				DisplayName: Ardilla neboloso
+				DisplayName: Ardilla nebolosa
 				// Tooltip: ""
 			}
 
@@ -925,7 +1033,7 @@ Mods: {
 			}
 
 			MeteoriteFairyItem: {
-				DisplayName: Hada ardiente
+				DisplayName: Hada meteoro
 				Tooltip: ¡Eh! ¡Hazme caso!
 			}
 
@@ -1272,7 +1380,25 @@ Mods: {
 				Tooltip:
 					'''
 					{$CommonItemTooltip.RightClickToOpen}
-					Ábrela para descubrir las increibles aventuras del Hombre de Meteorito y el Ninja.
+					Ábrela para descubrir las increíbles aventuras del Hombre de Meteorito y el Ninja.
+					'''
+			}
+
+			MeteormanPaintings: {
+				DisplayName: Galería del coleccionista - Odisea Estelar
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					¡No se mueva de su asiento y llame ya! Ábrela para descubrir las increíbles aventuras del Hombre de Meteorito.
+					'''
+			}
+
+			NinjaPaintings: {
+				DisplayName: Galería del coleccionista - El camino ninja
+				Tooltip:
+					'''
+					{$CommonItemTooltip.RightClickToOpen}
+					¡No se mueva de su asiento y llame ya! Ábrela para descubrir las increíbles aventuras del Ninja.
 					'''
 			}
 
@@ -1428,7 +1554,7 @@ Mods: {
 			}
 
 			NebulaSoil: {
-				DisplayName: Sustrato neboloso
+				DisplayName: Sustrato nebuloso
 				// Tooltip: ""
 			}
 
@@ -1460,7 +1586,7 @@ Mods: {
 			}
 
 			EyelingBanner: {
-				DisplayName: Estantarte de Eyeling
+				DisplayName: Estandarte de Eyeling
 				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Eyeling
 			}
 
@@ -1471,7 +1597,7 @@ Mods: {
 
 			MeteoriteFairyBanner: {
 				DisplayName: Estandarte de Hada meteoro
-				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Meteorite Fairy
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Hada meteoro
 			}
 
 			MeteoriteManBanner: {
@@ -1485,13 +1611,13 @@ Mods: {
 			}
 
 			TCBigMeteoriteSlime: {
-				DisplayName: Big Meteorite Slime Banner
-				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Gran Slime de Meteorito
+				DisplayName: Estandarte de Gran slime de meteorito
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Gran slime de meteorito
 			}
 
 			TCMeteoriteSlime: {
-				DisplayName: Meteorite Slime Banner
-				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Slime de Meteorito
+				DisplayName: Estandarte de Slime de meteorito
+				Tooltip: Los jugadores cercanos obtienen una bonificación contra: Slime de meteorito
 			}
 
 			#............................................................................................................Placeable Bosses
@@ -1551,7 +1677,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección hombre de meteorito Vol.5
-					La Driada cura al Hombre de Meteorito
+					La Dríada cura al Hombre de Meteorito
 					Por thyflyingraccons
 					'''
 			}
@@ -1611,7 +1737,7 @@ Mods: {
 				Tooltip:
 					'''
 					Colección Ninja Vol.5
-					"Esta es una técnica muy compleja, pocos logran llevarla a cabo con exito, la gratitud no es moco de pavo"
+					"Esta es una técnica muy compleja, pocos logran llevarla a cabo con éxito, la gratitud no es moco de pavo"
 					Por thyflyingraccons
 					'''
 			}
@@ -2235,7 +2361,7 @@ Mods: {
 			}
 
 			ObsidianBunnyCage: {
-				DisplayName: Jaula de conejo de obisiana
+				DisplayName: Jaula de conejo de obsidiana
 				// Tooltip: ""
 			}
 
@@ -2564,6 +2690,41 @@ Mods: {
 
 			ExampleMinecart: {
 				// DisplayName: Example Minecart
+				// Tooltip: ""
+			}
+
+			RedCandyCaneDresser: {
+				DisplayName: Aparador de caramelo rojo
+				// Tooltip: ""
+			}
+
+			TCStatueRadar: {
+				// DisplayName: T C Statue Radar
+				// Tooltip: ""
+			}
+
+			TCStatueRadarT2: {
+				// DisplayName: T C Statue Radar T2
+				// Tooltip: ""
+			}
+
+			TCStatueRadarT3: {
+				// DisplayName: T C Statue Radar T3
+				// Tooltip: ""
+			}
+
+			TCPaintingRadar: {
+				// DisplayName: T C Painting Radar
+				// Tooltip: ""
+			}
+
+			TCPaintingRadarT2: {
+				// DisplayName: T C Painting Radar T2
+				// Tooltip: ""
+			}
+
+			ExampleBlock: {
+				// DisplayName: Example Block
 				// Tooltip: ""
 			}
 		}
@@ -2901,6 +3062,7 @@ Mods: {
 			RedCandyCaneCandle.MapEntry: Vela de caramelo rojo
 			RedCandyCaneLantern.MapEntry: Linterna de caramelo rojo
 			RedCandyCaneSofa.MapEntry: Sofa de caramelo rojo
+			RedCandyCaneDresser.MapEntry: Aparador de caramelo rojo
 		}
 
 		Configs: {
@@ -2922,5 +3084,54 @@ Mods: {
 		}
 
 		// Config.ItemHeader: Wings Toggle Header
+
+		Currencies: {
+			RedCandyCane: Bastón de caramelo rojo
+			MagicSoul: Alma Mágica
+			TerraCoin: Terramoneda
+		}
+
+		InfoDisplays: {
+			StatueRadarDisplay.DisplayName: Estatuas
+			PaintingRadarDisplay.DisplayName: Cuadros
+			NoStatues: No hay estatuas cerca
+			OneStatue: ¡Se ha detectado una estatua!
+			SeveralStatues: ¡Se han detectado varias estatuas!
+			NoPaintings: No hay cuadros cerca
+			OnePainting: ¡Se ha detectado un cuadro!
+			SeveralPaintings: ¡Se han detectado varios cuadros!
+		}
+
+		Achievements: {
+			NinjaHistoryAchievement: {
+				FriendlyName: El camino ninja
+				Description: Consigue todos los cuadros que narran las aventuras del Ninja.
+			}
+
+			MeteormanHistoryAchievement: {
+				FriendlyName: Odisea estelar
+				Description: Consigue todos los cuadros que narran las aventuras del Hombre de Meteorito.
+			}
+
+			GachaCoinAchievement: {
+				FriendlyName: Mentalidad de tiburón
+				Description: Recoge 1000 Terramonedas derrotando enemigos.
+			}
+
+			AllBunniesAchievement: {
+				FriendlyName: Sigue al conejo de cobre
+				Description: Consigue todas las variantes de conejos mineralosas. Elegiste la pastilla de cobre.
+			}
+
+			AllFruitsAchievement: {
+				FriendlyName: ¡Se le van las vitaminas!
+				Description: Consigue todas las variantes de frutas mineralosas. Esto no forma parte de una dieta equilibrada.
+			}
+
+			AllSquirrelsAchievement: {
+				FriendlyName: ¡Están como una regadera!
+				Description: Consigue todas las variantes de ardillas mineralosas. Romperían el mundo en dos por una sola fruta mineralosa.
+			}
+		}
 	}
 }

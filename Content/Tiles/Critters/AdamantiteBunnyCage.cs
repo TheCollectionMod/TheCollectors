@@ -1,18 +1,15 @@
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Microsoft.Xna.Framework;
+using TheCollectors.Content.Items.Consumables.Critters;
 
 namespace TheCollectors.Content.Tiles.Critters
 {
 	public class AdamantiteBunnyCage : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Adamantite Bunny Cage");
-		}
 		public override void SetDefaults()
 		{
 			Item.CloneDefaults(ItemID.AmberBunnyCage);
@@ -20,44 +17,42 @@ namespace TheCollectors.Content.Tiles.Critters
 		}
 		public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<Content.Items.Consumables.Critters.AdamantiteBunnyItem>(), 1);
-			recipe.AddIngredient(ItemID.Terrarium, 1);
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.Register();
+			CreateRecipe()
+				.AddIngredient(ModContent.ItemType<AdamantiteBunnyItem>(), 1)
+				.AddIngredient(ItemID.Terrarium, 1)
+				.AddTile(TileID.WorkBenches)
+				.SortAfterFirstRecipesOf(ItemID.AmberBunnyCage) // places the recipe right after vanilla frog cage recipe.
+				.Register();
 		}
 	}
 	public class AdamantiteBunnyCageTile : ModTile
 	{
 		public override void SetStaticDefaults()
 		{
-			Main.tileFrameImportant[Type] = true;
-			Main.tileLighted[Type] = true;
-			Main.tileLavaDeath[Type] = true;
-			//TileObjectData.newTile.CopyFrom(TileObjectData.StyleSmallCage);  //The StyleSmallCage es la del ratón
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
-			TileObjectData.newTile.Height = 3;
-			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
-			TileObjectData.addTile(Type);
+            // Here we just copy a bunch of values from the frog cage tile
+            TileID.Sets.CritterCageLidStyle[Type] = TileID.Sets.CritterCageLidStyle[TileID.AmberBunnyCage]; // This is how vanilla draws the roof of the cage
+            Main.tileFrameImportant[Type] = Main.tileFrameImportant[TileID.AmberBunnyCage];
+            Main.tileLavaDeath[Type] = Main.tileLavaDeath[TileID.AmberBunnyCage];
+            Main.tileSolidTop[Type] = Main.tileSolidTop[TileID.AmberBunnyCage];
+            Main.tileTable[Type] = Main.tileTable[TileID.AmberBunnyCage];
+            AdjTiles = [TileID.AmberBunnyCage, TileID.GoldBunnyCage]; // Just in case another mod uses the frog cage to craft
+            AnimationFrameHeight = 54;
 
-			AnimationFrameHeight = 54;
+            TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.AmberBunnyCage, 0));
+            TileObjectData.addTile(Type);
 
-			LocalizedText name = CreateMapEntryName();
-			AddMapEntry(new Color(122, 217, 232), name);
+            AddMapEntry(new Color(122, 217, 232), ModContent.GetInstance<AdamantiteBunnyCage>().DisplayName);
 		}
-		public override void KillMultiTile(int i, int j, int frameX, int frameY)
-		{
-			Item.NewItem(new Terraria.DataStructures.EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ModContent.ItemType<AdamantiteBunnyCage>());
-		}
-		public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset) //the confection mod
-		{
-			Tile tile = Main.tile[i, j];
-			Main.critterCage = true;
-			int left = i - tile.TileFrameX / 18;
-			int top = j - tile.TileFrameY / 18;
-			int offset = left / 3 * (top / 3);
-			offset %= Main.cageFrames;
-			frameYOffset = Main.bunnyCageFrame[offset] * AnimationFrameHeight;
-		}
+        public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
+        {
+            offsetY = 2; // From vanilla
+            Main.critterCage = true; // Vanilla doesn't run the animation code for critters unless this is checked
+        }
+        public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
+        {
+            Tile tile = Main.tile[i, j];
+            int tileCageFrameIndex = TileDrawing.GetBigAnimalCageFrame(i, j, tile.TileFrameX, tile.TileFrameY);
+            frameYOffset = Main.bunnyCageFrame[tileCageFrameIndex] * AnimationFrameHeight;
+        }
 	}
 }

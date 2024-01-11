@@ -30,7 +30,7 @@ namespace TheCollectors.Common.Systems
 			//DoBossChecklistIntegration();
 
 			// We can integrate with other mods here by following the same pattern. Some modders may prefer a ModSystem for each mod they integrate with, or some other design.
-			DoTMLAchievementsIntegration();
+			//DoTMLAchievementsIntegration();
 		}
 
 		private void DoCensusIntegration()
@@ -38,15 +38,16 @@ namespace TheCollectors.Common.Systems
 			if (ModLoader.TryGetMod("Census", out Mod Census))
 			{
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Ninja>(), "Kill King Slime");
-				//Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Archeologist>(), "Have Rope Coil in inventary");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Meteorman>(), "Rescue in Meteor crash");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Enchanter>(), "Rescue in Dungeon");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.McMoneyPants>(), "Have a Terra Coin in inventary");
 				Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.CandyElf>(), "Have a Candy Cane Block in inventary");
-				//Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Carver>(), "Rescue in Snow");
-				//Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.StarMerchant>(), "Have a Fallen Star in inventary");
-			}
-		}
+
+                //Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Archeologist>(), "Have Rope Coil in inventary");
+                //Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.Carver>(), "Rescue in Snow");
+                //Census.Call("TownNPCCondition", ModContent.NPCType<Content.NPCs.TownNPCs.StarMerchant>(), "Have a Fallen Star in inventary");
+            }
+        }
 
 		/*private void DoBossChecklistIntegration()
 		{
@@ -125,10 +126,10 @@ namespace TheCollectors.Common.Systems
 
 			// Other bosses or additional Mod.Call can be made here.
 		}*/
-		private void DoTMLAchievementsIntegration()
+		/*private void DoTMLAchievementsIntegration()
 		{
 			if (ModLoader.TryGetMod("TMLAchievements", out Mod mod))
 				mod.Call("AddAchievement", this, "RodOfDiscord", AchievementCategory.Collector, "TheCollectors/Assets/Textures/Achievement", null, false, false, 2.5f, new string[] { "Collect_" + ItemID.RodofDiscord });
-		}
+		}*/
 	}
 }

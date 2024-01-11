@@ -18,7 +18,7 @@ using Terraria.GameContent;
 using Terraria.DataStructures;
 using ReLogic.Content;
 using Terraria.ModLoader.IO;
-//using TheBeta.Content.Dusts;
+using TheCollectors.Content.Currencies;
 
 namespace TheCollectors.Content.NPCs.TownNPCs
 {
@@ -37,7 +37,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         {
             return NPCProfile;
         }
-        public override List<string> SetNPCNameList()
+        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>()
             {
@@ -93,7 +93,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPC.friendly = true;
             NPC.width = 36;
             NPC.height = 44;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 20;
             NPC.defense = 20;
             NPC.lifeMax = 350;
@@ -178,7 +178,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public override void AddShops()
         {
             var npcShop = new NPCShop(Type, ShopName)
-                .Add(ItemID.CandyCaneBlock)
+                .Add(new Item(ItemID.CandyCaneBlock) { shopCustomPrice = Item.buyPrice(silver: 5) })
                 .Add(ItemID.CandyCaneSword)
                 .Add(ItemID.CnadyCanePickaxe)
                 .Add(ItemID.CandyCaneHook)
@@ -201,11 +201,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                 .Add(ItemID.SugarCookie)
                 .Add(ItemID.GingerbreadCookie)
                 .Add(ItemID.Eggnog)
-                .Add(new Item(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneCraftingStation>())
-                {
-                    shopCustomPrice = 300,
-                    shopSpecialCurrency = TheCollectors.CandyCaneId
-                });
+                .Add<Items.Placeable.RedCandyCaneSet.RedCandyCaneCraftingStation>();
 
             npcShop.Register(); // Name of this shop tab
         }
@@ -227,7 +223,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 return Language.GetTextValue("Mods.TheCollectors.Dialogue.CandyElf.StandardDialogue4");
                         }
                     }
-                    return null;
+                    break;
                 case 1:
                     {
                         int santaclaus = NPC.FindFirstNPC(NPCID.SantaClaus);
@@ -240,19 +236,19 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.CandyElf.SantaClaus", Main.npc[santaclaus].GivenName);
                                 }
-                                else return null;
+                                break;
 
                             case 1:
                                 if (partygirl >= 0 && Main.rand.NextBool(4))
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.CandyElf.PartyGirl", Main.npc[partygirl].GivenName);
                                 }
-                                else return null;
+                                break;
                         }
                     }
-                    return null;
+                    break;
             }
-            return null;
+            return Language.GetTextValue("Mods.TheCollectors.Dialogue.CandyElf.StandardDialogue1");
         }
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

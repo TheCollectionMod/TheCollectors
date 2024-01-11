@@ -422,7 +422,7 @@ namespace TheCollectors.Content.Projectiles
 			return false;
 		}
 
-		public override bool? CanDamage()
+		public override Nullable<bool> CanDamage()/* tModPorter Suggestion: Return null instead of true */
 		{
 			// Flails in spin mode won't damage enemies within the first 12 ticks. Visually this delays the first hit until the player swings the flail around for a full spin before damaging anything.
 			if (CurrentAIState == AIState.Spinning && SpinningStateTimer <= 12f)

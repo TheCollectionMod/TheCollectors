@@ -10,8 +10,10 @@ namespace TheCollectors.Content.NPCs.Critters
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Hellstone Squirrel");
-			NPCID.Sets.TownCritter[NPC.type] = true;
+            // DisplayName.SetDefault("Hellstone Squirrel");
+            NPCID.Sets.CountsAsCritter[Type] = true;
+            NPCID.Sets.CountsAsCritter[Type] = true;
+            NPCID.Sets.TownCritter[NPC.type] = true;
 			Main.npcFrameCount[NPC.type] = Main.npcFrameCount[NPCID.Squirrel];
 			NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
 			{
@@ -37,7 +39,7 @@ namespace TheCollectors.Content.NPCs.Critters
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.knockBackResist = 0f;
-			NPC.aiStyle = 7;
+			NPC.aiStyle = NPCAIStyleID.Passive;
 			NPC.catchItem = (short)ModContent.ItemType<Content.Items.Consumables.Critters.HellstoneSquirrelItem>();
 			NPC.dontTakeDamageFromHostiles = false;
 			AIType = NPCID.Squirrel;

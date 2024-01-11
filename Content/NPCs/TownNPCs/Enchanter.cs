@@ -1,27 +1,28 @@
-using System.Collections.Generic;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.Audio;
-using Terraria.GameContent.ItemDropRules;
-using Terraria.DataStructures;
-using Terraria.Utilities;
-using Terraria.Localization;
-using Terraria.GameContent.Bestiary;
-using Terraria.GameContent.Personalities;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using Terraria.GameContent;
-using Microsoft.Xna.Framework;
-using Terraria.ModLoader.IO;
-using TheCollectors.Content.Items;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using TheCollectors.Content.Projectiles.Magic;
-using TheCollectors.Content.Items.Weapons.Magic;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
+using Terraria.GameContent;
+using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.Events;
-using static Terraria.ModLoader.ModContent;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Personalities;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
+using Terraria.Utilities;
+using TheCollectors.Content.Currencies;
 using TheCollectors.Content.Dusts;
+using TheCollectors.Content.Items;
+using TheCollectors.Content.Items.Weapons.Magic;
+using TheCollectors.Content.Projectiles.Magic;
+using static Terraria.ModLoader.ModContent;
 
 namespace TheCollectors.Content.NPCs.TownNPCs
 {
@@ -50,7 +51,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         {
             tag["numberOfTimesTalkedTo"] = NumberOfTimesTalkedTo;
         }
-        public override List<string> SetNPCNameList()
+        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>()
             {
@@ -111,7 +112,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPC.friendly = true;        // NPC Will not attack player
             NPC.width = 36;
             NPC.height = 56;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 10;
             NPC.defense = 15;
             NPC.lifeMax = 250;
@@ -199,72 +200,72 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.AmethystStaffTier1>())
                 {
                     shopCustomPrice = 20,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.TopazStaffTier1>())
                 {
                     shopCustomPrice = 20,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.SapphireStaffTier1>())
                 {
                     shopCustomPrice = 30,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.EmeraldStaffTier1>())
                 {
                     shopCustomPrice = 30,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.AmberStaffTier1>())
                 {
                     shopCustomPrice = 40,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.RubyStaffTier1>())
                 {
                     shopCustomPrice = 40,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.DiamondStaffTier1>())
                 {
                     shopCustomPrice = 50,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 })
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.AmethystStaffTier2>())
                 {
                     shopCustomPrice = 200,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.TopazStaffTier2>())
                 {
                     shopCustomPrice = 200,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.SapphireStaffTier2>())
                 {
                     shopCustomPrice = 300,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.EmeraldStaffTier2>())
                 {
                     shopCustomPrice = 300,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.AmberStaffTier2>())
                 {
                     shopCustomPrice = 400,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.RubyStaffTier2>())
                 {
                     shopCustomPrice = 400,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode)
                 .Add(new Item(ModContent.ItemType<Content.Items.Weapons.Magic.DiamondStaffTier2>())
                 {
                     shopCustomPrice = 500,
-                    shopSpecialCurrency = TheCollectors.MagicSoulId
+                    shopSpecialCurrency = TheCollectorsCurrencies.MagicSoulId
                 }, Condition.Hardmode);
 
             npcShop.Register(); // Name of this shop tab
@@ -297,17 +298,17 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                             }
                                             else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.NotTalkALot");
                                     }
-                                    return null;
+                                    break;
                                 }
                             case 1:
                                 if (BirthdayParty.PartyIsUp)
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.PartyIsUp");
                                 }
-                                else return null;
+                                break;
                         }
                     }
-                    return null;
+                    break;
                 case 1:
                     {
                         int wizard = NPC.FindFirstNPC(NPCID.Wizard);
@@ -322,20 +323,20 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.Wizard", Main.npc[wizard].GivenName);
                                 }
-                                else return null;
+                                break;
 
                             case 1:
                                 if (partygirl >= 0)
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.PartyGirl", Main.npc[partygirl].GivenName);
                                 }
-                                else return null;
+                                break;
                             case 2:
                                 if (dryad >= 0)
                                 {
                                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.Dryad", Main.npc[partygirl].GivenName);
                                 }
-                                else return null;
+                                break;
                                 /*case 2:
                                     if (runeWizard >= 0)
                                     {
@@ -344,7 +345,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                     else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.RuneWizard2", Main.npc[runeWizard].GivenName);*/
                         }
                     }
-                    return null;
+                    break;
                 case 2:
                     {
                         switch (Main.invasionType)  // (Main.invasionType == X)	GoblinArmy (1), FrostLegion (2), Pirates (3), MartianMadness (4)
@@ -378,9 +379,9 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.AncientCultist1");
                         }
                     }
-                    return null;
+                    break;
             }
-            return null;
+            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Enchanter.StandardDialogue1");
         }
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

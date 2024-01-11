@@ -35,7 +35,7 @@ namespace TheCollectors
 					.AddTile(TileID.WorkBenches)
 					.Register();
 
-			// Mod Recipes
+			// ModRecipes
 
 				Recipe.Create(ModContent.ItemType<Content.Items.Ammo.MeteorArrow>(), 100)
 					.AddIngredient(ItemID.WoodenArrow, 100)
@@ -172,6 +172,15 @@ namespace TheCollectors
 				//Placeable
 				Recipe.Create(ItemID.ShroomiteBar, 1)
 					.AddIngredient(ItemType<Content.Items.NPCStash.Meteorman.ShroomiteOre>(), 4)
+					.AddTile(TileID.MythrilAnvil)
+					.Register();
+				Recipe.Create(ItemID.HallowedBar, 1)
+					.AddIngredient(ItemType<Content.Items.NPCStash.Meteorman.HallowedOre>(), 4)
+					.AddTile(TileID.MythrilAnvil)
+					.Register();
+
+				Recipe.Create(ItemID.SpectreBar, 1)
+					.AddIngredient(ItemType<Content.Items.NPCStash.Meteorman.SpectreOre>(), 4)
 					.AddTile(TileID.MythrilAnvil)
 					.Register();
 
@@ -467,11 +476,11 @@ namespace TheCollectors
 					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
 					.Register();
 
-				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneDresser>(), 1)
+				Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneDresser>(), 1)
 					.AddIngredient(ItemID.CandyCaneBlock, 160)
-					//.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
+					.AddTile(TileType<Content.Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>())
 					.AddTile(TileID.WorkBenches)
-					.Register();*/
+					.Register();
 
 				/*Recipe.Create(ModContent.ItemType<Content.Items.Placeable.RedCandyCaneSet.RedCandyCaneFireplace>(), 1)
 					.AddIngredient(ItemID.CandyCaneBlock, 100)

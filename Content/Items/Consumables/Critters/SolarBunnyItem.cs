@@ -1,3 +1,4 @@
+using System;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -30,7 +31,7 @@ namespace TheCollectors.Content.Items.Consumables.Critters
 			Item.noUseGraphic = true;
 		}
 
-		public override bool? UseItem(Player player)
+		public override Nullable<bool> UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
 		{
 			NPC.NewNPC(player.GetSource_ItemUse(Item), (int)player.Center.X, (int)player.Center.Y, ModContent.NPCType<NPCs.Critters.SolarBunny>());
 			return true;

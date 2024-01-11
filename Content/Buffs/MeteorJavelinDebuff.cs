@@ -8,7 +8,7 @@ namespace TheCollectors.Content.Buffs
 	{
 		public override void Update(NPC npc, ref int buffIndex) 
 		{
-			npc.GetGlobalNPC<TheCollectorsDamageOverTimeNPC>().MeteorJavelinDebuff = true;
+			npc.GetGlobalNPC<DamageOverTimeGlobalNPC>().MeteorJavelinDebuff = true;
 		}
 	}
 }

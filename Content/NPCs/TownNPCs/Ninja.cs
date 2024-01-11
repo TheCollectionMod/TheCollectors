@@ -32,6 +32,10 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public int NumberOfTimesTalkedTo = 0;
         private static int ShimmerHeadIndex;
         private static Profiles.StackedNPCProfile NPCProfile;
+        // Sets a unique message when the NPC dies.
+        // See also NPCID.Sets.IsTownChild if you just want the message used by Angler and Princess.
+        // See ModifyDeathMessage() way below for more details
+        public override LocalizedText DeathMessage => this.GetLocalization("DeathMessage");
         public override void Load()
         {
             // Adds our Shimmer Head to the NPCHeadLoader.
@@ -41,7 +45,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         {
             return NPCProfile;
         }
-        public override List<string> SetNPCNameList()
+        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>()
             {
@@ -80,7 +84,8 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             .SetBiomeAffection<ForestBiome>(AffectionLevel.Like)
             .SetBiomeAffection<OceanBiome>(AffectionLevel.Dislike)
             .SetBiomeAffection<HallowBiome>(AffectionLevel.Hate)
-            .SetNPCAffection(NPCID.Guide, AffectionLevel.Love); // < Mind the semicolon!
+             .SetNPCAffection(NPCID.BestiaryGirl, AffectionLevel.Like)
+             .SetNPCAffection(NPCID.Guide, AffectionLevel.Love); // < Mind the semicolon!
             //.SetNPCAffection(ModContent.NPCType<MasterSan>(), AffectionLevel.Like) // Para los NPCs del mod
             // Dislike QueenSlimede BossesAsNpecs, call hecho en otro archivo
             // Hate KingSlime de BossesAsNpecs, call hecho en otro archivo
@@ -90,6 +95,12 @@ namespace TheCollectors.Content.NPCs.TownNPCs
 				new Profiles.DefaultNPCProfile(Texture, NPCHeadLoader.GetHeadSlot(HeadTexture), Texture + "_Party"),
 				new Profiles.DefaultNPCProfile(Texture + "_Shimmer", ShimmerHeadIndex, Texture + "_Shimmer_Party")
 			);
+          /*  // Here we define which portrait to use for the Town NPC when the portrait style setting is set to detailed.
+            NPCID.Sets.NPCPortraits.Add(Type, NPCID.Sets.PrioritizedPortrait()
+                    .With(NPCID.Sets.ShimmeredPortraitCondition, NPCID.Sets.BasicPortrait($"{Texture}_Shimmer_Portrait")) // This is the portrait to use while the Town NPC is shimmered.
+                    .Default(NPCID.Sets.BasicPortrait($"{Texture}_Portrait"))); // Default portrait to use (not shimmered).
+            NPCID.Sets.NPCPortraitsCloseUpOffsets.Add(Type, new Vector2(-3f, 0f)); // Here we can change the offsets of Town NPC when the portrait style setting is set to profile.
+                                                                                   //NPCID.Sets.NPCPortraitsFullBodyRetroOffsets.Add(Type, new Vector2(0f, 0f)); // Here we can change the offsets of Town NPC when the portrait style setting is set to retro.*/
         }
         public override void SetDefaults()
         {
@@ -97,7 +108,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
             NPC.friendly = true;
             NPC.width = 36;
             NPC.height = 44;
-            NPC.aiStyle = 7;
+            NPC.aiStyle = NPCAIStyleID.Passive;
             NPC.damage = 20;
             NPC.defense = 20;
             NPC.lifeMax = 350;
@@ -154,7 +165,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = Language.GetTextValue("LegacyInterface.28");
-            button2 = "¡Battle Change!";
+            button2 = "?Battle Change!";
         }
         public override void OnChatButtonClicked(bool firstButton, ref string shop)
         { 
@@ -233,14 +244,15 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.NotTalkALot");
                         }
                     }
-                    return null;
+                    break;
                 case 1:
                     {
                         int guide = NPC.FindFirstNPC(NPCID.Guide);
                         int partygirl = NPC.FindFirstNPC(NPCID.PartyGirl);
+                        int bestiarygirl = NPC.FindFirstNPC(NPCID.BestiaryGirl);
                         //int mastersan = NPC.FindFirstNPC(ModContent.NPCType<MasterSan>());
 
-                            switch (Main.rand.Next(2))
+                        switch (Main.rand.Next(3))
                         {
                             case 0:
                                 if (guide >= 0)
@@ -254,7 +266,7 @@ namespace TheCollectors.Content.NPCs.TownNPCs
 
                                             return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.Guide2", Main.npc[guide].GivenName);
                                     }
-                                else return null;
+                                break;
 
                             case 1:
                                 if (partygirl >= 0)
@@ -268,7 +280,22 @@ namespace TheCollectors.Content.NPCs.TownNPCs
 
                                             return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.PartyGirl2", Main.npc[partygirl].GivenName);
                                     }
-                                else return null;
+                                break;
+                            case 2:
+                                if (bestiarygirl >= 0)
+                                {
+                                    if (Main.bloodMoon || Main.moonPhase == 0)
+                                    {
+                                        // Standard dialogue when transformed
+                                        return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.BestiaryGirl2", Main.npc[bestiarygirl].GivenName);
+                                    }
+                                    else
+                                    {
+                                        // Standard dialogue when the moon is calm
+                                        return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.BestiaryGirl1", Main.npc[bestiarygirl].GivenName);
+                                    }
+                                }
+                                break;
                         }
                     }
                     return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.OtrosNPCs");
@@ -311,9 +338,9 @@ namespace TheCollectors.Content.NPCs.TownNPCs
                                 else return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.SlimeRain1");
                         }
                     }
-                    return null;
+                    break;
             }
-            return null;
+            return Language.GetTextValue("Mods.TheCollectors.Dialogue.Ninja.StandardDialogue1");
         }
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)
         {

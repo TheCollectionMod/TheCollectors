@@ -19,9 +19,9 @@ namespace TheCollectors.Content.Items.Placeable.RedCandyCaneSet
 			Item.CloneDefaults(ItemID.SkyMill);
 			Item.width = 28;
 			Item.height = 14;
-			/*Item.value = Item.buyPrice(0, 10, 0, 0);
+			Item.value = Item.buyPrice(0, 10, 0, 0);
 			Item.value = Item.sellPrice(0, 2, 0, 0);
-			Item.rare = ItemRarityID.White;
+			/*Item.rare = ItemRarityID.White;
 			Item.maxStack = 99;
 			Item.consumable = true;*/
 			Item.createTile = ModContent.TileType<Tiles.RedCandyCaneSet.RedCandyCaneCraftingStation>();

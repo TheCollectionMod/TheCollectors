@@ -1,7 +1,8 @@
 using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
+using TheCollectors.Content.Achievements;
 
 namespace TheCollectors.Content.Items.NPCStash.McMoneyPants
 {
@@ -21,5 +22,17 @@ namespace TheCollectors.Content.Items.NPCStash.McMoneyPants
 			Item.value = Item.sellPrice(0, 0, 50, 0);
 			Item.rare = ItemRarityID.Purple;
 		}
-	}
+        public override bool OnPickup(Player player)
+        {
+            if (player.whoAmI == Main.myPlayer)
+            {
+                if (!GachaCoinAchievement.TerraCoinPickupCondition.IsCompleted)
+                {
+                    GachaCoinAchievement.TerraCoinPickupCondition.Value++;
+                }
+            }
+
+            return true;
+        }
+    }
 }

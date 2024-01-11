@@ -8,19 +8,10 @@ namespace TheCollectors
 	{		
 		public const string AssetPath = $"{nameof(TheCollectors)}/Assets/";
 
-		public static int TerraCoinId;
-		public static int MagicSoulId;
-		public static int CandyCaneId;
 
 		public override void Load()
 		{
 
-			{
-				// Registers a new custom currency
-				TerraCoinId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.TerraCoin(ModContent.ItemType<Content.Items.NPCStash.McMoneyPants.TerraCoin>(), 999L, "Terra Coin"));
-				MagicSoulId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.MagicSoul(ModContent.ItemType<Content.Items.MagicSoul>(), 999L, "Magic Soul"));
-				CandyCaneId = CustomCurrencyManager.RegisterCurrency(new Content.Currencies.RedCandyCane(ItemID.CandyCaneBlock, 999L, "Red Candy Cane"));
-			}
 		}
 		public override void Unload()
 		{

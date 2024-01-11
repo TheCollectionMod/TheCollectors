@@ -3,17 +3,17 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.GameContent.Metadata;
-using static Terraria.ModLoader.ModContent;
-
+using TheCollectors.Content.Dusts;
+using TheCollectors.Content.Items.NPCStash.Meteorman;
 
 namespace TheCollectors.Content.Tiles.Trees
 {
-    class DemoniteTreeSapling : ModTile
+    public class DemoniteTreeSapling : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -26,10 +26,10 @@ namespace TheCollectors.Content.Tiles.Trees
             TileObjectData.newTile.Origin = new Point16(0, 1);
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile, TileObjectData.newTile.Width, 0);
             TileObjectData.newTile.UsesCustomCanPlace = true;
-            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
+            TileObjectData.newTile.CoordinateHeights = [16, 18];
             TileObjectData.newTile.CoordinateWidth = 16;
             TileObjectData.newTile.CoordinatePadding = 2;
-            TileObjectData.newTile.AnchorValidTiles = new[] { ModContent.TileType<Items.NPCStash.Meteorman.DemoniteSoilTile>() };
+            TileObjectData.newTile.AnchorValidTiles = [ModContent.TileType<DemoniteSoilTile>()];
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawFlipHorizontal = true;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -39,39 +39,58 @@ namespace TheCollectors.Content.Tiles.Trees
 
             TileObjectData.addTile(Type);
 
-            LocalizedText name = CreateMapEntryName();
-            // name.SetDefault("Demonite Sapling");
-            AddMapEntry(new Color(120, 0, 70), name);
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Sapling"));
 
             TileID.Sets.TreeSapling[Type] = true;
             TileID.Sets.CommonSapling[Type] = true;
             TileID.Sets.SwaysInWindBasic[Type] = true;
             TileMaterials.SetForTileId(Type, TileMaterials._materialsByName["Plant"]); // Make this tile interact with golf balls in the same way other plants do
 
+            AdjTiles = [TileID.Saplings];
+
             DustType = DustID.Demonite;
-            AdjTiles = new int[] { TileID.Saplings };
         }
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
             num = fail ? 1 : 3;
         }
+        public override void RandomUpdate(int i, int j)
+        {
+            // A random chance to slow down growth
+            if (!WorldGen.genRand.NextBool(20))
+            {
+                return;
+            }
+
+            Tile tile = Framing.GetTileSafely(i, j); // Safely get the tile at the given coordinates
+            bool growSuccess; // A bool to see if the tree growing was successful.
+
+            // Style 0 is for the ExampleTree sapling, and style 1 is for ExamplePalmTree, so here we check frameX to call the correct method.
+            // Any pixels before 54 on the tilesheet are for ExampleTree while any pixels above it are for ExamplePalmTree
+            if (tile.TileFrameX < 54)
+            {
+                growSuccess = WorldGen.GrowTree(i, j);
+            }
+            else
+            {
+                growSuccess = WorldGen.GrowPalmTree(i, j);
+            }
+
+            // A flag to check if a player is near the sapling
+            bool isPlayerNear = WorldGen.PlayerLOS(i, j);
+
+            // If growing the tree was a success and the player is near, show growing effects
+            if (growSuccess && isPlayerNear)
+            {
+                WorldGen.TreeGrowFXCheck(i, j);
+            }
+        }
         public override void SetSpriteEffects(int i, int j, ref SpriteEffects effects)
         {
-            if (i % 2 == 1)
+            if (i % 2 == 0)
             {
                 effects = SpriteEffects.FlipHorizontally;
             }
-        }
-        public override void RandomUpdate(int i, int j)
-        {
-            if (!WorldGen.genRand.NextBool(20))
-                return;
-
-            bool growSucess = WorldGen.GrowTree(i, j);
-            bool isPlayerNear = WorldGen.PlayerLOS(i, j);
-
-            if (growSucess && isPlayerNear)
-                WorldGen.TreeGrowFXCheck(i, j);
         }
     }
 }
